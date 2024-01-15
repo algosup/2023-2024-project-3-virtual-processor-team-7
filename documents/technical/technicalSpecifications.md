@@ -63,12 +63,11 @@ The document should also benefit other stakeholders and project owners by giving
 
 As stated in the Functional Requirements, the goal of the project is to create a virtual processor and an interpreter for running assembly code on that processor.
 
-We have been given eight weeks to complete this project
-Upon dissecting the game we have discovered that Pac-Man has more complexity than it might seem on the surface and you will see later on that we have willingly cut some features off for the project to be completed in the given timeframe.
+We have been given eight weeks to complete this project.
 
 ### Setting up the development environment
 
-We will set up our development environment following the requirements as follow.
+We will set up our development environment following the requirements as follow :
 
 #### Hardware requirement
 
