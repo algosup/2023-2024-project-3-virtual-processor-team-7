@@ -3,10 +3,9 @@
 --------------------------------------------------------
 <h3>First steps into the project</h3>
 
-
 The client gave us a project about a virtual processor and an interpretter which allow us to read and use our own assembly dialect in the processor.
 
-We took a first look at the project individually. Because of time schedule, we weren't able to do a proper meeting this week. 
+We took a first look at the project individually. Because of time schedule, we weren't able to do a proper meeting this week.
 
 Since we don't have that much of time this week, we mostly spent our time acquiring the information about :
 
