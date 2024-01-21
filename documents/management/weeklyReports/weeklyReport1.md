@@ -33,7 +33,7 @@ We have created a notion to place our note, definition  and even a <strong>Gantt
 
 <br>
 
-![Alt text](image.png)
+![Alt text](/image/Notionweek1.png)
 ***exemple of the notion on the assembly glossary***
 
 
