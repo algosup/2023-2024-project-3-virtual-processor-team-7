@@ -4,4 +4,4 @@
 
 // Jump functions without conditions prototypes
 
-#endif // LOGIC_H
+#endif // JUMPUN_H
