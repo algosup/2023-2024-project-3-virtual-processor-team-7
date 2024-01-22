@@ -10,7 +10,7 @@ For this project we have to create our own assembly code NASM and MAMS and make 
 The technical has also been started including the big parts:
 <br>
 <br>
-![Alt text](/image/technical1.png)
+![image](/documents/management/image/technical1.png)
 *A part of the technical*
 
 
@@ -28,13 +28,13 @@ The technical has also been started including the big parts:
 | C language developpment | 0%  |
 | Weekly report  | 30%   |
 
-<h5></h5>
+<h5>The Notion</h5>
 The notion has been finished and we started completing the Task list and the gantt chart
 
-![Alt text](/image/Notionweek2.png)
+![Alt text](/documents/management/image/Notionweek2.png)
 *Image of the Task list*
 
-![Alt text](/image/Notionweek2(2).png)
+![Alt text](/documents/management/image/Notionweek2(2).png)
 *Image of the gantt chart*
 
 
