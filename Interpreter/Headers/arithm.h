@@ -1,7 +1,7 @@
-// logic.h
-#ifndef LOGIC_H
-#define LOGIC_H
+// arithm.h
+#ifndef ARITHM_H
+#define ARITHM_H
 
-// Logical operation prototypes
+// Arithmetic operation prototypes
 
-#endif // LOGIC_H
+#endif // ARITHM_H

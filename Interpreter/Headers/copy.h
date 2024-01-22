@@ -4,4 +4,4 @@
 
 // Arithmetic operation prototypes
 
-#endif // ARITHM_H
+#endif // COPY_H
