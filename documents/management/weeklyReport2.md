@@ -7,6 +7,11 @@ During this week, we managed to find as much information as possible until wedne
 
 For this project we have to create our own assembly code NASM and MAMS and make sure that the command only take three characters to be wrote, we discussed about it and have the plan on how to do it.
 
+The technical has also been started including the big parts:
+<br>
+<br>
+![Alt text](/image/technical1.png)
+*A part of the technical*
 
 
 --------------------------------------------------------
@@ -17,7 +22,7 @@ For this project we have to create our own assembly code NASM and MAMS and make 
 | KPI's   | Progress |
 | -------- | ------- |
 | Functional specification  | 15%   |
-| Technical specification | 0%   |
+| Technical specification | 10%   |
 | Test Plan| 0%   |
 | Assembly developpment | 5%   |
 | C language developpment | 0%  |
