@@ -32,11 +32,15 @@
         - [★ Team member availability](#-team-member-availability)
         - [★ Time constraints](#-time-constraints)
   - [C. Functional Requirements](#c-functional-requirements)
-    - [?.](#)
-    - [?. Assembly Language](#-assembly-language)
+    - [1. System Capabilities](#1-system-capabilities)
+      - [➭ 1.1 Data Handling:](#-11-data-handling)
+      - [➭ 1.2 Calculations:](#-12-calculations)
+      - [➭ 1.3 Branching:](#-13-branching)
+      - [➭ 1.4 Platform Independence:](#-14-platform-independence)
+      - [➭ 1.5 Error Handling and Detection:](#-15-error-handling-and-detection)
+    - [2. Assembly Language](#2-assembly-language)
       - [➭ Instructions](#-instructions)
       - [➭ Example of use](#-example-of-use)
-    - [?. AAA](#-aaa)
   - [D. Non-Functional Requirements](#d-non-functional-requirements)
 
 </details>
@@ -51,7 +55,7 @@
 |---|---|
 | Document Owner | Gaël MALVAR |
 | Issue date | 01/22/2024 |
-| Last Issue Date | 01/22/2024 |
+| Last Issue Date | 01/23/2024 |
 | Document Name | Functional Specification|
 
 ### 2. Document Approval
@@ -198,9 +202,42 @@ In addition, deadlines are set for the overall completion of the project. These 
 
 ## C. Functional Requirements
 
-### ?. 
+### 1. System Capabilities
 
-### ?. Assembly Language
+#### ➭ 1.1 Data Handling:
+
+The assembly language instructions should enable smooth manipulation of data, including:
+
+**<u>Writing data between a register and:</u>**
+- An immediate value (a constant).
+- Another register.
+- The memory (RAM).
+- The virtual keyboard/display.
+
+
+#### ➭ 1.2 Calculations:
+**<u>The assembly language needs to provide essential support for mathematical and logical operations, including:**</u>
+
+- The four fundamental mathematical operations: addition, subtraction, multiplication, division.
+- The four basic logical operations: NOT, AND, OR, XOR.
+
+#### ➭ 1.3 Branching:
+
+**<u>The programming language should facilitate effective branching by enabling:**</u>
+
+- Comparisons between registers and values.
+- Conditional and unconditional jumping.
+- Calling and returning from subroutines.
+
+#### ➭ 1.4 Platform Independence:
+
+The interpreter should showcase the ability to be compiled and executed on any real computer architecture. To ensure portability, it should refrain from relying on external libraries beyond standard ones, and any usage of operating system-specific libraries must have viable alternatives.
+
+#### ➭ 1.5 Error Handling and Detection:
+
+The interpreter is required to incorporate robust error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should gracefully halt the program and notify the user.
+
+### 2. Assembly Language
 
 #### ➭ Instructions
 
@@ -272,7 +309,7 @@ In addition, deadlines are set for the overall completion of the project. These 
 - **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
 - **Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).**
 - **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
-- **The exact syntax and details may vary based on specific design choices and requirements for your processor architecture. This is a simplified example to get you started.**
+- **The exact syntax and details may vary based on specific design choices and requirements for the processor architecture. This is a simplified example to get you started.**
 
 #### ➭ Example of use
 
@@ -311,7 +348,5 @@ STOR R6, 102       ; Store the result in memory location 102
 
 RETURN             ; Return from the subroutine
 ```
-
-### ?. AAA
 
 ## D. Non-Functional Requirements
