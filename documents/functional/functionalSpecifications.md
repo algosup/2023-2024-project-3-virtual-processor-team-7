@@ -74,24 +74,27 @@
 
 ### 1. Glossary
 
-| Term used | Definition |
+| Terms used | Definition |
 |---|---|
 | Virtual Processor | |
 | GCC |  |
+| IDE |  |
 | Visual Studio Code (VS code) |  |
+|Compiler |  |
+
 ### 2. Project Overview
 
-The aim of this document is to furnish a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. The processor will be crafted using the C programming language.
+The aim of this document is to provide a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. We will virtualize the processor using C programming language.
 
 ### 3. Project Definition
 
 #### ➭ Vision
 
-The fundamental objective of this project is to design and implement a virtual processor capable of executing assembly code. This vision revolves around the creation of a minimalist assembly language specific to the virtual processor, meeting the requirements defined in the call for tenders. The assembly language thus defined will comprise a series of key instructions, including the storage of immediate values in registers, memory manipulation, basic arithmetic and logic operations, and flow control mechanisms.
+The fundamental objective of this project is to design and implement a virtual processor capable of executing assembly code. This vision revolves around the creation of a minimalist assembly language specific to the virtual processor, meeting the requirements asked in the call for tenders. The assembly language thus defined will comprise a series of key instructions, including the storage of immediate values in registers, memory manipulation, basic arithmetic and logic operations, and flow control mechanisms.
 
 #### ➭ Objectives
 
-- Design a minimalist assembly language for the virtual processor, respecting the instructions specified in the call for tenders.
+- Design a minimalist assembly language for the virtual processor, respecting the instructions as asked in the call for tenders.
 - Implement a C language program capable of reading a text file containing programs written in the defined assembly language.
 - Validate the syntax of assembly programs to guarantee their semantic validity.
 - Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly code execution.
@@ -101,7 +104,7 @@ The fundamental objective of this project is to design and implement a virtual p
 
 | In Scope |
 |---|
-| Design of a Virtual Processor |
+| Design a Virtual Processor |
 | Minimalist Assembly Language |
 | Implementation of an Interpreter |
 | Syntax Validation |
@@ -136,15 +139,15 @@ The stakeholders in this project will be:
 | Project Manager | Manages organization, planning, and budgeting while ensuring the team remains motivated. | Mattéo LEFIN|  <img src="https://avatars.githubusercontent.com/u/146164921?v=4" width="75px">      | [Matteo\'s Github Profile](https://github.com/Mattstar64) |
 | Program Manager | Ensures the project meets expectations, oversees the design, and takes responsibility for writing the Functional Specifications. | Gaël MALVAR | <img src="https://avatars.githubusercontent.com/u/146000851?v=4 " width="75px"> | [Gaël\'s Github Profile](https://github.com/Gael-MALVAR) |
 | Tech Lead | Leads technical decision-making in the project, translates the Functional Specifications into Technical Specifications | Robin DEBRY |<img src="https://avatars.githubusercontent.com/u/91249812?v=4" width="75px"> | [Robin\'s Github Profile](https://github.com/robin-debry) |
-| Software Engineers | Codes the software. | David CUAHONTE CUEVAS | <img src="https://avatars.githubusercontent.com/u/91249658?v=4" width="75px"> | [David\'s Github Profile](https://github.com/DavidCC812) |
-| Software Engineers | Codes the software. | Camille GAYAT  |<img src="https://avatars.githubusercontent.com/u/145991254?v=4" width="75px"> | [Camille\'s Github Profile](https://github.com/CamilleGayat) |
+| Software Engineers | Develop the software. | David CUAHONTE CUEVAS | <img src="https://avatars.githubusercontent.com/u/91249658?v=4" width="75px"> | [David\'s Github Profile](https://github.com/DavidCC812) |
+| Software Engineers | Develop the software. | Camille GAYAT  |<img src="https://avatars.githubusercontent.com/u/145991254?v=4" width="75px"> | [Camille\'s Github Profile](https://github.com/CamilleGayat) |
 | Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Abderrazaq MAKRAN |<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="75px"> | [Abderrazaq\'s Github Profile](https://github.com/Amakran2003) |
 | Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Raphaël PROUDHON | <img src="https://avatars.githubusercontent.com/u/146000634?v=4" width="75px"> | [Raphaël\'s Github Profile](https://github.com/raproudhon) |
 
 
 #### ➭ Project Reviewers
 
-The project evaluators, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
+The project reviewers, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
 
 - Guarantee the quality of the code, the semantic validity of the assembler programs
 - Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#c-functional-requirements).
@@ -169,21 +172,34 @@ The project evaluators, responsible for the in-depth review and approval of impo
 
 ##### ★ Human Resources
 
-The team is made up of the **7 members** mentioned above in [Project roles](#-project-roles)
+The team is made of the **7 members** mentioned above in [Project roles](#-project-roles)
 
-The project lasts **8 weeks**:
-
-In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
-This means we have **686 manhours**.
+- The project lasts **8 weeks**:
+  In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
+  This means we have **686 manhours**.
 
 ##### ★ Development Tools
 
-- Use of the **C language** with the **GCC compiler**.
-- Code editing with **Visual Studio Code**.
-
-Two different machines are available:
-- **MacBook Air 13″** running on **macOS Venture**.
-- **ThinkBook 14 G4 IAP** running on **Windows 11**.
+**Operating System:** Windows and MacOS
+  - **Compiler:** GCC 13.2
+  - **IDE:** Visual Studio Code 1.85
+  - **Hardware:** <br>
+    - [MacBook Air 2020](https://www.apple.com/fr/macbook-air-m1/)
+      - 13.3 inch (2560 x 1600)
+      - macOS Sonoma 14.2
+      - Apple M1 Chip
+    - [Lenovo Thinkbook 14](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkbook-series/thinkbook-14-iil/20sl)
+      - Windows 11 Pro
+      - 14 inch (1920 x 1080)
+      - Processor: Intel(R) Core(TM) i7-1165G7 CPU @ 2.80GHz
+      - RAM: 16.0 GB
+      - System type: 64-bit operating system, x64-based processor
+    - [ThinkPad E14 Gen 5](https://www.lenovo.com/fr/fr/p/laptops/thinkpad/thinkpade/thinkpad-e14-gen-5-(14-inch-intel)/len101t0064)
+      - Windows 11 Pro
+      - 14 inch (1920 x 1080)
+      - Processor: 13th Gen Intel(R) Core(TM) i7-1355U, 1700 Mhz
+      - RAM: 16.0 GB
+      - System type: 64-bit operating system, x64-based processor
 
 ##### ★ Associated costs
 
@@ -206,7 +222,7 @@ In addition, deadlines are set for the overall completion of the project. These 
 
 #### ➭ 1.1 Data Handling:
 
-The assembly language instructions should enable smooth manipulation of data, including:
+**<u>The assembly language instructions should enable smooth manipulation of data, including:</u>**
 
 **<u>Writing data between a register and:</u>**
 - An immediate value (a constant).
@@ -309,7 +325,7 @@ The interpreter is required to incorporate robust error-handling mechanisms, cap
 - **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
 - **Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).**
 - **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
-- **The exact syntax and details may vary based on specific design choices and requirements for the processor architecture. This is a simplified example to get you started.**
+- **The exact syntax and details may vary based on specific design choices and requirements for our processor architecture. This is a simplified example to get you started.**
 
 #### ➭ Example of use
 
