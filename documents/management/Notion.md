@@ -65,3 +65,9 @@ This notes is used by the program manager and the technical lead.
 
 ![Alt text](/documents/management/image/NOTION_func&tech3.png)
 *technical notes*
+
+--------------
+
+<h3>Link</h3>
+
+https://www.notion.so/Project-number-3-Virtual-processor-e6bc479ce65a478f8caec7c4216f91b9
