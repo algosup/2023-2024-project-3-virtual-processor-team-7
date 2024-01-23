@@ -25,11 +25,18 @@
       - [➭ Retroplanning](#-retroplanning)
       - [➭ Milestones](#-milestones)
       - [➭ Resources/Financial plan](#-resourcesfinancial-plan)
+        - [★ Human Resources](#-human-resources)
+        - [★ Development Tools](#-development-tools)
+        - [★ Associated costs](#-associated-costs)
       - [➭ Assumptions/Constraints](#-assumptionsconstraints)
+        - [★ Team member availability](#-team-member-availability)
+        - [★ Time constraints](#-time-constraints)
   - [C. Functional Requirements](#c-functional-requirements)
-    - [1. Assembly Language](#1-assembly-language)
+    - [?.](#)
+    - [?. Assembly Language](#-assembly-language)
       - [➭ Instructions](#-instructions)
-      - [➭ Operations](#-operations)
+      - [➭ Example of use](#-example-of-use)
+    - [?. AAA](#-aaa)
   - [D. Non-Functional Requirements](#d-non-functional-requirements)
 
 </details>
@@ -65,8 +72,9 @@
 
 | Term used | Definition |
 |---|---|
-| | |
-
+| Virtual Processor | |
+| GCC |  |
+| Visual Studio Code (VS code) |  |
 ### 2. Project Overview
 
 The aim of this document is to furnish a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. The processor will be crafted using the C programming language.
@@ -98,8 +106,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | Out of Scope |
 |---|
 | Compatibility with high-level languages |
-|  |
-|  |
+| Dive deeper in Assembly |
 
 #### ➭ Deliverables
 
@@ -114,19 +121,21 @@ The fundamental objective of this project is to design and implement a virtual p
 
 #### ➭ Stakeholders
 
-The stakeholders in this project will be the 7 members of our team.
+The stakeholders in this project will be: 
+- **_Franck JEANNIN_**
+- *The 7 members of our team.*
 
 #### ➭ Project Roles
 
-| Role | Name |
-|---|---|
-| Project Manager | Mattéo LEFIN|
-| Program Manager | Gaël MALVAR |
-| Tech Lead | Robin DEBRY |
-| Software Engineers | David CUAHONTE CUEVAS |
-| Software Engineers | Camille GAYAT  |
-| Quality Assurance | Abderrazaq MAKRAN |
-| Quality Assurance | Raphaël PROUDHON |
+| Role | Description | Name | Image | Link |
+|---|---|---|---|---|
+| Project Manager | Manages organization, planning, and budgeting while ensuring the team remains motivated. | Mattéo LEFIN|  <img src="https://avatars.githubusercontent.com/u/146164921?v=4" width="75px">      | [Matteo\'s Github Profile](https://github.com/Mattstar64) |
+| Program Manager | Ensures the project meets expectations, oversees the design, and takes responsibility for writing the Functional Specifications. | Gaël MALVAR | <img src="https://avatars.githubusercontent.com/u/146000851?v=4 " width="75px"> | [Gaël\'s Github Profile](https://github.com/Gael-MALVAR) |
+| Tech Lead | Leads technical decision-making in the project, translates the Functional Specifications into Technical Specifications | Robin DEBRY |<img src="https://avatars.githubusercontent.com/u/91249812?v=4" width="75px"> | [Robin\'s Github Profile](https://github.com/robin-debry) |
+| Software Engineers | Codes the software. | David CUAHONTE CUEVAS | <img src="https://avatars.githubusercontent.com/u/91249658?v=4" width="75px"> | [David\'s Github Profile](https://github.com/DavidCC812) |
+| Software Engineers | Codes the software. | Camille GAYAT  |<img src="https://avatars.githubusercontent.com/u/145991254?v=4" width="75px"> | [Camille\'s Github Profile](https://github.com/CamilleGayat) |
+| Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Abderrazaq MAKRAN |<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="75px"> | [Abderrazaq\'s Github Profile](https://github.com/Amakran2003) |
+| Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Raphaël PROUDHON | <img src="https://avatars.githubusercontent.com/u/146000634?v=4" width="75px"> | [Raphaël\'s Github Profile](https://github.com/raproudhon) |
 
 
 #### ➭ Project Reviewers
@@ -140,18 +149,169 @@ The project evaluators, responsible for the in-depth review and approval of impo
 
 #### ➭ Retroplanning
 
+![image retroplanning](retroplanning.png)
+
 #### ➭ Milestones
+
+| Milestone | Deadline|
+|---|---|
+| Functional Specifications v1 | 01/24/2024 |
+| Technical Specifications v1 | ../../2024 |
+| Test Plan | ../../2024 |
+| Working Prototype | ../../2024 |
+| Oral Presentation | 02/29/2024 |
 
 #### ➭ Resources/Financial plan
 
+##### ★ Human Resources
+
+The team is made up of the **7 members** mentioned above in [Project roles](#-project-roles)
+
+The project lasts **8 weeks**:
+
+In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
+This means we have **686 manhours**.
+
+##### ★ Development Tools
+
+- Use of the **C language** with the **GCC compiler**.
+- Code editing with **Visual Studio Code**.
+
+Two different machines are available:
+- **MacBook Air 13″** running on **macOS Venture**.
+- **ThinkBook 14 G4 IAP** running on **Windows 11**.
+
+##### ★ Associated costs
+
+No special costs are anticipated, as all materials are provided by the school.
+
 #### ➭ Assumptions/Constraints
+
+##### ★ Team member availability
+
+The team will be available throughout the project to work during assigned hours.
+
+##### ★ Time constraints
+
+Deadlines are in place for the delivery of documents ([Deliverables](#-deliverables)) such as Functional Specifications, Technical Specifications and the Test Plan. 
+In addition, deadlines are set for the overall completion of the project. These time constraints must be carefully respected to ensure steady progress and timely delivery of deliverables.
 
 ## C. Functional Requirements
 
-### 1. Assembly Language
+### ?. 
+
+### ?. Assembly Language
 
 #### ➭ Instructions
 
-#### ➭ Operations
+**<u>1. Storing an immediate value into a register:</u>**
+
+- **Syntax:** **`MOV immediate_value, destination_register`**
+- **Example:** **`MOV 42, R1`**
+  
+**<u>2. Copying the value of a register into another register:</u>**
+
+- **Syntax:** **`MOV source_register, destination_register`**
+- **Example:** **`MOV R1, R2`**  
+  
+**<u>3. Reading the value of the memory at the address contained by a register and storing it into another register:</u>**
+
+- **Syntax:** **`LOAD address_register, destination_register`**
+- **Example:** **`LOAD R3, R4`**
+
+**<u>4. Storing the value of a register into memory at the address contained by another register:</u>**
+
+- **Syntax:** **`STOR source_register, address_register`**
+- **Example:** **`STOR R2, R5`**
+
+**<u>5. Comparing the content of registers:</u>**
+
+- **Syntax:** **`COMP source_register1, source_register2`**
+- **Example:** **`COMP R1, R2`**
+
+**<u>6. Jumping unconditionally to a label:</u>**
+
+- **Syntax:** **`JUMP label`**
+- **Example:** **`JUMP start_loop`**
+
+**<u>7. Jumping conditionally to a label:</u>**
+
+- **Syntax:** **`JUMP_IF condition, label`**
+- **Example:** **`JUMP_IF NOT_ZERO, end_loop`**
+
+**<u>8. Calling a subroutine:</u>**
+
+- **Syntax:** **`CALL subroutine_label`**
+- **Example:** **`CALL my_subroutine`**
+
+**<u>9. Returning from a subroutine:</u>**
+
+- **Syntax:** **`RETURN`**
+- **Example:** **`RETURN`**
+
+**<u>10. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:</u>**
+
+- **Addition:** **`ADD source_register1, source_register2, destination_register`**
+- **Subtraction:** **`SUB source_register1, source_register2, destination_register`**
+- **Multiplication:** **`MUL source_register1, source_register2, destination_register`**
+- **Division:** **`DIV source_register1, source_register2, destination_register`**
+
+**<u>11. The 4 basic logical operations: OR, AND, XOR, and NOT:</u>**
+
+- **OR operation:** **`OR source_register1, source_register2, destination_register`**
+- **AND operation:** **`AND source_register1, source_register2, destination_register`**
+- **XOR operation:** **`XOR source_register1, source_register2, destination_register`**
+- **NOT operation:** **`NOT source_register, destination_register`**
+
+**<u>12. Ending a program:</u>**
+
+- **HLT:** **`HLT`**
+
+**➭ Note**
+
+- **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
+- **Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).**
+- **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
+- **The exact syntax and details may vary based on specific design choices and requirements for your processor architecture. This is a simplified example to get you started.**
+
+#### ➭ Example of use
+
+**<u>Assembly program to add two numbers and store the result</u>**
+
+```
+; Memory layout
+; Memory location 100: First operand
+; Memory location 101: Second operand
+; Memory location 102: Result
+
+; Start of the program
+
+LOAD R1, 100       ; Load the first operand into register R1
+LOAD 101, R2       ; Load the second operand into register R2
+
+ADD R1, R2, R3     ; Add the contents of R1 and R2, store result in R3
+
+STOR R3, 102       ; Store the result in memory location 102
+
+JUMP end_program   ; Jump to the end of the program
+
+end_program:
+HLT                ; Halt the program
+
+
+; Subroutine to perform multiplication
+
+my_subroutine
+
+LOAD R4, 100       ; Load the first operand into register R4
+LOAD R5, 101       ; Load the second operand into register R5
+MUL R4, R5, R6     ; Multiply the contents of R4 and R5, store result in R6
+
+STOR R6, 102       ; Store the result in memory location 102
+
+RETURN             ; Return from the subroutine
+```
+
+### ?. AAA
 
 ## D. Non-Functional Requirements
