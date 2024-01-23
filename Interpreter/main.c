@@ -24,6 +24,9 @@ void executeInstruction(instructions instruction, int operand1, int operand2)
         registersArray[operand2] = registersArray[operand1];
         registersArray[operand1] = NULL;
         break;
+    case HLT:
+        exit(0);
+        break;
     default:
         printf("Unknown instruction\n");
         break;
@@ -43,9 +46,12 @@ int main()
 
     printf("\n");
 
+
     executeInstruction(MOV_REG, R1, R2);
     printf("R1 : %d\n", registersArray[R1]);
     printf("R2 : %d\n", registersArray[R2]);
+
+    executeInstruction(HLT, 0, 0);
 
     return 0;
 }
