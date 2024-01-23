@@ -6,7 +6,7 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| |
+|Last Updated| 02/22/2024 |
 |Status| Draft|
 
 
@@ -18,6 +18,7 @@
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
 |1| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|1| 02/22/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
@@ -35,6 +36,11 @@
   - [3.1 Test Objectives](#31-test-objectives)
   - [3.2 Testing Environment](#32-testing-environment)
   - [3.3 Test Principles](#33-test-principles)
+  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
+    - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
+    - [3.4.2 Identify Testing Type](#342-identify-testing-type)
+    - [3.4.3 Document Risk & Issues](#343-document-risk--issues)
+    - 
 
 ## 1. GLOSSARY
 <br>
@@ -89,7 +95,7 @@ This collaborative approach ensures that the test plan not only meets technical 
 - ### 3.1 Test Objectives
   - This test plan is focused on rigorously assessing the virtual processor and interpreter in our project, emphasizing functionality, reliability, and correctness. We aim to validate precise execution of assembly code, assess the reliability of the virtual processor under diverse scenarios, and ensure accurate results from the interpreter. Additionally, we prioritize educational value, providing a testing framework aligned with learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides ensure accessibility for a broad audience. This testing approach aims not only to validate technical robustness but also to highlight the project's educational merits in the realm of low-level programming.
 
-- ### 3.2 Testing Environment
+- ### 3.2 Test Environment
   - **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
@@ -127,7 +133,13 @@ This collaborative approach ensures that the test plan not only meets technical 
 
 - ## 3.4 Scope and Levels of Testing
     - ### 3.4.1 Define Scope of Testing
+      - #### In scope 
+        - we will be testing each part of the software, each instruction.
+      - #### Out scope
+        -
     - ### 3.4.2 Identify Testing Type
+      - #### Agile testing
+        we are going to use an agile testing strategy so as soon as new versions are realesed by the development team we will be able to test it as soon as possible and give a feedback in short delays.
     - ### 3.4.3 Document Risk & Issues
     - ### 3.4.4 Create Test Logistics
     -  
@@ -135,10 +147,39 @@ This collaborative approach ensures that the test plan not only meets technical 
   - ### 4.1 Entry and Exit Criteria
   - ### 4.2 Test Cycles
   - ### 4.3 Validation and Defect Management
+    - The defects will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "Bug". 
+    - A template for those tickets has been created and is stored in ![bugReport.yml]
+
+    - When a bug is found, a bug report will be created.
+They will also be created via tickets on GitHub Issues so that it is easy for the development team to see when a bug has been found.
+
+When an update has been made to fix a bug, the QA will be notified via a comment on the ticket by the person who tried to resolve it.
+
+
+
+The people in charge of resolving the bug will be set as assignees.
+
+
+
+    
+    - It is the responsibility of the tester to open the defects, link them to the corresponding test case, assign an initial severity, retest and close the defect; it is the responsibility of the Project Manager to review the severity of the defects and facilitate with the technical team the fix and its implementation, communicate with QA when the test can continue or should be halt, request the QA's to retest, and modify status as the defect progresses through the cycle; it is the responsibility of the technical team to review the bug-reports on a daily basis, ask for details if necessary, fix the defect, communicate to the Project Manager the fix is done.
+    
+    - Defects found during the Testing will be categorized according to the bug-reporting tool implemented directly on Github issues and the categories are:
+  
+      | Severity | Impact |
+      |---|---|
+      |1 (Critical) | - This bug is critical enough to crash the system, cause file corruption, or cause potential data loss. <br> - It causes an abnormal return to the operating system (crash or a system failure message appears). <br> - It causes the application to hang and requires re-booting the system.|
+      |2 (High) | -It causes a lack of vital program functionality with workaround.|
+      |3 (Medium) |- This Bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
+      |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
+
+     
   - ### 4.4 Test Metrics
   - ### 4.5 Defect tracking & Reporting
+    - ![Defect tracking reporting](.\Img\Defect_tracking_reporting.png)
   - 
 ## 5. TEST MANAGEMENT PROCESS
+  - ### 5.1 Test Managment Tools
 
 ## Test Plan approval
 
