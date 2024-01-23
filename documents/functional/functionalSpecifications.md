@@ -156,7 +156,7 @@ The project reviewers, responsible for the in-depth review and approval of impor
 
 #### ➭ Retroplanning
 
-![image retroplanning](retroplanning.png)
+![image retroplanning](documents/functional/image/retroplanning.png)
 
 #### ➭ Milestones
 
