@@ -35,6 +35,6 @@ typedef enum
 
 // Cpu function prototypes
 void initializeCpu();
-void executeInstruction();
+void executeInstruction(instructions instruction, int operand1, int operand2);
 
 #endif // CPU_H
