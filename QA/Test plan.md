@@ -47,10 +47,19 @@
 
 |Term|Definition|Source|
 |---|---|---|
-C |C is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs.| [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
-Virtual Processor | A virtual processor is a representation of a physical processor core to the operating system of a logical partition that uses shared processors.| [IBM](https://www.ibm.com/docs/en/power8/8408-44E?topic=processors-virtual)
-Assembly language| In computer programming, assembly language, often referred to simply as assembly and commonly abbreviated as ASM or asm, is any low-level programming language with a very strong correspondence between the instructions in the language and the architecture's machine code instructions.| [Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)
-IDE: Integrated Development Environment | An integrated development environment is a software application that provides comprehensive facilities for software development. An IDE normally consists of at least a source-code editor, build automation tools, and a debugger.| [Wikipedia](https://en.wikipedia.org/wiki/Integrated_development_environment)
+|C |C is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs.| [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))|
+|Virtual Processor | A virtual processor is a representation of a physical processor core to the operating system of a logical partition that uses shared processors.| [IBM](https://www.ibm.com/docs/en/power8/8408-44E?topic=processors-virtual)|
+|Assembly language| In computer programming, assembly language, often referred to simply as assembly and commonly abbreviated as ASM or asm, is any low-level programming language with a very strong correspondence between the instructions in the language and the architecture's machine code instructions.| [Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)|
+| Operating Sytem | An operating system (OS) is system software that manages computer hardware and software resources, and provides common services for computer programs.| [Wikipedia](https://en.wikipedia.org/wiki/Operating_system)|
+|IDE: Integrated Development Environment | An integrated development environment is a software application that provides comprehensive facilities for software development. An IDE normally consists of at least a source-code editor, build automation tools, and a debugger. (Visual Studio Code)| [Wikipedia](https://en.wikipedia.org/wiki/Integrated_development_environment)|
+|Compiler GCC|The GNU Compiler Collection is an optimizing compiler produced by the GNU Project supporting various programming languages, hardware architectures and operating systems. The Free Software Foundation distributes GCC as free software under the GNU General Public License.| [Wikipedia](https://en.wikipedia.org/wiki/GNU_Compiler_Collection)|
+|Test case|In software engineering, a test case is a specification of the inputs, execution conditions, testing procedure, and expected results that define a single test to be executed to achieve a particular software testing objective, such as to exercise a particular program path or to verify compliance with a specific requirement.|[Wikipedia](https://en.wikipedia.org/wiki/Test_case)| 
+| Project Manager | A project manager is a professional in the field of project management. Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish; regardless of industry.| [Wikipedia](https://en.wikipedia.org/wiki/Project_manager)|
+| Program Manager | He is a strategic project-management professional whose job is to help oversee and coordinate the various projects, products, and other strategic initiatives across an organization.| [ProductPlan](https://www.productplan.com/glossary/program-manager/#:~:text=Definition%3A%20A%20program%20manager%20is,strategic%20initiatives%20across%20an%20organization.) |
+| Technical Lead | He oversees the technical aspects of a software team by making architectural and design decisions, guiding team members in technical matters, and supervising system modifications. |[Ironhack](https://www.ironhack.com/gb/blog/what-is-a-tech-lead#:~:text=A%20technical%20lead%20%E2%80%93%20or%20tech,matters%2C%20and%20supervising%20system%20modifications.)|
+|Software Engineer | He apply engineering principles and knowledge of programming languages to build software solutions for end users. Software engineers design and develop computer games, business applications, operating systems, network control systems, and middleware—to name just a few of the many career paths available.| [Michigan Technological University](https://www.mtu.edu/cs/undergraduate/software/what/#:~:text=of%20software%20applications.-,Software%20engineers%20apply%20engineering%20principles%20and%20knowledge%20of%20programming%20languages,the%20many%20career%20paths%20available.)|
+| QA (Quality Assurance) |A QA engineer creates tests that identify issues with software before a product launch. These tests entail other tasks such as developing and running new tests and reporting their results to stakeholders, who will collaborate to fix program bugs or problems.| [Workable](https://resources.workable.com/qa-engineer-job-description#:~:text=What%20does%20a%20Quality%20Assurance,fix%20program%20bugs%20or%20problems.)|
+
 
 <br>
 
@@ -123,13 +132,18 @@ This collaborative approach ensures that the test plan not only meets technical 
   
     - Tests will be focused on meeting the objectives and quality 
     
+  <br>
     - Testing processes will be well defined, yet flexible, with the ability to change as needed. 
     
+  <br>  
     - There will be common, consistent procedures for all teams supporting testing activities
 
+  <br>
     - Testing activities will build upon previous stages to avoid redundancy or duplication of effort
 
+  <br>
     - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
+
 
 - ## 3.4 Scope and Levels of Testing
     - ### 3.4.1 Define Scope of Testing
@@ -145,26 +159,20 @@ This collaborative approach ensures that the test plan not only meets technical 
     -  
 ## 4. EXECUTION STRATEGY
   - ### 4.1 Entry and Exit Criteria
-  - ### 4.2 Test Cycles
-  - ### 4.3 Validation and Defect Management
-    - The defects will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "Bug". 
-    - A template for those tickets has been created and is stored in ![bugReport.yml]
-
-    - When a bug is found, a bug report will be created.
-They will also be created via tickets on GitHub Issues so that it is easy for the development team to see when a bug has been found.
-
-When an update has been made to fix a bug, the QA will be notified via a comment on the ticket by the person who tried to resolve it.
-
-
-
-The people in charge of resolving the bug will be set as assignees.
-
-
-
-    
-    - It is the responsibility of the tester to open the defects, link them to the corresponding test case, assign an initial severity, retest and close the defect; it is the responsibility of the Project Manager to review the severity of the defects and facilitate with the technical team the fix and its implementation, communicate with QA when the test can continue or should be halt, request the QA's to retest, and modify status as the defect progresses through the cycle; it is the responsibility of the technical team to review the bug-reports on a daily basis, ask for details if necessary, fix the defect, communicate to the Project Manager the fix is done.
-    
-    - Defects found during the Testing will be categorized according to the bug-reporting tool implemented directly on Github issues and the categories are:
+    - 
+  - ### 4.2 Test Cases
+  - ### 4.3 Validation and bug Report Management
+    - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
+  <br>
+    - A template for those tickets has been created : 
+      ![bugReport.yml](Img/Bugreport.png) 
+    - It is QA's responsibility to open the bug-report, link them to the corresponding test case, assign an initial severity, retest and close the bug;
+  <br> 
+    - It is Project Manager's responsibility of the  to review the severity of the bugs and facilitate with the technical team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle; 
+  <br>
+    - It is Technical team's responsibility to review the bug-report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager the fix is done.
+  <br>
+    - Bugs found during the Testing will be categorized according to the bug-reporting template implemented directly on Github issues and the categories are:
   
       | Severity | Impact |
       |---|---|
@@ -179,7 +187,26 @@ The people in charge of resolving the bug will be set as assignees.
     - ![Defect tracking reporting](.\Img\Defect_tracking_reporting.png)
   - 
 ## 5. TEST MANAGEMENT PROCESS
-  - ### 5.1 Test Managment Tools
+  - ### 5.1 Test Managment Tool
+    - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the testcase.yml tool.
+  <br>
+    
+    - Project specific folder structure will be created in Github issues to manage the status of this project.
+  <br>  
+    - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
+  <br>
+    - During the Test Design phase, all test cases are written directly with this templates: [testcase.yml](Templates/testCase.yml). Any change to the test case will be directly updated in Github issues. 
+  <br>  
+    - Each Tester will directly access their respective assigned test cases and update the status of each executed step in Github issues.
+  <br>  
+    - Any bug encountered will be raised in Github issues to the particular Test case.
+  <br>
+    - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
+  <br>
+    - Various reports can be generated from Github issues to provide status of Test execution. For
+    example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity
+    wise defects etc.
+
 
 ## Test Plan approval
 
