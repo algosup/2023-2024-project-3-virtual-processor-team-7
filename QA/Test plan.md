@@ -150,16 +150,16 @@
 
 
 - ## 3.4 Scope and Levels of Testing
-    - ### 3.4.1 Define Scope of Testing
+    - ### ➭ Define Scope of Testing
       - #### In scope 
         - we will be testing each part of the software, each instruction.
       - #### Out scope
         -
-    - ### 3.4.2 Identify Testing Type
+    - ### ➭ Identify Testing Type
       - #### Agile testing
         we are going to use an agile testing strategy so as soon as new versions are realesed by the development team we will be able to test it as soon as possible and give a feedback in short delays.
-    - ### 3.4.3 Document Risk & Issues
-    - ### 3.4.4 Create Test Logistics
+    - ### ➭ Document Risk & Issues
+    - ### ➭ Create Test Logistics
     -  
 ## 4. EXECUTION STRATEGY
   - ### 4.1 Entry and Exit Criteria
