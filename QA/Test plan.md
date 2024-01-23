@@ -81,7 +81,7 @@
 
   - The primary audience for this test plan includes project team members, each with distinct roles:
 
-      - **Project Team Members:**
+      - **QA's Members:**
 
         - Responsible for executing tasks outlined in this document.
         - Contribute insights and recommendations regarding the test plan.
@@ -96,9 +96,9 @@
 
           - Ensures the test plan and deliverables are consistent with the project's design.
           - Provides the necessary testing environment.
-          - Adheres to procedures related to defect fixes.programming.
+          - Adheres to procedures related to bug fixes programming.
 
-This collaborative approach ensures that the test plan not only meets technical requirements but also aligns with overall project goals.
+  This collaborative approach ensures that the test plan not only meets technical requirements but also aligns with overall project goals.
 
 ## 3. TEST STRATEGY
 - ### 3.1 Test Objectives
@@ -133,15 +133,19 @@ This collaborative approach ensures that the test plan not only meets technical 
     - Tests will be focused on meeting the objectives and quality 
     
   <br>
+
     - Testing processes will be well defined, yet flexible, with the ability to change as needed. 
     
   <br>  
+
     - There will be common, consistent procedures for all teams supporting testing activities
 
   <br>
+
     - Testing activities will build upon previous stages to avoid redundancy or duplication of effort
 
   <br>
+
     - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
 
 
@@ -183,8 +187,8 @@ This collaborative approach ensures that the test plan not only meets technical 
 
      
   - ### 4.4 Test Metrics
-  - ### 4.5 Defect tracking & Reporting
-    - ![Defect tracking reporting](.\Img\Defect_tracking_reporting.png)
+  - ### 4.5 Bug tracking & Reporting
+    - ![Bug tracking reporting](.\Img\bug_tracking_reporting.png)
   - 
 ## 5. TEST MANAGEMENT PROCESS
   - ### 5.1 Test Managment Tool
@@ -203,7 +207,7 @@ This collaborative approach ensures that the test plan not only meets technical 
   <br>
     - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
   <br>
-    - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise defects etc.
+    - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
 
 
 ## Test Plan approval
