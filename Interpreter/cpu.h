@@ -3,7 +3,7 @@
 #define CPU_H
 
 //enum for the instructions
-enum instructions{
+typedef enum{
     MOV_IMM = 0,
     MOV_REG,
     LOAD,
@@ -22,16 +22,15 @@ enum instructions{
     XOR,
     NOT,
     HLT
-};
+}instructions;
+
 
 //enum for registers
-enum registers{
-    R0,
+typedef enum {
     R1,
     R2,
     R3
-    //Other registers may be added
-};
+}registers;
 
 // Cpu function prototypes
 void initializeCpu();
