@@ -203,9 +203,7 @@ This collaborative approach ensures that the test plan not only meets technical 
   <br>
     - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
   <br>
-    - Various reports can be generated from Github issues to provide status of Test execution. For
-    example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity
-    wise defects etc.
+    - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise defects etc.
 
 
 ## Test Plan approval
