@@ -25,6 +25,12 @@ void executeInstruction(instructions instruction, int operand1, int operand2)
     case HLT:
         exit(0);
         break;
+    case ADD:
+        registersArray[R3] = registersArray[operand2] += registersArray[operand1];
+        break;
+    case SUB:
+        registersArray[R3] = registersArray[operand2] -= registersArray[operand1];
+        break;
     default:
         printf("Unknown instruction: %d\n", instruction);
         break;
@@ -43,6 +49,46 @@ int main()
     printf("R1: %d\n", registersArray[R1]);
     printf("R2: %d\n", registersArray[R2]);
     printf("R3: %d\n", registersArray[R3]);
+
+    //-------------------------------------------------
+
+    executeInstruction(MOV_IMM, 42, R1);
+
+    printf("R1: %d\n", registersArray[R1]);
+    printf("R2: %d\n", registersArray[R2]);
+    printf("R3: %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    executeInstruction(MOV_REG, R1, R2);
+    printf("R1 : %d\n", registersArray[R1]);
+    printf("R2 : %d\n", registersArray[R2]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    executeInstruction(ADD, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+    executeInstruction(SUB, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+
+
+    //-------------------------------------------------
+
+    executeInstruction(HLT, 0, 0);
+
 
     return 0;
 }
