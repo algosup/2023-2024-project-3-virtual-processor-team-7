@@ -249,7 +249,6 @@
   - ### 5.1 Test Managment Tool
     - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.
   <br>
-    
     - Project specific folder structure will be created in Github to manage the status of this project.
   <br>  
     - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
