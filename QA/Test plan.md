@@ -177,7 +177,7 @@
   - ### 4.1 Criteria
     - #### 4.1.1 Suspension Criteria
       - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
-       ![SuspensionCriteria](Images\suspensionCriteria.png)
+       ![SuspensionCriteria](Images/suspensionCriteria.png)
        
     
     - #### 4.1.2 Entry Criteria and Exit Criteria
@@ -188,7 +188,7 @@
         - **The successful completion of any prerequisite testing phases.** 
     
         Meeting entry criteria helps ensure that testing can proceed efficiently and that the results obtained are reliable.
-      ![exitentry](Images\entryExitCriteria.png)
+      ![exitentry](Images/entryExitCriteria.png)
       - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
         - **Achieving a certain level of test coverage** 
         - **The successful execution of test cases, the resolution of critical bugs** 
@@ -213,32 +213,33 @@
   
   - ### 4.3 Test Cases
      To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress. It also serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented.
-<br>
-  A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
-    ![test_case](Images\test_case.png)
+    <br>
+    
+    A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
+    ![test_case](Images/test_case.png)
       - To enhance clarity, each test case will be meticulously crafted and documented within GitHub Issues, designated with the label "Test Case." 
       - This ensures that every team member can readily comprehend the testing requirements. 
       - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
   
   - ### 4.4 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
-  <br>
+    <br>
     - A template for those tickets has been created : 
-      ![bugReport.yml](Images\bug_report.png) 
+      ![bugReport.yml](Images/bug_report.png) 
     - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug;
-  <br> 
+    <br> 
     - It is Project Manager's responsibility to review the severity of the bugs and facilitate with the technical team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle; 
-  <br>
+    <br>
     - It is Technical team's responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager the fix is done.
-  <br>
+    <br>
     - Bug found during the testing will be categorized according to the bug reporting template implemented directly on Github issues and the categories are:
   
-      | Severity | Impact |
-      |---|---|
-      |1 (Critical) | - This bug is critical enough to crash the system, cause file corruption, or cause potential data loss. <br> - It causes an abnormal return to the operating system (crash or a system failure message appears). <br> - It causes the application to hang and requires re-booting the system.|
-      |2 (High) | -It causes a lack of vital program functionality with workaround.|
-      |3 (Medium) |- This Bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
-      |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
+    | Severity | Impact |
+    |---|---|
+    |1 (Critical) | - This bug is critical enough to crash the system, cause file corruption, or cause potential data loss. <br> - It causes an abnormal return to the operating system (crash or a system failure message appears). <br> - It causes the application to hang and requires re-booting the system.|
+    |2 (High) | -It causes a lack of vital program functionality with workaround.|
+    |3 (Medium) |- This Bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
+    |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
 
   
   - ### 4.5 Test Metrics
@@ -249,15 +250,14 @@
   - ### 5.1 Test Managment Tool
     - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.
   <br>
-    
     - Project specific folder structure will be created in Github to manage the status of this project.
-  <br>  
+  <br> 
     - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
   <br>
     - During the Test Design phase, all test cases are written directly with this templates: [testcase.yml](). Any change to the test case will be directly updated in Github issues. 
-  <br>  
+  <br>
     - Each Tester will directly access their respective assigned test cases and update the status of each executed step in Github issues.
-  <br>  
+  <br>
     - Any bug encountered will be raised in Github issues to the particular Test case.
   <br>
     - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
