@@ -6,7 +6,7 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| 01/24/2024 |
+|Last Updated| 01/25/2024 |
 |Status| Draft|
 
 
@@ -18,8 +18,9 @@
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
 |1| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|1| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.1| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.2| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.3| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
@@ -30,7 +31,7 @@
 # Table of Contents
 - [1. GLOSSARY](#1-glossary)
 - [2. INTRODUCTION](#1-introduction)
-  - [2.1 Purpose](#21-purpose)
+  - [2.1 Purpose](#2.1-purpose)
   - [2.2 Project Overview](#22-project-overview)
   - [2.3 Audience](#23-audience)
 - [3. TEST STRATEGY](#3-test-strategy)
@@ -41,7 +42,17 @@
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
     - [3.4.3 Document Risk & Issues](#343-document-risk--issues)
-    - 
+- [4. EXECUTION STRATEGY](#4-execution-strategy)
+  - [4.1 Criteria](#41-criteria)
+    - [4.1.1 Suspension Criteria](#411-suspension-criteria)
+    - [4.1.2 Entry Criteria and Exit Criteria](#412-entry-criteria-and-exit-criteria)
+  - [4.2 Github Issues](#42-github-issues)
+  - [4.3 Test Cases](#43-test-cases)
+  - [4.4 Validation and Bug Report Managment](#44-validation-and-bug-report-management)
+  - [4.5 Test Metrics](#45-test-metrics)
+  - [4.6 Bug Tracking & Reporting](#46-bug-tracking--reporting)
+- [5. TEST MANAGMENT PROCESS](#5-test-management-process)
+  - [5.1 Test Managment Tool](#51-test-managment-tool)
 
 ## 1. GLOSSARY
 <br>
@@ -163,7 +174,7 @@
     - ### 3.4.4 Create Test Logistics
     -  
 ## 4. EXECUTION STRATEGY
-  - ### 4.1 Entry and Exit Criteria
+  - ### 4.1 Criteria
     - #### 4.1.1 Suspension Criteria
       - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
        ![SuspensionCriteria](Images\suspensionCriteria.png)
@@ -200,7 +211,7 @@
   <br>
 
   
-  - ### 4.2 Test Cases
+  - ### 4.3 Test Cases
      To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress. It also serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented.
 <br>
   A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
@@ -209,7 +220,7 @@
       - This ensures that every team member can readily comprehend the testing requirements. 
       - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
   
-  - ### 4.3 Validation and Bug Report Management
+  - ### 4.4 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
     - A template for those tickets has been created : 
@@ -230,8 +241,8 @@
       |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
 
   
-  - ### 4.4 Test Metrics
-  - ### 4.5 Bug tracking & Reporting
+  - ### 4.5 Test Metrics
+  - ### 4.6 Bug tracking & Reporting
      ![Bug tracking reporting](Images/Defect_tracking_reporting.png)
    
 ## 5. TEST MANAGEMENT PROCESS
