@@ -252,16 +252,6 @@ In each headers file we will write the prototype of the functions you used.
 |-- 2023-2024-project-3-virtual-processor-team-7 (root)
 |   |-- interpreter
 |   |   |-- headers
-|   |   |   |-- arithm.h
-|   |   |   |-- compare.h
-|   |   |   |-- copy.h
-|   |   |   |-- cpu.h
-|   |   |   |-- jump.h
-|   |   |   |-- load.h
-|   |   |   |-- logic.h
-|   |   |   |-- subroutine.h
-|   |   |   |-- storeAddr.h
-|   |   |   |-- storeImm.h
 |   |   |-- main.c
 |   |-- documents
 |   |   |-- functional
@@ -291,18 +281,6 @@ In each headers file we will write the prototype of the functions you used.
 |   |   |   |-- testCases.yml
 |   |   |-- testPlan.md
 |   |-- test
-|   |   |-- testArithm.asm
-|   |   |-- testSubroutine.asm
-|   |   |-- testCompare.asm
-|   |   |-- testCopy.asm
-|   |   |-- testCpu.asm
-|   |   |-- testJumpCond.asm
-|   |   |-- testJumpUn.asm
-|   |   |-- testLoad.asm
-|   |   |-- testLogic.asm
-|   |   |-- testStoreAddr.asm
-|   |   |-- testStoreImm.asm
-|   |   |-- testMain.asm
 |   |-- .gitignore
 |   |-- README.md
 |   |-- LICENSE
