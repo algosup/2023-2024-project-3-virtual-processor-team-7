@@ -224,14 +224,17 @@
   - ### 4.4 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
     <br>
-    - A template for those tickets has been created : 
-      ![bugReport.yml](Images/bug_report.png) 
-    - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug;
-    <br> 
-    - It is Project Manager's responsibility to review the severity of the bugs and facilitate with the technical team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle; 
-    <br>
+    
+    - A template for those tickets has been created :
+
+      ![bugReport.yml](Images/bug_report.png)
+
+    - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug>.
+      
+    - It is Project Manager's responsibility to review the severity of the bugs and facilitate with the technical team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle.
+      
     - It is Technical team's responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager the fix is done.
-    <br>
+
     - Bug found during the testing will be categorized according to the bug reporting template implemented directly on Github issues and the categories are:
   
     | Severity | Impact |
@@ -248,20 +251,27 @@
    
 ## 5. TEST MANAGEMENT PROCESS
   - ### 5.1 Test Managment Tool
-    - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.
-  <br>
+    - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.   
+    <br>
+    
     - Project specific folder structure will be created in Github to manage the status of this project.
-  <br> 
+    <br>
+
     - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
-  <br>
+    <br>
+    
     - During the Test Design phase, all test cases are written directly with this templates: [testcase.yml](). Any change to the test case will be directly updated in Github issues. 
-  <br>
+    <br>
+    
     - Each Tester will directly access their respective assigned test cases and update the status of each executed step in Github issues.
-  <br>
+    <br>
+    
     - Any bug encountered will be raised in Github issues to the particular Test case.
-  <br>
+    <br>
+    
     - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
-  <br>
+    <br>
+    
     - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
 
 
