@@ -30,8 +30,8 @@
 
 # Table of Contents
 - [1. GLOSSARY](#1-glossary)
-- [2. INTRODUCTION](#1-introduction)
-  - [2.1 Purpose](#2.1-purpose)
+- [2. INTRODUCTION](#2-introduction)
+  - [2.1 Purpose](#21-purpose)
   - [2.2 Project Overview](#22-project-overview)
   - [2.3 Audience](#23-audience)
 - [3. TEST STRATEGY](#3-test-strategy)
