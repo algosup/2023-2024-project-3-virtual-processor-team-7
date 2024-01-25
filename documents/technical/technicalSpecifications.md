@@ -143,7 +143,7 @@ Each assembly code will test a specific part of the project for instance one ass
 
 ### Folder Structure
 
-In each headers file we will write the prototype of the functions you used.
+All in **bold** are folders.
 
 **`/interpreter`** Contains all the files related to the interpreter.
 
@@ -151,7 +151,7 @@ In each headers file we will write the prototype of the functions you used.
 
 **`interpreter/headers`** Contains all the header files such as :
 
-`cpu.h` Header file for the functions related to the Central Processing Unit(CPU).
+<!-- `cpu.h` Header file for the functions related to the Central Processing Unit(CPU).
 
 `storeImm.h` Header file for the functions related to store an immediate value in a register.
 
@@ -169,7 +169,7 @@ In each headers file we will write the prototype of the functions you used.
 
 `arithm.h` Header file for the functions related to arithmetic operations.
 
-`logic.h` Header file for the functions related to logical operations.
+`logic.h` Header file for the functions related to logical operations. -->
 
 **`/documents`** Contains all the documents related to the project in subfolders such as :
 
@@ -189,7 +189,7 @@ In each headers file we will write the prototype of the functions you used.
 
 `notion.md` Contains all the information about the project such as the KPI's, the gantt chart, the task list and the weekly reports.
 
-**`documents/management/images`**Contains all the images for the management documents.
+**`documents/management/images`** Contains all the images for the management documents.
 
 **`documents/management/WeeklyReport`** Contains all the weekly reports such as :
 
