@@ -6,10 +6,7 @@
 <summary> 📖 Table of content 📖 </summary>
 
 - [Functional Specifications | Virtual Processor Team 7](#functional-specifications--virtual-processor-team-7)
-  - [A. Document Control](#a-document-control)
-    - [1. Document Information](#1-document-information)
-    - [2. Document Approval](#2-document-approval)
-  - [B. Introduction](#b-introduction)
+  - [I. Introduction](#i-introduction)
     - [1. Glossary](#1-glossary)
     - [2. Project Overview](#2-project-overview)
     - [3. Project Definition](#3-project-definition)
@@ -19,7 +16,6 @@
       - [➭ Deliverables](#-deliverables)
     - [4. Project Organisation](#4-project-organisation)
       - [➭ Stakeholders](#-stakeholders)
-      - [➭ Project Roles](#-project-roles)
       - [➭ Project Reviewers](#-project-reviewers)
     - [5. Project Plan](#5-project-plan)
       - [➭ Retroplanning](#-retroplanning)
@@ -31,60 +27,60 @@
       - [➭ Assumptions/Constraints](#-assumptionsconstraints)
         - [★ Team member availability](#-team-member-availability)
         - [★ Time constraints](#-time-constraints)
-  - [C. Functional Requirements](#c-functional-requirements)
+  - [II. Functional Requirements](#ii-functional-requirements)
     - [1. System Capabilities](#1-system-capabilities)
       - [➭ 1.1 Data Handling:](#-11-data-handling)
       - [➭ 1.2 Calculations:](#-12-calculations)
       - [➭ 1.3 Branching:](#-13-branching)
       - [➭ 1.4 Platform Independence:](#-14-platform-independence)
+        - [★ C standard Libraries](#-c-standard-libraries)
       - [➭ 1.5 Error Handling and Detection:](#-15-error-handling-and-detection)
     - [2. Assembly Language](#2-assembly-language)
+      - [➭ Language Design](#-language-design)
       - [➭ Instructions](#-instructions)
+        - [★ 1. Storing an immediate value into a register:](#-1-storing-an-immediate-value-into-a-register)
+        - [★ 2. Copying the value of a register into another register:](#-2-copying-the-value-of-a-register-into-another-register)
+        - [★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:](#-3-reading-the-value-of-the-memory-at-the-address-contained-by-a-register-and-storing-it-into-another-register)
+        - [★ 4. Storing the value of a register into memory at the address contained by another register:](#-4-storing-the-value-of-a-register-into-memory-at-the-address-contained-by-another-register)
+        - [★ 5. Comparing the content of registers:](#-5-comparing-the-content-of-registers)
+        - [★ 6. Jumping unconditionally to a label:](#-6-jumping-unconditionally-to-a-label)
+        - [★ 7. Jumping conditionally to a label:](#-7-jumping-conditionally-to-a-label)
+        - [★ 8. Jumping conditionally to a label](#-8-jumping-conditionally-to-a-label)
+        - [★ 9. Calling a subroutine:](#-9-calling-a-subroutine)
+        - [★ 10. Returning from a subroutine:](#-10-returning-from-a-subroutine)
+        - [★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:](#-11-the-4-basic-arithmetic-operations-addition-subtraction-multiplication-and-division)
+        - [★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:](#-12-the-4-basic-logical-operations-or-and-xor-and-not)
+        - [★ 13. Ending a program](#-13-ending-a-program)
       - [➭ Example of use](#-example-of-use)
-  - [D. Non-Functional Requirements](#d-non-functional-requirements)
+      - [➭ Machine Code](#-machine-code)
+  - [III. Non-Functional Requirements](#iii-non-functional-requirements)
+      - [➭ Performance:](#-performance)
+      - [➭ Portability:](#-portability)
+      - [➭ Reliability:](#-reliability)
+      - [➭ Scalability:](#-scalability)
 
 </details>
 
 ---
 
-## A. Document Control
-
-### 1. Document Information
-
-| Document ID | Document # 01 |
-|---|---|
-| Document Owner | Gaël MALVAR |
-| Issue date | 01/22/2024 |
-| Last Issue Date | 01/23/2024 |
-| Document Name | Functional Specification|
-
-### 2. Document Approval
-
-| Role | Name | Signature | Date |
-|---|---|---|---|
-| Project Manager | Mattéo LEFIN| ⌛ | ../../.. |
-| Program Manager | Gaël MALVAR | ⌛ | ../../.. |
-| Tech Lead | Robin DEBRY | ⌛ | ../../.. |
-| Software Engineers | David CUAHONTE CUEVAS | ⌛ | ../../.. |
-| Software Engineers | Camille GAYAT  | ⌛ | ../../.. |
-| Quality Assurance | Abderrazaq MAKRAN | ⌛ | ../../.. |
-| Quality Assurance | Raphaël PROUDHON | ⌛ | ../../.. |
-
-## B. Introduction
+## I. Introduction
 
 ### 1. Glossary
 
 | Terms used | Definition |
 |---|---|
-| Virtual Processor | |
-| GCC |  |
-| IDE |  |
-| Visual Studio Code (VS code) |  |
-|Compiler |  |
+| Assembler | A program that translates assembly language into machine code. |
+| Semantic Validity | Ensuring that the meaning of the assembly code is correct and adheres to the intended functionality. |
+| Machine Code | The low-level code that is directly executed by the computer's central processing unit (CPU). |
+| Virtual Processor | A virtual processor refers to a simulated or emulated instance of a central processing unit (CPU) that operates in a virtualized environment. It mimics the behavior of a physical processor, allowing the execution of instructions and processing of data, often used for testing, development, or educational purposes. |
+| C language | The C programming language is a general-purpose, procedural programming language developed by Dennis Ritchie in the early 1970s. It is widely used for system and application software development due to its efficiency, portability, and powerful features. C serves as the foundation for many other programming languages. |
+| GCC | GCC, or the GNU Compiler Collection, is a suite of compilers developed by the Free Software Foundation (FSF). It includes compilers for various programming languages, with a primary focus on C, C++, and Fortran. GCC is renowned for its open-source nature, portability, and support for multiple platforms. |
+| IDE | An Integrated Development Environment (IDE) is a comprehensive software application that provides developers with a centralized platform for coding, debugging, testing, and deploying software. It typically includes a source code editor, debugger, build automation tools, and other features to enhance the development workflow. |
+| Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or an intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers play a crucial role in the software development process by converting human-readable code into a form understandable by computers. |
 
 ### 2. Project Overview
 
-The aim of this document is to provide a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. We will virtualize the processor using C programming language.
+The aim of this document is to provide a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. We will virtualize the processor using C programming language and the GCC compiler.
 
 ### 3. Project Definition
 
@@ -123,6 +119,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | Technical Specifications Document | Document (markdown) | 02/09/2023 |
 | Weekly Reports | Document (markdown) | Every Friday |
 | Test Plan | Document (markdown) | 02/16/2024 |
+| Final product | Program | 02/23/2024 |
 
 ### 4. Project Organisation
 
@@ -131,19 +128,6 @@ The fundamental objective of this project is to design and implement a virtual p
 The stakeholders in this project will be: 
 - **_Franck JEANNIN_**
 - *The 7 members of our team.*
-
-#### ➭ Project Roles
-
-| Role | Description | Name | Image | Link |
-|---|---|---|---|---|
-| Project Manager | Manages organization, planning, and budgeting while ensuring the team remains motivated. | Mattéo LEFIN|  <img src="https://avatars.githubusercontent.com/u/146164921?v=4" width="75px">      | [Matteo\'s Github Profile](https://github.com/Mattstar64) |
-| Program Manager | Ensures the project meets expectations, oversees the design, and takes responsibility for writing the Functional Specifications. | Gaël MALVAR | <img src="https://avatars.githubusercontent.com/u/146000851?v=4 " width="75px"> | [Gaël\'s Github Profile](https://github.com/Gael-MALVAR) |
-| Tech Lead | Leads technical decision-making in the project, translates the Functional Specifications into Technical Specifications | Robin DEBRY |<img src="https://avatars.githubusercontent.com/u/91249812?v=4" width="75px"> | [Robin\'s Github Profile](https://github.com/robin-debry) |
-| Software Engineers | Develop the software. | David CUAHONTE CUEVAS | <img src="https://avatars.githubusercontent.com/u/91249658?v=4" width="75px"> | [David\'s Github Profile](https://github.com/DavidCC812) |
-| Software Engineers | Develop the software. | Camille GAYAT  |<img src="https://avatars.githubusercontent.com/u/145991254?v=4" width="75px"> | [Camille\'s Github Profile](https://github.com/CamilleGayat) |
-| Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Abderrazaq MAKRAN |<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="75px"> | [Abderrazaq\'s Github Profile](https://github.com/Amakran2003) |
-| Quality Assurance | Conducts comprehensive testing of product functionalities to identify and address bugs and issues. Documents identified bugs and issues, creates the test plan, and verifies the resolution of reported problems after they have been fixed. | Raphaël PROUDHON | <img src="https://avatars.githubusercontent.com/u/146000634?v=4" width="75px"> | [Raphaël\'s Github Profile](https://github.com/raproudhon) |
-
 
 #### ➭ Project Reviewers
 
@@ -156,7 +140,7 @@ The project reviewers, responsible for the in-depth review and approval of impor
 
 #### ➭ Retroplanning
 
-![image retroplanning](documents/functional/image/retroplanning.png)
+![image retroplanning](./image/retroplanning.png)
 
 #### ➭ Milestones
 
@@ -172,7 +156,7 @@ The project reviewers, responsible for the in-depth review and approval of impor
 
 ##### ★ Human Resources
 
-The team is made of the **7 members** mentioned above in [Project roles](#-project-roles)
+The team is made of **7 members**
 
 - The project lasts **8 weeks**:
   In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
@@ -183,23 +167,6 @@ The team is made of the **7 members** mentioned above in [Project roles](#-proje
 **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
-  - **Hardware:** <br>
-    - [MacBook Air 2020](https://www.apple.com/fr/macbook-air-m1/)
-      - 13.3 inch (2560 x 1600)
-      - macOS Sonoma 14.2
-      - Apple M1 Chip
-    - [Lenovo Thinkbook 14](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkbook-series/thinkbook-14-iil/20sl)
-      - Windows 11 Pro
-      - 14 inch (1920 x 1080)
-      - Processor: Intel(R) Core(TM) i7-1165G7 CPU @ 2.80GHz
-      - RAM: 16.0 GB
-      - System type: 64-bit operating system, x64-based processor
-    - [ThinkPad E14 Gen 5](https://www.lenovo.com/fr/fr/p/laptops/thinkpad/thinkpade/thinkpad-e14-gen-5-(14-inch-intel)/len101t0064)
-      - Windows 11 Pro
-      - 14 inch (1920 x 1080)
-      - Processor: 13th Gen Intel(R) Core(TM) i7-1355U, 1700 Mhz
-      - RAM: 16.0 GB
-      - System type: 64-bit operating system, x64-based processor
 
 ##### ★ Associated costs
 
@@ -216,7 +183,7 @@ The team will be available throughout the project to work during assigned hours.
 Deadlines are in place for the delivery of documents ([Deliverables](#-deliverables)) such as Functional Specifications, Technical Specifications and the Test Plan. 
 In addition, deadlines are set for the overall completion of the project. These time constraints must be carefully respected to ensure steady progress and timely delivery of deliverables.
 
-## C. Functional Requirements
+## II. Functional Requirements
 
 ### 1. System Capabilities
 
@@ -249,74 +216,114 @@ In addition, deadlines are set for the overall completion of the project. These 
 
 The interpreter should showcase the ability to be compiled and executed on any real computer architecture. To ensure portability, it should refrain from relying on external libraries beyond standard ones, and any usage of operating system-specific libraries must have viable alternatives.
 
+##### ★ C standard Libraries
+
+| Name | Use |
+|---|---|
+| **stdio.h** | Manages input and output operations, including functions for formatted input and output, file handling, and character input/output.|
+| **stdlib.h** | Provides general-purpose functions for memory allocation and deallocation (malloc, free, etc.), random number generation (rand, srand), and other. |
+| **string.h** | Contains functions for manipulating strings, including copying (strcpy, strncpy), concatenation (strcat, strncat), comparison (strcmp, strncmp), and searching (strchr, strstr). |
+| **ctype.h** | Defines functions for character classification and conversion, such as checking if a character is alphabetic (isalpha), numeric (isdigit), or converting case (toupper, tolower). |
+| **math.h** | Provides mathematical functions, including trigonometric (sin, cos, tan), exponential (exp), logarithmic (log, log10), power (pow), square root (sqrt), and others. |
+| **time.h** | Deals with time-related functions, such as obtaining the current time (time), formatting time (strftime), and converting between different time representations. |
+| **stddef.h** | Defines several macros, including NULL (a null pointer) and offsetof (offset of a member within a structure).|
+| **stdint.h** | Introduces standardized integer types with specific widths (int8_t, int16_t, int32_t, uint8_t, uint16_t, uint32_t, etc.), ensuring consistency across platforms. |
+| **stdbool.h** | Defines the boolean data type (bool) along with true and false constants.|
+| **stdarg.h** | Contains macros and functions for handling variable-length argument lists, commonly used in functions like printf and scanf. |
+
+
 #### ➭ 1.5 Error Handling and Detection:
 
 The interpreter is required to incorporate robust error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should gracefully halt the program and notify the user.
 
 ### 2. Assembly Language
 
+#### ➭ Language Design 
+
+The assembly language we've crafted is a synthesis of instructions inspired by diverse architectures, combining elements from x86 and ARM. This approach was taken to harness the strengths and proven designs of established architectures, providing a robust and versatile foundation for our virtual processor.
+
+*Our language design includes:*
+
+
+**3. Load Instruction (LOAD)**
+Inspiration: ARM architecture
+
+**5. Compare Instruction (CMP)**
+Inspiration: ARM architecture
+
+**13. Halt Instruction (HLT)**
+Inspiration: x86 architecture
+
+
 #### ➭ Instructions
 
-**<u>1. Storing an immediate value into a register:</u>**
+🚨⚠️ All instructions must be written in capital letters ⚠️🚨
+
+##### ★ 1. Storing an immediate value into a register:
 
 - **Syntax:** **`MOV immediate_value, destination_register`**
 - **Example:** **`MOV 42, R1`**
-  
-**<u>2. Copying the value of a register into another register:</u>**
+
+##### ★ 2. Copying the value of a register into another register:
 
 - **Syntax:** **`MOV source_register, destination_register`**
-- **Example:** **`MOV R1, R2`**  
-  
-**<u>3. Reading the value of the memory at the address contained by a register and storing it into another register:</u>**
+- **Example:** **`MOV R1, R2`**
+
+##### ★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:
 
 - **Syntax:** **`LOAD address_register, destination_register`**
 - **Example:** **`LOAD R3, R4`**
 
-**<u>4. Storing the value of a register into memory at the address contained by another register:</u>**
+##### ★ 4. Storing the value of a register into memory at the address contained by another register:
 
-- **Syntax:** **`STOR source_register, address_register`**
-- **Example:** **`STOR R2, R5`**
+- **Syntax:** **`STR source_register, address_register`**
+- **Example:** **`STR R2, R5`**
 
-**<u>5. Comparing the content of registers:</u>**
+##### ★ 5. Comparing the content of registers:
 
-- **Syntax:** **`COMP source_register1, source_register2`**
-- **Example:** **`COMP R1, R2`**
+- **Syntax:** **`CMP source_register1, source_register2`**
+- **Example:** **`CMP R1, R2`**
 
-**<u>6. Jumping unconditionally to a label:</u>**
+##### ★ 6. Jumping unconditionally to a label:
 
-- **Syntax:** **`JUMP label`**
-- **Example:** **`JUMP start_loop`**
+- **Syntax:** **`JMP label`**
+- **Example:** **`JMP start_loop`**
 
-**<u>7. Jumping conditionally to a label:</u>**
+##### ★ 7. Jumping conditionally to a label:
 
-- **Syntax:** **`JUMP_IF condition, label`**
-- **Example:** **`JUMP_IF NOT_ZERO, end_loop`**
+- **Syntax:** **`JMPT condition, label`**
+- **Example:** **`JMPT TRUE, end_loop`**
 
-**<u>8. Calling a subroutine:</u>**
+##### ★ 8. Jumping conditionally to a label
+
+- **Syntax:** **`JMPF condition, label`**
+- **Example:** **`JMPF TRUE, end_loop`**
+
+##### ★ 9. Calling a subroutine:
 
 - **Syntax:** **`CALL subroutine_label`**
 - **Example:** **`CALL my_subroutine`**
 
-**<u>9. Returning from a subroutine:</u>**
+##### ★ 10. Returning from a subroutine:
 
 - **Syntax:** **`RETURN`**
 - **Example:** **`RETURN`**
 
-**<u>10. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:</u>**
+##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:
 
 - **Addition:** **`ADD source_register1, source_register2, destination_register`**
 - **Subtraction:** **`SUB source_register1, source_register2, destination_register`**
 - **Multiplication:** **`MUL source_register1, source_register2, destination_register`**
 - **Division:** **`DIV source_register1, source_register2, destination_register`**
 
-**<u>11. The 4 basic logical operations: OR, AND, XOR, and NOT:</u>**
+##### ★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:
 
 - **OR operation:** **`OR source_register1, source_register2, destination_register`**
 - **AND operation:** **`AND source_register1, source_register2, destination_register`**
 - **XOR operation:** **`XOR source_register1, source_register2, destination_register`**
 - **NOT operation:** **`NOT source_register, destination_register`**
 
-**<u>12. Ending a program:</u>**
+##### ★ 13. Ending a program
 
 - **HLT:** **`HLT`**
 
@@ -325,11 +332,12 @@ The interpreter is required to incorporate robust error-handling mechanisms, cap
 - **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
 - **Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).**
 - **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
-- **The exact syntax and details may vary based on specific design choices and requirements for our processor architecture. This is a simplified example to get you started.**
+- **We have sometimes used four letters to add precision (e.g. `JMPT`).**
+- **In the case of a calculation where the result is a number with a decimal point, the number will always be rounded down. (e.g. 4/3 = 1.333, the result will be 1)**
 
 #### ➭ Example of use
 
-**<u>Assembly program to add two numbers and store the result</u>**
+**<u>Assembly program to add two numbers and store the result:</u>**
 
 ```
 ; Memory layout
@@ -365,4 +373,49 @@ STOR R6, 102       ; Store the result in memory location 102
 RETURN             ; Return from the subroutine
 ```
 
-## D. Non-Functional Requirements
+#### ➭ Machine Code
+
+| Register | Instructions |
+|---|---|
+| **R1 = 0x01** | **MOV immediate to register = 0x20** |
+| **R2 = 0x02** | **MOV register to register = 0x21** |
+| **R3 = 0x03** | **LOAD = 0x30** |
+| **R4 = 0x04** | **STR = 0x41** |
+| **R5 = 0x05** | **CMP = 0x52** |
+| **R6 = 0x06** | **JMP = 0x70** |
+| **R7 = 0x07** | **ADD = 0xC0** |
+| **R8 = 0x08** | **SUB = 0xD1** |
+| **R9 = 0x09** | **MUL = 0xE2** |
+| **R10 = 0x0A** | **DIV = 0xF3** |
+| **R11 = 0x0B** | **OR = 0x14** |
+| **R12 = 0x0C** | **AND = 0x25** |
+| **R13 = 0x0D** | **XOR = 0x36** |
+| **R14 = 0x0E** | **NOT = 0x47** |
+| **R15 = 0x0F** | **HLT = 0xFF** |
+| **R16 = 0x10** | **PRT = 0x58** | 
+|  | **JMPT = 0x81** |
+|  | **JMPF = 0x92** |
+|  | **CALL = 0xA0** |
+|  | **Return = 0xB0** |
+
+## III. Non-Functional Requirements
+
+#### ➭ Performance:
+
+The virtual processor must efficiently execute assembly code, maintaining minimal latency and swift response times.
+The interpreter is expected to handle moderate-sized assembly programs seamlessly, ensuring optimal performance without significant delays.
+
+#### ➭ Portability:
+
+Design the interpreter with a focus on portability, guaranteeing compatibility across diverse computer architectures and operating systems.
+The interpreter should be executable without requiring modifications on different platforms.
+
+#### ➭ Reliability:
+
+The virtual processor should prioritize high reliability, minimizing the occurrence of unexpected crashes or errors during the execution of assembly code.
+Implement robust error-handling mechanisms to gracefully manage invalid or unexpected inputs, enhancing the overall reliability of the interpreter.
+
+#### ➭ Scalability:
+
+Architect the interpreter to scale efficiently with the complexity of assembly programs, facilitating the incorporation of a growing number of instructions and features.
+Ensure that the interpreter's performance remains acceptable as both the size and complexity of assembly code grow, providing a scalable solution.
