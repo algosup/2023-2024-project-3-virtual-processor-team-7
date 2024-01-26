@@ -58,6 +58,7 @@
       - [➭ Portability:](#-portability)
       - [➭ Reliability:](#-reliability)
       - [➭ Scalability:](#-scalability)
+  - [IV. Conclusion](#iv-conclusion)
 
 </details>
 
@@ -419,3 +420,10 @@ Implement robust error-handling mechanisms to gracefully manage invalid or unexp
 
 Architect the interpreter to scale efficiently with the complexity of assembly programs, facilitating the incorporation of a growing number of instructions and features.
 Ensure that the interpreter's performance remains acceptable as both the size and complexity of assembly code grow, providing a scalable solution.
+
+
+## IV. Conclusion
+
+In conclusion, this document outlines the roadmap for Team 7's Virtual Processor project. We've defined a clear vision, set achievable objectives, and established practical guidelines. Our focus on simplicity, collaboration, and accessibility in both language design and programming guidelines ensures a user-friendly and educational tool.
+
+As we move forward, this document will guide our development, emphasizing a commitment to quality and practical utility. Let's work together to bring these aspirations to life in a tangible project.
