@@ -102,9 +102,44 @@ Our team managed to produce a functional readable instruction .
 
 <h4>Wednesday & Thursday</h4>
 
+<h5>Functional Specification</h5>
+
+We added  System Capabilities for writing data, calculations and more.
+
+![Alt text](/documents/management/image/Functional8.png)
+*A part of the System Capabilities*
+
+<h5>Test Plan</h5>
+The test plan has been continued, adding graphs like the Entry and Exit Criteria graph.
+
+![Alt text](/documents/management/image/TP4.png)
+*Entry and Exit Criteria*
+
+<h5>Programming</h5>
+
+We progressed a lot and done a lot of assembly instructions and we also coded a functional reader.
+
+![Alt text](/documents/management/image/Dev6.png)
+*A part of the reader program*
+
+![Alt text](/documents/management/image/Dev7.png)
+*Some Assembly instructions that has been finished*
+
+
+
+<h5>Meeting with the Client</h5>
+
+For the next parts of the project, we needed crucial information like, do we have to just interpret with C the text files containing the assembly instruction or do we need to transform this text files into machine code and so Interpret it after ? 
+It turned that it was the case 2 and that it doesn't mean we have to star all over again, it just had a bit more work.
 
 
 <h4>Friday</h4>
+
+<h5>Functional Specification</h5>
+
+<h5>Program</h5>
+
+<h5>Test Plan</h5>
 
 -------------------------------
 <h3>Project Planning and management</h3>
@@ -128,7 +163,15 @@ A project charter has been created to explain who we are and the purpose of the 
 ![Alt text](/documents/management/image/PC.png)
 *A part of the Project Charter*
 
-<h5>Critical pass</h5>
+<h5>RACI MATRIX</h5>
+
+A RACI Matrix has been created for having a quick vision of which members of the team, clients  and stakeholders roles and responsabilities.
+
+![Alt text](/documents/management/image/RACI.png)
+*A part of the RACI Matrix*
+
+<h5>Communication Plan</h5>
+
 
 
 -------
