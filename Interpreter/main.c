@@ -12,8 +12,11 @@ void initializeCpu()
     printf("Initializing CPU...\n");
 }
 
+
+
 void executeInstruction(instructions instruction, int operand1, int operand2)
 {
+
     switch (instruction)
     {
     case MOV_IMM:
@@ -30,6 +33,21 @@ void executeInstruction(instructions instruction, int operand1, int operand2)
         break;
     case SUB:
         registersArray[R3] = registersArray[operand2] -= registersArray[operand1];
+        break;
+    case MUL:
+        registersArray[R3] = registersArray[operand2] *= registersArray[operand1];
+        break;
+    case OR:
+        registersArray[R3] = registersArray[operand2] || registersArray[operand1];
+        break;
+    case AND:
+        registersArray[R3] = registersArray[operand2] && registersArray[operand1];
+        break;
+    case NOT:
+        registersArray[R3] = !(registersArray[operand2] && registersArray[operand1]);
+        break;
+    case XOR:
+        registersArray[R3] = registersArray[operand2] ^ registersArray[operand1];
         break;
     default:
         printf("Unknown instruction: %d\n", instruction);
@@ -76,6 +94,7 @@ int main()
     printf("\n");
 
     //-------------------------------------------------
+
     executeInstruction(SUB, R1, R2);
     printf("R3 : %d\n", registersArray[R3]);
 
@@ -83,8 +102,44 @@ int main()
 
     //-------------------------------------------------
 
+    executeInstruction(MUL, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
 
+    printf("\n");
 
+    //-------------------------------------------------
+
+    executeInstruction(OR, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    executeInstruction(AND, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    executeInstruction(NOT, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    executeInstruction(XOR, R1, R2);
+    printf("R3 : %d\n", registersArray[R3]);
+
+    printf("\n");
+
+    //-------------------------------------------------
+
+    printf("LOAD : %d\n", );
+
+    printf("\n");
     //-------------------------------------------------
 
     executeInstruction(HLT, 0, 0);
