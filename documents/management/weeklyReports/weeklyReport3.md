@@ -49,6 +49,62 @@ Our team started coding by defining in C language the different instructions and
 ![Alt text](/documents/management/image/Dev2.png)
 *intialization of the CPU*
 
+<h5>Technical Specification</h5>
+
+The Technical sepecification include the folder organisation but also developement environment and an explaination of the program structure in details.
+
+![Alt text](/documents/management/image/technical2.png)
+*A part of the development environment*
+
+![Alt text](/documents/management/image/technical3.png)
+*A part of the data structure*
+
+<h5>Test Plan</h5>
+
+we decided to create a template for Bug reports and Test cases.
+
+![Alt text](/documents/management/image/TP1.png)
+*Test case template*
+
+![Alt text](/documents/management/image/TP2.png)
+*Bug Report template*
+
+<h4>Tuesday</h4>
+
+<h5>The functional</h5>
+The functional has been greatly advanced. We were able to give a list of all our assembly instructions and we continued the missing parts of our functional.
+
+![Alt text](/documents/management/image/Functional6.png)
+*A part of the functional requirements*
+
+![Alt text](/documents/management/image/Functional7.png)
+*A part of the list of assembly instruction*
+
+
+<h5>Assembly</h5>
+
+Our team managed to produce a functional readable instruction .
+
+![Alt text](/documents/management/image/Dev4.png)
+*A part of the reading program which only include the program getting the size of the assembly file and read the file.*
+
+
+![Alt text](/documents/management/image/Dev3.png)
+*Functional instruction MOV_IMM*
+
+![Alt text](/documents/management/image/Dev5.png)
+*Exemple we used to test out the instruction, there's three registers R1,R2 and R3 and they have 42, 0 and 0 in it*
+
+<h5>Test Plan</h5>
+
+![Alt text](/documents/management/image/TP3.png)
+*part of the updates of the test Plan*
+
+<h4>Wednesday & Thursday</h4>
+
+
+
+<h4>Friday</h4>
 
 -------------------------------
 <h3>Project Planning and management</h3>
@@ -64,6 +120,17 @@ Our team started coding by defining in C language the different instructions and
 | Assembly developpment | 100%   |
 | C language developpment | 15%  |
 | Weekly report  | 45%   |
+
+<h5>Project Charter</h5>
+
+A project charter has been created to explain who we are and the purpose of the project.
+
+![Alt text](/documents/management/image/PC.png)
+*A part of the Project Charter*
+
+<h5>Critical pass</h5>
+
+
 -------
 <h3>Glossary</h3>
 
