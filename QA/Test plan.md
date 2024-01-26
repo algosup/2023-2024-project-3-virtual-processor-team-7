@@ -32,28 +32,29 @@
 # Table of Contents
 - [1. GLOSSARY](#1-glossary)
 - [2. INTRODUCTION](#2-introduction)
-  - [2.1 Purpose](#21-purpose)
-  - [2.2 Project Overview](#22-project-overview)
-  - [2.3 Audience](#23-audience)
+  - [2.1 Purpose✅](#21-purpose)
+  - [2.2 Project Overview✅](#22-project-overview)
+  - [2.3 Audience✅](#23-audience)
 - [3. TEST STRATEGY](#3-test-strategy)
-  - [3.1 Test Objectives](#31-test-objectives)
-  - [3.2 Testing Environment](#32-testing-environment)
-  - [3.3 Test Principles](#33-test-principles)
+  - [3.1 Test Objectives ✅](#31-test-objectives)
+  - [3.2 Testing Environment ✅](#32-testing-environment)
+  - [3.3 Test Principles✅](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
     - [3.4.3 Document Risk & Issues](#343-document-risk--issues)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria](#41-criteria)
-    - [4.1.1 Suspension Criteria](#411-suspension-criteria)
-    - [4.1.2 Entry Criteria and Exit Criteria](#412-entry-criteria-and-exit-criteria)
-  - [4.2 Github Issues](#42-github-issues)
-  - [4.3 Test Cases](#43-test-cases)
-  - [4.4 Validation and Bug Report Managment](#44-validation-and-bug-report-management)
-  - [4.5 Test Metrics](#45-test-metrics)
-  - [4.6 Bug Tracking & Reporting](#46-bug-tracking--reporting)
+    - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
+    - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+  - [4.2 Test Cycles✅](#42-test-cycles)
+  - [4.3 Github Issues✅](#42-github-issues)
+  - [4.4 Test Cases](#43-test-cases)
+  - [4.5 Validation and Bug Report Managment✅](#44-validation-and-bug-report-management)
+  - [4.6 Test Metrics✅](#45-test-metrics)
+  - [4.7 Bug Tracking & Reporting✅](#46-bug-tracking--reporting)
 - [5. TEST MANAGMENT PROCESS](#5-test-management-process)
-  - [5.1 Test Managment Tool](#51-test-managment-tool)
+  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
 
 ## 1. GLOSSARY
 <br>
@@ -83,9 +84,13 @@
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
+      We focus on functionality, reliability, and correctness, ensuring precise assembly code execution. The strategy emphasizes educational value for students exploring low-level programming.
     -  **Execution Strategy:**
+      Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing defects and gathering performance data.
     -  **Test Management:**
+      GitHub Issues is our central tool for creating, managing, and assigning testing-related issues, facilitating transparent communication within the team.
 
+  This concise framework ensures effective testing, aligning technical robustness with the educational goals of the project.
 - ### 2.2 Project Overview
 
   - Algosup asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
@@ -201,8 +206,22 @@
         - **The commitment of the whole code on Github repository** 
   
         Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
-  
-  - ### 4.2 GitHub Issues
+  - ### 4.2 Test Cycles
+    - Two Functional Testing Cycles:
+      - First Cycle:
+        - Objective: Identify blocking, critical bugs, and most high-priority bugs.
+        - Approach: Use workarounds if necessary to complete all test cases.
+        -Focus: Prioritize finding showstopper issues that may hinder the basic functionality.
+      - Second Cycle:
+        - Objective: Address remaining high and medium bugs, eliminate workarounds from the first cycle, correct any gaps in the test cases, and gather performance results.
+        - Approach: Resolve issues identified in the first cycle, and specifically focus on medium-priority bugs.
+        - Focus: Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
+    - Functional Testing Cycles: These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
+    <br>
+
+    In summary, the functional testing cycles gradually enhance the system's quality, addressing defects in priority order.
+
+  - ### 4.3 GitHub Issues
 
     GitHub Issues is a built-in issue-tracking tool that allows us to create and manage issues and assign them to team members.
     
@@ -217,7 +236,7 @@
   <br>
 
   
-  - ### 4.3 Test Cases
+  - ### 4.4 Test Cases
      To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress. It also serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented.
     <br>
     
@@ -227,7 +246,7 @@
       - This ensures that every team member can readily comprehend the testing requirements. 
       - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
   
-  - ### 4.4 Validation and Bug Report Management
+  - ### 4.5 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
     <br>
     
@@ -251,9 +270,18 @@
     |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
 
   
-  - ### 4.5 Test Metrics
-  - ### 4.6 Bug tracking & Reporting
-     ![Bug tracking reporting](Images/Defect_tracking_reporting.png)
+  - ### 4.6 Test Metrics
+  The table mentions several metrics and processes related to tracking defects (bugs or issues) during testing:
+
+  | Report | Metrics | Frequency |
+  |---|---|---|
+  | Test preparation & Excution status | Metrics: - % complete - % Work In Progress (WIP) - % Pass - % Fail | Weekly/Daily (optional) |
+  | Daily Execution Status | Metrics: - Pass - Fail - Total Bugs - Highlight Showstopper/Critical Bugs | Frequency: Daily |
+  - ### 4.7 Bug tracking & Reporting
+     
+     <p float="left">
+  <img src="Images/Defect_tracking_reporting.png" width="700" />
+</p>
    
 ## 5. TEST MANAGEMENT PROCESS
   - ### 5.1 Test Managment Tool
@@ -279,8 +307,11 @@
     <br>
     
     - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
+  - ### 5.2 Test Design Process
 
-
+<p float="left">
+  <img src="Images/TestDesignProcess.png" width="1000" />
+</p>
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
