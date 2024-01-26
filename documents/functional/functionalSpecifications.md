@@ -64,9 +64,12 @@
 
 ---
 
+
 ## I. Introduction
 
+
 ### 1. Glossary
+
 
 | Terms used | Definition |
 |---|---|
@@ -79,17 +82,24 @@
 | IDE | An Integrated Development Environment (IDE) is a comprehensive software application that provides developers with a centralized platform for coding, debugging, testing, and deploying software. It typically includes a source code editor, debugger, build automation tools, and other features to enhance the development workflow. |
 | Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or an intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers play a crucial role in the software development process by converting human-readable code into a form understandable by computers. |
 
+
 ### 2. Project Overview
+
 
 The aim of this document is to provide a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. We will virtualize the processor using C programming language and the GCC compiler.
 
+
 ### 3. Project Definition
+
 
 #### ➭ Vision
 
+
 The fundamental objective of this project is to design and implement a virtual processor capable of executing assembly code. This vision revolves around the creation of a minimalist assembly language specific to the virtual processor, meeting the requirements asked in the call for tenders. The assembly language thus defined will comprise a series of key instructions, including the storage of immediate values in registers, memory manipulation, basic arithmetic and logic operations, and flow control mechanisms.
 
+
 #### ➭ Objectives
+
 
 - Design a minimalist assembly language for the virtual processor, respecting the instructions as asked in the call for tenders.
 - Implement a C language program capable of reading a text file containing programs written in the defined assembly language.
@@ -97,7 +107,9 @@ The fundamental objective of this project is to design and implement a virtual p
 - Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly code execution.
 - Integrate debugging functions, such as display of register contents, to facilitate the development and verification of assembly code.
 
+
 #### ➭ Scope
+
 
 | In Scope |
 |---|
@@ -112,7 +124,9 @@ The fundamental objective of this project is to design and implement a virtual p
 | Compatibility with high-level languages |
 | Dive deeper in Assembly |
 
+
 #### ➭ Deliverables
+
 
 | Name | Type | Deadline |
 |---|---|---|
@@ -122,40 +136,53 @@ The fundamental objective of this project is to design and implement a virtual p
 | Test Plan | Document (markdown) | 02/16/2024 |
 | Final product | Program | 02/23/2024 |
 
+
 ### 4. Project Organisation
 
+
 #### ➭ Stakeholders
+
 
 The stakeholders in this project will be: 
 - **_Franck JEANNIN_**
 - *The 7 members of our team.*
+  
 
 #### ➭ Project Reviewers
+
 
 The project reviewers, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
 
 - Guarantee the quality of the code, the semantic validity of the assembler programs
 - Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#c-functional-requirements).
 
+
 ### 5. Project Plan
+
 
 #### ➭ Retroplanning
 
+
 ![image retroplanning](./image/retroplanning.png)
 
+
 #### ➭ Milestones
+
 
 | Milestone | Deadline|
 |---|---|
 | Functional Specifications v1 | 01/24/2024 |
-| Technical Specifications v1 | ../../2024 |
-| Test Plan | ../../2024 |
-| Working Prototype | ../../2024 |
+| Technical Specifications v1 | 02/05/2024 |
+| Test Plan | 02/16/2024 |
+| Working Prototype | 02/22/2024 |
 | Oral Presentation | 02/29/2024 |
+
 
 #### ➭ Resources/Financial plan
 
+
 ##### ★ Human Resources
+
 
 The team is made of **7 members**
 
@@ -163,32 +190,45 @@ The team is made of **7 members**
   In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
   This means we have **686 manhours**.
 
+
 ##### ★ Development Tools
+
 
 **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
 
+
 ##### ★ Associated costs
+
 
 No special costs are anticipated, as all materials are provided by the school.
 
+
 #### ➭ Assumptions/Constraints
+
 
 ##### ★ Team member availability
 
+
 The team will be available throughout the project to work during assigned hours.
 
+
 ##### ★ Time constraints
+
 
 Deadlines are in place for the delivery of documents ([Deliverables](#-deliverables)) such as Functional Specifications, Technical Specifications and the Test Plan. 
 In addition, deadlines are set for the overall completion of the project. These time constraints must be carefully respected to ensure steady progress and timely delivery of deliverables.
 
+
 ## II. Functional Requirements
+
 
 ### 1. System Capabilities
 
+
 #### ➭ 1.1 Data Handling:
+
 
 **<u>The assembly language instructions should enable smooth manipulation of data, including:</u>**
 
@@ -200,12 +240,16 @@ In addition, deadlines are set for the overall completion of the project. These 
 
 
 #### ➭ 1.2 Calculations:
+
+
 **<u>The assembly language needs to provide essential support for mathematical and logical operations, including:**</u>
 
 - The four fundamental mathematical operations: addition, subtraction, multiplication, division.
 - The four basic logical operations: NOT, AND, OR, XOR.
 
+
 #### ➭ 1.3 Branching:
+
 
 **<u>The programming language should facilitate effective branching by enabling:**</u>
 
@@ -213,11 +257,15 @@ In addition, deadlines are set for the overall completion of the project. These 
 - Conditional and unconditional jumping.
 - Calling and returning from subroutines.
 
+
 #### ➭ 1.4 Platform Independence:
+
 
 The interpreter should showcase the ability to be compiled and executed on any real computer architecture. To ensure portability, it should refrain from relying on external libraries beyond standard ones, and any usage of operating system-specific libraries must have viable alternatives.
 
+
 ##### ★ C standard Libraries
+
 
 | Name | Use |
 |---|---|
@@ -235,11 +283,15 @@ The interpreter should showcase the ability to be compiled and executed on any r
 
 #### ➭ 1.5 Error Handling and Detection:
 
+
 The interpreter is required to incorporate robust error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should gracefully halt the program and notify the user.
+
 
 ### 2. Assembly Language
 
+
 #### ➭ Language Design 
+
 
 The assembly language we've crafted is a synthesis of instructions inspired by diverse architectures, combining elements from x86 and ARM. This approach was taken to harness the strengths and proven designs of established architectures, providing a robust and versatile foundation for our virtual processor.
 
@@ -258,73 +310,100 @@ Inspiration: x86 architecture
 
 #### ➭ Instructions
 
+
 🚨⚠️ All instructions must be written in capital letters ⚠️🚨
 
+
 ##### ★ 1. Storing an immediate value into a register:
+
 
 - **Syntax:** **`MOV immediate_value, destination_register`**
 - **Example:** **`MOV 42, R1`**
 
+
 ##### ★ 2. Copying the value of a register into another register:
+
 
 - **Syntax:** **`MOV source_register, destination_register`**
 - **Example:** **`MOV R1, R2`**
 
+
 ##### ★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:
+
 
 - **Syntax:** **`LOAD address_register, destination_register`**
 - **Example:** **`LOAD R3, R4`**
 
+
 ##### ★ 4. Storing the value of a register into memory at the address contained by another register:
+
 
 - **Syntax:** **`STR source_register, address_register`**
 - **Example:** **`STR R2, R5`**
 
+
 ##### ★ 5. Comparing the content of registers:
+
 
 - **Syntax:** **`CMP source_register1, source_register2`**
 - **Example:** **`CMP R1, R2`**
 
+
 ##### ★ 6. Jumping unconditionally to a label:
+
 
 - **Syntax:** **`JMP label`**
 - **Example:** **`JMP start_loop`**
 
+
 ##### ★ 7. Jumping conditionally to a label:
+
 
 - **Syntax:** **`JMPT condition, label`**
 - **Example:** **`JMPT TRUE, end_loop`**
 
+
 ##### ★ 8. Jumping conditionally to a label
+
 
 - **Syntax:** **`JMPF condition, label`**
 - **Example:** **`JMPF TRUE, end_loop`**
 
+
 ##### ★ 9. Calling a subroutine:
+
 
 - **Syntax:** **`CALL subroutine_label`**
 - **Example:** **`CALL my_subroutine`**
 
+
 ##### ★ 10. Returning from a subroutine:
+
 
 - **Syntax:** **`RETURN`**
 - **Example:** **`RETURN`**
 
+
 ##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:
+
 
 - **Addition:** **`ADD source_register1, source_register2, destination_register`**
 - **Subtraction:** **`SUB source_register1, source_register2, destination_register`**
 - **Multiplication:** **`MUL source_register1, source_register2, destination_register`**
 - **Division:** **`DIV source_register1, source_register2, destination_register`**
 
+
 ##### ★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:
+
 
 - **OR operation:** **`OR source_register1, source_register2, destination_register`**
 - **AND operation:** **`AND source_register1, source_register2, destination_register`**
 - **XOR operation:** **`XOR source_register1, source_register2, destination_register`**
 - **NOT operation:** **`NOT source_register, destination_register`**
 
+
 ##### ★ 13. Ending a program
+
 
 - **HLT:** **`HLT`**
 
@@ -336,7 +415,9 @@ Inspiration: x86 architecture
 - **We have sometimes used four letters to add precision (e.g. `JMPT`).**
 - **In the case of a calculation where the result is a number with a decimal point, the number will always be rounded down. (e.g. 4/3 = 1.333, the result will be 1)**
 
+
 #### ➭ Example of use
+
 
 **<u>Assembly program to add two numbers and store the result:</u>**
 
@@ -374,7 +455,9 @@ STOR R6, 102       ; Store the result in memory location 102
 RETURN             ; Return from the subroutine
 ```
 
+
 #### ➭ Machine Code
+
 
 | Register | Instructions |
 |---|---|
@@ -399,30 +482,40 @@ RETURN             ; Return from the subroutine
 |  | **CALL = 0xA0** |
 |  | **Return = 0xB0** |
 
+
 ## III. Non-Functional Requirements
 
+
 #### ➭ Performance:
+
 
 The virtual processor must efficiently execute assembly code, maintaining minimal latency and swift response times.
 The interpreter is expected to handle moderate-sized assembly programs seamlessly, ensuring optimal performance without significant delays.
 
+
 #### ➭ Portability:
+
 
 Design the interpreter with a focus on portability, guaranteeing compatibility across diverse computer architectures and operating systems.
 The interpreter should be executable without requiring modifications on different platforms.
 
+
 #### ➭ Reliability:
+
 
 The virtual processor should prioritize high reliability, minimizing the occurrence of unexpected crashes or errors during the execution of assembly code.
 Implement robust error-handling mechanisms to gracefully manage invalid or unexpected inputs, enhancing the overall reliability of the interpreter.
 
+
 #### ➭ Scalability:
+
 
 Architect the interpreter to scale efficiently with the complexity of assembly programs, facilitating the incorporation of a growing number of instructions and features.
 Ensure that the interpreter's performance remains acceptable as both the size and complexity of assembly code grow, providing a scalable solution.
 
 
 ## IV. Conclusion
+
 
 In conclusion, this document outlines the roadmap for Team 7's Virtual Processor project. We've defined a clear vision, set achievable objectives, and established practical guidelines. Our focus on simplicity, collaboration, and accessibility in both language design and programming guidelines ensures a user-friendly and educational tool.
 
