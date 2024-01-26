@@ -52,7 +52,6 @@
         - [★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:](#-12-the-4-basic-logical-operations-or-and-xor-and-not)
         - [★ 13. Ending a program](#-13-ending-a-program)
       - [➭ Example of use](#-example-of-use)
-      - [➭ Machine Code](#-machine-code)
   - [III. Non-Functional Requirements](#iii-non-functional-requirements)
       - [➭ Performance:](#-performance)
       - [➭ Portability:](#-portability)
@@ -454,33 +453,6 @@ STOR R6, 102       ; Store the result in memory location 102
 
 RETURN             ; Return from the subroutine
 ```
-
-
-#### ➭ Machine Code
-
-
-| Register | Instructions |
-|---|---|
-| **R1 = 0x01** | **MOV immediate to register = 0x20** |
-| **R2 = 0x02** | **MOV register to register = 0x21** |
-| **R3 = 0x03** | **LOAD = 0x30** |
-| **R4 = 0x04** | **STR = 0x41** |
-| **R5 = 0x05** | **CMP = 0x52** |
-| **R6 = 0x06** | **JMP = 0x70** |
-| **R7 = 0x07** | **ADD = 0xC0** |
-| **R8 = 0x08** | **SUB = 0xD1** |
-| **R9 = 0x09** | **MUL = 0xE2** |
-| **R10 = 0x0A** | **DIV = 0xF3** |
-| **R11 = 0x0B** | **OR = 0x14** |
-| **R12 = 0x0C** | **AND = 0x25** |
-| **R13 = 0x0D** | **XOR = 0x36** |
-| **R14 = 0x0E** | **NOT = 0x47** |
-| **R15 = 0x0F** | **HLT = 0xFF** |
-| **R16 = 0x10** | **PRT = 0x58** | 
-|  | **JMPT = 0x81** |
-|  | **JMPF = 0x92** |
-|  | **CALL = 0xA0** |
-|  | **Return = 0xB0** |
 
 
 ## III. Non-Functional Requirements
