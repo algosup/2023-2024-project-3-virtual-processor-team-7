@@ -21,6 +21,7 @@
 |1.1| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.2| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.3| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.4| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
@@ -159,6 +160,11 @@
   <br>
 
     - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
+
+  <br>
+
+  - We will also go though unit test for each feature released by the development team.
+    - we will run the unit test algorithm coded by the dev team.
 
 
 - ## 3.4 Scope and Levels of Testing
