@@ -48,13 +48,14 @@
     - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
     - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
   - [4.2 Test Cycles✅](#42-test-cycles)
-  - [4.3 Github Issues✅](#42-github-issues)
-  - [4.4 Test Cases](#43-test-cases)
+  - [4.3 Github Issues✅](#43-github-issues)
+  - [4.4 Test Cases](#44-test-cases)
   - [4.5 Validation and Bug Report Managment✅](#44-validation-and-bug-report-management)
   - [4.6 Test Metrics✅](#45-test-metrics)
   - [4.7 Bug Tracking & Reporting✅](#46-bug-tracking--reporting)
 - [5. TEST MANAGMENT PROCESS](#5-test-management-process)
   - [5.1 Test Managment Tool✅](#51-test-managment-tool)
+  - [5.2 Test Design Process](#52-test-design-process)
 
 ## 1. GLOSSARY
 <br>
@@ -280,7 +281,7 @@
   - ### 4.7 Bug tracking & Reporting
      
      <p float="left">
-  <img src="Images/Defect_tracking_reporting.png" width="700" />
+  <img src="Images/Defect_tracking_reporting.png" width="900" />
 </p>
    
 ## 5. TEST MANAGEMENT PROCESS
@@ -312,6 +313,36 @@
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
 </p>
+This section outlines the process of test case preparation and collaboration between each team members. Here's a breakdown of the key points:
+
+1. **Understanding Requirements:**
+   - Testers thoroughly understand each requirement specified for the project. 
+
+2. **Traceability:**
+   - Each test case is mapped to use cases and requirements, creating a traceability in Github Isssues. This traceability helps establish a clear link between tests and the specific requirements they address.
+
+3. **Test Cases Preparation:**
+   - For each requirement, QA's prepare corresponding test cases to ensure comprehensive coverage.
+
+4. **Test Cases Review :**
+   - Test cases undergo a review process facilitated by the Project Manager or Tech lead . During this review, any identified bug is captured and communicated to the QA's.
+
+5. **Rework and Approval(comments):**
+   - QA's address the review bugs, make necessary revisions to the test cases, and seek approval and sign-off from the Project Manager or Tech lead. This iterative process ensures that the test cases align with the project's requirements.
+
+<!-- 6. **Prototype and Specification Usage:**
+   - During the preparation phase, testers leverage the prototype, use cases, and functional specifications to craft detailed, step-by-step test cases. This approach ensures that testing aligns with the intended functionality and design of the system.
+
+7. **Clarification Tracker:**
+   - Testers maintain a Clarification Tracker sheet, documenting any queries or uncertainties. This sheet is periodically shared with the Requirements team, facilitating clarification and updates to the test cases. Clarifications may lead to Change Requests or help in detailing implicit requirements.
+
+8. **Sign-off Communication:**
+   - Sign-off for the test cases is communicated through email by the BUSINESS ANALYST. This formal communication signifies the completion of the test case preparation phase and the readiness for test execution.
+
+9. **Updating Test Cases:**
+   - Any subsequent changes to the test cases, if needed, are directly updated in the chosen test management tool, which, in this case, is HP ALM. This ensures that the latest version of the test cases is available for reference. -->
+
+This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
