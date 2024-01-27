@@ -6,7 +6,7 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| 01/25/2024 |
+|Last Updated| 01/27/2024 |
 |Status| Draft|
 
 
@@ -22,7 +22,7 @@
 |1.2| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.3| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.4| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-
+|1.5| 01/27/2024|Abderrazaq MAKRAN | Draft |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
