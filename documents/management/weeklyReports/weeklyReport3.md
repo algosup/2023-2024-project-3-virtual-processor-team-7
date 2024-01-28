@@ -136,10 +136,17 @@ It turned that it was the case 2 and that it doesn't mean we have to star all ov
 <h4>Friday</h4>
 
 <h5>Functional Specification</h5>
+The functional is almost finished, we added some definition of the original libraries of the C language and added some definitions to the glossary.
+
+![Alt text](/documents/management/image/Functional9.png)
+*Some the C language original libraries*
+
+![Alt text](/documents/management/image/Functional10.png)
+*A part of the updated glossary*
 
 <h5>Program</h5>
 
-<h5>Test Plan</h5>
+The assembly part of the project has been finished and now we are focusing more on the C language
 
 -------------------------------
 <h3>Project Planning and management</h3>
@@ -149,11 +156,11 @@ It turned that it was the case 2 and that it doesn't mean we have to star all ov
 
 | KPI's   | Progress |
 | -------- | ------- |
-| Functional specification  | ??%   |
-| Technical specification | ??%   |
-| Test Plan| ??%   |
+| Functional specification  | 92%   |
+| Technical specification | 15%   |
+| Test Plan| 35%   |
 | Assembly developpment | 100%   |
-| C language developpment | 15%  |
+| C language developpment | 30%  |
 | Weekly report  | 45%   |
 
 <h5>Project Charter</h5>
@@ -172,7 +179,7 @@ A RACI Matrix has been created for having a quick vision of which members of the
 
 <h5>Communication Plan</h5>
 
-
+A communication plan has been created  even if we only have one stakeholder.
 
 -------
 <h3>Glossary</h3>
