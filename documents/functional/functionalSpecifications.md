@@ -135,7 +135,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | Name | Type | Deadline |
 |---|---|---|
 | Functional Specifications Document | Document (markdown) | 01/30/2024 |
-| Technical Specifications Document | Document (markdown) | 02/09/2023 |
+| Technical Specifications Document | Document (markdown) | 02/09/2024 |
 | Weekly Reports | Document (markdown) | Every Friday |
 | Test Plan | Document (markdown) | 02/16/2024 |
 | Final product | Program | 02/23/2024 |
@@ -190,7 +190,7 @@ The stakeholders in this project will be:
 The project reviewers, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
 
 - Guarantee the quality of the code, the semantic validity of the assembler programs
-- Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#c-functional-requirements).
+- Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#ii-functional-requirements).
 
 
 ### 5. Project Plan
@@ -354,70 +354,90 @@ Inspiration: x86 architecture
 
 
 - **Syntax:** **`MOV immediate_value, destination_register`**
+  - Copies a value into a register.
 - **Example:** **`MOV 42, R1`**
+  - Assigns the value 42 to register R1.
 
 
 ##### ★ 2. Copying the value of a register into another register:
 
 
 - **Syntax:** **`MOV source_register, destination_register`**
+  - Duplicates the value from one register to another.
 - **Example:** **`MOV R1, R2`**
+  - Copies the content of R1 into R2.
 
 
 ##### ★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:
 
 
 - **Syntax:** **`LOAD address_register, destination_register`**
+  - Retrieves data from memory using the address in a register.
 - **Example:** **`LOAD R3, R4`**
+  - Loads the content of the memory at the address in R3 into R4.
 
 
 ##### ★ 4. Storing the value of a register into memory at the address contained by another register:
 
 
 - **Syntax:** **`STR source_register, address_register`**
+  - Writes the content of a register into memory at the address in another register.
 - **Example:** **`STR R2, R5`**
+  - Stores the content of R2 into the memory at the address in R5.
 
 
 ##### ★ 5. Comparing the content of registers:
 
 
 - **Syntax:** **`CMP source_register1, source_register2`**
+  - Compares the values in two registers.
 - **Example:** **`CMP R1, R2`**
+  - Compares the contents of R1 and R2.
 
 
 ##### ★ 6. Jumping unconditionally to a label:
 
 
 - **Syntax:** **`JMP label`**
+  - Jumps to a specified label.
 - **Example:** **`JMP start_loop`**
+  - Jumps to the "start_loop" label.
 
 
 ##### ★ 7. Jumping conditionally to a label:
 
 
 - **Syntax:** **`JMPT condition, label`**
+  - Jumps to a label if a specified condition is true.
 - **Example:** **`JMPT TRUE, end_loop`**
+  - Jumps to "end_loop" if the condition is true.
 
 
 ##### ★ 8. Jumping conditionally to a label
 
 
 - **Syntax:** **`JMPF condition, label`**
+  - Jumps to a label if a specified condition is false.
 - **Example:** **`JMPF TRUE, end_loop`**
+  - Jumps to "end_loop" if the condition is false.
 
 
 ##### ★ 9. Calling a subroutine:
 
 
 - **Syntax:** **`CALL subroutine_label`**
+  - Initiates a subroutine.
 - **Example:** **`CALL my_subroutine`**
+  - Calls the "my_subroutine" subroutine.
 
 
 ##### ★ 10. Returning from a subroutine:
 
 
 - **Syntax:** **`RETURN`**
+  - Exits a subroutine.
 - **Example:** **`RETURN`**
+  - Returns from the current subroutine.
 
 
 ##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:
@@ -447,7 +467,9 @@ Inspiration: x86 architecture
 ##### ★ 14. Printing to the screen:
 
 - **Syntax:** **`PRT "register_to_print"`**
+  - Outputs the value stored in the specified register to the screen.
 - **Example:** **`PRT "register_value"`**
+  - Prints the content of the register.
 
 
 **➭ Note**
