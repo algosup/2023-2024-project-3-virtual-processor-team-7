@@ -14,6 +14,9 @@
       - [➭ Objectives](#-objectives)
       - [➭ Scope](#-scope)
       - [➭ Deliverables](#-deliverables)
+      - [➭ Personas](#-personas)
+        - [★ Persona 1 - Emma Turner](#-persona-1---emma-turner)
+        - [★ Persona 2 - Alex Garcia](#-persona-2---alex-garcia)
     - [4. Project Organisation](#4-project-organisation)
       - [➭ Stakeholders](#-stakeholders)
       - [➭ Project Reviewers](#-project-reviewers)
@@ -51,12 +54,14 @@
         - [★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:](#-11-the-4-basic-arithmetic-operations-addition-subtraction-multiplication-and-division)
         - [★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:](#-12-the-4-basic-logical-operations-or-and-xor-and-not)
         - [★ 13. Ending a program](#-13-ending-a-program)
+        - [★ 14. Printing to the screen:](#-14-printing-to-the-screen)
       - [➭ Example of use](#-example-of-use)
+      - [➭ Machine Code](#-machine-code)
   - [III. Non-Functional Requirements](#iii-non-functional-requirements)
-      - [➭ Performance:](#-performance)
-      - [➭ Portability:](#-portability)
-      - [➭ Reliability:](#-reliability)
-      - [➭ Scalability:](#-scalability)
+      - [➭ Performance](#-performance)
+      - [➭ Portability](#-portability)
+      - [➭ Reliability](#-reliability)
+      - [➭ Scalability](#-scalability)
   - [IV. Conclusion](#iv-conclusion)
 
 </details>
@@ -134,6 +139,38 @@ The fundamental objective of this project is to design and implement a virtual p
 | Weekly Reports | Document (markdown) | Every Friday |
 | Test Plan | Document (markdown) | 02/16/2024 |
 | Final product | Program | 02/23/2024 |
+
+
+#### ➭ Personas
+
+
+##### ★ Persona 1 - Emma Turner
+
+Introduction:
+
+Emma Turner, a 32-year-old software engineer, is currently based in Seattle. With a background in developing web applications, she is now eager to explore low-level programming and assembly language. Emma works for a startup that focuses on innovative tech solutions.
+
+Goals:
+
+- Emma's main goal is to acquire proficiency in assembly language to broaden her skill set. She seeks a virtual processor that integrates seamlessly with her Windows workstation. The simplicity of the language and accessibility are crucial factors for her successful transition to low-level programming.
+
+Challenges:
+
+- Emma faces the challenge of adapting to a new programming paradigm. As a result, she looks for a virtual processor that provides clear documentation and support to aid in her learning journey. The compatibility with her Windows environment is essential for a smooth integration into her current workflow.
+
+##### ★ Persona 2 - Alex Garcia
+
+Introduction:
+
+Alex Garcia, a 25-year-old junior software developer, recently joined a tech company in Los Angeles. Having expertise in high-level languages like Python, he is eager to explore assembly language for a more in-depth understanding of computer architecture.
+
+Goals:
+
+- Alex's primary goal is to grasp the fundamentals of assembly language to enhance his overall programming knowledge. He is interested in a virtual processor that supports macOS, as she frequently switches between his MacBook and a Windows machine. A straightforward and intuitive instruction set is vital for Alex's successful adoption of the new language.
+
+Challenges:
+
+- As a junior developer, Alex may find certain low-level programming concepts challenging. Hence, he looks for a virtual processor with a supportive community and learning resources. The ability to seamlessly switch between macOS and Windows without compatibility issues is crucial for his development workflow.
 
 
 ### 4. Project Organisation
@@ -406,6 +443,13 @@ Inspiration: x86 architecture
 
 - **HLT:** **`HLT`**
 
+
+##### ★ 14. Printing to the screen:
+
+- **Syntax:** **`PRT "register_to_print"`**
+- **Example:** **`PRT "register_value"`**
+
+
 **➭ Note**
 
 - **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
@@ -455,31 +499,83 @@ RETURN             ; Return from the subroutine
 ```
 
 
+#### ➭ Machine Code
+
+
+| Register | Machine Code |
+|---|---|
+| **R1** | **0x01** |
+| **R2** | **0x02** |
+| **R3** | **0x03** |
+| **R4** | **0x04** |
+| **R5** | **0x05** |
+| **R6** | **0x06** |
+| **R7** | **0x07** |
+| **R8** | **0x08** |
+| **R9** | **0x09** |
+| **R10** | **0x0A** |
+| **R11** | **0x0B** |
+| **R12** | **0x0C** |
+| **R13** | **0x0D** |
+| **R14** | **0x0E** |
+| **R15** | **0x0F** |
+| **R16** | **0x10** |
+
+
+
+| Instructions | Machine Code |
+|---|---|
+| **MOV immediate to register** | **0x20** |
+| **MOV register to register** | **0x20** |
+| **LOAD** | **0x30** |
+| **STR** | **0x41** |
+| **CMP** | **0x52** |
+| **JMP** | **0x70** |
+| **ADD** | **0xC0** |
+| **SUB** | **0xD1** |
+| **MUL** | **0xE2** |
+| **DIV** | **0xF3** |
+| **OR** | **0x14** |
+| **AND** | **0x25** |
+| **XOR** | **0x26** |
+| **NOT** | **0x47** |
+| **HLT** | **0xFF** |
+| **PRT** | **0x58** |
+| **JMPT** | **0x81** |
+| **JMPF** | **0x92** |
+| **CALL** | **0xA0** |
+| **Return** | **0xB0** |
+| **MOVC** |  |
+| **MOVCH**  |  |
+| **PRTC** |  |
+| **PRTCH** |  |
+
+
 ## III. Non-Functional Requirements
 
 
-#### ➭ Performance:
+#### ➭ Performance
 
 
 The virtual processor must efficiently execute assembly code, maintaining minimal latency and swift response times.
 The interpreter is expected to handle moderate-sized assembly programs seamlessly, ensuring optimal performance without significant delays.
 
 
-#### ➭ Portability:
+#### ➭ Portability
 
 
 Design the interpreter with a focus on portability, guaranteeing compatibility across diverse computer architectures and operating systems.
 The interpreter should be executable without requiring modifications on different platforms.
 
 
-#### ➭ Reliability:
+#### ➭ Reliability
 
 
 The virtual processor should prioritize high reliability, minimizing the occurrence of unexpected crashes or errors during the execution of assembly code.
 Implement robust error-handling mechanisms to gracefully manage invalid or unexpected inputs, enhancing the overall reliability of the interpreter.
 
 
-#### ➭ Scalability:
+#### ➭ Scalability
 
 
 Architect the interpreter to scale efficiently with the complexity of assembly programs, facilitating the incorporation of a growing number of instructions and features.
@@ -492,3 +588,4 @@ Ensure that the interpreter's performance remains acceptable as both the size an
 In conclusion, this document outlines the roadmap for Team 7's Virtual Processor project. We've defined a clear vision, set achievable objectives, and established practical guidelines. Our focus on simplicity, collaboration, and accessibility in both language design and programming guidelines ensures a user-friendly and educational tool.
 
 As we move forward, this document will guide our development, emphasizing a commitment to quality and practical utility. Let's work together to bring these aspirations to life in a tangible project.
+
