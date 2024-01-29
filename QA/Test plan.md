@@ -74,6 +74,7 @@
 | Technical Lead | He oversees the technical aspects of a software team by making architectural and design decisions, guiding team members in technical matters, and supervising system modifications. |[Ironhack](https://www.ironhack.com/gb/blog/what-is-a-tech-lead#:~:text=A%20technical%20lead%20%E2%80%93%20or%20tech,matters%2C%20and%20supervising%20system%20modifications.)|
 |Software Engineer | He apply engineering principles and knowledge of programming languages to build software solutions for end users. Software engineers design and develop computer games, business applications, operating systems, network control systems, and middleware—to name just a few of the many career paths available.| [Michigan Technological University](https://www.mtu.edu/cs/undergraduate/software/what/#:~:text=of%20software%20applications.-,Software%20engineers%20apply%20engineering%20principles%20and%20knowledge%20of%20programming%20languages,the%20many%20career%20paths%20available.)|
 | QA (Quality Assurance) |A QA engineer creates tests that identify issues with software before a product launch. These tests entail other tasks such as developing and running new tests and reporting their results to stakeholders, who will collaborate to fix program bugs or problems.| [Workable](https://resources.workable.com/qa-engineer-job-description#:~:text=What%20does%20a%20Quality%20Assurance,fix%20program%20bugs%20or%20problems.)|
+| Low-level programming | A low-level programming language is a programming language that provides little or no abstraction from a computer's instruction set architecture—commands or functions in the language map that are structurally similar to processor's instructions. Generally, this refers to either machine code or assembly language.| [Wikipedia](https://en.wikipedia.org/wiki/Low-level_programming_language) |
 
 
 <br>
@@ -87,7 +88,7 @@
     -  **Test Strategy:**
       We focus on functionality, reliability, and correctness, ensuring precise assembly code execution. The strategy emphasizes educational value for students exploring low-level programming.
     -  **Execution Strategy:**
-      Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing defects and gathering performance data.
+      Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing bugs and gathering performance data.
     -  **Test Management:**
       GitHub Issues is our central tool for creating, managing, and assigning testing-related issues, facilitating transparent communication within the team.
 
@@ -189,8 +190,9 @@
   - ### 4.1 Criteria
     - #### 4.1.1 Suspension Criteria
       - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
-       ![SuspensionCriteria](Images/suspensionCriteria.png)
-       
+      <p float="left">
+      <img src="Images/suspensionCriteria.png" width="700" />
+      </p>
     
     - #### 4.1.2 Entry Criteria and Exit Criteria
       - Entry criteria define the conditions that must be fulfilled before the testing process can commence. They serve as a set of prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
@@ -200,7 +202,9 @@
         - **The successful completion of any prerequisite testing phases.** 
     
         Meeting entry criteria helps ensure that testing can proceed efficiently and that the results obtained are reliable.
-      ![exitentry](Images/entryExitCriteria.png)
+      <p float="left">
+      <img src="Images/entryExitCriteria.png" width="700" />
+      </p>
       - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
         - **Achieving a certain level of test coverage** 
         - **The successful execution of test cases, the resolution of critical bugs** 
@@ -242,7 +246,9 @@
     <br>
     
     A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
-    ![test_case](Images/test_case.png)
+    <p float="left">
+    <img src="Images/test_case.png" width="700" />
+    </p>
       - To enhance clarity, each test case will be meticulously crafted and documented within GitHub Issues, designated with the label "Test Case." 
       - This ensures that every team member can readily comprehend the testing requirements. 
       - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
@@ -280,9 +286,9 @@
   | Daily Execution Status | Metrics: - Pass - Fail - Total Bugs - Highlight Showstopper/Critical Bugs | Frequency: Daily |
   - ### 4.7 Bug tracking & Reporting
      
-     <p float="left">
-  <img src="Images/Defect_tracking_reporting.png" width="900" />
-</p>
+    <p float="left">
+    <img src="Images/Defect_tracking_reporting.png" width="900" />
+    </p>
    
 ## 5. TEST MANAGEMENT PROCESS
   - ### 5.1 Test Managment Tool
@@ -308,7 +314,8 @@
     <br>
     
     - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
-  - ### 5.2 Test Design Process
+  
+  ### 5.2 Test Design Process
 
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
@@ -343,6 +350,54 @@ This section outlines the process of test case preparation and collaboration bet
    - Any subsequent changes to the test cases, if needed, are directly updated in the chosen test management tool, which, in this case, is HP ALM. This ensures that the latest version of the test cases is available for reference. -->
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
+
+### 5.3 Mix
+
+## 5.4 Document Review and Commenting
+
+### Importance of Reviewing Documents
+
+Document review is a crucial aspect of our project management process at Algosup. It involves carefully examining the documents created by team members, providing constructive feedback, and ensuring the overall quality and accuracy of project deliverables.
+
+### Collaborative Learning
+
+Reviewing the work of peers, especially across different promotions, promotes collaborative learning. It allows team members to share insights, correct potential errors, and offer diverse perspectives that contribute to the overall improvement of project documentation.
+
+### Error Prevention
+
+By conducting thorough document reviews and leaving comments, we aim to prevent errors before they impact the project. Identifying and rectifying issues during the review process helps maintain the integrity of our work and ensures that final deliverables meet the highest standards.
+
+### Continuous Improvement
+
+Document reviews are not just about error correction; they also serve as opportunities for continuous improvement. Team members can suggest enhancements, share alternative approaches, and collectively strive for excellence in project documentation.
+
+### Guidelines for Document Review
+
+1. **Be Thorough:** Carefully review each document to identify grammatical errors, inconsistencies, or inaccuracies.
+
+2. **Provide Constructive Feedback:** When leaving comments, focus on constructive feedback that helps the document author understand the issue and improve their work.
+
+3. **Encourage Collaboration:** Use document reviews as a platform for collaboration. Encourage discussions and foster an environment where team members feel comfortable seeking and providing feedback.
+
+4. **Acknowledge Positive Aspects:** In addition to pointing out areas for improvement, acknowledge positive aspects of the document. Positive reinforcement motivates team members and boosts morale.
+
+5. **Use Initials in Comments:** When leaving comments, include your initials to provide clear attribution of feedback. This helps in tracking and clarifying points during the review process.
+
+### Document Review Process
+
+1. **Author Submission:** The document author submits their work for review through the designated platform (e.g., GitHub Issues).
+
+2. **Review and Comment:** Peers review the document thoroughly, leaving comments on specific sections that require attention.
+
+3. **Discussion and Clarification:** Engage in discussions to clarify comments and address any questions raised during the review process.
+
+4. **Revision:** The document author revises the document based on the feedback received.
+
+5. **Final Approval:** Once the document meets the required standards, it receives final approval.
+
+### Conclusion
+
+The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at Algosup. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
