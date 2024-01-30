@@ -28,7 +28,6 @@
         - [★ Development Tools](#-development-tools)
         - [★ Associated costs](#-associated-costs)
       - [➭ Assumptions/Constraints](#-assumptionsconstraints)
-        - [★ Team member availability](#-team-member-availability)
         - [★ Time constraints](#-time-constraints)
   - [II. Functional Requirements](#ii-functional-requirements)
     - [1. System Capabilities](#1-system-capabilities)
@@ -67,6 +66,16 @@
 </details>
 
 ---
+
+| Role | Name | Signature | Date |
+|---|---|---|---|
+| Project Manager | Mattéo LEFIN |  | 30/01/2024 |
+| Program Manager | Gaël MALVAR |  |30/01/2024 |
+| Tech Lead | Robin DEBRY |  | 30/01/2024 |
+| Software Developer | David CUAHONTE CUEVAS |  | 30/01/2024 |
+| Software Developer | Camille GAYAT | | 30/01/2024|
+| Quality Assurance | Abderrazaq MAKRAN |  | 30/01/2024 |
+| Quality Assurance | Raphaël PROUDHON |  | 30/01/2024 |
 
 ## I. Introduction
 
@@ -211,10 +220,6 @@ No special costs are anticipated, as all materials are provided by the school.
 
 #### ➭ Assumptions/Constraints
 
-##### ★ Team member availability
-
-The team will be available throughout the project to work during assigned hours.
-<!--Idem what's the point of this part? -->
 ##### ★ Time constraints
 
 Deadlines are in place for the delivery of documents ([Deliverables](#-deliverables)) such as Functional Specifications, Technical Specifications and the Test Plan. 
@@ -439,7 +444,6 @@ STOR R6, 102       ; Store the result in memory location 102
 RETURN             ; Return from the subroutine
 ```
 
-<!-- I don't think this is necessary, while it's important to explain the assembly, giving a code example seems too much (in my opinion, up to you) -->
 #### ➭ Machine Code
 
 | Register | Machine Code |
