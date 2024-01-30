@@ -110,6 +110,7 @@ The fundamental objective of this project is to design and implement a virtual p
 #### ➭ Objectives
 
 - Design a minimalist assembly inspired language for the virtual processor, respecting the instructions as asked in the call for tender.
+- Virtual processor with a size of 32bits it represent a memory of 4,294,967,296 bytes
 - Implement a C language program capable of reading a text file containing programs written in the defined assembly-like language.
 - Validate the syntax of assembly-like programs to guarantee their semantic validity.
 - Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly-like code execution.
