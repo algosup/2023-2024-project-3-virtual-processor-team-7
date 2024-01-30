@@ -211,7 +211,6 @@ The team is made of **7 members**
   In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
   This means we have **686 manhours**.
 
-<!-- I don't see the point of this part, the 8 weeks yes, the rest is redundant -->
 
 ##### ★ Development Tools
 
@@ -397,9 +396,9 @@ Inspiration: x86 architecture
 
 ##### ★ 14. Printing to the screen:
 
-- **Syntax:** **`PRT "register_to_print"`**
+- **Syntax:** **`PRT register_to_print`**
   - Outputs the value stored in the specified register to the screen.
-- **Example:** **`PRT "register_value"`**
+- **Example:** **`PRT register_value`**
   - Prints the content of the register.
 
 **➭ Note**
@@ -453,15 +452,15 @@ RETURN             ; Return from the subroutine
 
 | Register | Machine Code |
 |---|---|
-| **R1** | **0x01** |
-| **R2** | **0x02** |
-| **R3** | **0x03** |
-| **R4** | **0x04** |
-| **R5** | **0x05** |
-| **R6** | **0x06** |
-| **R7** | **0x07** |
-| **R8** | **0x08** |
-| **R9** | **0x09** |
+| **R1**  | **0x01** |
+| **R2**  | **0x02** |
+| **R3**  | **0x03** |
+| **R4**  | **0x04** |
+| **R5**  | **0x05** |
+| **R6**  | **0x06** |
+| **R7**  | **0x07** |
+| **R8**  | **0x08** |
+| **R9**  | **0x09** |
 | **R10** | **0x0A** |
 | **R11** | **0x0B** |
 | **R12** | **0x0C** |
@@ -470,28 +469,28 @@ RETURN             ; Return from the subroutine
 | **R15** | **0x0F** |
 | **R16** | **0x10** |
 
-| Instructions | Machine Code |
-|---|---|
-| **MOV immediate to register** | **0x20** |
-| **MOV register to register** | **0x20** |
-| **LOAD** | **0x30** |
-| **STR** | **0x41** |
-| **CMP** | **0x52** |
-| **JMP** | **0x70** |
-| **ADD** | **0xC0** |
-| **SUB** | **0xD1** |
-| **MUL** | **0xE2** |
-| **DIV** | **0xF3** |
-| **OR** | **0x14** |
-| **AND** | **0x25** |
-| **XOR** | **0x26** |
-| **NOT** | **0x47** |
-| **HLT** | **0xFF** |
-| **PRT** | **0x58** |
-| **JMPT** | **0x81** |
-| **JMPF** | **0x92** |
-| **CALL** | **0xA0** |
-| **Return** | **0xB0** | 
+| Instructions | Syntax | Machine Code |
+|---|---|---|
+| **MOV immediate to register** | MOV immediate_value, destination_register | **0x20** |
+| **MOV register to register** | MOV source_register, destination_register | **0x20** |
+| **LOAD** | LOAD address_register, destination_register | **0x30** |
+| **STR** | STR source_register, address_register | **0x41** |
+| **CMP** | CMP source_register1, source_register2 | **0x52** |
+| **JMP** | JMP label | **0x70** |
+| **ADD** | ADD source_register1, source_register2, destination_register | **0xC0** |
+| **SUB** | SUB source_register1, source_register2, destination_register | **0xD1** |
+| **MUL** | MUL source_register1, source_register2, destination_register | **0xE2** |
+| **DIV** | DIV source_register1, source_register2, destination_register | **0xF3** |
+| **OR** | OR source_register1, source_register2, destination_register | **0x14** |
+| **AND** | AND source_register1, source_register2, destination_register | **0x25** |
+| **XOR** | XOR source_register1, source_register2, destination_register | **0x26** |
+| **NOT** | NOT source_register, destination_register | **0x47** |
+| **HLT** | HLT | **0xFF** |
+| **PRT** | PRT register_to_print | **0x58** |
+| **JMPT** | JMPT condition, label | **0x81** |
+| **JMPF** | JMPF condition, label | **0x92** |
+| **CALL** | CALL subroutine_label | **0xA0** |
+| **Return** | RETURN | **0xB0** | 
 
 
 ## III. Non-Functional Requirements
