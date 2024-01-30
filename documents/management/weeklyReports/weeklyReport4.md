@@ -15,6 +15,10 @@ The functional Specification received some changes to ??? and it has been polish
 <h5>Technical Specification</h5>
 
 Now that the Functional is finished, we can progress more on the technical. 
+We made an info chart of how the reading, convertion of our assembly into machine code and the execution of the machine code
+
+![Alt text](/documents/management/image/Info_chart.png)
+*A part of the info chart in the technical*
 
 <h5>Test Plan</h5>
 
