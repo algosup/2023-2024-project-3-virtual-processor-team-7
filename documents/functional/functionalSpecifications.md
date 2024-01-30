@@ -99,6 +99,8 @@
 
 The aim of this document is to provide an in depth functional specification for the Virtual Processor Project of Team 7. This project's objective is to develop a virtual processor to execute an assembly-like language. We will virtualize the processor using C programming language and the GCC compiler.
 
+In our project, we first create an assembly-like language. Then, we bring in the idea of machine code. This code is like the computer's basic language that the CPU directly uses. Our machine code acts as a link between the instructions of our assembly language and the CPU. This step is important because it helps translate the readable assembly-like instructions into the binary language the computer hardware knows. This process allows programs to run effectively on our virtual processor.
+
 ### 3. Project Definition
 
 #### ➭ Vision
@@ -489,11 +491,7 @@ RETURN             ; Return from the subroutine
 | **JMPT** | **0x81** |
 | **JMPF** | **0x92** |
 | **CALL** | **0xA0** |
-| **Return** | **0xB0** |
-| **MOVC** |  |
-| **MOVCH**  |  |
-| **PRTC** |  |
-| **PRTCH** |  |
+| **Return** | **0xB0** | 
 
 
 ## III. Non-Functional Requirements
@@ -526,6 +524,3 @@ In conclusion, this document outlines the roadmap for Team 7's Virtual Processor
 
 As we move forward, this document will guide our development, emphasizing a commitment to quality and practical utility. Let's work together to bring these aspirations to life in a tangible project.
 
-<!--I don't think a conclusion is necessary in this documents -->
-
-<!-- Overall, try speaking more of the machine code part of the project in the beginning, and try to remove the "fluff" which means the CHATGPT sentences like "robust coding environment" or stuff like that.-->
