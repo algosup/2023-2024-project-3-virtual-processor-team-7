@@ -77,7 +77,7 @@
 | Tech Lead | Robin DEBRY |  | 30/01/2024 |
 | Software Developer | David CUAHONTE CUEVAS |  | 30/01/2024 |
 | Software Developer | Camille GAYAT | | 30/01/2024|
-| Quality Assurance | Abderrazaq MAKRAN |  | 30/01/2024 |
+| Quality Assurance | Abderrazaq MAKRAN | ✔️ | 30/01/2024 |
 | Quality Assurance | Raphaël PROUDHON |  | 30/01/2024 |
 
 ## I. Introduction
