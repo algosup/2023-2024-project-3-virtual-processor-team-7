@@ -12,14 +12,11 @@
 
 <details>
 
-<summary>
-
-## Table of Content
+<summary> Table of Content
 
 </summary>
 
 - [Technical Specifications](#technical-specifications)
-  - [Table of Content](#table-of-content)
   - [1. Introduction](#1-introduction)
     - [Document Purpose \& Definition](#document-purpose--definition)
     - [Glossary](#glossary)
@@ -34,7 +31,7 @@
         - [➭ Commenting conventions](#-commenting-conventions)
         - [➭ Documents conventions](#-documents-conventions)
         - [➭ Folders conventions](#-folders-conventions)
-        - [Test-Driven Development](#test-driven-development)
+        - [➭ Test-Driven Development](#-test-driven-development)
       - [Assumptions and constraints](#assumptions-and-constraints)
   - [2.Technical Specifications](#2technical-specifications)
     - [Folder Structure](#folder-structure)
@@ -42,6 +39,7 @@
       - [Registers](#registers)
       - [CPU](#cpu)
       - [Instructions](#instructions)
+    - [Software structure](#software-structure)
 
 </details>
 
@@ -49,20 +47,19 @@
 
 ### Document Purpose & Definition
 
-The goal of the Technical Specifications is to take the Functional Requirements which defines the features, scope and goals of the project, to dissect each requirement and turn it into instructions, as clear as possible, to guide the development team as well as the quality assurance team in the successful completion of their mission.
+The objective of the Technical Specifications is to translate the Functional Requirements, which delineate the features, scope, and objectives of the project. This involves breaking down each requirement into explicit instructions with utmost clarity. The purpose is to provide precise guidance to both the development and quality assurance teams, ensuring the successful accomplishment of their mission.
 
-We therefore encourage thorough reading of the [Functional Specifications](../functional/functionalSpecifications.md) before further reading.
+We strongly recommend a comprehensive review of the [Functional Specifications](../functional/functionalSpecifications.md)  before delving deeper into the Technical Specifications.
 
-The goal of the Technical Requirements is to clarify as much as possible to avoid the engineers making decisions
+The primary aim of the Technical Requirements is to minimize ambiguity and prevent engineers from making uninformed decisions. To achieve this, we will address various functional and non-functional facets of the project. Simultaneously, we will make informed technological and architectural choices, evaluate their implications, measure associated risks and impacts, and compare them against alternative solutions.
 
-With that being said, we will try to cover as many functional and non-functional aspects of the project while making technological and architectural decisions, evaluating those decisions, measuring their associated risks and impact and compare those to other potential solutions.
-
-The document should also benefit other stakeholders and project owners by giving insight into our methodology and may serve as a future reference for maintenance.
+This document is intended not only to assist the development team but also to provide valuable insights for other stakeholders and project owners. It serves as a reference for our methodology and may prove beneficial for future maintenance activities.
 
 ### Glossary
 
 | Term | Definition |
 |---|---|
+
 
 ### Project Overview
 
@@ -125,9 +122,9 @@ All their name will be written in camelCase.
 
 ##### ➭ Folders conventions
 
-All the folders will be written in snake_case.
+All the folders will be written in camelCase.
 
-##### Test-Driven Development
+##### ➭ Test-Driven Development
 
 We will use the Test-Driven Development methodology to develop our project.
 For that we will create Assembly code files that will be used to test our project.
@@ -151,25 +148,11 @@ All in **bold** are folders.
 
 **`interpreter/headers`** Contains all the header files such as :
 
-<!-- `cpu.h` Header file for the functions related to the Central Processing Unit(CPU).
+`machineCode.h` Contains the machine code.
 
-`storeImm.h` Header file for the functions related to store an immediate value in a register.
+`assembleCode.h` Permit to assemble the code.
 
-`copy.h` Header file for the functions related to copy a register value to another register.
-
-`load.h` Header file for the functions related to load a value from memory into a register.
-
-`storeAddr.h` Header file for the functions related to store the value of a register into memory address.
-
-`compare.h` Header file for the functions related to compare two values.
-
-`jump.h` Header file for the functions related to jump with or without condition.
-
-`subroutine.h` Header file for the functions related to call a subroutine and return from a subroutine.
-
-`arithm.h` Header file for the functions related to arithmetic operations.
-
-`logic.h` Header file for the functions related to logical operations. -->
+`cpu.h` Contains the CPU.
 
 **`/documents`** Contains all the documents related to the project in subfolders such as :
 
@@ -252,6 +235,7 @@ All in **bold** are folders.
 |-- 2023-2024-project-3-virtual-processor-team-7 (root)
 |   |-- interpreter
 |   |   |-- headers
+|   |   |   |-- machineCode.h
 |   |   |-- main.c
 |   |-- documents
 |   |   |-- functional
@@ -276,9 +260,8 @@ All in **bold** are folders.
 |   |   |   |   |-- technical1.png
 |   |   |   |-- technicalSpecifications.md
 |   |-- qa
-|   |   |-- template
-|   |   |   |-- bugReport.yml
-|   |   |   |-- testCases.yml
+|   |   |-- images
+|   |   |   |-- testPlan1.png
 |   |   |-- testPlan.md
 |   |-- test
 |   |-- .gitignore
@@ -290,28 +273,23 @@ All in **bold** are folders.
 
 #### Registers
 
-We will use 3 registers to store the data :
-
-- R1
-- R2
-- R3
-
-To implement them we will use a typedef enum.
-
-``` c
-typedef enum {
-    R1,
-    R2,
-    R3,
-    R4,
-    R5,
-    R6
-} Register;
-```
-
+We will use 16 registers to implement them we will use the program counter of the CPU.
+![registers](./images/Technical1.png)
+PC is the program counter. It contains the address of the next instruction to be executed.
+In this case PC will be always the instruction
 it will be easier to use them in the functions.
 
 #### CPU
+
+![imageCPU](./images/Technical2.png)
+
+- **PC** is the program counter. it provides the temporary housing for the next instruction that is to be executed in a string of instructions. As one instruction is retrieved and implemented, the program counter queues up the next instruction in the string, effectively minimizing delays in the execution of steps necessary to complete a task.
+- **IR** is the instruction register. It contains the instruction that is currently being executed.
+- **MAR** is the memory address register. It contains the address of the memory location to be accessed.
+- **MDR** is the memory data register. It contains the data to be written to or read from the addressed location in memory.
+- **ALU** is the arithmetic logic unit. It performs arithmetic and logical operations.
+- **ACC** is the accumulator. It contains the result of the most recent arithmetic or logical operation performed by the ALU.
+- **General Purpose Registers** are registers that can be used for any purpose. They are used to store operands, results, memory addresses, and so on it's for that we will use them to store the values of the registers.
 
 We will use a struct to implement the CPU.
 The CPU will have 6 registers, a memory of 100 bytes, a program counter, a stack and a stack pointer.
@@ -330,6 +308,144 @@ typedef struct {
 
 #### Instructions
 
-According to the [Functional Specifications](../functional/functionalSpecifications.md) we will use 17 instructions to implement them we will use a typedef enum with their name but only the first 4 characters and only in uppercase.
+According to the [Functional Specifications](../functional/functionalSpecifications.md) we will use 20 instructions to implement them we will use the program counter of the CPU.
+Now we will explain each instruction and how we will implement them.
 
-[⬆️ Back to top](#table-of-content)
+- **MOV** : Move the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    cpu->registers[machineCode[pc + 2]] = machineCode[pc + 1];
+    ```
+
+    with that the value of the register will be moved to another register.
+<br>
+- **ADD** : Add the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] + cpu->registers[machineCode[pc + 2]];
+    ```
+
+    With that the value of two registers will be added. The result will be stored in a third register.
+<br>
+
+- **SUB** : Substract the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] - cpu->registers[machineCode[pc + 2]];
+    ```
+
+    With that the value of two registers will be substracted. The result will be stored in a third register.
+<br>
+- **MUL** : Multiply the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] * cpu->registers[machineCode[pc + 2]];
+    ```
+
+    With that the value of two registers will be multiplied. The result will be stored in a third register.
+<br>
+
+- **DIV** : Divide the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] / cpu->registers[machineCode[pc + 2]];
+    ```
+
+    With that the value of two registers will be divided. The result will be stored in a third register.
+
+<br>
+
+- **CMP** : Compare the value of a register to another register. To implement this instruction we will use :
+
+    ``` c
+    if (cpu->registers[machineCode[pc + 1]] == cpu->registers[machineCode[pc + 2]]) {
+        printf("The two values are equal\n")
+    } else {
+        printf("The two values are not equal\n")
+    }
+    ```
+
+    With that the value of two registers will be compared. If the two values are equal the program will print "The two values are equal" else it will print "The two values are not equal". It's for the beginning with that you will be sure that is working as intended.
+  
+<br>
+
+- **OR** : Logical OR between two registers. To implement this instruction we will use :
+
+    ``` c
+     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] | cpu->registers[machineCode[pc + 2]];
+    ```
+
+    We use | to do a logical OR between two registers. The result will be stored in a third register.
+
+<br>
+
+- **AND** : Logical AND between two registers. To implement this instruction we will use :
+
+    ``` c
+     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] & cpu->registers[machineCode[pc + 2]];
+    ```
+
+    We use & to do a logical AND between two registers. The result will be stored in a third register.
+
+<br>
+
+- **XOR** : Logical XOR between two registers. To implement this instruction we will use :
+
+    ``` c
+     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] ^ cpu->registers[machineCode[pc + 2]];
+    ```
+
+    We use ^ to do a logical XOR between two registers. The result will be stored in a third register.
+
+<br>
+
+- **NOT** : Logical NOT between two registers. To implement this instruction we will use :
+
+    ``` c
+     cpu->registers[machineCode[pc + 2]] = ~cpu->registers[machineCode[pc + 1]];
+    ```
+
+    We use ~ to do a logical NOT between two registers. The result will be stored in a second register.
+  
+<br>
+
+<!-- - **LOAD** : Load the value of a register to memory. To implement this instruction we will use :
+
+    ``` c
+    cpu->memory[machineCode[pc + 2]][machineCode[pc + 1]] = cpu->registers[machineCode[pc + 3]];
+    ```
+
+    With that the value of a register will be loaded to memory. -->
+
+### Software structure
+
+The software structure will be divided into 4 parts : The CPU, the machine code , the interpreter and the main.
+
+- **CPU** : The CPU will be divided into 6 registers, a memory of 100 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will looks something like that :
+
+``` c
+void initializeCPU(CPU *cpu)
+{
+    for (int i = 0; i < MEMORY_SIZE; i++)
+    {
+        cpu->registers[i] = 0;
+    }
+    for (int i = 0; i < MEMORY_SIZE; i++)
+    {
+        cpu->memory[i] = 0;
+    }
+    cpu->program_counter = 0;
+
+    for (int i = 0; i < MEMORY_SIZE; i++)
+    {
+        cpu->stack[i] = 0;
+    }
+    cpu->stack_pointer = 0;
+}
+```
+
+Don't forget to include the standard C library`#include <stdio.h>`, `#include <stdlib.h>` and `#include <string.h>`.
+
+-
+
+[⬆️ Back to top](#technical-specifications)
