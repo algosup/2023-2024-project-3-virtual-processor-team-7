@@ -78,42 +78,33 @@
 | Terms used | Definition |
 |---|---|
 | Assembler | A program that translates assembly language into machine code. |
-| Semantic Validity | Ensuring that the meaning of the assembly code is correct and adheres to the intended functionality. |
+| Semantic Validity | Ensuring that the meaning of the assembly-like code is correct and adheres to the intended functionality. |
 | Machine Code | The low-level code that is directly executed by the computer's central processing unit (CPU). |
 | Virtual Processor | A virtual processor refers to a simulated or emulated instance of a central processing unit (CPU) that operates in a virtualized environment. It mimics the behavior of a physical processor, allowing the execution of instructions and processing of data, often used for testing, development, or educational purposes. |
 | C language | The C programming language is a general-purpose, procedural programming language developed by Dennis Ritchie in the early 1970s. It is widely used for system and application software development due to its efficiency, portability, and powerful features. C serves as the foundation for many other programming languages. |
-| GCC | GCC, or the GNU Compiler Collection, is a suite of compilers developed by the Free Software Foundation (FSF). It includes compilers for various programming languages, with a primary focus on C, C++, and Fortran. GCC is renowned for its open-source nature, portability, and support for multiple platforms. |
+| GCC | GCC, or the GNU Compiler Collection, is a suite of compilers developed by the Free Software Foundation (FSF). It includes compilers for various programming languages, with a primary focus on C, C++, and Fortran.
 | IDE | An Integrated Development Environment (IDE) is a comprehensive software application that provides developers with a centralized platform for coding, debugging, testing, and deploying software. It typically includes a source code editor, debugger, build automation tools, and other features to enhance the development workflow. |
-| Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or an intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers play a crucial role in the software development process by converting human-readable code into a form understandable by computers. |
-
+| Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or an intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers are important in the software development process as they convert human-readable code into a form understandable by computers. |
 
 ### 2. Project Overview
 
-
-The aim of this document is to provide a thorough functional specification for the Virtual Processor Project of Team 7. This endeavor encompasses the development of a virtual processor tailored to execute assembly code. We will virtualize the processor using C programming language and the GCC compiler.
-
+The aim of this document is to provide an in depth functional specification for the Virtual Processor Project of Team 7. This project's objective is to develop a virtual processor to execute an assembly-like language. We will virtualize the processor using C programming language and the GCC compiler.
 
 ### 3. Project Definition
 
-
 #### ➭ Vision
 
-
-The fundamental objective of this project is to design and implement a virtual processor capable of executing assembly code. This vision revolves around the creation of a minimalist assembly language specific to the virtual processor, meeting the requirements asked in the call for tenders. The assembly language thus defined will comprise a series of key instructions, including the storage of immediate values in registers, memory manipulation, basic arithmetic and logic operations, and flow control mechanisms.
-
+The fundamental objective of this project is to design and implement a virtual processor capable of executing assembly-like code. This vision revolves around the creation of a minimalistic assembly inspired language specific to the virtual processor, meeting the requirements asked in the call for tender. The assembly-like language thus defined will comprise a series of key instructions, including the storage of immediate values in registers, memory manipulation, basic arithmetic and logic operations, and flow control mechanisms.
 
 #### ➭ Objectives
 
-
-- Design a minimalist assembly language for the virtual processor, respecting the instructions as asked in the call for tenders.
-- Implement a C language program capable of reading a text file containing programs written in the defined assembly language.
-- Validate the syntax of assembly programs to guarantee their semantic validity.
-- Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly code execution.
-- Integrate debugging functions, such as display of register contents, to facilitate the development and verification of assembly code.
-
+- Design a minimalist assembly inspired language for the virtual processor, respecting the instructions as asked in the call for tender.
+- Implement a C language program capable of reading a text file containing programs written in the defined assembly-like language.
+- Validate the syntax of assembly-like programs to guarantee their semantic validity.
+- Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly-like code execution.
+- Integrate debugging functions, such as display of register contents, to facilitate the development and verification of assembly-like code.
 
 #### ➭ Scope
-
 
 | In Scope |
 |---|
