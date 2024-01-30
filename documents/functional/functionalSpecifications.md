@@ -28,33 +28,33 @@
         - [★ Human Resources](#-human-resources)
         - [★ Development Tools](#-development-tools)
         - [★ Associated costs](#-associated-costs)
-      - [➭ Assumptions/Constraints](#-assumptionsconstraints)
+      - [➭ Constraints](#-constraints)
         - [★ Time constraints](#-time-constraints)
   - [II. Functional Requirements](#ii-functional-requirements)
     - [1. System Capabilities](#1-system-capabilities)
-      - [➭ 1.1 Data Handling:](#-11-data-handling)
-      - [➭ 1.2 Calculations:](#-12-calculations)
-      - [➭ 1.3 Branching:](#-13-branching)
-      - [➭ 1.4 Platform Independence:](#-14-platform-independence)
-        - [★ C standard Libraries](#-c-standard-libraries)
-      - [➭ 1.5 Error Handling and Detection:](#-15-error-handling-and-detection)
+      - [➭ 1.1 Data Handling](#-11-data-handling)
+      - [➭ 1.2 Calculations](#-12-calculations)
+      - [➭ 1.3 Branching](#-13-branching)
+      - [➭ 1.4 Platform Independence](#-14-platform-independence)
+        - [★ C Standard Libraries](#-c-standard-libraries)
+      - [➭ 1.5 Error Handling and Detection](#-15-error-handling-and-detection)
     - [2. Assembly Language](#2-assembly-language)
       - [➭ Language Design](#-language-design)
       - [➭ Instructions](#-instructions)
-        - [★ 1. Storing an immediate value into a register:](#-1-storing-an-immediate-value-into-a-register)
-        - [★ 2. Copying the value of a register into another register:](#-2-copying-the-value-of-a-register-into-another-register)
-        - [★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:](#-3-reading-the-value-of-the-memory-at-the-address-contained-by-a-register-and-storing-it-into-another-register)
-        - [★ 4. Storing the value of a register into memory at the address contained by another register:](#-4-storing-the-value-of-a-register-into-memory-at-the-address-contained-by-another-register)
-        - [★ 5. Comparing the content of registers:](#-5-comparing-the-content-of-registers)
-        - [★ 6. Jumping unconditionally to a label:](#-6-jumping-unconditionally-to-a-label)
-        - [★ 7. Jumping conditionally to a label:](#-7-jumping-conditionally-to-a-label)
+        - [★ 1. Storing an immediate value into a register](#-1-storing-an-immediate-value-into-a-register)
+        - [★ 2. Copying the value of a register into another register](#-2-copying-the-value-of-a-register-into-another-register)
+        - [★ 3. Reading the value of the memory at the address contained by a register and storing it in another register](#-3-reading-the-value-of-the-memory-at-the-address-contained-by-a-register-and-storing-it-in-another-register)
+        - [★ 4. Storing the value of a register into memory at the address contained by another register](#-4-storing-the-value-of-a-register-into-memory-at-the-address-contained-by-another-register)
+        - [★ 5. Comparing the content of registers](#-5-comparing-the-content-of-registers)
+        - [★ 6. Jumping unconditionally to a label](#-6-jumping-unconditionally-to-a-label)
+        - [★ 7. Jumping conditionally to a label](#-7-jumping-conditionally-to-a-label)
         - [★ 8. Jumping conditionally to a label](#-8-jumping-conditionally-to-a-label)
-        - [★ 9. Calling a subroutine:](#-9-calling-a-subroutine)
-        - [★ 10. Returning from a subroutine:](#-10-returning-from-a-subroutine)
-        - [★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:](#-11-the-4-basic-arithmetic-operations-addition-subtraction-multiplication-and-division)
-        - [★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:](#-12-the-4-basic-logical-operations-or-and-xor-and-not)
+        - [★ 9. Calling a subroutine](#-9-calling-a-subroutine)
+        - [★ 10. Returning from a subroutine](#-10-returning-from-a-subroutine)
+        - [★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division](#-11-the-4-basic-arithmetic-operations-addition-subtraction-multiplication-and-division)
+        - [★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT](#-12-the-4-basic-logical-operations-or-and-xor-and-not)
         - [★ 13. Ending a program](#-13-ending-a-program)
-        - [★ 14. Printing to the screen:](#-14-printing-to-the-screen)
+        - [★ 14. Printing to the screen](#-14-printing-to-the-screen)
       - [➭ Example of use](#-example-of-use)
       - [➭ Machine Code](#-machine-code)
   - [III. Non-Functional Requirements](#iii-non-functional-requirements)
@@ -74,7 +74,7 @@
 |---|---|---|---|
 | Project Manager | Mattéo LEFIN |  | 30/01/2024 |
 | Program Manager | Gaël MALVAR |  |30/01/2024 |
-| Tech Lead | Robin DEBRY |  | 30/01/2024 |
+| Tech Lead | Robin DEBRY | :white_check_mark: | 30/01/2024 |
 | Software Developer | David CUAHONTE CUEVAS |  | 30/01/2024 |
 | Software Developer | Camille GAYAT | | 30/01/2024|
 | Quality Assurance | Abderrazaq MAKRAN | ✔️ | 30/01/2024 |
@@ -89,15 +89,15 @@
 | Assembler | A program that translates assembly language into machine code. |
 | Semantic Validity | Ensuring that the meaning of the assembly-like code is correct and adheres to the intended functionality. |
 | Machine Code | The low-level code that is directly executed by the computer's central processing unit (CPU). |
-| Virtual Processor | A virtual processor refers to a simulated or emulated instance of a central processing unit (CPU) that operates in a virtualized environment. It mimics the behavior of a physical processor, allowing the execution of instructions and processing of data, often used for testing, development, or educational purposes. |
+| Virtual Processor | A virtual processor refers to a simulated or emulated instance of a central processing unit (CPU) that operates in a virtualized environment. It mimics the behaviour of a physical processor, allowing the execution of instructions and processing of data, often used for testing, development, or educational purposes. |
 | C language | The C programming language is a general-purpose, procedural programming language developed by Dennis Ritchie in the early 1970s. It is widely used for system and application software development due to its efficiency, portability, and powerful features. C serves as the foundation for many other programming languages. |
 | GCC | GCC, or the GNU Compiler Collection, is a suite of compilers developed by the Free Software Foundation (FSF). It includes compilers for various programming languages, with a primary focus on C, C++, and Fortran.
 | IDE | An Integrated Development Environment (IDE) is a comprehensive software application that provides developers with a centralized platform for coding, debugging, testing, and deploying software. It typically includes a source code editor, debugger, build automation tools, and other features to enhance the development workflow. |
-| Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or an intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers are important in the software development process as they convert human-readable code into a form understandable by computers. |
+| Compiler | A compiler is a software tool that translates high-level source code written in programming languages like C, C++, or Java into machine code or intermediate code. The resulting executable or intermediate code can be run on a computer. Compilers are important in the software development process as they convert human-readable code into a form understandable by computers.|
 
 ### 2. Project Overview
 
-The aim of this document is to provide an in depth functional specification for the Virtual Processor Project of Team 7. This project's objective is to develop a virtual processor to execute an assembly-like language. We will virtualize the processor using C programming language and the GCC compiler.
+The aim of this document is to provide an in depth functional specification for the Virtual Processor Project of Team 7. This project's objective is to develop a virtual processor to execute an assembly-like language. We will virtualize the processor using the C programming language and the GCC compiler.
 
 In our project, we first create an assembly-like language. Then, we bring in the idea of machine code. This code is like the computer's basic language that the CPU directly uses. Our machine code acts as a link between the instructions of our assembly language and the CPU. This step is important because it helps translate the readable assembly-like instructions into the binary language the computer hardware knows. This process allows programs to run effectively on our virtual processor.
 
@@ -113,7 +113,7 @@ The fundamental objective of this project is to design and implement a virtual p
 - Implement a C language program capable of reading a text file containing programs written in the defined assembly-like language.
 - Validate the syntax of assembly-like programs to guarantee their semantic validity.
 - Set up virtual system calls to display text in a virtual terminal, enabling visualization of assembly-like code execution.
-- Integrate debugging functions, such as display of register contents, to facilitate the development and verification of assembly-like code.
+- Integrate debugging functions, such as the display of register contents, to facilitate the development and verification of assembly-like code.
 
 #### ➭ Scope
 
@@ -146,7 +146,7 @@ The fundamental objective of this project is to design and implement a virtual p
 
 Introduction:
 
-Emma Turner, a 32-year-old software engineer, is currently based in Seattle. With a background in developing web applications, she is now eager to explore low-level programming and assembly language. Emma works for a startup that focuses on innovative tech solutions.
+- Emma Turner, a 32-year-old software engineer, is currently based in Seattle. With a background in developing web applications, she is now eager to explore low-level programming and assembly language. Emma works for a startup that focuses on innovative tech solutions.
 
 Goals:
 
@@ -160,7 +160,7 @@ Challenges:
 
 Introduction:
 
-Alex Garcia, a 25-year-old junior software developer, recently joined a tech company in Los Angeles. Having expertise in high-level languages like Python, he is eager to explore assembly language for a more in-depth understanding of computer architecture.
+- Alex Garcia, a 25-year-old junior software developer, recently joined a tech company in Los Angeles. Having expertise in high-level languages like Python, he is eager to explore assembly language for a more in-depth understanding of computer architecture.
 
 Goals:
 
@@ -174,7 +174,8 @@ Challenges:
 
 #### ➭ Stakeholders
 
-The stakeholders in this project will be: 
+The stakeholders in this project will be:
+
 - **_Franck JEANNIN_**
 - *The 7 members of our team.*
 
@@ -182,7 +183,7 @@ The stakeholders in this project will be:
 
 The project reviewers, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
 
-- Guarantee the quality of the code, the semantic validity of the assembler programs
+- Guarantee the quality of the code and the semantic validity of the assembler programs
 - Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#ii-functional-requirements).
 
 ### 5. Project Plan
@@ -211,18 +212,18 @@ The team is made of **7 members**
   In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
   This means we have **686 manhours**.
 
-
 ##### ★ Development Tools
 
 **Operating System:** Windows and MacOS
-  - **Compiler:** GCC 13.2
-  - **IDE:** Visual Studio Code 1.85
+
+- **Compiler:** GCC 13.2
+- **IDE:** Visual Studio Code 1.85
 
 ##### ★ Associated costs
 
 No special costs are anticipated, as all materials are provided by the school.
 
-#### ➭ Assumptions/Constraints
+#### ➭ Constraints
 
 ##### ★ Time constraints
 
@@ -233,9 +234,9 @@ In addition, deadlines are set for the overall completion of the project. These 
 
 ### 1. System Capabilities
 
-#### ➭ 1.1 Data Handling:
+#### ➭ 1.1 Data Handling
 
-**<u>The assembly-like language instructions should enable smooth manipulation of data, including:</u>**
+**<u>The assembly-like language instructions should enable smooth manipulation of data, including</u>**
 
 **<u>Writing data between a register and:</u>**
 
@@ -244,14 +245,14 @@ In addition, deadlines are set for the overall completion of the project. These 
 - The memory (RAM).
 - The virtual keyboard/display.
 
-#### ➭ 1.2 Calculations:
+#### ➭ 1.2 Calculations
 
-**<u>The assembly-like language needs to provide essential support for mathematical and logical operations, including:**</u>
+**<u>The assembly-like language needs to provide essential support for mathematical and logical operations, including**</u>
 
-- The four fundamental mathematical operations: addition, subtraction, multiplication, division.
+- The four fundamental mathematical operations: are addition, subtraction, multiplication and division.
 - The four basic logical operations: NOT, AND, OR, XOR.
 
-#### ➭ 1.3 Branching:
+#### ➭ 1.3 Branching
 
 **<u>The programming language should facilitate effective branching by enabling:**</u>
 
@@ -259,16 +260,16 @@ In addition, deadlines are set for the overall completion of the project. These 
 - Conditional and unconditional jumping.
 - Calling and returning from subroutines.
 
-#### ➭ 1.4 Platform Independence:
+#### ➭ 1.4 Platform Independence
 
 The interpreter should showcase the ability to be compiled and executed on any real computer architecture. To ensure portability, it should refrain from relying on external libraries beyond standard ones, and any usage of operating system-specific libraries must have viable alternatives.
 
-##### ★ C standard Libraries
+##### ★ C Standard Libraries
 
 | Name | Use |
 |---|---|
 | **stdio.h** | Manages input and output operations, including functions for formatted input and output, file handling, and character input/output.|
-| **stdlib.h** | Provides general-purpose functions for memory allocation and deallocation (malloc, free, etc.), random number generation (rand, srand), and other. |
+| **stdlib.h** | Provides general-purpose functions for memory allocation and deallocation (malloc, free, etc.), random number generation (rand, srand), and others. |
 | **string.h** | Contains functions for manipulating strings, including copying (strcpy, strncpy), concatenation (strcat, strncat), comparison (strcmp, strncmp), and searching (strchr, strstr). |
 | **ctype.h** | Defines functions for character classification and conversion, such as checking if a character is alphabetic (isalpha), numeric (isdigit), or converting case (toupper, tolower). |
 | **math.h** | Provides mathematical functions, including trigonometric (sin, cos, tan), exponential (exp), logarithmic (log, log10), power (pow), square root (sqrt), and others. |
@@ -278,13 +279,13 @@ The interpreter should showcase the ability to be compiled and executed on any r
 | **stdbool.h** | Defines the boolean data type (bool) along with true and false constants.|
 | **stdarg.h** | Contains macros and functions for handling variable-length argument lists, commonly used in functions like printf and scanf. |
 
-#### ➭ 1.5 Error Handling and Detection:
+#### ➭ 1.5 Error Handling and Detection
 
 The interpreter is required to add error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should halt the program and notify the user.
 
 ### 2. Assembly Language
 
-#### ➭ Language Design 
+#### ➭ Language Design
 
 The assembly-like language we've created is a synthesis of instructions inspired by diverse architectures, combining elements from x86 and ARM. This approach was taken to harness the strengths and proven designs of established architectures, providing a versatile foundation for our virtual processor.
 
@@ -303,52 +304,49 @@ Inspiration: x86 architecture
 
 🚨⚠️ All instructions must be written in capital letters ⚠️🚨
 
-##### ★ 1. Storing an immediate value into a register:
+##### ★ 1. Storing an immediate value into a register
 
 - **Syntax:** **`MOV immediate_value, destination_register`**
   - Copies a value into a register.
 - **Example:** **`MOV 42, R1`**
-  - Assigns the value 42 to register R1.
+  - Assign the value 42 to register R1.
 
-
-##### ★ 2. Copying the value of a register into another register:
+##### ★ 2. Copying the value of a register into another register
 
 - **Syntax:** **`MOV source_register, destination_register`**
   - Duplicates the value from one register to another.
 - **Example:** **`MOV R1, R2`**
   - Copies the content of R1 into R2.
 
-
-##### ★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:
+##### ★ 3. Reading the value of the memory at the address contained by a register and storing it in another register
 
 - **Syntax:** **`LOAD address_register, destination_register`**
   - Retrieves data from memory using the address in a register.
 - **Example:** **`LOAD R3, R4`**
   - Loads the content of the memory at the address in R3 into R4.
 
-##### ★ 4. Storing the value of a register into memory at the address contained by another register:
+##### ★ 4. Storing the value of a register into memory at the address contained by another register
 
 - **Syntax:** **`STR source_register, address_register`**
   - Writes the content of a register into memory at the address in another register.
 - **Example:** **`STR R2, R5`**
   - Stores the content of R2 into the memory at the address in R5.
 
-##### ★ 5. Comparing the content of registers:
+##### ★ 5. Comparing the content of registers
 
 - **Syntax:** **`CMP source_register1, source_register2`**
   - Compares the values in two registers.
 - **Example:** **`CMP R1, R2`**
   - Compares the contents of R1 and R2.
 
-
-##### ★ 6. Jumping unconditionally to a label:
+##### ★ 6. Jumping unconditionally to a label
 
 - **Syntax:** **`JMP label`**
   - Jumps to a specified label.
 - **Example:** **`JMP start_loop`**
   - Jumps to the "start_loop" label.
 
-##### ★ 7. Jumping conditionally to a label:
+##### ★ 7. Jumping conditionally to a label
 
 - **Syntax:** **`JMPT condition, label`**
   - Jumps to a label if a specified condition is true.
@@ -362,28 +360,28 @@ Inspiration: x86 architecture
 - **Example:** **`JMPF TRUE, end_loop`**
   - Jumps to "end_loop" if the condition is false.
 
-##### ★ 9. Calling a subroutine:
+##### ★ 9. Calling a subroutine
 
 - **Syntax:** **`CALL subroutine_label`**
   - Initiates a subroutine.
 - **Example:** **`CALL my_subroutine`**
   - Calls the "my_subroutine" subroutine.
 
-##### ★ 10. Returning from a subroutine:
+##### ★ 10. Returning from a subroutine
 
-- **Syntax:** **`RETURN`**
+- **Syntax:** **`RET`**
   - Exits a subroutine.
-- **Example:** **`RETURN`**
+- **Example:** **`RET`**
   - Returns from the current subroutine.
 
-##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:
+##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division
 
 - **Addition:** **`ADD source_register1, source_register2, destination_register`**
 - **Subtraction:** **`SUB source_register1, source_register2, destination_register`**
 - **Multiplication:** **`MUL source_register1, source_register2, destination_register`**
 - **Division:** **`DIV source_register1, source_register2, destination_register`**
 
-##### ★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:
+##### ★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT
 
 - **OR operation:** **`OR source_register1, source_register2, destination_register`**
 - **AND operation:** **`AND source_register1, source_register2, destination_register`**
@@ -394,7 +392,7 @@ Inspiration: x86 architecture
 
 - **HLT:** **`HLT`**
 
-##### ★ 14. Printing to the screen:
+##### ★ 14. Printing to the screen
 
 - **Syntax:** **`PRT register_to_print`**
   - Outputs the value stored in the specified register to the screen.
@@ -403,49 +401,26 @@ Inspiration: x86 architecture
 
 **➭ Note**
 
-- **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
-- **Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).**
-- **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
-- **We have sometimes used four letters to add precision (e.g. `JMPT`).**
-- **In the case of a calculation where the result is a number with a decimal point, the number will always be rounded down. (e.g. 4/3 = 1.333, the result will be 1)**
+- Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).
+- Labels are alphanumeric identifiers for program locations (e.g., **`start_loop`**, **`my_subroutine`**).
+- Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.
+- We have sometimes used four letters to add precision (e.g. **`JMPT`**).
+- In the case of a calculation where the result is a number with a decimal point, the number will always be rounded down. (e.g. 4/3 = 1.333, the result will be 1)
 
 #### ➭ Example of use
 
-
 **<u>Assembly program to add two numbers and store the result:</u>**
 
-```
-; Memory layout
-; Memory location 100: First operand
-; Memory location 101: Second operand
-; Memory location 102: Result
+```asm
 
 ; Start of the program
+MOV 8, R3
+PRT R3
+MOV 5, R2
+PRT R2
+ADD R3, R2, R1
+PRT R1
 
-LOAD R1, 100       ; Load the first operand into register R1
-LOAD 101, R2       ; Load the second operand into register R2
-
-ADD R1, R2, R3     ; Add the contents of R1 and R2, store result in R3
-
-STOR R3, 102       ; Store the result in memory location 102
-
-JUMP end_program   ; Jump to the end of the program
-
-end_program:
-HLT                ; Halt the program
-
-
-; Subroutine to perform multiplication
-
-my_subroutine
-
-LOAD R4, 100       ; Load the first operand into register R4
-LOAD R5, 101       ; Load the second operand into register R5
-MUL R4, R5, R6     ; Multiply the contents of R4 and R5, store result in R6
-
-STOR R6, 102       ; Store the result in memory location 102
-
-RETURN             ; Return from the subroutine
 ```
 
 #### ➭ Machine Code
@@ -490,14 +465,11 @@ RETURN             ; Return from the subroutine
 | **JMPT** | JMPT condition, label | **0x81** |
 | **JMPF** | JMPF condition, label | **0x92** |
 | **CALL** | CALL subroutine_label | **0xA0** |
-| **Return** | RETURN | **0xB0** | 
-
+| **RET** | RET | **0xB0** |
 
 ## III. Non-Functional Requirements
 
-
 #### ➭ Performance
-
 
 The virtual processor must efficiently execute assembly-like code, maintaining minimal latency and swift response times.
 The interpreter is expected to handle moderate-sized assembly-like programs seamlessly, ensuring optimal performance without significant delays.
@@ -522,4 +494,3 @@ Ensure that the interpreter's performance remains acceptable as both the size an
 In conclusion, this document outlines the roadmap for Team 7's Virtual Processor project. We've defined a clear vision, set achievable objectives, and established practical guidelines. Our focus on simplicity, collaboration, and accessibility in both language design and programming guidelines ensures a user-friendly and educational tool.
 
 As we move forward, this document will guide our development, emphasizing a commitment to quality and practical utility. Let's work together to bring these aspirations to life in a tangible project.
-

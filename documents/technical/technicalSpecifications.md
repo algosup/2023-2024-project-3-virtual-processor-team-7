@@ -235,6 +235,9 @@ All in **bold** are folders.
 |-- 2023-2024-project-3-virtual-processor-team-7 (root)
 |   |-- interpreter
 |   |   |-- headers
+|   |   |   |-- cpu.h
+|   |   |   |-- instructionToMachineCode.h
+|   |   |   |-- parser.h
 |   |   |   |-- machineCode.h
 |   |   |-- main.c
 |   |-- documents
@@ -419,9 +422,9 @@ Now we will explain each instruction and how we will implement them.
 
 ### Software structure
 
-The software structure will be divided into 4 parts : The CPU, the machine code , the interpreter and the main.
+The software structure will be divided into 5 parts : The CPU, the FileReader, the machine code , the interpreter and the main.
 
-- **CPU** : The CPU will be divided into 6 registers, a memory of 100 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will looks something like that :
+- **CPU** : The CPU will be divided into 6 registers, a memory of 2^16 bytes that you need to define before all so it will be 65536 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will looks something like that :
 
 ``` c
 void initializeCPU(CPU *cpu)
@@ -446,6 +449,18 @@ void initializeCPU(CPU *cpu)
 
 Don't forget to include the standard C library`#include <stdio.h>`, `#include <stdlib.h>` and `#include <string.h>`.
 
--
+<!-- - **Machine code** : The machine code will be divided into 19 instructions. To structure the machine code we will use a struct. After that we will create multiple function for each instruction it will be for example `add()`, `sub()`, `mul()`, `div()`, `cmp()`, `or()`, `and()`, `xor()`, `not()`, `load()`, `store()`, `jump()`, `jumpT()`,`jumpF()` `call()`, `return()`, `halt()`, `mov()`,`print()`. but first of all we need to read an assembly file for that we will use `fgets()` function inside a while loop to read the file line by line. After that we will use `strtok()` function to split the line into tokens.
+Of course if a line is empty or if the line begin with a `;` it will be ignored. After that we will use `strcmp()` function to compare the tokens with the instructions. If the token is equal to the instruction we will call the function of the instruction. For example if the token is equal to `add` we will call the function `add()`. It will looks something like that :
+
+``` c
+
+if (strcmp(token, "ADD") == 0)
+        {
+            add();
+        }
+
+```
+
+inside this function add we will assign a machine code to the instruction. We will also parse  -->
 
 [⬆️ Back to top](#technical-specifications)
