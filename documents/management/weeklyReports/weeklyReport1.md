@@ -23,7 +23,7 @@ Since we don't have that much time this week, we mostly spent our time acquiring
 | Functional specification  | 0%   |
 | Technical specification | 0%   |
 | Test Plan| 0%   |
-| Assembly developpment | 0%   |
+| Assembly-like developpment | 0%   |
 | C language developpment | 0%  |
 | Weekly report  | 15%   |
 

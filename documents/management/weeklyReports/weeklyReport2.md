@@ -24,7 +24,7 @@ _A part of the technical_
 | Functional specification | 15%      |
 | Technical specification  | 10%      |
 | Test Plan                | 0%       |
-| Assembly development    | 5%       |
+| Assembly-like development    | 5%       |
 | C language development  | 0%       |
 | Weekly report            | 30%      |
 

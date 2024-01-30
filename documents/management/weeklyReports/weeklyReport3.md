@@ -27,7 +27,7 @@ On monday, we firstly did a plan related to the organization of our repository :
 
 <h5>The Functional specifications</h5>
 
-The functional specifications are advancing smoothly, they already have a table of content and a third of the content itself, it's missing the sub-parts.
+The Functional Specifications are advancing smoothly, they already have a table of content and a third of the content itself, it's missing the sub-parts.
 
 ![Alt text](/documents/management/image/ToC_v1.png)
 *First version of the Table of Content.*
@@ -45,13 +45,13 @@ The functional specifications are advancing smoothly, they already have a table 
 
 Our team started coding by defining in C language the different instructions and different registers to initialize the [CPU (Central Processing Unit).](#-glossary)
 ![Alt text](/documents/management/image/Dev1.png)
-*We defined the instruction of assembly using C language.*
+*We defined an instruction of assembly using C language.*
 ![Alt text](/documents/management/image/Dev2.png)
 *Intialization of the CPU*
 
 <h5>Technical Specifications</h5>
 
-The Technical specifications include the folder organization but also the development environment and a detailed explanation of the structure of the program.
+The Technical Specifications include the folder organization but also the development environment and a detailed explanation of the structure of the program.
 
 ![Alt text](/documents/management/image/technical2.png)
 *A part of the development environment*
@@ -78,10 +78,10 @@ The functional has been greatly advanced. We were able to give a list of all our
 *A part of the functional requirements*
 
 ![Alt text](/documents/management/image/Functional7.png)
-*A part of the list of assembly instruction*
+*A part of the list of our assembly instruction*
 
 
-<h5>Assembly</h5>
+<h5>Program</h5>
 
 Our team managed to produce a function that can detect the size and read the contents of the files, they have also done the first instruction: MOV_IMM.
 
@@ -156,7 +156,7 @@ The assembly-like part of the project should be finished soon and now we are foc
 | Functional specification  | 92%   |
 | Technical specification | 15%   |
 | Test Plan| 35%   |
-| Assembly developpment | 100%   |
+| Assembly-like developpment | 100%   |
 | C language developpment | 30%  |
 | Weekly report  | 45%   |
 
