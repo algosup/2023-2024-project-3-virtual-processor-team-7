@@ -6,6 +6,7 @@
 <summary> 📖 Table of content 📖 </summary>
 
 - [Functional Specifications | Virtual Processor Team 7](#functional-specifications--virtual-processor-team-7)
+  - [Document Approval](#document-approval)
   - [I. Introduction](#i-introduction)
     - [1. Glossary](#1-glossary)
     - [2. Project Overview](#2-project-overview)
@@ -66,6 +67,8 @@
 </details>
 
 ---
+
+## Document Approval
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
