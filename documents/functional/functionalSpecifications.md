@@ -17,7 +17,7 @@
       - [➭ Personas](#-personas)
         - [★ Persona 1 - Emma Turner](#-persona-1---emma-turner)
         - [★ Persona 2 - Alex Garcia](#-persona-2---alex-garcia)
-    - [4. Project Organisation](#4-project-organisation)
+    - [4. Project Organization](#4-project-organization)
       - [➭ Stakeholders](#-stakeholders)
       - [➭ Project Reviewers](#-project-reviewers)
     - [5. Project Plan](#5-project-plan)
@@ -68,12 +68,9 @@
 
 ---
 
-
 ## I. Introduction
 
-
 ### 1. Glossary
-
 
 | Terms used | Definition |
 |---|---|
@@ -109,7 +106,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | In Scope |
 |---|
 | Design a Virtual Processor |
-| Minimalist Assembly Language |
+| Minimalist Assembly inspired Language |
 | Implementation of an Interpreter |
 | Syntax Validation |
 | Debugging Features |
@@ -119,9 +116,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | Compatibility with high-level languages |
 | Dive deeper in Assembly |
 
-
 #### ➭ Deliverables
-
 
 | Name | Type | Deadline |
 |---|---|---|
@@ -131,9 +126,7 @@ The fundamental objective of this project is to design and implement a virtual p
 | Test Plan | Document (markdown) | 02/16/2024 |
 | Final product | Program | 02/23/2024 |
 
-
 #### ➭ Personas
-
 
 ##### ★ Persona 1 - Emma Turner
 
@@ -157,44 +150,34 @@ Alex Garcia, a 25-year-old junior software developer, recently joined a tech com
 
 Goals:
 
-- Alex's primary goal is to grasp the fundamentals of assembly language to enhance his overall programming knowledge. He is interested in a virtual processor that supports macOS, as she frequently switches between his MacBook and a Windows machine. A straightforward and intuitive instruction set is vital for Alex's successful adoption of the new language.
+- Alex's primary goal is to grasp the fundamentals of assembly language to enhance his overall programming knowledge. He is interested in a virtual processor that supports macOS, as he frequently switches between his MacBook and his Windows machine. A simple and intuitive instruction set is vital for Alex's successful adoption of the new language.
 
 Challenges:
 
-- As a junior developer, Alex may find certain low-level programming concepts challenging. Hence, he looks for a virtual processor with a supportive community and learning resources. The ability to seamlessly switch between macOS and Windows without compatibility issues is crucial for his development workflow.
+- As a junior developer, Alex may find certain low-level programming concepts challenging. Hence, he looks for a  simple virtual processor with a simple assembly-like language. The ability to seamlessly switch between macOS and Windows without compatibility issues is crucial for his development workflow.
 
-
-### 4. Project Organisation
-
+### 4. Project Organization
 
 #### ➭ Stakeholders
-
 
 The stakeholders in this project will be: 
 - **_Franck JEANNIN_**
 - *The 7 members of our team.*
-  
 
 #### ➭ Project Reviewers
-
 
 The project reviewers, responsible for the in-depth review and approval of important deliverables, will be the two dedicated Quality Assurance (QA) members of the team. Their role will be to:
 
 - Guarantee the quality of the code, the semantic validity of the assembler programs
 - Check that the virtual processor's functionalities meet the criteria specified in the [Functional Requirements](#ii-functional-requirements).
 
-
 ### 5. Project Plan
-
 
 #### ➭ Retroplanning
 
-
 ![image retroplanning](./image/retroplanning.png)
 
-
 #### ➭ Milestones
-
 
 | Milestone | Deadline|
 |---|---|
@@ -204,12 +187,9 @@ The project reviewers, responsible for the in-depth review and approval of impor
 | Working Prototype | 02/22/2024 |
 | Oral Presentation | 02/29/2024 |
 
-
 #### ➭ Resources/Financial plan
 
-
 ##### ★ Human Resources
-
 
 The team is made of **7 members**
 
@@ -217,66 +197,52 @@ The team is made of **7 members**
   In this time frame, we have **28 half-days** of project work (**3.5 hours** per half-day).
   This means we have **686 manhours**.
 
+<!-- I don't see the point of this part, the 8 weeks yes, the rest is redundant -->
 
 ##### ★ Development Tools
-
 
 **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
 
-
 ##### ★ Associated costs
-
 
 No special costs are anticipated, as all materials are provided by the school.
 
-
 #### ➭ Assumptions/Constraints
-
 
 ##### ★ Team member availability
 
-
 The team will be available throughout the project to work during assigned hours.
-
-
+<!--Idem what's the point of this part? -->
 ##### ★ Time constraints
-
 
 Deadlines are in place for the delivery of documents ([Deliverables](#-deliverables)) such as Functional Specifications, Technical Specifications and the Test Plan. 
 In addition, deadlines are set for the overall completion of the project. These time constraints must be carefully respected to ensure steady progress and timely delivery of deliverables.
 
-
 ## II. Functional Requirements
-
 
 ### 1. System Capabilities
 
-
 #### ➭ 1.1 Data Handling:
 
-
-**<u>The assembly language instructions should enable smooth manipulation of data, including:</u>**
+**<u>The assembly-like language instructions should enable smooth manipulation of data, including:</u>**
 
 **<u>Writing data between a register and:</u>**
+
 - An immediate value (a constant).
 - Another register.
 - The memory (RAM).
 - The virtual keyboard/display.
 
-
 #### ➭ 1.2 Calculations:
 
-
-**<u>The assembly language needs to provide essential support for mathematical and logical operations, including:**</u>
+**<u>The assembly-like language needs to provide essential support for mathematical and logical operations, including:**</u>
 
 - The four fundamental mathematical operations: addition, subtraction, multiplication, division.
 - The four basic logical operations: NOT, AND, OR, XOR.
 
-
 #### ➭ 1.3 Branching:
-
 
 **<u>The programming language should facilitate effective branching by enabling:**</u>
 
@@ -284,15 +250,11 @@ In addition, deadlines are set for the overall completion of the project. These 
 - Conditional and unconditional jumping.
 - Calling and returning from subroutines.
 
-
 #### ➭ 1.4 Platform Independence:
-
 
 The interpreter should showcase the ability to be compiled and executed on any real computer architecture. To ensure portability, it should refrain from relying on external libraries beyond standard ones, and any usage of operating system-specific libraries must have viable alternatives.
 
-
 ##### ★ C standard Libraries
-
 
 | Name | Use |
 |---|---|
@@ -307,23 +269,17 @@ The interpreter should showcase the ability to be compiled and executed on any r
 | **stdbool.h** | Defines the boolean data type (bool) along with true and false constants.|
 | **stdarg.h** | Contains macros and functions for handling variable-length argument lists, commonly used in functions like printf and scanf. |
 
-
 #### ➭ 1.5 Error Handling and Detection:
 
-
-The interpreter is required to incorporate robust error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should gracefully halt the program and notify the user.
-
+The interpreter is required to add error-handling mechanisms, capable of detecting syntactical errors such as invalid lines or parameters. In the event of an error, the interpreter should halt the program and notify the user.
 
 ### 2. Assembly Language
 
-
 #### ➭ Language Design 
 
+The assembly-like language we've created is a synthesis of instructions inspired by diverse architectures, combining elements from x86 and ARM. This approach was taken to harness the strengths and proven designs of established architectures, providing a versatile foundation for our virtual processor.
 
-The assembly language we've crafted is a synthesis of instructions inspired by diverse architectures, combining elements from x86 and ARM. This approach was taken to harness the strengths and proven designs of established architectures, providing a robust and versatile foundation for our virtual processor.
-
-*Our language design includes:*
-
+*Our language design includes for example:*
 
 **3. Load Instruction (LOAD)**
 Inspiration: ARM architecture
@@ -334,15 +290,11 @@ Inspiration: ARM architecture
 **13. Halt Instruction (HLT)**
 Inspiration: x86 architecture
 
-
 #### ➭ Instructions
-
 
 🚨⚠️ All instructions must be written in capital letters ⚠️🚨
 
-
 ##### ★ 1. Storing an immediate value into a register:
-
 
 - **Syntax:** **`MOV immediate_value, destination_register`**
   - Copies a value into a register.
@@ -352,7 +304,6 @@ Inspiration: x86 architecture
 
 ##### ★ 2. Copying the value of a register into another register:
 
-
 - **Syntax:** **`MOV source_register, destination_register`**
   - Duplicates the value from one register to another.
 - **Example:** **`MOV R1, R2`**
@@ -361,24 +312,19 @@ Inspiration: x86 architecture
 
 ##### ★ 3. Reading the value of the memory at the address contained by a register and storing it into another register:
 
-
 - **Syntax:** **`LOAD address_register, destination_register`**
   - Retrieves data from memory using the address in a register.
 - **Example:** **`LOAD R3, R4`**
   - Loads the content of the memory at the address in R3 into R4.
 
-
 ##### ★ 4. Storing the value of a register into memory at the address contained by another register:
-
 
 - **Syntax:** **`STR source_register, address_register`**
   - Writes the content of a register into memory at the address in another register.
 - **Example:** **`STR R2, R5`**
   - Stores the content of R2 into the memory at the address in R5.
 
-
 ##### ★ 5. Comparing the content of registers:
-
 
 - **Syntax:** **`CMP source_register1, source_register2`**
   - Compares the values in two registers.
@@ -388,72 +334,56 @@ Inspiration: x86 architecture
 
 ##### ★ 6. Jumping unconditionally to a label:
 
-
 - **Syntax:** **`JMP label`**
   - Jumps to a specified label.
 - **Example:** **`JMP start_loop`**
   - Jumps to the "start_loop" label.
 
-
 ##### ★ 7. Jumping conditionally to a label:
-
 
 - **Syntax:** **`JMPT condition, label`**
   - Jumps to a label if a specified condition is true.
 - **Example:** **`JMPT TRUE, end_loop`**
   - Jumps to "end_loop" if the condition is true.
 
-
 ##### ★ 8. Jumping conditionally to a label
-
 
 - **Syntax:** **`JMPF condition, label`**
   - Jumps to a label if a specified condition is false.
 - **Example:** **`JMPF TRUE, end_loop`**
   - Jumps to "end_loop" if the condition is false.
 
-
 ##### ★ 9. Calling a subroutine:
-
 
 - **Syntax:** **`CALL subroutine_label`**
   - Initiates a subroutine.
 - **Example:** **`CALL my_subroutine`**
   - Calls the "my_subroutine" subroutine.
 
-
 ##### ★ 10. Returning from a subroutine:
-
 
 - **Syntax:** **`RETURN`**
   - Exits a subroutine.
 - **Example:** **`RETURN`**
   - Returns from the current subroutine.
 
-
 ##### ★ 11. The 4 basic arithmetic operations: addition, subtraction, multiplication, and division:
-
 
 - **Addition:** **`ADD source_register1, source_register2, destination_register`**
 - **Subtraction:** **`SUB source_register1, source_register2, destination_register`**
 - **Multiplication:** **`MUL source_register1, source_register2, destination_register`**
 - **Division:** **`DIV source_register1, source_register2, destination_register`**
 
-
 ##### ★ 12. The 4 basic logical operations: OR, AND, XOR, and NOT:
-
 
 - **OR operation:** **`OR source_register1, source_register2, destination_register`**
 - **AND operation:** **`AND source_register1, source_register2, destination_register`**
 - **XOR operation:** **`XOR source_register1, source_register2, destination_register`**
 - **NOT operation:** **`NOT source_register, destination_register`**
 
-
 ##### ★ 13. Ending a program
 
-
 - **HLT:** **`HLT`**
-
 
 ##### ★ 14. Printing to the screen:
 
@@ -462,7 +392,6 @@ Inspiration: x86 architecture
 - **Example:** **`PRT "register_value"`**
   - Prints the content of the register.
 
-
 **➭ Note**
 
 - **Registers are denoted by **`R`** followed by a number (e.g., **`R1`**, **`R2`**).**
@@ -470,7 +399,6 @@ Inspiration: x86 architecture
 - **Conditional jumps can be based on conditions like **`ZERO`**, **`NOT_ZERO`**, **`NEGATIVE`**, **`POSITIVE`**, etc.**
 - **We have sometimes used four letters to add precision (e.g. `JMPT`).**
 - **In the case of a calculation where the result is a number with a decimal point, the number will always be rounded down. (e.g. 4/3 = 1.333, the result will be 1)**
-
 
 #### ➭ Example of use
 
@@ -511,9 +439,8 @@ STOR R6, 102       ; Store the result in memory location 102
 RETURN             ; Return from the subroutine
 ```
 
-
+<!-- I don't think this is necessary, while it's important to explain the assembly, giving a code example seems too much (in my opinion, up to you) -->
 #### ➭ Machine Code
-
 
 | Register | Machine Code |
 |---|---|
@@ -533,8 +460,6 @@ RETURN             ; Return from the subroutine
 | **R14** | **0x0E** |
 | **R15** | **0x0F** |
 | **R16** | **0x10** |
-
-
 
 | Instructions | Machine Code |
 |---|---|
@@ -570,35 +495,30 @@ RETURN             ; Return from the subroutine
 #### ➭ Performance
 
 
-The virtual processor must efficiently execute assembly code, maintaining minimal latency and swift response times.
-The interpreter is expected to handle moderate-sized assembly programs seamlessly, ensuring optimal performance without significant delays.
-
+The virtual processor must efficiently execute assembly-like code, maintaining minimal latency and swift response times.
+The interpreter is expected to handle moderate-sized assembly-like programs seamlessly, ensuring optimal performance without significant delays.
 
 #### ➭ Portability
-
 
 Design the interpreter with a focus on portability, guaranteeing compatibility across diverse computer architectures and operating systems.
 The interpreter should be executable without requiring modifications on different platforms.
 
-
 #### ➭ Reliability
 
-
-The virtual processor should prioritize high reliability, minimizing the occurrence of unexpected crashes or errors during the execution of assembly code.
+The virtual processor should prioritize high reliability, minimizing the occurrence of unexpected crashes or errors during the execution of assembly-like code.
 Implement robust error-handling mechanisms to gracefully manage invalid or unexpected inputs, enhancing the overall reliability of the interpreter.
-
 
 #### ➭ Scalability
 
-
 Architect the interpreter to scale efficiently with the complexity of assembly programs, facilitating the incorporation of a growing number of instructions and features.
-Ensure that the interpreter's performance remains acceptable as both the size and complexity of assembly code grow, providing a scalable solution.
-
+Ensure that the interpreter's performance remains acceptable as both the size and complexity of assembly-like code grow, providing a scalable solution.
 
 ## IV. Conclusion
-
 
 In conclusion, this document outlines the roadmap for Team 7's Virtual Processor project. We've defined a clear vision, set achievable objectives, and established practical guidelines. Our focus on simplicity, collaboration, and accessibility in both language design and programming guidelines ensures a user-friendly and educational tool.
 
 As we move forward, this document will guide our development, emphasizing a commitment to quality and practical utility. Let's work together to bring these aspirations to life in a tangible project.
 
+<!--I don't think a conclusion is necessary in this documents -->
+
+<!-- Overall, try speaking more of the machine code part of the project in the beginning, and try to remove the "fluff" which means the CHATGPT sentences like "robust coding environment" or stuff like that.-->
