@@ -448,7 +448,7 @@ PRT R1
 | Instructions | Syntax | Machine Code |
 |---|---|---|
 | **MOV immediate to register** | MOV immediate_value, destination_register | **0x20** |
-| **MOV register to register** | MOV source_register, destination_register | **0x20** |
+| **MOV register to register** | MOV source_register, destination_register | **0x21** |
 | **LOAD** | LOAD address_register, destination_register | **0x30** |
 | **STR** | STR source_register, address_register | **0x41** |
 | **CMP** | CMP source_register1, source_register2 | **0x52** |
