@@ -12,9 +12,7 @@
 
 <details>
 
-<summary> Table of Content
-
-</summary>
+<summary> Table of Content </summary>
 
 - [Technical Specifications](#technical-specifications)
   - [1. Introduction](#1-introduction)
@@ -58,8 +56,7 @@ This document is intended not only to assist the development team but also to pr
 ### Glossary
 
 | Term | Definition |
-|---|---|
-
+|------|------------|
 
 ### Project Overview
 
@@ -82,7 +79,7 @@ We will set up our development environment following the requirements as follow 
 - Any text editor but [Visual Studio Code](https://code.visualstudio.com/) is recommended.
 - [Github](https://github.com/) or any control version system. Our team will use Github for this project especially [Github Desktop](https://desktop.github.com) it will be easier for all team members.
 - We use the version 18 of C language called C18 also known as C17 because it is one of the most recent version of C language.
-- We use [GCC](https://gcc.gnu.org/) as our compiler.
+- We use [GCC](https://gcc.gnu.org/) 14.0.0 as our compiler.
 
 #### Coding methodology
 
@@ -142,6 +139,12 @@ Each assembly code will test a specific part of the project for instance one ass
 
 All in **bold** are folders.
 
+**`/.github/ISSUE_TEMPLATE`** Contains all the files related to the issue template.
+
+`bugReport.yml` Contains the bug report template.
+
+`testCase.yml` Contains the test case template.
+
 **`/interpreter`** Contains all the files related to the interpreter.
 
 `main.c` Core of the project, contains the main function.
@@ -196,11 +199,7 @@ All in **bold** are folders.
 
 `testPlan.md` Contains the test plan.
 
-**`/qa/template`**  Contains all the files related to the quality assurance template which contains:
-
-`testCases.yml` Contains the template to create a test case.
-
-`bugReport.yml` Contains the template to create a bug report.
+**`qa/images`** Contains all the images for the test plan.
 
 **`/test`** Contains all the files related to the test which contains all the assembly code files like :
 
@@ -214,9 +213,9 @@ All in **bold** are folders.
 
 `testLoad.asm` Contains the assembly code to test the load of a value from memory into a register.
 
-`testStoreAddr.asm` Contains the assembly code to test the store of the value of a register into memory address.
+`testStore.asm` Contains the assembly code to test the store of the value of a register into memory address.
 
-`testCompare.asm` Contains the assembly code to test the compare of two values.
+`testCmp.asm` Contains the assembly code to test the compare of two values.
 
 `testJump.asm` Contains the assembly code to test the jump without condition.
 
@@ -230,15 +229,18 @@ All in **bold** are folders.
 
 `testLogic.asm` Contains the assembly code to test the logical operations.
 
-``` folder
+```folder
 
 |-- 2023-2024-project-3-virtual-processor-team-7 (root)
+|   |-- .github
+|   |   |-- ISSUE_TEMPLATE
+|   |   |   |-- bugReport.yml
+|   |   |   |-- testCase.yml
 |   |-- interpreter
 |   |   |-- headers
 |   |   |   |-- cpu.h
-|   |   |   |-- instructionToMachineCode.h
+|   |   |   |-- executeInstruction.h
 |   |   |   |-- parser.h
-|   |   |   |-- machineCode.h
 |   |   |-- main.c
 |   |-- documents
 |   |   |-- functional
@@ -267,6 +269,24 @@ All in **bold** are folders.
 |   |   |   |-- testPlan1.png
 |   |   |-- testPlan.md
 |   |-- test
+|   |   |-- testMov.asm
+|   |   |-- testPrint.asm
+|   |   |-- testAdd.asm
+|   |   |-- testSub.asm
+|   |   |-- testMul.asm
+|   |   |-- testDiv.asm
+|   |   |-- testCmp.asm
+|   |   |-- testOr.asm
+|   |   |-- testAnd.asm
+|   |   |-- testXor.asm
+|   |   |-- testNot.asm
+|   |   |-- testLoad.asm
+|   |   |-- testStore.asm
+|   |   |-- testJump.asm
+|   |   |-- testJumpCond.asm
+|   |   |-- testCall.asm
+|   |   |-- testReturn.asm
+|   |
 |   |-- .gitignore
 |   |-- README.md
 |   |-- LICENSE
@@ -295,7 +315,7 @@ it will be easier to use them in the functions.
 - **General Purpose Registers** are registers that can be used for any purpose. They are used to store operands, results, memory addresses, and so on it's for that we will use them to store the values of the registers.
 
 We will use a struct to implement the CPU.
-The CPU will have 6 registers, a memory of 100 bytes, a program counter, a stack and a stack pointer.
+The CPU will have 6 registers, the memory, a program counter, a stack and a stack pointer.
 
 ``` c
 
@@ -322,6 +342,7 @@ Now we will explain each instruction and how we will implement them.
 
     with that the value of the register will be moved to another register.
 <br>
+
 - **ADD** : Add the value of a register to another register. To implement this instruction we will use :
 
     ``` c
@@ -339,6 +360,7 @@ Now we will explain each instruction and how we will implement them.
 
     With that the value of two registers will be substracted. The result will be stored in a third register.
 <br>
+
 - **MUL** : Multiply the value of a register to another register. To implement this instruction we will use :
 
     ``` c
@@ -422,7 +444,7 @@ Now we will explain each instruction and how we will implement them.
 
 ### Software structure
 
-The software structure will be divided into 5 parts : The CPU, the FileReader, the machine code , the interpreter and the main.
+The software structure will be divided into 5 parts : The CPU, the parser, the instructionTomachineCode,and the main.
 
 - **CPU** : The CPU will be divided into 6 registers, a memory of 2^16 bytes that you need to define before all so it will be 65536 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will looks something like that :
 
@@ -449,18 +471,50 @@ void initializeCPU(CPU *cpu)
 
 Don't forget to include the standard C library`#include <stdio.h>`, `#include <stdlib.h>` and `#include <string.h>`.
 
-<!-- - **Machine code** : The machine code will be divided into 19 instructions. To structure the machine code we will use a struct. After that we will create multiple function for each instruction it will be for example `add()`, `sub()`, `mul()`, `div()`, `cmp()`, `or()`, `and()`, `xor()`, `not()`, `load()`, `store()`, `jump()`, `jumpT()`,`jumpF()` `call()`, `return()`, `halt()`, `mov()`,`print()`. but first of all we need to read an assembly file for that we will use `fgets()` function inside a while loop to read the file line by line. After that we will use `strtok()` function to split the line into tokens.
-Of course if a line is empty or if the line begin with a `;` it will be ignored. After that we will use `strcmp()` function to compare the tokens with the instructions. If the token is equal to the instruction we will call the function of the instruction. For example if the token is equal to `add` we will call the function `add()`. It will looks something like that :
+- **Parser**: The parser will be used to parse the assembly code. First of all we need a structure to store the label for their name and their adresses in memory. We will call it `Label`. After that we will need a function to parse the assembly code. We will call it `parse()`
+it will take the file in parameter, it will take also the array for the machine code and the machine code size at the beginning of this function you need to initialise the line which is an array of character that will permits to read the file line by line. After that you need to initialise the index that will permits to assign machine code when the parser will find a precise instruction according to the machine decided in the [functional specification](../functional/functionalSpecifications.md).After that we need to initialise the labelCount and the label adress to manage the jump instruction. It will looks something like that :
 
 ``` c
+    struct Label {
+        char name[256];
+        int address;
+    } labels[100]; // Adjust the size as needed
 
-if (strcmp(token, "ADD") == 0)
-        {
-            add();
-        }
+
+void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
+{
+    char line[256];
+    int index = 0;
+    int currentAddress = 0;
+    int labelCount = 0;
 
 ```
 
-inside this function add we will assign a machine code to the instruction. We will also parse  -->
+After that you will need a while loop to parse each line.
+
+``` c
+        while (fgets(line, sizeof(line), file))
+        {
+            // Parse the line
+        }
+```
+
+⚠️ **Don't forget to manage the comment and empty lines** ⚠️
+
+After that you will create a token for each instruction you encounter like that :
+
+``` c
+    char *token = strtok(line, " \t\n");
+```
+
+it will permit to know which instruction you encounter and which register will be a source or a destination register.
+
+- **InstructionToMachineCode**: This part will be used to use the execute the instruction. To do that we need a function to execute the instruction. We will call it `executeInstruction()` it will take the CPU in parameter and the machine code. After that we will need a while to be sure that the program don't find a halt instruction. Inside this while we will need a switch case to execute the instruction. It will looks something like that :
+
+``` c
+
+
+
+
 
 [⬆️ Back to top](#technical-specifications)
