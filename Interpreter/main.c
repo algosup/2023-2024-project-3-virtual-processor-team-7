@@ -28,7 +28,7 @@ int main()
     unsigned char memory[MEMORY_SIZE] = {0};
 
     // Execute the program
-    executeProgram(&cpu, machineCode);
+    executeInstructions(&cpu, machineCode);
 
     // Display memory contents after execution
     for (int i = 0; i < MEMORY_SIZE; i++)

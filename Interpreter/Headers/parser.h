@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "instructionToMachineCode.h"
+#include "executeInstructions.h"
 
 // Function to convert assembly code to machine code
 void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
@@ -40,19 +40,18 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         // Decode the instruction and convert to machine code
         if (strcmp(token, "MOV") == 0)
         {
-            machineCode[index++] = 0x20; // MOV opcode
-
             // Parse source operand (immediate or register)
             token = strtok(NULL, " \t\n");
             if (token[0] == 'R')
             {
+                machineCode[index++] = 0x21;                        // MOV opcode
                 machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
             }
             else
             {
+                machineCode[index++] = 0x20;                    // MOV opcode
                 machineCode[index++] = strtol(token, NULL, 10); // Immediate value
             }
-
             // Parse destination register
             token = strtok(NULL, " \t\n");
             machineCode[index++] = strtol(token + 1, NULL, 10); // Register number

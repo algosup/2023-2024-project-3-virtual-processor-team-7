@@ -3,7 +3,7 @@
 #include <string.h>
 #include "cpu.h"
 
-void executeProgram(CPU *cpu, unsigned char machineCode[])
+void executeInstructions(CPU *cpu, unsigned char machineCode[])
 {
     int pc = 0; // Program Counter
 
