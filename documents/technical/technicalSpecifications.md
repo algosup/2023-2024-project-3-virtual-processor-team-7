@@ -79,7 +79,7 @@ We will set up our development environment following the requirements as follow 
 - Any text editor but [Visual Studio Code](https://code.visualstudio.com/) is recommended.
 - [Github](https://github.com/) or any control version system. Our team will use Github for this project especially [Github Desktop](https://desktop.github.com) it will be easier for all team members.
 - We use the version 18 of C language called C18 also known as C17 because it is one of the most recent version of C language.
-- We use [GCC](https://gcc.gnu.org/) 14.0.0 as our compiler.
+- We use [GCC](https://gcc.gnu.org/) 13.2 as our compiler.
 
 #### Coding methodology
 
@@ -513,8 +513,73 @@ it will permit to know which instruction you encounter and which register will b
 
 ``` c
 
+void executeProgram(CPU *cpu, unsigned char machineCode[])
+{
+    int pc = 0; // Program Counter
 
+    while (1){
+        switch (machineCode[pc])
+        {
+        // MOV immediate_value, destination_register
+        case 0x20:
+            if (machineCode[pc + 1] > 255)
+            {
+                // Handle overflow
+                printf("Overflow in MOV detected\n");
+                return;
+            }
+            else
+            {
+                cpu->registers[machineCode[pc + 2]] = machineCode[pc + 1];
+                printf("MOV %d, R%d\n", machineCode[pc + 1], machineCode[pc + 2]);
+                pc += 3;
+            }
+            break;
+        }
+    }
+}
+```
 
+This is the example for the MOV instruction. You need to do the same for the other instructions.
 
+- **Main**: This part will be used to read all text file put in argument when you execute the program. For example to launch the program you will need to be in the interpreter folder and execute the command :
+
+    ``` bash
+    ./main <PathToYourFile.txt>
+    ```
+
+    After that you will need to open the file and check if the file exist. If the file exists you will need to call the function `initializeCPU()` to initialize the CPU. Further beyond that you will need to call the function `parse()` to parse the assembly code. ⚠️ **Don't forget to close the file**⚠️. Finally you will need to call the function `executeInstruction()` to execute the instruction the program found when it read the file. It will looks something like that :
+
+    ``` c
+    int main(int argc, char *argv[])
+    {
+        if (argc != 2)
+        {
+            printf("Usage: ./main <file>\n");
+            return 1;
+        }
+
+        FILE *file = fopen(argv[1], "r");
+        if (!file)
+        {
+            printf("Error: Could not open file %s\n", argv[1]);
+            return 1;
+        }
+
+        CPU cpu;
+        initializeCPU(&cpu);
+
+        unsigned char machineCode[MEMORY_SIZE];
+        int machineCodeSize = 0;
+
+        parser(file, machineCode, &machineCodeSize);
+
+        fclose(file);
+
+        executeInstruction(&cpu, machineCode);
+
+        return 0;
+    }
+    ```
 
 [⬆️ Back to top](#technical-specifications)
