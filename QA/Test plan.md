@@ -6,7 +6,7 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| 01/27/2024 |
+|Last Updated| 02/01/2024 |
 |Status| Draft|
 
 
@@ -17,15 +17,17 @@
 ## Document History
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
-|1| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|1.1| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.2| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.3| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.4| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.5| 01/27/2024|Abderrazaq MAKRAN | Draft |
+|1.0| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.02| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.05| 01/27/2024|Abderrazaq MAKRAN | Draft |
+|1.06| 02/01/2024|Abderrazaq MAKRAN | Draft |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
+| Mattéo Lefin | Project Manager | Reviewer | 02/01/2024 |
 
 <br>
 
@@ -42,7 +44,7 @@
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
-    - [3.4.3 Document Risk & Issues](#343-document-risk--issues)
+    - [3.4.3 Create Test Logistics](#343-create-test-logistics)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria](#41-criteria)
     - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
@@ -170,22 +172,32 @@
 
   <br>
 
-  - We will also go though unit test for each feature released by the development team.
+  - We will also go through unit test for each feature released by the development team.
     - we will run the unit test algorithm coded by the dev team.
 
 
 - ## 3.4 Scope and Levels of Testing
     - ### 3.4.1 Define Scope of Testing
       - #### In scope 
-        - we will be testing each part of the software, each instruction.
+        - Comprehensive testing of each part of the software, including each instruction.
+        - Functional testing of all features and functionalities.
+        - Identification and validation of expected system behavior.
+        - Testing of various scenarios and inputs to ensure system robustness.
+        - Performance testing to gather data on system responsiveness.
       - #### Out scope
-        -
+        - Security testing for potential vulnerabilities in the system.
+        - Compatibility testing across a wide range of browsers or platforms.
+        - User acceptance testing (UAT) for assessing user satisfaction.
     - ### 3.4.2 Identify Testing Type
       - #### Agile testing
-        we are going to use an agile testing strategy so as soon as new versions are realesed by the development team we will be able to test it as soon as possible and give a feedback in short delays.
-    - ### 3.4.3 Document Risk & Issues
-    - ### 3.4.4 Create Test Logistics
-    -  
+        Agile testing is an iterative and collaborative approach to software testing within the Agile development framework. It involves frequent and early testing throughout the development lifecycle, focusing on continuous feedback and adaptability to change. Testers actively collaborate with developers, product owners, and other stakeholders in cross-functional teams. Key practices include Test-Driven Development (TDD), automation for quick feedback, and exploratory testing. Agile testing emphasizes delivering value to the customer, responding to changing requirements, and conducting regular sprint reviews and retrospectives for continuous improvement. Overall, it aligns testing activities with the principles of Agile development, ensuring high-quality software releases in short, incremental cycles.
+    - ### 3.4.3 Create Test Logistics
+      - ### In scope
+        - Establishing a test environment for functional testing.
+        - Ensuring necessary access to testing tools and resources.
+      - ### Out scope
+        - Managing logistics related to non-functional testing environments.
+        - Procuring hardware or software licenses beyond the scope of the current testing cycle.  
 ## 4. EXECUTION STRATEGY
   - ### 4.1 Criteria
     - #### 4.1.1 Suspension Criteria
@@ -213,15 +225,15 @@
         Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
   - ### 4.2 Test Cycles
     - Two Functional Testing Cycles:
-      - First Cycle:
-        - Objective: Identify blocking, critical bugs, and most high-priority bugs.
-        - Approach: Use workarounds if necessary to complete all test cases.
-        -Focus: Prioritize finding showstopper issues that may hinder the basic functionality.
-      - Second Cycle:
-        - Objective: Address remaining high and medium bugs, eliminate workarounds from the first cycle, correct any gaps in the test cases, and gather performance results.
-        - Approach: Resolve issues identified in the first cycle, and specifically focus on medium-priority bugs.
-        - Focus: Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
-    - Functional Testing Cycles: These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
+      - **First Cycle:**
+        - **Objective:** Identify blocking, critical bugs, and most high-priority bugs.
+        - **Approach:** Use workarounds if necessary to complete all test cases.
+        -**Focus:** Prioritize finding showstopper issues that may hinder the basic functionality.
+      - **Second Cycle:**
+        - **Objective:** Address remaining high and medium bugs, eliminate workarounds from the first cycle, correct any gaps in the test cases, and gather performance results.
+        - **Approach:** Resolve issues identified in the first cycle, and specifically focus on medium-priority bugs.
+        - **Focus:** Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
+    - **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
     <br>
 
     In summary, the functional testing cycles gradually enhance the system's quality, addressing defects in priority order.
@@ -249,9 +261,12 @@
     <p float="left">
     <img src="Images/test_case.png" width="700" />
     </p>
-      - To enhance clarity, each test case will be meticulously crafted and documented within GitHub Issues, designated with the label "Test Case." 
-      - This ensures that every team member can readily comprehend the testing requirements. 
-      - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
+      
+    - To enhance clarity, each test case will be meticulously crafted and documented within GitHub Issues, designated with the label "Test Case." 
+    
+    - This ensures that every team member can readily comprehend the testing requirements. 
+    
+    - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
   
   - ### 4.5 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
@@ -315,7 +330,7 @@
     
     - Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
   
-  ### 5.2 Test Design Process
+### 5.2 Test Design Process
 
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
@@ -351,9 +366,8 @@ This section outlines the process of test case preparation and collaboration bet
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
-### 5.3 Mix
 
-## 5.4 Document Review and Commenting
+### 5.3 Document Review and Commenting
 
 ### Importance of Reviewing Documents
 
