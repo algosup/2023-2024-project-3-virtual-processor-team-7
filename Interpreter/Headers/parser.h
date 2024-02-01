@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <string.h>
-#include "machineCode.h"
+#include "instructionToMachineCode.h"
 
 // Function to convert assembly code to machine code
-void assembleCode(FILE *file, unsigned char machineCode[], int *machineCodeSize)
+void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
 {
     char line[256];
     int index = 0;

@@ -1,40 +1,37 @@
-// cpu.h
-#ifndef CPU_H
-#define CPU_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// enum for the instructions
-typedef enum
+#define MEMORY_SIZE 256
+
+typedef struct
 {
-    MOV_IMM,
-    MOV_REG,
-    LOAD,
-    STOR,
-    COMP,
-    JUMP,
-    JUMP_IF,
-    CALL,
-    RETURN,
-    ADD,
-    SUB,
-    MUL,
-    DIV,
-    OR,
-    AND,
-    XOR,
-    NOT,
-    HLT
-} instructions;
+    int registers[16];
+    unsigned char memory[MEMORY_SIZE];
+    int program_counter;
+    int stack[MEMORY_SIZE];
+    int stack_pointer;
+} CPU;
 
-// enum for registers
-typedef enum
+void initializeCPU(CPU *cpu)
 {
-    R1,
-    R2,
-    R3
-} registers;
+    // Initialize CPU state
+    for (int i = 0; i < 16; i++)
+    {
+        cpu->registers[i] = 0;
+    }
 
-// Cpu function prototypes
-void initializeCpu();
-void executeInstruction(instructions instruction, int operand1, int operand2);
+    for (int i = 0; i < MEMORY_SIZE; i++)
+    {
+        cpu->memory[i] = 0;
+    }
 
-#endif // CPU_H
+    cpu->program_counter = 0;
+
+    for (int i = 0; i < MEMORY_SIZE; i++)
+    {
+        cpu->stack[i] = 0;
+    }
+
+    cpu->stack_pointer = 0;
+}
