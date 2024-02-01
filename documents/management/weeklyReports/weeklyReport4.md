@@ -37,6 +37,13 @@ We made an info chart of how the reading, convertion of our assembly into machin
 | C language development | 30%  |
 | Weekly report  | 60%   |
 
+<h5>Documents rearrangement</h5>
+
+We regrouped all the management documents in a folder named "otherDocuments" in the "mangement"  folder.
+<h5>Communication Plan</h5>
+
+We added our team as a stakeholder.
+
 <h5>Critical Path</h5>
 
 A critical path has been produced because it helps estimate the project duration accurately, identifying critical activities that must be completed on time, highlighting task dependencies, resource constraints and potential risks.
