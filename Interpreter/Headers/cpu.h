@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MEMORY_SIZE 256
+#define MEMORY_SIZE 65536
 
 typedef struct
 {

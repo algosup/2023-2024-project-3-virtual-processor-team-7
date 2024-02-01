@@ -7,6 +7,15 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
 {
     char line[256];
     int index = 0;
+    int currentAddress = 0;
+    int labelCount = 0;
+
+    // A structure to store labels and their addresses
+    struct Label
+    {
+        char name[256];
+        int address;
+    } labels[100]; // Adjust the size as needed
 
     while (fgets(line, sizeof(line), file) != NULL)
     {
@@ -17,7 +26,16 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         // Tokenize the line to extract instruction and operands
         char *token = strtok(line, " \t\n");
         if (token == NULL)
-            continue; // No instruction on this line
+            continue;
+
+        if (token[strlen(token) - 1] == ':')
+        {
+            token[strlen(token) - 1] = '\0'; // Remove the colon
+            strcpy(labels[labelCount].name, token);
+            labels[labelCount].address = currentAddress;
+            labelCount++;
+            continue;
+        }
 
         // Decode the instruction and convert to machine code
         if (strcmp(token, "MOV") == 0)
@@ -79,26 +97,33 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         {
             machineCode[index++] = 0x58; // PRT opcode
 
-            // Parse register or immediate value to print
+            // Parse register to print
             token = strtok(NULL, " \t\n");
-            if (token[0] == 'R')
-            {
-                machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
-            }
-            else
-            {
-                unsigned int immediateValue = atoi(token) & 0xFF; // Ensure immediate value is within 8 bits
-                machineCode[index++] = (1 << 7) | immediateValue; // Immediate value with MSB set
-            }
+            machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
         }
-
         else if (strcmp(token, "JMP") == 0)
         {
             machineCode[index++] = 0x70; // JMP opcode
 
             // Parse label
             token = strtok(NULL, " \t\n");
-            machineCode[index++] = strtol(token, NULL, 10); // Label value
+            int labelIndex;
+            for (labelIndex = 0; labelIndex < labelCount; labelIndex++)
+            {
+                if (strcmp(labels[labelIndex].name, token) == 0)
+                {
+                    // Found the label, use its address
+                    machineCode[index++] = labels[labelIndex].address;
+                    break;
+                }
+            }
+            if (labelIndex == labelCount)
+            {
+                // Label not found, handle error
+                printf("Error: Label not found - %s\n", token);
+                exit(1);
+            }
+            currentAddress += 2;
         }
         else if (strcmp(token, "JMPT") == 0)
         {

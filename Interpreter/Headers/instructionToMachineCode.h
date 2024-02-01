@@ -3,7 +3,6 @@
 #include <string.h>
 #include "cpu.h"
 
-
 void executeProgram(CPU *cpu, unsigned char machineCode[])
 {
     int pc = 0; // Program Counter
@@ -12,8 +11,14 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
     {
         switch (machineCode[pc])
         {
-        // MOV source_register, destination_register
+        // MOV immediate_value, destination_register
         case 0x20:
+            cpu->registers[machineCode[pc + 2]] = machineCode[pc + 1];
+            printf("MOV %d, R%d\n", machineCode[pc + 1], machineCode[pc + 2]);
+            pc += 3;
+            break;
+        // MOV source_register, destination_register
+        case 0x21:
             cpu->registers[machineCode[pc + 2]] = cpu->registers[machineCode[pc + 1]];
             printf("MOV R%d, R%d\n", machineCode[pc + 1], machineCode[pc + 2]);
             pc += 3;
@@ -50,9 +55,14 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
             break;
         // JMP label
         case 0x70: // JMP label
-            cpu->program_counter = machineCode[cpu->program_counter + 1];
-            printf("JMP %d\n", machineCode[cpu->program_counter + 1]);
+        {
+            // Assuming operand is a 16-bit address
+            uint16_t address = (machineCode[cpu->program_counter + 1] << 8) | machineCode[cpu->program_counter + 2];
+            cpu->program_counter = address;
+            printf("JMP %04X\n", address);
+            pc += 2;
             break;
+        }
 
         case 0x81: // JMPT condition, label
             if (machineCode[cpu->program_counter + 1])
@@ -104,7 +114,6 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
                 // Handle underflow, for example, set a flag or take appropriate action
                 printf("Underflow in subtraction detected\n");
                 return;
-                // You may choose to set a flag and handle it outside the switch statement
             }
             else
             {
@@ -121,10 +130,9 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
             int result = cpu->registers[machineCode[pc + 1]] * cpu->registers[machineCode[pc + 2]];
             if (result > 255)
             {
-                // Handle overflow, for example, set a flag or take appropriate action
+                // Handle overflow
                 printf("Overflow in multiplication detected\n");
                 return;
-                // You may choose to set a flag and handle it outside the switch statement
             }
             else
             {
@@ -141,7 +149,7 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
             unsigned char dividend = cpu->registers[machineCode[pc + 1]];
             if (divisor == 0 || dividend == 0)
             {
-                // Handle division by zero, for example, set a flag or take appropriate action
+                // Handle division by zero
                 printf("Division by zero detected\n");
                 return;
             }
@@ -186,58 +194,3 @@ void executeProgram(CPU *cpu, unsigned char machineCode[])
         }
     }
 }
-
-// int main()
-// {
-//     // Machine code instructions
-//     unsigned char machineCode[] = {
-//         // Example instructions:
-//         0x20, 0x08, 0x03,       // MOV 42, R1
-//         0X58, 0x03,             // PRT R1
-//         0x20, 0x05, 0x02,       // MOV R1, R2
-//         0x30, 0x03, 0x04,       // LOAD R3, R4
-//         0x21, 0x03, 0x05,       // MOV R3, R5
-//         0x58, 0x05,             // PRT R5
-//         0x21, 0x02, 0x04,       // MOV R2, R4
-//         0x58, 0x04,             // PRT R4
-//         0x41, 0x02, 0x05,       // STR R2, R5
-
-//         0xC0, 0x03, 0x02, 0x01, // ADD R1, R2, R3
-//         0x58, 0x01,
-//         0xD1, 0x02, 0x01, 0x03, // SUB R1, R2, R3
-//         0xE2, 0x01, 0x02, 0x03, // MUL R1, R2, R3
-//         0x58, 0x01,
-//         0x58, 0x02,
-//         0xF3, 0x01, 0x02, 0x03, // DIV R1, R2, R3
-//         0x58, 0x03,
-//         0x14, 0x01, 0x02, 0x03, // OR R1, R2, R3
-//         0x58, 0x01,
-//         0x58, 0x02,
-//         0x25, 0x01, 0x02, 0x03, // AND R1, R2, R3
-//         0x58, 0x03,
-//         0x36, 0x01, 0x02, 0x03, // XOR R1, R2, R3
-//         0x58, 0x03,
-//         0x47, 0x01, 0x02,       // NOT R1, R4
-
-//         0xFF                    // HLT
-//     };
-
-//     // Registers
-//     unsigned char registers[6] = {0}; // R1, R2, R3, R4, R5, HLT
-//     // Memory
-//     unsigned char memory[MEMORY_SIZE] = {0};
-
-//     // Execute the program
-//     executeProgram(machineCode, registers, memory);
-
-//     // Display memory contents after execution
-//     for (int i = 0; i < MEMORY_SIZE; i++)
-//     {
-//         if (memory[i] != 0)
-//         {
-//             printf("Memory[%d]: %d\n", i, memory[i]);
-//         }
-//     }
-
-//     return 0;
-// }
