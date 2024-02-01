@@ -7,7 +7,7 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
 {
     int pc = 0; // Program Counter
 
-    while (machineCode[pc] != 0xFF)
+    while (1)
     {
         switch (machineCode[pc])
         {
