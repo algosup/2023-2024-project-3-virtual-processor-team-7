@@ -32,6 +32,10 @@ Now that we've wrapped up the Functional phase, we shifted our focus towards the
 
 <h5>Technical specification</h5>
 
+The Technical Specification has been upgraded.
+
+![Alt text](/documents/management/image/technical4.png)
+*A part of the InstructionToMachineCode in the Technical Specification*
 
 <h5>Test Case</h5>
 
@@ -43,14 +47,15 @@ Thirty test cases have been meticulously developed for the program, and they hav
 
 <h5>Test Plan</h5>
 
-all the major points of the Test Plan has been completed.
+All key elements of the Test Plan have been successfully completed.
 
 ![Alt text](/documents/management/image/TP5.png)
 *Test Case explanation in the Test Plan*
 
 <h5>Program</h5>
 
-We were able to implement the reading of the conditional/unconditional jump , the CALL and the RETURN of our assembly program.
+
+We successfully implemented the reading of conditional jumps, CALL, and RETURN in our assembly program. The only remaining component to be addressed is the implementation of unconditional jumps.
 
 
 
@@ -63,7 +68,7 @@ We were able to implement the reading of the conditional/unconditional jump , th
 | KPI's   | Progress |
 | -------- | ------- |
 | Functional specification  | 100%   |
-| Technical specification | 60%   |
+| Technical specification | 50%   |
 | Test Plan| 50%   |
 | Assembly-like development | 100%   |
 | C language development | 30%  |
