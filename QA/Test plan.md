@@ -54,7 +54,7 @@
   - [4.4 Test Cases](#44-test-cases)
   - [4.5 Validation and Bug Report Managment✅](#44-validation-and-bug-report-management)
   - [4.6 Test Metrics✅](#45-test-metrics)
-  - [4.7 Bug Tracking & Reporting✅](#46-bug-tracking--reporting)
+  - [4.7 Bug Tracking & Reporting✅](#47-bug-tracking--reporting)
 - [5. TEST MANAGMENT PROCESS](#5-test-management-process)
   - [5.1 Test Managment Tool✅](#51-test-managment-tool)
   - [5.2 Test Design Process](#52-test-design-process)
