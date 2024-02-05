@@ -32,26 +32,32 @@
 <br>
 
 # Table of Contents
-- [Test Plan](#test-plan)
-- [Revision and Sign off](#revision-and-sign-off)
-  - [Document History](#document-history)
-  - [Approval List](#approval-list)
-- [Table of Contents](#table-of-contents)
-  - [1. GLOSSARY](#1-glossary)
-  - [2. INTRODUCTION](#2-introduction)
-  - [3. TEST STRATEGY](#3-test-strategy)
-  - [4. EXECUTION STRATEGY](#4-execution-strategy)
-  - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
-    - [5.2 Test Design Process](#52-test-design-process)
-    - [5.3 Document Review and Commenting](#53-document-review-and-commenting)
-    - [Importance of Reviewing Documents](#importance-of-reviewing-documents)
-    - [Collaborative Learning](#collaborative-learning)
-    - [Error Prevention](#error-prevention)
-    - [Continuous Improvement](#continuous-improvement)
-    - [Guidelines for Document Review](#guidelines-for-document-review)
-    - [Document Review Process](#document-review-process)
-    - [Conclusion](#conclusion)
-  - [Test Plan approval](#test-plan-approval)
+- [1. GLOSSARY](#1-glossary)
+- [2. INTRODUCTION](#2-introduction)
+  - [2.1 Purpose✅](#21-purpose)
+  - [2.2 Project Overview✅](#22-project-overview)
+  - [2.3 Audience✅](#23-audience)
+- [3. TEST STRATEGY](#3-test-strategy)
+  - [3.1 Test Objectives ✅](#31-test-objectives)
+  - [3.2 Testing Environment ✅](#32-testing-environment)
+  - [3.3 Test Principles✅](#33-test-principles)
+  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
+    - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
+    - [3.4.2 Identify Testing Type](#342-identify-testing-type)
+    - [3.4.3 Create Test Logistics](#343-create-test-logistics)
+- [4. EXECUTION STRATEGY](#4-execution-strategy)
+  - [4.1 Criteria](#41-criteria)
+    - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
+    - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+  - [4.2 Test Cycles✅](#42-test-cycles)
+  - [4.3 Github Issues✅](#43-github-issues)
+  - [4.4 Test Cases](#44-test-cases)
+  - [4.5 Validation and Bug Report Managment✅](#44-validation-and-bug-report-management)
+  - [4.6 Test Metrics✅](#45-test-metrics)
+  - [4.7 Bug Tracking & Reporting✅](#47-bug-tracking--reporting)
+- [5. TEST MANAGMENT PROCESS](#5-test-management-process)
+  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
+  - [5.2 Test Design Process](#52-test-design-process)
 
 ## 1. GLOSSARY
 <br> 
@@ -82,7 +88,7 @@
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
-      This test strategy is designed to meticulously evaluate the functionality, efficiency, and stability of virtual processors, aiming to guarantee optimal operation in virtualized environments.
+      We focus on functionality, reliability, and correctness, ensuring precise assembly code execution. The strategy emphasizes educational value for students exploring low-level programming.
     -  **Execution Strategy:**
       Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing bugs and gathering performance data.
     -  **Test Management:**
@@ -91,7 +97,7 @@
   This concise framework ensures effective testing, aligning technical robustness with the educational goals of the project.
 - ### 2.2 Project Overview
 
-  - We were asked to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious to discover the world of assembly language and system programming!
+  - Algosup asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
 
 - ### 2.3 Audience
 
@@ -365,7 +371,7 @@ This process emphasizes collaboration, review, and iteration to enhance the qual
 
 ### Importance of Reviewing Documents
 
-Document review is a crucial aspect of our project management process at ALGOSUP. It involves carefully examining the documents created by team members, providing constructive feedback, and ensuring the overall quality and accuracy of project deliverables.
+Document review is a crucial aspect of our project management process at Algosup. It involves carefully examining the documents created by team members, providing constructive feedback, and ensuring the overall quality and accuracy of project deliverables.
 
 ### Collaborative Learning
 
@@ -405,7 +411,7 @@ Document reviews are not just about error correction; they also serve as opportu
 
 ### Conclusion
 
-The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at ALGOSUP. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
+The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at Algosup. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
