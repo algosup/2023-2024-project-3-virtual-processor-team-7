@@ -71,7 +71,7 @@ We successfully implemented the reading of conditional jumps, CALL, and RETURN i
 | Technical specification | 50%   |
 | Test Plan| 50%   |
 | Assembly-like development | 100%   |
-| C language development | 30%  |
+| C language development | 50%  |
 | Weekly report  | 60%   |
 
 <h5>Documents rearrangement</h5>
