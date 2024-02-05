@@ -32,32 +32,32 @@
 <br>
 
 # Table of Contents
-- [1. GLOSSARY](#1-glossary)
-- [2. INTRODUCTION](#2-introduction)
-  - [2.1 Purpose✅](#21-purpose)
-  - [2.2 Project Overview✅](#22-project-overview)
-  - [2.3 Audience✅](#23-audience)
-- [3. TEST STRATEGY](#3-test-strategy)
-  - [3.1 Test Objectives ✅](#31-test-objectives)
-  - [3.2 Testing Environment ✅](#32-testing-environment)
-  - [3.3 Test Principles✅](#33-test-principles)
+  - [1. GLOSSARY](#1-glossary)
+  - [2. INTRODUCTION](#2-introduction)
+    - [2.1 Purpose](#21-purpose)
+    - [2.2 Project Overview](#22-project-overview)
+    - [2.3 Audience](#23-audience)
+  - [3. TEST STRATEGY](#3-test-strategy)
+    - [3.1 Test Objectives](#31-test-objectives)
+    - [3.2 Test Environment](#32-test-environment)
+    - [3.3 Test Principles](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
     - [3.4.3 Create Test Logistics](#343-create-test-logistics)
-- [4. EXECUTION STRATEGY](#4-execution-strategy)
-  - [4.1 Criteria](#41-criteria)
-    - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
-    - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
-  - [4.2 Test Cycles✅](#42-test-cycles)
-  - [4.3 Github Issues✅](#43-github-issues)
-  - [4.4 Test Cases](#44-test-cases)
-  - [4.5 Validation and Bug Report Managment✅](#44-validation-and-bug-report-management)
-  - [4.6 Test Metrics✅](#45-test-metrics)
-  - [4.7 Bug Tracking & Reporting✅](#47-bug-tracking--reporting)
-- [5. TEST MANAGMENT PROCESS](#5-test-management-process)
-  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
-  - [5.2 Test Design Process](#52-test-design-process)
+  - [4. EXECUTION STRATEGY](#4-execution-strategy)
+    - [4.1 Criteria](#41-criteria)
+      - [4.1.1 Suspension Criteria](#411-suspension-criteria)
+      - [4.1.2 Entry Criteria and Exit Criteria](#412-entry-criteria-and-exit-criteria)
+    - [4.2 Test Cycles](#42-test-cycles)
+    - [4.3 GitHub Issues](#43-github-issues)
+    - [4.4 Test Cases](#44-test-cases)
+    - [4.5 Validation and Bug Report Management](#45-validation-and-bug-report-management)
+  - [4.6 Test Metrics](#46-test-metrics)
+    - [4.7 Bug tracking \& Reporting](#47-bug-tracking--reporting)
+  - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
+    - [5.1 Test Managment Tool](#51-test-managment-tool)
+    - [5.2 Test Design Process](#52-test-design-process)
 
 ## 1. GLOSSARY
 <br> 
@@ -84,23 +84,23 @@
 
 ## 2. INTRODUCTION
 
-- ### 2.1 Purpose
+### 2.1 Purpose
 
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
-      We focus on functionality, reliability, and correctness, ensuring precise assembly code execution. The strategy emphasizes educational value for students exploring low-level programming.
+       This test strategy is designed to meticulously evaluate the functionality, efficiency, and stability of virtual processors, aiming to guarantee optimal operation in virtualized environments
     -  **Execution Strategy:**
       Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing bugs and gathering performance data.
     -  **Test Management:**
       GitHub Issues is our central tool for creating, managing, and assigning testing-related issues, facilitating transparent communication within the team.
 
   This concise framework ensures effective testing, aligning technical robustness with the educational goals of the project.
-- ### 2.2 Project Overview
+### 2.2 Project Overview
 
-  - Algosup asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
+  - ALGOSUP asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
 
-- ### 2.3 Audience
+### 2.3 Audience
 
   - The primary audience for this test plan includes project team members, each with distinct roles:
 
@@ -124,10 +124,10 @@
   This collaborative approach ensures that the test plan not only meets technical requirements but also aligns with overall project goals.
 
 ## 3. TEST STRATEGY
-- ### 3.1 Test Objectives
+### 3.1 Test Objectives
   - This test plan is focused on rigorously assessing the virtual processor and interpreter in our project, emphasizing functionality, reliability, and correctness. We aim to validate precise execution of assembly code, assess the reliability of the virtual processor under diverse scenarios, and ensure accurate results from the interpreter. Additionally, we prioritize educational value, providing a testing framework aligned with learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides ensure accessibility for a broad audience. This testing approach aims not only to validate technical robustness but also to highlight the project's educational merits in the realm of low-level programming.
 
-- ### 3.2 Test Environment
+### 3.2 Test Environment
   - **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
@@ -151,7 +151,7 @@
       - RAM: 16.0 GB
       - System type: 64-bit operating system, x64-based processor
 
-- ### 3.3 Test Principles 
+### 3.3 Test Principles 
   
     - Tests will be focused on meeting the objectives and quality 
     
@@ -177,37 +177,36 @@
     - we will run the unit test algorithm coded by the dev team.
 
 
-- ## 3.4 Scope and Levels of Testing
-    - ### 3.4.1 Define Scope of Testing
-      - #### In scope 
+## 3.4 Scope and Levels of Testing
+### 3.4.1 Define Scope of Testing
+#### In scope 
         - Comprehensive testing of each part of the software, including each instruction.
         - Functional testing of all features and functionalities.
         - Identification and validation of expected system behavior.
         - Testing of various scenarios and inputs to ensure system robustness.
         - Performance testing to gather data on system responsiveness.
-      - #### Out scope
+  #### Out scope
         - Security testing for potential vulnerabilities in the system.
         - Compatibility testing across a wide range of browsers or platforms.
         - User acceptance testing (UAT) for assessing user satisfaction.
-    - ### 3.4.2 Identify Testing Type
-      - #### Agile testing
+### 3.4.2 Identify Testing Type
+#### Agile testing
         Agile testing is an iterative and collaborative approach to software testing within the Agile development framework. It involves frequent and early testing throughout the development lifecycle, focusing on continuous feedback and adaptability to change. Testers actively collaborate with developers, product owners, and other stakeholders in cross-functional teams. Key practices include Test-Driven Development (TDD), automation for quick feedback, and exploratory testing. Agile testing emphasizes delivering value to the customer, responding to changing requirements, and conducting regular sprint reviews and retrospectives for continuous improvement. Overall, it aligns testing activities with the principles of Agile development, ensuring high-quality software releases in short, incremental cycles.
-    - ### 3.4.3 Create Test Logistics
-      - ### In scope
+### 3.4.3 Create Test Logistics
+### In scope
         - Establishing a test environment for functional testing.
         - Ensuring necessary access to testing tools and resources.
-      - ### Out scope
+### Out scope
         - Managing logistics related to non-functional testing environments.
         - Procuring hardware or software licenses beyond the scope of the current testing cycle.  
 ## 4. EXECUTION STRATEGY
-  - ### 4.1 Criteria
-    - #### 4.1.1 Suspension Criteria
+### 4.1 Criteria
+#### 4.1.1 Suspension Criteria
       - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
       <p float="left">
       <img src="Images/suspensionCriteria.png" width="700" />
       </p>
-    
-    - #### 4.1.2 Entry Criteria and Exit Criteria
+#### 4.1.2 Entry Criteria and Exit Criteria
       - Entry criteria define the conditions that must be fulfilled before the testing process can commence. They serve as a set of prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
         - **The availability of the test environment** 
         - **Completion of necessary documentation**
@@ -224,7 +223,7 @@
         - **The commitment of the whole code on Github repository** 
   
         Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
-  - ### 4.2 Test Cycles
+### 4.2 Test Cycles
     - Two Functional Testing Cycles:
       - **First Cycle:**
         - **Objective:** Identify blocking, critical bugs, and most high-priority bugs.
@@ -239,7 +238,7 @@
 
     In summary, the functional testing cycles gradually enhance the system's quality, addressing defects in priority order.
 
-  - ### 4.3 GitHub Issues
+### 4.3 GitHub Issues
 
     GitHub Issues is a built-in issue-tracking tool that allows us to create and manage issues and assign them to team members.
     
@@ -254,7 +253,7 @@
   <br>
 
   
-  - ### 4.4 Test Cases
+### 4.4 Test Cases
      To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress. It also serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented.
     <br>
     
@@ -269,13 +268,13 @@
     
     - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
   
-  - ### 4.5 Validation and Bug Report Management
+### 4.5 Validation and Bug Report Management
     - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
     <br>
     
     - A template for those tickets has been created :
 
-      ![bugReport.yml](Images/bug_report.png)
+  ![bugReport.yml](Images/bug_report.png)
 
     - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug>.
       
@@ -293,21 +292,21 @@
     |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.|
 
   
-  - ### 4.6 Test Metrics
+## 4.6 Test Metrics
   The table mentions several metrics and processes related to tracking defects (bugs or issues) during testing:
 
   | Report | Metrics | Frequency |
   |---|---|---|
   | Test preparation & Excution status | Metrics: - % complete - % Work In Progress (WIP) - % Pass - % Fail | Weekly/Daily (optional) |
   | Daily Execution Status | Metrics: - Pass - Fail - Total Bugs - Highlight Showstopper/Critical Bugs | Frequency: Daily |
-  - ### 4.7 Bug tracking & Reporting
+### 4.7 Bug tracking & Reporting
      
     <p float="left">
     <img src="Images/Defect_tracking_reporting.png" width="900" />
     </p>
    
 ## 5. TEST MANAGEMENT PROCESS
-  - ### 5.1 Test Managment Tool
+### 5.1 Test Managment Tool
     - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.   
     <br>
     
@@ -321,6 +320,7 @@
     <br>
     
     - Each Tester will directly access their respective assigned test cases and update the status of each executed step in Github issues.
+  
     <br>
     
     - Any bug encountered will be raised in Github issues to the particular Test case.
@@ -372,7 +372,7 @@ This process emphasizes collaboration, review, and iteration to enhance the qual
 
 ### Importance of Reviewing Documents
 
-Document review is a crucial aspect of our project management process at Algosup. It involves carefully examining the documents created by team members, providing constructive feedback, and ensuring the overall quality and accuracy of project deliverables.
+Document review is a crucial aspect of our project management process at ALGOSUP. It involves carefully examining the documents created by team members, providing constructive feedback, and ensuring the overall quality and accuracy of project deliverables.
 
 ### Collaborative Learning
 
@@ -412,7 +412,7 @@ Document reviews are not just about error correction; they also serve as opportu
 
 ### Conclusion
 
-The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at Algosup. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
+The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at ALGOSUP. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
