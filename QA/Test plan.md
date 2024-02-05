@@ -60,7 +60,7 @@
   - [5.2 Test Design Process](#52-test-design-process)
 
 ## 1. GLOSSARY
-<br>
+<br> 
 
 |Term|Definition|Source|
 |---|---|---|
