@@ -56,8 +56,8 @@ This document is intended not only to assist the development team but also to pr
 
 ### Glossary
 
-| Term | Definition |
-|------|------------|
+| Term | Definition |links|
+|------|------------|-----|
 |Central Processing Unit (CPU)|The central processing unit (CPU) is the unit which performs most of the processing inside a computer.|
 |Arithmetic Logic Unit (ALU)|The arithmetic logic unit (ALU) is a digital circuit within the CPU that performs arithmetic and logical operations.|
 |Memory Address Register (MAR)|The memory address register (MAR) is the CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored.|
@@ -128,6 +128,16 @@ Each ticket represents a chunk of work, a bug found, a feature request, an updat
 ##### ➭ Commenting conventions
 
 Comment all the functions to explain what they do.
+
+``` c
+/**
+ * @brief This function is used to initialize the CPU.
+ * 
+ * @param cpu The CPU to initialize.
+ */
+// here you will explain what the function does
+// Here your function
+```
 
 ##### ➭ Documents conventions
 
@@ -202,21 +212,7 @@ All in **bold** are folders.
 
 **`documents/management/WeeklyReport`** Contains all the weekly reports such as :
 
-`weeklyReport1.md` Contains the weekly report 1.
-
-`weeklyReport2.md` Contains the weekly report 2.
-
-`weeklyReport3.md` Contains the weekly report 3.
-
-`weeklyReport4.md` Contains the weekly report 4.
-
-`weeklyReport5.md` Contains the weekly report 5.
-
-`weeklyReport6.md` Contains the weekly report 6.
-
-`weeklyReport7.md` Contains the weekly report 7.
-
-`weeklyReport8.md` Contains the weekly report 8.
+`weeklyReport1.md` Contains the weekly report 1 and so on.
 
 **`/qa`** Contains all the files related to the quality assurance which contains:
 
