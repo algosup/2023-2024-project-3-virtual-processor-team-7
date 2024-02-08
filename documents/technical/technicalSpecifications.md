@@ -58,21 +58,21 @@ This document is intended not only to assist the development team but also to pr
 
 | Term | Definition |links|
 |------|------------|-----|
-|Central Processing Unit (CPU)|The central processing unit (CPU) is the unit which performs most of the processing inside a computer.|[More information](https://en.wikipedia.org/wiki/Central_processing_unit)|
-|Arithmetic Logic Unit (ALU)|The arithmetic logic unit (ALU) is a digital circuit within the CPU that performs arithmetic and logical operations.|[More information](https://www.techtarget.com/whatis/definition/arithmetic-logic-unit-ALU)|
-|Memory Address Register (MAR)|The memory address register (MAR) is the CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored.|[More information](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-address-register/)|
-|Memory Data Register (MDR)|The memory data register (MDR) is the CPU register that either stores the data to be written to the memory or the data that was read from the memory.|[More information](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-data-register/)|
-|Accumulator (ACC)|The accumulator is a register in the CPU that stores the result of an arithmetic or logical operation.|[More information](https://www.techopedia.com/definition/2456/accumulator)|
+|Central Processing Unit (CPU)|The central processing unit (CPU) is the unit which performs most of the processing inside a computer.|[Wikipedia](https://en.wikipedia.org/wiki/Central_processing_unit)|
+|Arithmetic Logic Unit (ALU)|The arithmetic logic unit (ALU) is a digital circuit within the CPU that performs arithmetic and logical operations.|[Techtarget](https://www.techtarget.com/whatis/definition/arithmetic-logic-unit-ALU)|
+|Memory Address Register (MAR)|The memory address register (MAR) is the CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored.|[Studysmarter](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-address-register/)|
+|Memory Data Register (MDR)|The memory data register (MDR) is the CPU register that either stores the data to be written to the memory or the data that was read from the memory.|[Studysmarter](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-data-register/)|
+|Accumulator (ACC)|The accumulator is a register in the CPU that stores the result of an arithmetic or logical operation.|[Techopedia](https://www.techopedia.com/definition/2456/accumulator)|
 |Operating System (OS)|An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.|[More information](https://en.wikipedia.org/wiki/Operating_system)|
-|Integrated Development Environment (IDE)|An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.|[More information](https://aws.amazon.com/what-is/ide/)|
-|Binary File|A binary file is a computer file that is not a text file. The term "binary file" is often used as a term meaning "non-text file".|[More information](https://en.wikipedia.org/wiki/Binary_file)|
-|Machine Code|Machine code is a computer program written in machine language instructions that can be executed directly by a computer's central processing unit (CPU).|[More information](https://marketbusinessnews.com/financial-glossary/machine-code/)|
-|Assembly Code|Assembly code is a low-level programming language for a computer, or other programmable device, in which there is a very strong (generally one-to-one) correspondence between the language and the architecture's machine code instructions.|[More information](https://www.investopedia.com/terms/a/assembly-language.asp)|
-|Subroutine|A subroutine is a sequence of program instructions that performs a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.|[More information](https://en.wikipedia.org/wiki/Subroutine)|
-|Stack|A stack is a linear data structure that follows the Last In First Out (LIFO) principle.|[More information](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
-|Stack Pointer|A stack pointer is a small register that stores the address of the last program request in a stack.|[More information](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
-|Overflow|An overflow occurs when a computer program attempts to store data beyond the boundaries of a fixed-length storage buffer.| [More information](https://en.wikipedia.org/wiki/Buffer_overflow)|
-|Portability|Portability is the ability of a computer program to be executed in multiple environments.|[More information](https://developerexperience.io/articles/software-portability#)|
+|Integrated Development Environment (IDE)|An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.|[AWS Amazon](https://aws.amazon.com/what-is/ide/)|
+|Binary File|A binary file is a computer file that is not a text file. The term "binary file" is often used as a term meaning "non-text file".|[Wikipedia](https://en.wikipedia.org/wiki/Binary_file)|
+|Machine Code|Machine code is a computer program written in machine language instructions that can be executed directly by a computer's central processing unit (CPU).|[Market business news](https://marketbusinessnews.com/financial-glossary/machine-code/)|
+|Assembly Code|Assembly code is a low-level programming language for a computer, or other programmable device, in which there is a very strong (generally one-to-one) correspondence between the language and the architecture's machine code instructions.|[Investopedia](https://www.investopedia.com/terms/a/assembly-language.asp)|
+|Subroutine|A subroutine is a sequence of program instructions that performs a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.|[Wikipedia](https://en.wikipedia.org/wiki/Subroutine)|
+|Stack|A stack is a linear data structure that follows the Last In First Out (LIFO) principle.|[Prebytes](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
+|Stack Pointer|A stack pointer is a small register that stores the address of the last program request in a stack.|[Prepbytes](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
+|Overflow|An overflow occurs when a computer program attempts to store data beyond the boundaries of a fixed-length storage buffer.| [Wikipedia](https://en.wikipedia.org/wiki/Buffer_overflow)|
+|Portability|Portability is the ability of a computer program to be executed in multiple environments.|[Developerexperience](https://developerexperience.io/articles/software-portability#)|
 
 ### Project Overview
 
@@ -398,33 +398,32 @@ Now we will explain each instruction and how we will implement them.
 <br>
 
 - **XOR**: Logical XOR between two registers. To implement this instruction we will:
-
-- Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of bitwise XOR operation between the value in cpu->registers at the index specified by machineCode[pc + 1] and the value in cpu->registers at the index specified by machineCode[pc + 2].
-- We use ^ to do a logical XOR between two registers. The result will be stored in a third register.
+  - Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of bitwise XOR operation between the value in cpu->registers at the index specified by machineCode[pc + 1] and the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - We use ^ to do a logical XOR between two registers. The result will be stored in a third register.
 
 <br>
 
 - **NOT**: Logical NOT between two registers. To implement this instruction we will
-  - Set the value in cpu->registers at the index specified by machineCode[pc + 2] to the bitwise complement (NOT) of the value in cpu->registers at the index specified by machineCode[pc + 1]
+  - Set the value in cpu->registers at the index specified by machineCode[pc + 2] to the bitwise complement (NOT) of the value in cpu->registers at the index specified by machineCode[pc + 1].
   - We use ~ to do a logical NOT between two registers. The result will be stored in a second register.
   
 <br>
 
 - **LOAD**: Load the value of a register to memory. To implement this instruction we will
-  - Set the value in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1] to the value in cpu->registers at the index specified by machineCode[pc + 3]
+  - Set the value in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1] to the value in cpu->registers at the index specified by machineCode[pc + 3].
   - With that, the value of a register will be loaded to memory.
 
 <br>
 
 - **STORE**: Store the value of a memory in a register. To implement this instruction we will
-  - Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the value stored in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1]
+  - Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the value stored in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1].
   - With that, the value of a memory will be stored in a register.
 
 <br>
 
 - **JMP**: Jump to a specific address. To implement this instruction we will
-- Set the program counter (pc) of the CPU to the value specified by machineCode[pc + 1]
-- With that, the program counter will jump to a specific address.
+  - Set the program counter (pc) of the CPU to the value specified by machineCode[pc + 1].
+  - With that, the program counter will jump to a specific address.
 
 <br>
 
@@ -451,8 +450,8 @@ Now we will explain the jump with condition instructions.
   - With that, the program counter will jump to a specific address and the return address will be stored in the stack.
 
 - **RET**: Return from a subroutine. To implement this instruction we will
-  - Decrement the stack pointer
-  - Set the program counter (pc) of the CPU to the value stored in the CPU stack at the current stack pointer
+  - Decrement the stack pointer.
+  - Set the program counter (pc) of the CPU to the value stored in the CPU stack at the current stack pointer.
   - With that, the program counter will jump to the return address stored in the stack.
 
 ### Software structure
