@@ -58,22 +58,21 @@ This document is intended not only to assist the development team but also to pr
 
 | Term | Definition |links|
 |------|------------|-----|
-|Central Processing Unit (CPU)|The central processing unit (CPU) is the unit which performs most of the processing inside a computer.|
-|Arithmetic Logic Unit (ALU)|The arithmetic logic unit (ALU) is a digital circuit within the CPU that performs arithmetic and logical operations.|
-|Memory Address Register (MAR)|The memory address register (MAR) is the CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored.|
-|Memory Data Register (MDR)|The memory data register (MDR) is the CPU register that either stores the data to be written to the memory or the data that was read from the memory.|
-|Accumulator (ACC)|The accumulator is a register in the CPU that stores the result of an arithmetic or logical operation.|
-|Operating System (OS)|An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.|
-|Integrated Development Environment (IDE)|An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.|
-|Control Version System|A control version system (CVS) is a software tool used to help record changes to files by keeping a history of changes.|
-|Binary File|A binary file is a computer file that is not a text file. The term "binary file" is often used as a term meaning "non-text file".|
-|Machine Code|Machine code is a computer program written in machine language instructions that can be executed directly by a computer's central processing unit (CPU).|
-|Assembly Code|Assembly code is a low-level programming language for a computer, or other programmable device, in which there is a very strong (generally one-to-one) correspondence between the language and the architecture's machine code instructions.|
-|Subroutine|A subroutine is a sequence of program instructions that performs a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.|
-|Stack|A stack is a linear data structure that follows the Last In First Out (LIFO) principle.|
-|Stack Pointer|A stack pointer is a small register that stores the address of the last program request in a stack.|
-|Overflow|An overflow occurs when a computer program attempts to store data beyond the boundaries of a fixed-length storage buffer.|
-|Portability|Portability is the ability of a computer program to be executed in multiple environments.|
+|Central Processing Unit (CPU)|The central processing unit (CPU) is the unit which performs most of the processing inside a computer.|[More information](https://en.wikipedia.org/wiki/Central_processing_unit)|
+|Arithmetic Logic Unit (ALU)|The arithmetic logic unit (ALU) is a digital circuit within the CPU that performs arithmetic and logical operations.|[More information](https://www.techtarget.com/whatis/definition/arithmetic-logic-unit-ALU)|
+|Memory Address Register (MAR)|The memory address register (MAR) is the CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored.|[More information](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-address-register/)|
+|Memory Data Register (MDR)|The memory data register (MDR) is the CPU register that either stores the data to be written to the memory or the data that was read from the memory.|[More information](https://www.studysmarter.co.uk/explanations/computer-science/computer-organisation-and-architecture/memory-data-register/)|
+|Accumulator (ACC)|The accumulator is a register in the CPU that stores the result of an arithmetic or logical operation.|[More information](https://www.techopedia.com/definition/2456/accumulator)|
+|Operating System (OS)|An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.|[More information](https://en.wikipedia.org/wiki/Operating_system)|
+|Integrated Development Environment (IDE)|An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.|[More information](https://aws.amazon.com/what-is/ide/)|
+|Binary File|A binary file is a computer file that is not a text file. The term "binary file" is often used as a term meaning "non-text file".|[More information](https://en.wikipedia.org/wiki/Binary_file)|
+|Machine Code|Machine code is a computer program written in machine language instructions that can be executed directly by a computer's central processing unit (CPU).|[More information](https://marketbusinessnews.com/financial-glossary/machine-code/)|
+|Assembly Code|Assembly code is a low-level programming language for a computer, or other programmable device, in which there is a very strong (generally one-to-one) correspondence between the language and the architecture's machine code instructions.|[More information](https://www.investopedia.com/terms/a/assembly-language.asp)|
+|Subroutine|A subroutine is a sequence of program instructions that performs a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed.|[More information](https://en.wikipedia.org/wiki/Subroutine)|
+|Stack|A stack is a linear data structure that follows the Last In First Out (LIFO) principle.|[More information](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
+|Stack Pointer|A stack pointer is a small register that stores the address of the last program request in a stack.|[More information](https://www.prepbytes.com/blog/stacks/stack-pointer-types-applications-and-operations/)|
+|Overflow|An overflow occurs when a computer program attempts to store data beyond the boundaries of a fixed-length storage buffer.| [More information](https://en.wikipedia.org/wiki/Buffer_overflow)|
+|Portability|Portability is the ability of a computer program to be executed in multiple environments.|[More information](https://developerexperience.io/articles/software-portability#)|
 
 ### Project Overview
 
@@ -95,7 +94,7 @@ We will set up our development environment following the requirements as follow 
 
 - Any integrated development environment (IDE) but [Visual Studio Code](https://code.visualstudio.com/) is recommended.
 - [Github](https://github.com/) or any control version system. Our team will use Github for this project especially [Github Desktop](https://desktop.github.com) it will be easier for all team members.
-- We use the version 18 of C language called C18 also known as C17 because it is one of the most recent version of C language.
+- We use version 18 of C language called C18 also known as C17 because it is one of the most recent versions of C language.
 - We use [GCC](https://gcc.gnu.org/) 13.2 as our compiler.
 
 #### Coding methodology
@@ -105,25 +104,25 @@ We will set up our development environment following the requirements as follow 
 The development team started to work on the basic features of the project such as the basic logical operation, the basic arithmetic operation using these instructions
 
 - ADD to make an addition.
-- SUB to make a substraction.
+- SUB to make a subtraction.
 - MUL to make a multiplication.
 - DIV to make a division.
 
-Once the Functional Specifications are dissected in the Technical Specifications, the functions and features of the project will be assigned to team members and priotised by either the project manager or the tech lead depending on the task.
+Once the Functional Specifications are dissected in the Technical Specifications, the functions and features of the project will be assigned to team members and prioritised by either the project manager or the tech lead depending on the task.
 
-For each functions and features the QA's team members will create Github Issues, those issues will be assigned to the team member in charge of the task.
-We prefer to use the term of ticket more than issues as it is more representative of the work to be done.
+For each function and feature the QA's team members will create Github Issues, and those issues will be assigned to the team member in charge of the task.
+We prefer to use the term ticket more than issues as it is more representative of the work to be done.
 
-Each ticket represents a chunk of work, a bug found, a feature request, an update. This abstraction allows to keep track of many types of tasks, break them down even more and allows to move forward swiftly.
+Each ticket represents a chunk of work, a bug found, a feature request, and an update. This abstraction allows us to keep track of many types of tasks, break them down even more and move forward swiftly.
 
 ##### ➭ Coding conventions
 
 - All the code will be written in C language and we will use the C18 standard.
-- Each functions name will be written in snake_case.
+- Each function's name will be written in snake_case.
 - Variable names will be written in camelCase.
-- All variable will be written at the same place.
+- All variables will be written in the same place.
 - All #define will be written in SNAKE_CASE and in uppercase.
-- All #define will be written at the same place.
+- All #define will be written in the same place.
 
 ##### ➭ Commenting conventions
 
@@ -135,7 +134,6 @@ Comment all the functions to explain what they do.
  * 
  * @param cpu The CPU to initialize.
  */
-// here you will explain what the function does
 // Here your function
 ```
 
@@ -151,7 +149,7 @@ All the folders will be written in camelCase.
 ##### ➭ Test-Driven Development
 
 We will use the Test-Driven Development methodology to develop our project.
-For that we will create Assembly code files that will be used to test our project.
+For that, we will create Assembly code files that will be used to test our project.
 Each assembly code will test a specific part of the project for instance one assembly code will test the basic logical operation, another one will test the basic arithmetic operation and so on.
 
 #### Assumptions and constraints
@@ -174,7 +172,7 @@ All in **bold** are folders.
 
 **`/interpreter`** Contains all the files related to the interpreter.
 
-`main.c` Core of the project, contains the main function.
+`main.c` The core of the project, contains the main function.
 
 **`interpreter/headers`** Contains all the header files such as :
 
@@ -206,7 +204,7 @@ All in **bold** are folders.
 
 **`Documents/Management`** Contains all the documents related to the management of the project such as :
 
-`notion.md` Contains all the information about the project such as the KPI's, the gantt chart, the task list and the weekly reports.
+`notion.md` Contains all the information about the project such as the KPIs, the Gantt chart, the task list and the weekly reports.
 
 **`documents/management/images`** Contains all the images for the management documents.
 
@@ -214,7 +212,7 @@ All in **bold** are folders.
 
 `weeklyReport1.md` Contains the weekly report 1 and so on.
 
-**`/qa`** Contains all the files related to the quality assurance which contains:
+**`/qa`** Contains all the files related to quality assurance which contain:
 
 `testPlan.md` Contains the test plan.
 
@@ -222,23 +220,23 @@ All in **bold** are folders.
 
 **`/test`** Contains all the files related to the test which contains all the assembly code files like :
 
-`testMain.all` Contains a complex assembly with multiple function to ensure that is working as intended.
+`testMain.all` Contains a complex assembly with multiple functions to ensure that is working as intended.
 
 `testCpu.all` Contains the assembly code to test the CPU.
 
-`testStoreImm.all` Contains the assembly code to test the store immediate value in a register.
+`testStoreImm.all` Contains the assembly code to test the store's immediate value in a register.
 
 `testCopy.all` Contains the assembly code to test the copy of a register value to another register.
 
 `testLoad.all` Contains the assembly code to test the load of a value from memory into a register.
 
-`testStore.all` Contains the assembly code to test the store of the value of a register into memory address.
+`testStore.all` Contains the assembly code to test the store of the value of a register into the memory address.
 
-`testCmp.all` Contains the assembly code to test the compare of two values.
+`testCmp.all` Contains the assembly code to test the comparison of two values.
 
 `testJump.all` Contains the assembly code to test the jump without condition.
 
-`testJumpCond.all` Contains the assembly code to test the jump with condition.
+`testJumpCond.all` Contains the assembly code to test the jump with the condition.
 
 `testCall.all` Contains the assembly code to test the call of a subroutine.
 
@@ -275,13 +273,6 @@ All in **bold** are folders.
 |   |   |   └-- notion.md
 |   |   |   └-- weeklyReport
 |   |   |   |   |-- weeklyReport1.md
-|   |   |   |   |-- weeklyReport2.md
-|   |   |   |   └-- weeklyReport3.md
-|   |   |   |   └-- weeklyReport4.md
-|   |   |   |   └-- weeklyReport5.md
-|   |   |   |   └-- weeklyReport6.md
-|   |   |   |   └-- weeklyReport7.md
-|   |   |   |   └-- weeklyReport8.md
 |   |   └-- technical
 |   |   |   └-- images
 |   |   |   |   └-- technical1.png
@@ -320,6 +311,7 @@ All in **bold** are folders.
 
 We will use 16 registers to implement them we will use the program counter of the CPU.
 ![registers](./images/programCounterExplain.png)
+
 PC is the program counter. It contains the address of the next instruction to be executed.
 In this case PC will be always the instruction
 it will be easier to use them in the functions.
@@ -334,7 +326,7 @@ it will be easier to use them in the functions.
 - **MDR** is the memory data register. It contains the data to be written to or read from the addressed location in memory.
 - **ALU** is the arithmetic logic unit. It performs arithmetic and logical operations.
 - **ACC** is the accumulator. It contains the result of the most recent arithmetic or logical operation performed by the ALU.
-- **General Purpose Registers** are registers that can be used for any purpose. They are used to store operands, results, memory addresses, and so on it's for that we will use them to store the values of the registers.
+- **General Purpose Registers** are registers that can be used for any purpose. They are used to store operands, results, memory addresses, and so on. We will use them to store the values of the registers.
 
 We will use a struct to implement the CPU.
 The CPU will have 6 registers, the memory, a program counter, a stack and a stack pointer.
@@ -353,394 +345,321 @@ typedef struct {
 
 #### Instructions
 
-According to the [Functional Specifications](../functional/functionalSpecifications.md) we will use 20 instructions to implement them we will use the program counter of the CPU.
+According to the [Functional Specifications](../functional/functionalSpecifications.md), we will use 20 instructions to implement them we will use the program counter of the CPU.
 Now we will explain each instruction and how we will implement them.
 
-- **MOV** : Move the value of a register to another register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 2]] = machineCode[pc + 1];
-    ```
-
-    with that the value of the register will be moved to another register.
-<br>
-
-- **ADD** : Add the value of a register to another register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] + cpu->registers[machineCode[pc + 2]];
-    ```
-
-    With that the value of two registers will be added. The result will be stored in a third register.
-<br>
-
-- **SUB** : Substract the value of a register to another register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] - cpu->registers[machineCode[pc + 2]];
-    ```
-
-    With that the value of two registers will be substracted. The result will be stored in a third register.
-<br>
-
-- **MUL** : Multiply the value of a register to another register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] * cpu->registers[machineCode[pc + 2]];
-    ```
-
-    With that the value of two registers will be multiplied. The result will be stored in a third register.
-<br>
-
-- **DIV** : Divide the value of a register to another register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] / cpu->registers[machineCode[pc + 2]];
-    ```
-
-    With that the value of two registers will be divided. The result will be stored in a third register.
+- **MOV**: Move the value of a register to another register. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 2] to the value from machineCode[pc + 1].
+  - With that, the value of the register will be moved to another register.
 
 <br>
 
-- **CMP** : Compare the value of a register to another register. To implement this instruction we will use :
+- **ADD**: Add the value of a register to another register. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the sum of the values in cpu->registers at the indices specified by machineCode[pc + 1] and machineCode[pc + 2].
+  - With that, the value of two registers will be added. The result will be stored in a third register.
 
-    ``` c
-    if (cpu->registers[machineCode[pc + 1]] == cpu->registers[machineCode[pc + 2]]) {
-        printf("The two values are equal\n")
-    } else {
-        printf("The two values are not equal\n")
-    }
-    ```
+<br>
 
-    With that the value of two registers will be compared. If the two values are equal the program will print "The two values are equal" else it will print "The two values are not equal". It's for the beginning with that you will be sure that is working as intended.
+- **SUB**: Subtract the value of a register to another register. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of subtracting the value in cpu->registers at the index specified by machineCode[pc + 2] from the value in cpu->registers at the index specified by machineCode[pc + 1].
+  - With that, the value of two registers will be subtracted. The result will be stored in a third register.
+
+<br>
+
+- **MUL**: Multiply the value of a register to another register. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of multiplying the value in cpu->registers at the index specified by machineCode[pc + 1] by the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - With that, the value of two registers will be multiplied. The result will be stored in a third register.
+
+<br>
+
+- **DIV**: Divide the value of a register to another register. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of dividing the value in cpu->registers at the index specified by machineCode[pc + by the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - With that, the value of the two registers will be divided. The result will be stored in a third register.
+
+<br>
+
+- **CMP**: Compare the value of a register to another register. To implement this instruction we will
+  - check if the value in cpu->registers at the index specified by machineCode[pc + 1] is equal to the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - With that,the value of the two registers will be compared.
+  If the two values are equal the program will print "The two values are equal" else it will print "The two values are not equal". It's for the beginning that you will be sure that is working as intended.
   
 <br>
 
-- **OR** : Logical OR between two registers. To implement this instruction we will use :
-
-    ``` c
-     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] | cpu->registers[machineCode[pc + 2]];
-    ```
-
-    We use | to do a logical OR between two registers. The result will be stored in a third register.
+- **OR**: Logical OR between two registers. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of bitwise OR operation between the value in cpu->registers at the index specified by machineCode[pc + 1] and the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - We use | to do a logical OR between two registers. The result will be stored in a third register.
 
 <br>
 
-- **AND** : Logical AND between two registers. To implement this instruction we will use :
-
-    ``` c
-     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] & cpu->registers[machineCode[pc + 2]];
-    ```
-
-    We use & to do a logical AND between two registers. The result will be stored in a third register.
+- **AND**: Logical AND between two registers. To implement this instruction we will
+  - set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of bitwise AND operation between the value in cpu->registers at the index specified by machineCode[pc + 1] and the value in cpu->registers at the index specified by machineCode[pc + 2].
+  - We use & to do a logical AND between two registers. The result will be stored in a third register.
 
 <br>
 
-- **XOR** : Logical XOR between two registers. To implement this instruction we will use :
+- **XOR**: Logical XOR between two registers. To implement this instruction we will:
 
-    ``` c
-     cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] ^ cpu->registers[machineCode[pc + 2]];
-    ```
-
-    We use ^ to do a logical XOR between two registers. The result will be stored in a third register.
+- Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the result of bitwise XOR operation between the value in cpu->registers at the index specified by machineCode[pc + 1] and the value in cpu->registers at the index specified by machineCode[pc + 2].
+- We use ^ to do a logical XOR between two registers. The result will be stored in a third register.
 
 <br>
 
-- **NOT** : Logical NOT between two registers. To implement this instruction we will use :
-
-    ``` c
-     cpu->registers[machineCode[pc + 2]] = ~cpu->registers[machineCode[pc + 1]];
-    ```
-
-    We use ~ to do a logical NOT between two registers. The result will be stored in a second register.
+- **NOT**: Logical NOT between two registers. To implement this instruction we will
+  - Set the value in cpu->registers at the index specified by machineCode[pc + 2] to the bitwise complement (NOT) of the value in cpu->registers at the index specified by machineCode[pc + 1]
+  - We use ~ to do a logical NOT between two registers. The result will be stored in a second register.
   
 <br>
 
-- **LOAD** : Load the value of a register to memory. To implement this instruction we will use :
-
-    ``` c
-    cpu->memory[machineCode[pc + 2]][machineCode[pc + 1]] = cpu->registers[machineCode[pc + 3]];
-    ```
-
-    With that the value of a register will be loaded to memory.
+- **LOAD**: Load the value of a register to memory. To implement this instruction we will
+  - Set the value in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1] to the value in cpu->registers at the index specified by machineCode[pc + 3]
+  - With that, the value of a register will be loaded to memory.
 
 <br>
 
-- **STORE** : Store the value of a memory to a register. To implement this instruction we will use :
-
-    ``` c
-    cpu->registers[machineCode[pc + 3]] = cpu->memory[machineCode[pc + 2]][machineCode[pc + 1]];
-    ```
-
-    With that the value of a memory will be stored to a register.
+- **STORE**: Store the value of a memory in a register. To implement this instruction we will
+  - Set the value in cpu->registers at the index specified by machineCode[pc + 3] to the value stored in cpu->memory at the index specified by machineCode[pc + 2] and machineCode[pc + 1]
+  - With that, the value of a memory will be stored in a register.
 
 <br>
 
-- **JMP** : Jump to a specific address. To implement this instruction we will use :
-
-    ``` c
-    cpu->program_counter = machineCode[pc + 1];
-    ```
-
-    With that the program counter will jump to a specific address.
+- **JMP**: Jump to a specific address. To implement this instruction we will
+- Set the program counter (pc) of the CPU to the value specified by machineCode[pc + 1]
+- With that, the program counter will jump to a specific address.
 
 <br>
 
 Now we will explain the jump with condition instructions.
 
-- **JMPT** : Jump to a specific address if the value of a register is true. To implement this instruction we will use :
+- **JMPT**: Jump to a specific address if the value of a register is true. To implement this instruction we will
+  - Check if the value in cpu->registers at the index specified by machineCode[pc + 1] is equal to 1
+  - If true, set the program counter (pc) of the CPU to the value specified by machineCode[pc + 2]
+  - With that, the program counter will jump to a specific address if the value of a register is true.
+  
+<br>
 
-    ``` c
-    if (cpu->registers[machineCode[pc + 1]] == 1) {
-        cpu->program_counter = machineCode[pc + 2];
-    }
-    ```
+- **JMPF**: Jump to a specific address if the value of a register is false. To implement this instruction we will
+  - Check if the value in cpu->registers at the index specified by machineCode[pc + 1] is equal to 0
+  - If true, set the program counter (pc) of the CPU to the value specified by machineCode[pc + 2]
+  - With that, the program counter will jump to a specific address if the value of a register is false.
+  
+<br>
 
-    With that the program counter will jump to a specific address if the value of a register is true.
+- **CALL**: Call a subroutine. To implement this instruction we will
+  - Store the current program counter (pc) incremented by 2 in the CPU stack
+  - Increment the stack pointer
+  - Set the program counter (pc) of the CPU to the value specified by machineCode[pc + 1]
+  - With that, the program counter will jump to a specific address and the return address will be stored in the stack.
 
-- **JMPF** : Jump to a specific address if the value of a register is false. To implement this instruction we will use :
-
-    ``` c
-    if (cpu->registers[machineCode[pc + 1]] == 0) {
-        cpu->program_counter = machineCode[pc + 2];
-    }
-    ```
-
-    With that the program counter will jump to a specific address if the value of a register is false.
-
-- **CALL** : Call a subroutine. To implement this instruction we will use :
-
-    ``` c
-    cpu->stack[cpu->stack_pointer] = cpu->program_counter + 2;
-    cpu->stack_pointer++;
-    cpu->program_counter = machineCode[pc + 1];
-    ```
-
-    With that the program counter will jump to a specific address and the return address will be stored in the stack.
-
-- **RET** : Return from a subroutine. To implement this instruction we will use :
-
-    ``` c
-    cpu->stack_pointer--;
-    cpu->program_counter = cpu->stack[cpu->stack_pointer];
-    ```
-
-    With that the program counter will jump to the return address stored in the stack.
+- **RET**: Return from a subroutine. To implement this instruction we will
+  - Decrement the stack pointer
+  - Set the program counter (pc) of the CPU to the value stored in the CPU stack at the current stack pointer
+  - With that, the program counter will jump to the return address stored in the stack.
 
 ### Software structure
 
-The software structure will be divided into 5 parts : The CPU, the parser, the instructionTomachineCode,and the main.
+The software structure will be divided into 5 parts: The CPU, the parser, the executeInstruction, and the main.
 
-- **CPU** : The CPU will be divided into 6 registers, a memory of 2^16 bytes that you need to define before all so it will be 65536 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will looks something like that :
+- **CPU**: The CPU will be divided into 6 registers, a memory of 2^16 bytes that you need to define before all so it will be 65536 bytes, a program counter, a stack and a stack pointer. The stack will be used to store the return address of the subroutines. To structure the CPU we will use a struct. After that, we will create a function to initialize the CPU. We will call it `initializeCPU()`and this function will take the structure of the CPU in parameter. Inside this function, you will need to initialise registers of the CPU to 0, initialise the memory to 0, initialise the program counter to 0, initialise the stack to 0 and initialise the stack pointer to 0. It will look something like this:
 
 ``` c
-void initializeCPU(CPU *cpu)
-{
-    for (int i = 0; i < MEMORY_SIZE; i++)
-    {
-        cpu->registers[i] = 0;
-    }
-    for (int i = 0; i < MEMORY_SIZE; i++)
-    {
-        cpu->memory[i] = 0;
-    }
-    cpu->program_counter = 0;
-
-    for (int i = 0; i < MEMORY_SIZE; i++)
-    {
-        cpu->stack[i] = 0;
-    }
-    cpu->stack_pointer = 0;
+// Initialize CPU registers to zero
+for each register in cpu->registers {
+    register = 0;
 }
+
+// Initialize CPU memory to zero
+for each memory_location in cpu->memory {
+    memory_location = 0;
+}
+
+// Set the program counter (pc) of the CPU to zero
+cpu->program_counter = 0;
+
+// Initialize CPU stack to zero
+for each stack_entry in cpu->stack {
+    stack_entry = 0;
+}
+
+// Set the stack pointer (sp) of the CPU to zero
+cpu->stack_pointer = 0;
 ```
 
 Don't forget to include the standard C library`#include <stdio.h>`, `#include <stdlib.h>` and `#include <string.h>`.
 
-- **Parser**: The parser will be used to parse the assembly code. First of all we need a structure to store the label for their name and their adresses in memory. We will call it `Label`. After that we will need a function to parse the assembly code. We will call it `parse()`
-it will take the file in parameter, it will take also the array for the machine code and the machine code size at the beginning of this function you need to initialise the line which is an array of character that will permits to read the file line by line. After that you need to initialise the index that will permits to assign machine code when the parser will find a precise instruction according to the machine decided in the [functional specification](../functional/functionalSpecifications.md).After that we need to initialise the labelCount and the label adress to manage the jump instruction.
+- **Parser**: The parser will be used to parse the assembly code. First of all, we need a structure to store the labels for their name and their addresses in memory. We will call it `Label`. After that, we will need a function to parse the assembly code. We will call it `parse()`
+it will take the file in parameter, it will take also the array for the machine code and the machine code size at the beginning of this function you need to initialise the line which is an array of characters that will permit you to read the file line by line. After that, you need to initialise the index that will permit to assign the machine code when the parser finds a precise instruction according to the machine decided in the [functional specification](../functional/functionalSpecifications.md). After that, we need to initialise the label count and the label address to manage the jump instruction.
 
 ``` c
-    struct Label {
-        char name[256];
-        int address;
-    } labels[100];
+Define a structure Label {
+    char name[256];
+    int address;
+} Declare an array labels of size 100 with elements of type Label;
 
-
-void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
-{
-    char line[256];
-    int index = 0;
-    int currentAddress = 0;
-    int labelCount = 0;
-
+Function parser(file, machineCode, machineCodeSize) {
+    Declare a string line with a maximum length of 256 characters;
+    Declare an integer index and initialize it to 0;
+    Declare an integer currentAddress and initialize it to 0;
+    Declare an integer labelCount and initialize it to 0;
 ```
 
-After that you will need a while loop to parse each line.
+After that, you will need a while loop to parse each line.
 
-``` c
-while (fgets(line, sizeof(line), file))
-{
-// Parse the line
-}
-```
+⚠️ **Don't forget to manage the comments and empty lines** ⚠️
 
-⚠️ **Don't forget to manage the comment and empty lines** ⚠️
-
-After that you will create a token for each instruction you encounter like that :
-
-``` c
-char *token = strtok(line, " \t\n");
-```
-
-it will permit to know which instruction you encounter and which register will be a source or a destination register.
+After that, you will create a token for each instruction you encounter. It will permit the program to know which instruction you encounter and which register will be a source or a destination register.
 
 Now let's a diagram to better understand the parser.
 
 ![parser](./images/diagramParser.png)
 
-- **executeInstruction**: This part will be used to use the execute the instruction. To do that we need a function to execute the instruction. We will call it `executeInstruction()` it will take the CPU in parameter and the machine code. After that we will need a while to be sure that the program don't find a halt instruction. Inside this while we will need a switch case to execute the instruction. It will looks something like that :
+- **executeInstruction**: This part will be used to execute the instruction. To do that we need a function to execute the instruction. We will call it `executeInstruction()` it will take the CPU in parameter and the machine code. After that, we will need a while to be sure that the program doesn't find an halt instruction. Inside this while loop we will need a switch case to execute the instruction. It will look something like this :
 
 ``` c
 
-void executeInstruction(CPU *cpu, unsigned char machineCode[])
-{
-    int pc = 0; 
+Function executeInstruction(cpu, machineCode) {
+    Declare an integer pc and initialize it to 0;
 
-    while (1){
-        switch (machineCode[pc])
-        {
-        
-        case 0x20:
-            if (machineCode[pc + 1] > 255)
-            {
-
-                printf("Overflow in MOV detected\n");
-                return;
-            }
-            else
-            {
-                cpu->registers[machineCode[pc + 2]] = machineCode[pc + 1];
-                printf("MOV %d, R%d\n", machineCode[pc + 1], machineCode[pc + 2]);
-                pc += 3;
-            }
-            break;
+    // Infinite loop to continuously execute instructions
+    Loop indefinitely {
+        // Switch statement to handle different instruction opcodes
+        Switch on machineCode[pc] {
+            Case 0x20: // Instruction opcode for MOV
+                If machineCode[pc + 1] > 255 {
+                    // Detect overflow in MOV
+                    Print "Overflow in MOV detected\n";
+                    Return;
+                } Else {
+                    // Execute MOV instruction
+                    Set the value in cpu->registers at the index specified by machineCode[pc + 2]
+                    to the value specified by machineCode[pc + 1];
+                    Print "MOV " followed by the value specified by machineCode[pc + 1]
+                    and "R" followed by the index specified by machineCode[pc + 2];
+                    Increment pc by 3;
+                }
+                Break; // Break out of the switch statement
         }
     }
 }
+
 ```
 
-This is the example for the MOV instruction. You need to do the same for the other instructions.
+This is an example of the MOV instruction. You need to do the same for the other instructions.
 
-- **Main**: This part will be used to read all text file put in argument when you execute the program. For example to launch the program you will need to be in the interpreter folder and execute the command :
+- **Main**: This part will be used to read all assembly like language (all) files put in the argument when you execute the program. For example to launch the program you will need to be in the interpreter folder and execute the command :
 
     ``` bash
-    ./main <PathToYourFile.txt> <PathToYourFileOutput.bin>
+    ./main <PathToYourFile.all> <PathToYourFileOutput.bin>
     ```
 
-    After that you will need to open the file and check if the file exist. If the file exists you will need to call the function `parse()` to parse the assembly code. ⚠️ **Don't forget to close the file**⚠️. We need also to write the machine code to a binary file to do that we will use the function `fwrite()` it will looks something like that :
+    After that, you will need to open the file and check if the file exists. If the file exists you will need to call the function `parse()` to parse the assembly code. ⚠️ **Don't forget to close the file**⚠️. We need also to write the machine code to a binary file to do that we will use the function `fwrite()` Which will look something like this:
 
 ``` c
-#include "parser.h"
-
-int main(int argc, char const *argv[])
-{
-    if (argc != 3)
-    {
-        printf("Usage: %s <assembly_code_file> <output_binary_file>\n", argv[0]);
-        return 1;
+Function main(argc, argv) {
+    // Check if the correct number of command-line arguments are provided
+    If argc is not equal to 3 {
+        Print usage information;
+        Return 1; // Exit with error status
     }
 
-    FILE *inputFile = fopen(argv[1], "r");
-    if (inputFile == NULL)
-    {
-        printf("Error opening file %s\n", argv[1]);
-        return 1;
-    }
-    
-
-    FILE *outputFile = fopen(argv[2], "wb");
-    if (outputFile == NULL)
-    {
-        printf("Error opening file %s\n", argv[2]);
-        fclose(inputFile);
-        return 1;
+    // Open the input assembly code file
+    Declare a FILE pointer inputFile and open the file specified by argv[1] in read mode;
+    If inputFile is NULL {
+        Print error message indicating failure to open the input file;
+        Return 1; // Exit with error status
     }
 
-    unsigned char machineCode[MEMORY_SIZE];
-    int machineCodeSize;
-
-
-    parser(inputFile, machineCode, &machineCodeSize);
-
-    for (int i = 0; i < machineCodeSize; ++i)
-    {
-        fwrite(&machineCode[i], sizeof(unsigned char), 1, outputFile);
+    // Open the output binary file
+    Declare a FILE pointer outputFile and open the file specified by argv[2] in binary write mode;
+    If outputFile is NULL {
+        Print error message indicating failure to open the output file;
+        Close inputFile;
+        Return 1; // Exit with error status
     }
 
-    fclose(inputFile);
-    fclose(outputFile);
+    // Declare variables to store machine code and its size
+    Declare an array machineCode of size MEMORY_SIZE to store the machine code;
+    Declare an integer machineCodeSize;
 
-    return 0;
+    // Parse the input assembly code file and generate machine code
+    Call the parser function with the inputFile, machineCode, and a reference to machineCodeSize;
+
+    // Write the machine code to the output binary file
+    For each element i in machineCode up to machineCodeSize {
+        Write the value of machineCode[i] to the outputFile;
+    }
+
+    // Close the input and output files
+    Close inputFile;
+    Close outputFile;
+
+    Return 0; // Exit with success status
 }
+
 ```
 
-With that you will be able to read the assembly code like and transform it in machine code and write it to a binary file.
+With that, you will be able to read the assembly code like (.all) and transform it into machine code and write it into a binary file.
 
-Now you have all the structure of the software to implement the interpreter part of the project. It still need to implement the reading of the binary file and the execution of the machine code.
+Now you have all the structure of the software to implement the interpreter part of the project. It still needs to implement the reading of the binary file and the execution of the machine code.
 
-To do that you will need a function to read and execute the binary file. We will call it `executeBinary()` it will take the CPU in parameter and the binary file. After that you will need to open the file and check if the file exist. If the file exists you will need to call the function `initializeCPU()` to initialize the CPU. Further beyond that you will need to call the function `executeInstruction()` to execute the machine code. ⚠️ **Don't forget to close the file**⚠️.
+To do that you will need a function to read and execute the binary file. We will call it `executeBinary()` it will take the CPU in parameter and the binary file. After that, you will need to open the file and check if the file exists. If the file exists you will need to call the function `initializeCPU()` to initialize the CPU. Further beyond that, you will need to call the function `executeInstruction()` to execute the machine code. ⚠️ **Don't forget to close the file**⚠️.
 
-``` c
+```c
 
-#include "<pathToYourHeaderFileOfTheInstruction.h>"
-
-int main(int argc, char const *argv[])
-{
-    if (argc != 2)
-    {
-        printf("Usage: %s <binary_file>\n", argv[0]);
-        return 1;
+Function main(argc, argv) {
+    // Check if the correct number of command-line arguments are provided
+    If argc is not equal to 2 {
+        Print usage information;
+        Return 1; // Exit with error status
     }
 
-    FILE *binaryFile = fopen(argv[1], "rb");
-    if (binaryFile == NULL)
-    {
-        printf("Error opening file %s\n", argv[1]);
-        return 1;
+    // Open the binary file
+    Declare a FILE pointer binaryFile and open the file specified by argv[1] in binary read mode;
+    If binaryFile is NULL {
+        Print error message indicating failure to open the binary file;
+        Return 1; // Exit with error status
     }
 
-    CPU cpu;
-    initializeCPU(&cpu);
+    // Create a CPU instance and initialize it
+    Declare a CPU structure instance cpu;
+    Call the initializeCPU function with a reference to cpu;
 
-    fseek(binaryFile, 0, SEEK_END);
-    long fileSize = ftell(binaryFile);
-    rewind(binaryFile);
+    // Determine the size of the binary file
+    Seek to the end of the binary file;
+    Get the current position in the file, which represents the file size;
+    Rewind the binary file to the beginning;
 
-    unsigned char *machineCode = malloc(fileSize);
+    // Allocate memory to store the machine code
+    Declare a pointer machineCode of type unsigned char and allocate memory with size equal to fileSize;
 
-    if (machineCode == NULL)
-    {
-        printf("Memory allocation error\n");
-        fclose(binaryFile);
-        return 1;
+    If machineCode is NULL {
+        Print memory allocation error message;
+        Close binaryFile;
+        Return 1; // Exit with error status
     }
 
-    fread(machineCode, sizeof(unsigned char), fileSize, binaryFile);
+    // Read the machine code from the binary file into memory
+    Read fileSize bytes from binaryFile into machineCode;
 
     // Close the binary file
-    fclose(binaryFile);
-    binaryFile = fopen(argv[1], "wb");
-    
-    fclose(binaryFile);
-    executeProgram(&cpu, machineCode);
+    Close binaryFile;
 
-    free(machineCode);
+    // Open the binary file again for writing (clear its contents)
+    Open the file specified by argv[1] in binary write mode;
+    Close binaryFile;
 
-    return 0;
+    // Execute the program using the CPU and machine code
+    Call the executeProgram function with the cpu and machineCode;
+
+    // Free the allocated memory for machineCode
+    Free machineCode;
+
+    Return 0; // Exit with success status
 }
 ```
 
-To explain more clearly the whole project will be divided in three big parts : the assembly like language code part, the interpreter part and the binary part. It will seems like that :
+⚠️ **Don't forget to include header files that you need when you write the code.** ⚠️
+
+To explain more clearly the whole project will be divided into three big parts: the assembly like language code part, the interpreter part and the binary part. It will seem like this:
 
 ![imageSoftwareStructure](./images/dataStructureDiagram.png)
 
@@ -748,6 +667,6 @@ To explain more clearly the whole project will be divided in three big parts : t
 
 We will use the following error handling strategy:
 
-- **Error Messages**: We will use descriptive error messages to help the user understand what went wrong. For example, if the program encounters an error while reading a assembly code file, it will print "Error reading file" to the console.If the program encounters an error while opening a binary file, it will print "Error opening file" to the console.Further beyond if the program encounters error of assemly like an overflow it will print "Overflow detected" to the console. If the problem is  with an instruction it will print "Error with the instruction" to the console you need to explain at wich line the error is detected to help the user to understand what went wrong.
+- **Error Messages**: We will use descriptive error messages to help the user understand what went wrong. For example, if the program encounters an error while reading an assembly code file, it will print "Error reading file" to the console. If the program encounters an error while opening a binary file, it will print "Error opening file" to the console. Further beyond if the program encounters an error of assembly like an overflow it will print "Overflow detected" to the console. If the problem is with an instruction it will print "Error with the instruction" to the console you need to explain at which line the error is detected to help the user understand what went wrong.
 
 [⬆️ Back to top](#technical-specifications)
