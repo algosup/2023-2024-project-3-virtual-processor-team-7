@@ -3,7 +3,7 @@
 | Role | Name | Signature | Date |
 |---|---|---|---|
 | Project Manager | Mattéo LEFIN|✅| 09/02/2024 |
-| Program Manager | Gaël MALVAR |  |  |
+| Program Manager | Gaël MALVAR |✅| 09/02/2024 |
 | Tech Lead | Robin DEBRY |  |  |
 | Software Developer | David CUAHONTE CUEVAS |✅| 09/02/2024|
 | Software Developer | Camille GAYAT  |✅| 09/02/2024 |
