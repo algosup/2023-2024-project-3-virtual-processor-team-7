@@ -2,11 +2,11 @@
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
-| Project Manager | Mattéo LEFIN|✅|09/02/2024  |
+| Project Manager | Mattéo LEFIN|✅| 09/02/2024 |
 | Program Manager | Gaël MALVAR |  |  |
 | Tech Lead | Robin DEBRY |  |  |
 | Software Developer | David CUAHONTE CUEVAS |  |  |
-| Software Developer | Camille GAYAT  |  |  |
+| Software Developer | Camille GAYAT  |✅| 09/02/2024 |
 | Quality Assurance | Abderrazaq MAKRAN |  |  |
 | Quality Assurance | Raphaël PROUDHON |  | |
 
