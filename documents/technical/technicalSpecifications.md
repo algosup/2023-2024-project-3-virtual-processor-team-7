@@ -8,7 +8,7 @@
 | Software Developer | David CUAHONTE CUEVAS |✅| 09/02/2024|
 | Software Developer | Camille GAYAT  |✅| 09/02/2024 |
 | Quality Assurance | Abderrazaq MAKRAN |  |  |
-| Quality Assurance | Raphaël PROUDHON |  | |
+| Quality Assurance | Raphaël PROUDHON | ✅ |09/02/2024 |
 
 <details>
 
