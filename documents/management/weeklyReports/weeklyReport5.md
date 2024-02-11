@@ -3,7 +3,7 @@
 ------------------------
 
 <h3>Overview</h3>
-
+Throughout this week, we completed the entire Technical Specification before the deadline, and concurrently, we also prepared the various test cases for the program.
 
 ------------------------
 
@@ -11,13 +11,16 @@
 
 <h5>Technical Specification</h5>
 
-The Technical Specification has been finalized to align with the established deadline.
+The Technical Specification has been finalized to align with the established deadline, the document was reviewed and approved by the entire team.
 
-<h5>Program</h5>
+![Alt text](/management/image/technical5.png)
+*Technical Approval Matrix*
 
-<h5>Test case</h5>
+<h5>Test Case</h5>
+All our test cases have been developed and prepared to address any future bug reports. There are 31 test cases, with importance ranging from low to critical based on the project criteria. These tests will enable us to more easily monitor the functionality and ensure that everything is working correctly.
 
-<h5>Test Plan</h5>
+![Alt text](/management/image/testCase2.png)
+*A part of the test cases*
 
 ------------------------
 
@@ -38,4 +41,6 @@ The Technical Specification has been finalized to align with the established dea
 
 The Comunication Plan has been enhanced, adding details about how we comunicate as a team and with the client.
 
-<h5></h5>
+![Alt text](/management/image/comPlan.png)
+*A part of the communication plan*
+
