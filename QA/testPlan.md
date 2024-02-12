@@ -47,10 +47,10 @@
   - [3.1 Test Objectives✅](#31-test-objectives)
   - [3.2 Test Environment✅](#32-test-environment)
   - [3.3 Test Principles✅](#33-test-principles)
-- [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
-  - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
-  - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
-  - [3.4.3 Create Test Logistics✅](#343-create-test-logistics)
+  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
+    - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
+    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
+    - [3.4.3 Create Test Logistics✅](#343-create-test-logistics)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria✅](#41-criteria)
     - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
@@ -59,11 +59,12 @@
   - [4.3 GitHub Issues✅](#43-github-issues)
   - [4.4 Test Cases✅](#44-test-cases)
   - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
-- [4.6 Test Metrics](#46-test-metrics)
+  - [4.6 Test Metrics](#46-test-metrics)
   - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
 - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
   - [5.1 Test Managment Tool✅](#51-test-managment-tool)
   - [5.2 Test Design Process](#52-test-design-process)
+  - [5.3 Document Review and Commenting](#53-document-review-and-commenting)
 
 ## 1. GLOSSARY
 <br> 
@@ -95,13 +96,15 @@
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
-       This test strategy is designed to meticulously evaluate the functionality, efficiency, and stability of virtual processors, aiming to guarantee optimal operation in virtualized environments
+       - This test strategy is designed to meticulously evaluate the:
+        - functionality, 
+        - efficiency, and 
+        - stability of virtual processors, aiming to guarantee optimal operation in virtualized environments
     -  **Execution Strategy:**
-      Two functional testing cycles address critical issues systematically. The first cycle allows workarounds, and the second refines the system by addressing bugs and gathering performance data.
+      Describes how the test will be performed and process to identify and report bugs, and to fix and implement fixes.
     -  **Test Management:**
-      GitHub Issues is our central tool for creating, managing, and assigning testing-related issues, facilitating transparent communication within the team.
+      Process to handle the logistics of the test and all the events that come up during execution.
 
-  This concise framework ensures effective testing, aligning technical robustness with the educational goals of the project.
 ### 2.2 Project Overview
 
   - ALGOSUP asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
@@ -126,8 +129,6 @@
           - Ensures the test plan and deliverables are consistent with the project's design.
           - Provides the necessary testing environment.
           - Adheres to procedures related to bug fixes programming.
-
-  This collaborative approach ensures that the test plan not only meets technical requirements but also aligns with overall project goals.
 
 ## 3. TEST STRATEGY
 ### 3.1 Test Objectives
@@ -301,7 +302,7 @@ In summary, the functional testing cycles gradually enhance the system's quality
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
 ## 4.6 Test Metrics
-  The table mentions several metrics and processes related to tracking defects (bugs or issues) during testing:
+  The table mentions several metrics and processes related to tracking bugs during testing:
 
   | Report | Metrics | Frequency |
   |---|---|---|
@@ -399,9 +400,6 @@ Document reviews are not just about error correction; they also serve as opportu
 
 3. **Encourage Collaboration:** Use document reviews as a platform for collaboration. Encourage discussions and foster an environment where team members feel comfortable seeking and providing feedback.
 
-4. **Acknowledge Positive Aspects:** In addition to pointing out areas for improvement, acknowledge positive aspects of the document. Positive reinforcement motivates team members and boosts morale.
-
-5. **Use Initials in Comments:** When leaving comments, include your initials to provide clear attribution of feedback. This helps in tracking and clarifying points during the review process.
 
 ### Document Review Process
 
@@ -417,7 +415,7 @@ Document reviews are not just about error correction; they also serve as opportu
 
 ### Conclusion
 
-The collaborative process of reviewing documents and leaving comments, including initials for attribution, is integral to our commitment to excellence at ALGOSUP. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
+The collaborative process of reviewing documents and leaving comments is integral to our commitment to excellence at ALGOSUP. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
