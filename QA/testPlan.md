@@ -6,7 +6,7 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| 02/01/2024 |
+|Last Updated| 02/12/2024 |
 |Status| Draft|
 
 
@@ -23,7 +23,10 @@
 |1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
 |1.05| 01/27/2024|Abderrazaq MAKRAN | Draft |
-|1.06| 02/01/2024|Abderrazaq MAKRAN | Draft |
+|2.0| 02/01/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|2.01| 02/07/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
@@ -32,32 +35,35 @@
 <br>
 
 # Table of Contents
-  - [1. GLOSSARY](#1-glossary)
-  - [2. INTRODUCTION](#2-introduction)
-    - [2.1 Purpose✅](#21-purpose)
-    - [2.2 Project Overview✅](#22-project-overview)
-    - [2.3 Audience✅](#23-audience)
-  - [3. TEST STRATEGY](#3-test-strategy)
-    - [3.1 Test Objectives✅](#31-test-objectives)
-    - [3.2 Test Environment✅](#32-test-environment)
-    - [3.3 Test Principles✅](#33-test-principles)
-  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
-    - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
-    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
-    - [3.4.3 Create Test Logistics✅](#343-create-test-logistics)
-  - [4. EXECUTION STRATEGY](#4-execution-strategy)
-    - [4.1 Criteria✅](#41-criteria)
-      - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
-      - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
-    - [4.2 Test Cycles✅](#42-test-cycles)
-    - [4.3 GitHub Issues✅](#43-github-issues)
-    - [4.4 Test Cases✅](#44-test-cases)
-    - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
-  - [4.6 Test Metrics](#46-test-metrics)
-    - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
-  - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
-    - [5.1 Test Managment Tool✅](#51-test-managment-tool)
-    - [5.2 Test Design Process](#52-test-design-process)
+- [Revision and Sign off](#revision-and-sign-off)
+  - [Document History](#document-history)
+  - [Approval List](#approval-list)
+- [1. GLOSSARY](#1-glossary)
+- [2. INTRODUCTION](#2-introduction)
+  - [2.1 Purpose✅](#21-purpose)
+  - [2.2 Project Overview✅](#22-project-overview)
+  - [2.3 Audience✅](#23-audience)
+- [3. TEST STRATEGY](#3-test-strategy)
+  - [3.1 Test Objectives✅](#31-test-objectives)
+  - [3.2 Test Environment✅](#32-test-environment)
+  - [3.3 Test Principles✅](#33-test-principles)
+- [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
+  - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
+  - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
+  - [3.4.3 Create Test Logistics✅](#343-create-test-logistics)
+- [4. EXECUTION STRATEGY](#4-execution-strategy)
+  - [4.1 Criteria✅](#41-criteria)
+    - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
+    - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+  - [4.2 Test Cycles✅](#42-test-cycles)
+  - [4.3 GitHub Issues✅](#43-github-issues)
+  - [4.4 Test Cases✅](#44-test-cases)
+  - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
+- [4.6 Test Metrics](#46-test-metrics)
+  - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
+- [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
+  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
+  - [5.2 Test Design Process](#52-test-design-process)
 
 ## 1. GLOSSARY
 <br> 
