@@ -159,23 +159,23 @@
 
 ### 3.3 Test Principles 
   
-    - Tests will be focused on meeting the objectives and quality 
+  - Tests will be focused on meeting the objectives and quality 
     
   <br>
 
-    - Testing processes will be well defined, yet flexible, with the ability to change as needed. 
+  - Testing processes will be well defined, yet flexible, with the ability to change as needed. 
     
   <br>  
 
-    - There will be common, consistent procedures for all teams supporting testing activities
+  - There will be common, consistent procedures for all teams supporting testing activities
 
   <br>
 
-    - Testing activities will build upon previous stages to avoid redundancy or duplication of effort
+  - Testing activities will build upon previous stages to avoid redundancy or duplication of effort
 
   <br>
 
-    - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
+  - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
 
   <br>
 
