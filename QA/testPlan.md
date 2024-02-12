@@ -52,8 +52,8 @@
     - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria✅](#41-criteria)
-    - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
-    - [4.1.2 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+    - [4.1.1 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+    - [4.1.2 Suspension Criteria✅](#411-suspension-criteria)
   - [4.2 Test Cycles✅](#42-test-cycles)
   - [4.3 GitHub Issues✅](#43-github-issues)
   - [4.4 Test Cases✅](#44-test-cases)
@@ -198,12 +198,7 @@
 Agile testing includes an incremental approach to testing. In this type of software testing, features are tested as they are developed.  
 ## 4. EXECUTION STRATEGY
 ### 4.1 Criteria
-#### 4.1.1 Suspension Criteria
-  - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
-      <p float="left">
-      <img src="Images/suspensionCriteria.png" width="700" />
-      </p>
-#### 4.1.2 Entry Criteria and Exit Criteria
+#### 4.1.1 Entry Criteria and Exit Criteria
   - Entry criteria define the conditions that must be fulfilled before the testing process can commence. They serve as a set of prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
     - **The availability of the test environment** 
     - **Completion of necessary documentation**
@@ -214,7 +209,8 @@ Agile testing includes an incremental approach to testing. In this type of softw
   <p float="left">
   <img src="Images/entryExitCriteria.png" width="700" />
   </p>
-  - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
+
+   - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
     
   - **Achieving a certain level of test coverage** 
     
@@ -223,6 +219,12 @@ Agile testing includes an incremental approach to testing. In this type of softw
   - **The commitment of the whole code on Github repository** 
   
   Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
+#### 4.1.2 Suspension Criteria
+  - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
+      <p float="left">
+      <img src="Images/suspensionCriteria.png" width="700" />
+      </p>
+
 ### 4.2 Test Cycles
  Two Functional Testing Cycles:
    - **First Cycle:**
