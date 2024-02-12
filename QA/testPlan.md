@@ -49,8 +49,7 @@
   - [3.3 Test Principles✅](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
-    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
-    - [3.4.3 Create Test Logistics✅](#343-create-test-logistics)
+    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type))
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria✅](#41-criteria)
     - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
@@ -186,11 +185,9 @@
 #### In scope 
 
    - Comprehensive testing of each part of the software, including each instruction.
-   
    - Functional testing of all features and functionalities.
    - Identification and validation of expected system behavior.
    - Testing of various scenarios and inputs to ensure system robustness.
-   - Performance testing to gather data on system responsiveness.
 #### Out scope
 
    - Security testing for potential vulnerabilities in the system.
@@ -198,14 +195,7 @@
    - User acceptance testing (UAT) for assessing user satisfaction.
 ### 3.4.2 Identify Testing Type
 #### Agile testing
-  Agile testing is an iterative and collaborative approach to software testing within the Agile development framework. It involves frequent and early testing throughout the development lifecycle, focusing on continuous feedback and adaptability to change. Testers actively collaborate with developers, product owners, and other stakeholders in cross-functional teams. Key practices include Test-Driven Development (TDD), automation for quick feedback, and exploratory testing. Agile testing emphasizes delivering value to the customer, responding to changing requirements, and conducting regular sprint reviews and retrospectives for continuous improvement. Overall, it aligns testing activities with the principles of Agile development, ensuring high-quality software releases in short, incremental cycles.
-### 3.4.3 Create Test Logistics
-### In scope
-  - Establishing a test environment for functional testing.
-  - Ensuring necessary access to testing tools and resources.
-### Out scope
-  - Managing logistics related to non-functional testing environments.
-  - Procuring hardware or software licenses beyond the scope of the current testing cycle.  
+Agile testing includes an incremental approach to testing. In this type of software testing, features are tested as they are developed.  
 ## 4. EXECUTION STRATEGY
 ### 4.1 Criteria
 #### 4.1.1 Suspension Criteria
