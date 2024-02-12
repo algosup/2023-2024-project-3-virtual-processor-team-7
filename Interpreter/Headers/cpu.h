@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#define MEMORY_SIZE 65536
+#include "parser.h"
 
 typedef struct
 {
@@ -16,7 +12,7 @@ typedef struct
 void initializeCPU(CPU *cpu)
 {
     // Initialize CPU state
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < MEMORY_SIZE; i++)
     {
         cpu->registers[i] = 0;
     }

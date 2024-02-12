@@ -1,6 +1,14 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "executeInstructions.h"
+
+#define MEMORY_SIZE 65536
+
+// A structure to store labels and their addresses
+    struct Label {
+        char name[256];
+        int address;
+    } labels[100]; // Adjust the size as needed
 
 // Function to convert assembly code to machine code
 void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
@@ -9,13 +17,9 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
     int index = 0;
     int currentAddress = 0;
     int labelCount = 0;
+    
 
-    // A structure to store labels and their addresses
-    struct Label
-    {
-        char name[256];
-        int address;
-    } labels[100]; // Adjust the size as needed
+
 
     while (fgets(line, sizeof(line), file) != NULL)
     {
@@ -26,16 +30,16 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         // Tokenize the line to extract instruction and operands
         char *token = strtok(line, " \t\n");
         if (token == NULL)
-            continue;
+            continue; 
 
-        if (token[strlen(token) - 1] == ':')
-        {
+        if (token[strlen(token) - 1] == ':') {
             token[strlen(token) - 1] = '\0'; // Remove the colon
             strcpy(labels[labelCount].name, token);
             labels[labelCount].address = currentAddress;
             labelCount++;
             continue;
         }
+        
 
         // Decode the instruction and convert to machine code
         if (strcmp(token, "MOV") == 0)
@@ -44,14 +48,15 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             token = strtok(NULL, " \t\n");
             if (token[0] == 'R')
             {
-                machineCode[index++] = 0x21;                        // MOV opcode
+                machineCode[index++] = 0x21; // MOV opcode
                 machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
             }
             else
             {
-                machineCode[index++] = 0x20;                    // MOV opcode
+                machineCode[index++] = 0x20; // MOV opcode
                 machineCode[index++] = strtol(token, NULL, 10); // Immediate value
             }
+
             // Parse destination register
             token = strtok(NULL, " \t\n");
             machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
@@ -107,22 +112,19 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             // Parse label
             token = strtok(NULL, " \t\n");
             int labelIndex;
-            for (labelIndex = 0; labelIndex < labelCount; labelIndex++)
-            {
-                if (strcmp(labels[labelIndex].name, token) == 0)
-                {
+            for (labelIndex = 0; labelIndex < labelCount; labelIndex++) {
+                if (strcmp(labels[labelIndex].name, token) == 0) {
                     // Found the label, use its address
                     machineCode[index++] = labels[labelIndex].address;
                     break;
                 }
             }
-            if (labelIndex == labelCount)
-            {
+            if (labelIndex == labelCount) {
                 // Label not found, handle error
                 printf("Error: Label not found - %s\n", token);
                 exit(1);
             }
-            currentAddress += 2;
+            currentAddress += 2; 
         }
         else if (strcmp(token, "JMPT") == 0)
         {

@@ -1,14 +1,26 @@
 #include "Headers/parser.h"
 
-int main()
+int main(int argc, char const *argv[])
 {
-    CPU cpu;
-    initializeCPU(&cpu);
-    // Open the assembly code file
-    FILE *file = fopen("testMC.asm", "r");
-    if (file == NULL)
+    if (argc != 3)
     {
-        perror("Error opening file");
+        printf("Usage: %s <assembly_code_file> <output_binary_file>\n", argv[0]);
+        return 1;
+    }
+
+    FILE *inputFile = fopen(argv[1], "r");
+    if (inputFile == NULL)
+    {
+        printf("Error opening file %s\n", argv[1]);
+        return 1;
+    }
+    
+
+    FILE *outputFile = fopen(argv[2], "wb");
+    if (outputFile == NULL)
+    {
+        printf("Error opening file %s\n", argv[2]);
+        fclose(inputFile);
         return 1;
     }
 
@@ -17,27 +29,17 @@ int main()
     int machineCodeSize;
 
     // Convert assembly code to machine code
-    parser(file, machineCode, &machineCodeSize);
+    parser(inputFile, machineCode, &machineCodeSize);
 
-    // Close the file
-    fclose(file);
-
-    // Registers
-    unsigned char registers[16] = {0}; // R1, R2, R3, R4, R5, HLT
-    // Memory
-    unsigned char memory[MEMORY_SIZE] = {0};
-
-    // Execute the program
-    executeInstructions(&cpu, machineCode);
-
-    // Display memory contents after execution
-    for (int i = 0; i < MEMORY_SIZE; i++)
+      // Write the machine code to the binary file line by line
+    for (int i = 0; i < machineCodeSize; ++i)
     {
-        if (memory[i] != 0)
-        {
-            printf("Memory[%d]: %d\n", i, memory[i]);
-        }
+        fwrite(&machineCode[i], sizeof(unsigned char), 1, outputFile);
     }
+
+    // Close the files
+    fclose(inputFile);
+    fclose(outputFile);
 
     return 0;
 }
