@@ -49,7 +49,7 @@
   - [3.3 Test Principles✅](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
-    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type))
+    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria✅](#41-criteria)
     - [4.1.1 Suspension Criteria✅](#411-suspension-criteria)
