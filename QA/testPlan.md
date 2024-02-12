@@ -58,7 +58,6 @@
   - [4.3 GitHub Issues✅](#43-github-issues)
   - [4.4 Test Cases✅](#44-test-cases)
   - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
-  - [4.6 Test Metrics](#46-test-metrics)
   - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
 - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
   - [5.1 Test Managment Tool✅](#51-test-managment-tool)
@@ -191,7 +190,6 @@
 #### Out scope
 
    - Security testing for potential vulnerabilities in the system.
-   - Compatibility testing across a wide range of browsers or platforms.
    - User acceptance testing (UAT) for assessing user satisfaction.
 ### 3.4.2 Identify Testing Type
 #### Agile testing
@@ -210,7 +208,7 @@ Agile testing includes an incremental approach to testing. In this type of softw
   <img src="Images/entryExitCriteria.png" width="700" />
   </p>
 
-   - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
+- Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
     
   - **Achieving a certain level of test coverage** 
     
@@ -220,26 +218,33 @@ Agile testing includes an incremental approach to testing. In this type of softw
   
   Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
 #### 4.1.2 Suspension Criteria
-  - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as defects, environmental issues, or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
+  - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as bugs or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
       <p float="left">
       <img src="Images/suspensionCriteria.png" width="700" />
       </p>
 
 ### 4.2 Test Cycles
+ **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
+ 
  Two Functional Testing Cycles:
    - **First Cycle:**
+     
      - **Objective:** Identify blocking, critical bugs, and most high-priority bugs.
+     
      - **Approach:** Use workarounds if necessary to complete all test cases.
+     
      - **Focus:** Prioritize finding showstopper issues that may hinder the basic functionality.
+   
    - **Second Cycle:**
+     
      - **Objective:** Address remaining high and medium bugs, eliminate workarounds from the first cycle, correct any gaps in the test cases, and gather performance results.
+     
      - **Approach:** Resolve issues identified in the first cycle, and specifically focus on medium-priority bugs.
+     
      - **Focus:** Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
  
- **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
  <br>
 
-In summary, the functional testing cycles gradually enhance the system's quality, addressing defects in priority order.
 
 ### 4.3 GitHub Issues
 
@@ -269,21 +274,23 @@ In summary, the functional testing cycles gradually enhance the system's quality
   
   - This ensures that every team member can readily comprehend the testing requirements. 
   
-  - Assignees for these test cases will include both QA's and individuals responsible for the respective features. 
+  - Assignees for these test cases will include both QA's and software engineers. 
   
 ### 4.5 Validation and Bug Report Management
-  - The bugs will be tracked through tickets on Github issues only. The technical team will gather information on a daily basis from Github, and request additional details from the project manager and the QA. The technical team will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
+  - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA's. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
   
   - A template for those tickets has been created :
   <p float="left">
   <img src="Images/bugReport.png" width="900" />
   </p>
-  - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug>.
+  
+  - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug.
     
-  - It is Project Manager's responsibility to review the severity of the bugs and facilitate with the technical team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle.
+  - It is Project Manager and Tehnical Lead responsibility to review the severity of the bugs and facilitate with the software engineers team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle.
     
-  - It is Technical team's responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager the fix is done.
+  - It is Software Engineers responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager and Technical Lead the fix is done.
+  
   - Bug found during the testing will be categorized according to the bug reporting template implemented directly on Github issues and the categories are:
 
  | Severity | Impact |
@@ -293,13 +300,7 @@ In summary, the functional testing cycles gradually enhance the system's quality
  |3 (Medium) |- This Bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
-## 4.6 Test Metrics
-  The table mentions several metrics and processes related to tracking bugs during testing:
 
-  | Report | Metrics | Frequency |
-  |---|---|---|
-  | Test preparation & Excution status | Metrics: - % complete - % Work In Progress (WIP) - % Pass - % Fail | Weekly/Daily (optional) |
-  | Daily Execution Status | Metrics: - Pass - Fail - Total Bugs - Highlight Showstopper/Critical Bugs | Frequency: Daily |
 ### 4.7 Bug tracking & Reporting
      
   <p float="left">
@@ -318,10 +319,10 @@ In summary, the functional testing cycles gradually enhance the system's quality
 - During the Test Design phase, all test cases are written directly with this templates: [testcase.yml](). Any change to the test case will be directly updated in Github issues. 
 <br>
 
-- Each Tester will directly access their respective assigned test cases and update the status of each executed step in Github issues.
+- Each software engineer will directly access their respective assigned test cases and update the status of each executed step in Github issues.
 <br>
 
-- Any bug encountered will be raised in Github issues to the particular Test case.
+- Any bug encountered will be raised in Github issues to the particular test case.
 <br>
 
 - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
