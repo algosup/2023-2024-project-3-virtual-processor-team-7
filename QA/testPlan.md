@@ -94,14 +94,12 @@
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
-       - This test strategy is designed to meticulously evaluate the:
-        - functionality, 
-        - efficiency, and 
-        - stability of virtual processors, aiming to guarantee optimal operation in virtualized environments
+      <br>Outline the goals of this test plan, specifying the testing environment and delineating the scope and levels of testing. Additionally, articulate the principles guiding the testing process and categorize the testing types involved.
     -  **Execution Strategy:**
-      Describes how the test will be performed and process to identify and report bugs, and to fix and implement fixes.
+      <br>Describes how the test will be performed and process to identify and report bugs, and to fix and implement fixes.
     -  **Test Management:**
-      Process to handle the logistics of the test and all the events that come up during execution.
+      <br>Process to handle the logistics of the test and all the events that come up during execution.
+
 
 ### 2.2 Project Overview
 
@@ -111,7 +109,7 @@
 
   - The primary audience for this test plan includes project team members, each with distinct roles:
 
-      - **Technical Team:**
+      - **Technical Team (Technical Lead and Software Engineers):**
 
         - Responsible for executing tasks outlined in this document.
         - Contribute insights and recommendations regarding the test plan.
@@ -122,17 +120,23 @@
         - Reviews, approves, and holds accountability for the test plan.
         - Tracks the performance of the testing activities.
 
+      - **Program Manager**
+        - Reviewing and approving the test plan to ensure it aligns with the project's objectives.
+        - Ensuring that the testing process adheres to established procedures and standards
+
       - **QA's Members:**
 
           - Ensures the test plan and deliverables are consistent with the project's design.
           - Provides the necessary testing environment.
           - Adheres to procedures related to bug fixes programming.
 
+
 ## 3. TEST STRATEGY
 ### 3.1 Test Objectives
   - This test plan is focused on rigorously assessing the virtual processor and interpreter in our project, emphasizing functionality, reliability, and correctness. We aim to validate precise execution of assembly code, assess the reliability of the virtual processor under diverse scenarios, and ensure accurate results from the interpreter. Additionally, we prioritize educational value, providing a testing framework aligned with learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides ensure accessibility for a broad audience. This testing approach aims not only to validate technical robustness but also to highlight the project's educational merits in the realm of low-level programming.
 
 ### 3.2 Test Environment
+
   - **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
   - **IDE:** Visual Studio Code 1.85
@@ -155,6 +159,7 @@
       - Processor: 13th Gen Intel(R) Core(TM) i7-1355U, 1700 Mhz
       - RAM: 16.0 GB
       - System type: 64-bit operating system, x64-based processor
+
 
 ### 3.3 Test Principles 
 
@@ -195,6 +200,8 @@
 #### Agile testing
 Agile testing includes an incremental approach to testing. In this type of software testing, features are tested as they are developed.  
 ## 4. EXECUTION STRATEGY
+
+
 ### 4.1 Criteria
 #### 4.1.1 Entry Criteria and Exit Criteria
   - Entry criteria define the conditions that must be fulfilled before the testing process can commence. They serve as a set of prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
@@ -223,6 +230,7 @@ Agile testing includes an incremental approach to testing. In this type of softw
       <img src="Images/suspensionCriteria.png" width="700" />
       </p>
 
+
 ### 4.2 Test Cycles
  **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
  
@@ -244,6 +252,7 @@ Agile testing includes an incremental approach to testing. In this type of softw
      - **Focus:** Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
  
  <br>
+
 
 
 ### 4.3 GitHub Issues
@@ -352,17 +361,6 @@ This section outlines the process of test case preparation and collaboration bet
 5. **Rework and Approval(comments):**
    - QA's address the review bugs, make necessary revisions to the test cases, and seek approval and sign-off from the Project Manager or Tech lead. This iterative process ensures that the test cases align with the project's requirements.
 
-<!-- 6. **Prototype and Specification Usage:**
-   - During the preparation phase, testers leverage the prototype, use cases, and functional specifications to craft detailed, step-by-step test cases. This approach ensures that testing aligns with the intended functionality and design of the system.
-
-7. **Clarification Tracker:**
-   - Testers maintain a Clarification Tracker sheet, documenting any queries or uncertainties. This sheet is periodically shared with the Requirements team, facilitating clarification and updates to the test cases. Clarifications may lead to Change Requests or help in detailing implicit requirements.
-
-8. **Sign-off Communication:**
-   - Sign-off for the test cases is communicated through email by the BUSINESS ANALYST. This formal communication signifies the completion of the test case preparation phase and the readiness for test execution.
-
-9. **Updating Test Cases:**
-   - Any subsequent changes to the test cases, if needed, are directly updated in the chosen test management tool, which, in this case, is HP ALM. This ensures that the latest version of the test cases is available for reference. -->
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
@@ -420,3 +418,9 @@ The collaborative process of reviewing documents and leaving comments is integra
 | Software Developer | David CUAHONTE |  | |
 | Quality Assurance | Raphaël PROUDHON |  | |
 | Quality Assurance | Abderrazaq MAKRAN |   | |
+
+
+
+
+
+
