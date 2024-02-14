@@ -17,22 +17,24 @@
 ## Document History
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
-|1.0| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.02| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
-|1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Draft | 
+|1.0| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Create the template  |
+|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add main titles and starte to fill the different parts | 
+|1.02| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add table of contents and add images | 
+|1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Replace images to match the background color with Github and fill more content. | 
+|1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON |  | 
 |1.05| 01/27/2024|Abderrazaq MAKRAN | Draft |
 |2.0| 02/01/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.01| 02/07/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Beta |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
-| Mattéo Lefin | Project Manager | Reviewer | 02/01/2024 |
+| Mattéo LEFIN | Project Manager | Reviewer | 02/01/2024 |
+| Raphael PROUDHON | Quality Assurance | Reviewer | 02/14/2024 |
+| Abderrazaq MAKRAN | Quality Assurance | Reviewer | 02/14/2024 |
 
 <br>
 
@@ -49,24 +51,24 @@
   - [3.1 Test Objectives✅](#31-test-objectives)
   - [3.2 Test Environment✅](#32-test-environment)
   - [3.3 Test Principles✅](#33-test-principles)
-  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
-    - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
-    - [3.4.2 Identify Testing Type](#342-identify-testing-type)
+  - [3.4 Scope and Levels of Testing✅](#34-scope-and-levels-of-testing)
+    - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
+    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
   - [4.1 Criteria✅](#41-criteria)
     - [4.1.1 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
     - [4.1.2 Suspension Criteria✅](#411-suspension-criteria)
   - [4.2 Test Cycles✅](#42-test-cycles)
-  - [4.3 GitHub Issues👁️](#43-github-issues)
-  - [4.4 Test Cases👁️](#44-test-cases)
-  - [4.5 Validation and Bug Report Management👁️](#45-validation-and-bug-report-management)
-  - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
+  - [4.3 GitHub Issues✅](#43-github-issues)
+  - [4.4 Test Cases✅](#44-test-cases)
+  - [4.5 Validation and bug Report Management✅](#45-validation-and-bug-report-management)
+  - [4.7 bug tracking & Reporting✅](#47-bug-tracking--reporting)
 - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
-  - [5.1 Test Managment Tool👁️](#51-test-managment-tool)
-  - [5.2 Test Design Process👁️](#52-test-design-process)
-  - [5.3 Schedule Estimation👁️](#53-schedule-estimation)
-  - [5.4 Test Deliverables👁️](#54-test-deliverables)
-  - [5.5 Document Review and Commenting👁️](#55-document-review-and-commenting)
+  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
+  - [5.2 Test Design Process✅](#52-test-design-process)
+  - [5.3 Schedule Estimation✅](#53-schedule-estimation)
+  - [5.4 Test Deliverables✅](#54-test-deliverables)
+  - [5.5 Document Review and Commenting✅](#55-document-review-and-commenting)
 
 ## 1. GLOSSARY
 <br> 
@@ -97,12 +99,12 @@
 
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
-    -  **Test Strategy:**
-      <br>This section outline the goals of this test plan, specifying the testing environment and delineating the scope and levels of testing. Articulates the principles guiding the testing process, and categorizes the types of testing involved.
-    -  **Execution Strategy:**
-      <br>Describes how the tests will be performed, the process for identifying and reporting bugs.
-    -  **Test Management:**
-      <br>This section outlines the process for handling the logistics of the test and addressing all events that arise during execution.
+    ### **Test Strategy:**
+      This section outline the goals of this test plan, specifying the testing environment and delineating the scope and levels of testing. Articulates the principles guiding the testing process, and categorizes the types of testing involved.
+    ### **Execution Strategy:**
+      Describes how the tests will be performed, the process for identifying and reporting bugs.
+    ### **Test Management:**
+      This section outlines the process for handling the logistics of the test and addressing all events that arise during execution.
 
 
 ### 2.2 Project Overview
@@ -137,7 +139,7 @@
 
 ## 3. TEST STRATEGY
 ### 3.1 Test Objectives
-  - This test plan is dedicated to thoroughly evaluating the virtual processor and interpreter in our project, with a strong emphasis on functionality, reliability, and correctness. Our objectives include validating the precise execution of assembly code,, assessing the reliability of the virtual processor across various scenarios, and ensuring accurate results from the interpreter. n addition to technical validation, we prioritize educational value, by aligning our testing framework with the learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides are provided to ensure accessibility for a wide audience. Through this testing approach, we aim not only to validate technical robustness but also to underscore the project's educational significance in the realm of low-level programming.
+  - This test plan is dedicated to thoroughly evaluating the virtual processor and interpreter in our project, with a strong emphasis on functionality, reliability, and correctness. Our objectives include validating the precise execution of assembly code, assessing the reliability of the virtual processor across various scenarios, and ensuring accurate results from the interpreter. In addition to technical validation, we prioritize educational value, by aligning our testing framework with the learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides are provided to ensure accessibility for a wide audience. Through this testing approach, we aim not only to validate technical robustness but also to underscore the project's educational significance in the realm of low-level programming.
 
 ### 3.2 Test Environment
 
@@ -201,8 +203,13 @@
    - Security testing for potential vulnerabilities in the system.
    - User acceptance testing (UAT) for assessing user satisfaction.
 ### 3.4.2 Identify Testing Type
+
+#### Functional testing
+Functional testing is a type of software testing that evaluates the functionality of a system or application based on specified requirements. The goal is to ensure that the software performs as expected, focusing on user-facing features and behaviors. Functional testing includes various types such as unit testing, integration testing, system testing, and user acceptance testing. The primary emphasis is on verifying that the software's features align with defined requirements.
+#### Unit testing
+Unit testing is a type of software testing where individual components or units of a program, such as functions or methods, are tested in isolation to ensure they work as intended. It involves automated, fast, and repeatable tests to catch defects early in the development process. Unit testing is fundamental for ensuring the reliability and maintainability of software.
 #### Agile testing
-Agile testing involves an incremental approach, where features are tested as they are developed during the software development process. 
+Agile testing aligns with Agile development principles, emphasizing continuous feedback, collaboration, iterative testing, test automation, and adaptability to deliver high-quality software in a dynamic and iterative development environment.
 ## 4. EXECUTION STRATEGY
 
 
@@ -238,7 +245,7 @@ Agile testing involves an incremental approach, where features are tested as the
 ### 4.2 Test Cycles
  **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle addresses critical issues, and the second cycle aims to refine the system performance and collect additional data.
  
- Two Functional Testing Cycles:
+### Two Functional Testing Cycles:
    - **First Cycle:**
      
      - **Objective:** Identify critical bugs, including any high-priority issues that may block basic functionality
@@ -265,7 +272,7 @@ Agile testing involves an incremental approach, where features are tested as the
    
    We define:
    
-   - **Bugs:** Unexpected problems or code errors.
+   - **bugs:** Unexpected problems or code errors.
    - **Errors:** Includes all errors that do not originate in the code.
    - **Deadlines:** Specific deadlines for project stages to ensure timely
      delivery.
@@ -296,7 +303,7 @@ Agile testing involves an incremental approach, where features are tested as the
   |3 (Medium) |Secondary features|
   |4 (Low) |Minor features with minimal impact|
   
-### 4.5 Validation and Bug Report Management
+### 4.5 Validation and bug Report Management
   - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA's. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
   
@@ -311,17 +318,17 @@ Agile testing involves an incremental approach, where features are tested as the
     
   - It is Software Engineers responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager and Technical Lead the fix is done.
   
-  - Bug found during the testing will be categorized according to the bug reporting template implemented directly on Github issues and the categories are:
+  - bug found during the testing will be categorized according to the bug reporting template implemented directly on Github issues and the categories are:
 
  | Severity | Impact |
  |---|---|
  |1 (Critical) | - This bug is critical enough to crash the system, cause file corruption, or cause potential data loss. <br> - It causes an abnormal return to the operating system (crash or a system failure message appears). <br> - It causes the application to hang and requires re-booting the system.|
  |2 (High) | -It causes a lack of vital program functionality with workaround.|
- |3 (Medium) |- This Bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
+ |3 (Medium) |- This bug will degrade the quality of the System. However there is an intelligent workaround for achieving the desired functionality, for example through another screen. <br> - This bug prevents other areas of the product from being tested. However other areas can be independently tested.| 
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
 
-### 4.7 Bug tracking & Reporting
+### 4.7 bug tracking & Reporting
      
   <p float="left">
   <img src="Images/defectTrackingReporting.png" width="900" />
@@ -348,28 +355,30 @@ Agile testing involves an incremental approach, where features are tested as the
 - During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
 <br>
 
-- Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
+- Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open bugs, Severity wise bugs etc.
   
 ### 5.2 Test Design Process
 
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
 </p>
-This section outlines the process of test case preparation and collaboration between each team members. Here's a breakdown of the key points:
+This section outlines the process of test case preparation and collaboration between each team members. Here's a breakdown of the key points: 
 
-1. **Understanding Requirements:**
+<br>
+
+### **Understanding Requirements:**
    - Testers thoroughly understand each requirement specified for the project. 
 
-2. **Traceability:**
+ ### **Traceability:**
    - Each test case is mapped to use cases and requirements, creating a traceability in Github Isssues. This traceability helps establish a clear link between tests and the specific requirements they address.
 
-3. **Test Cases Preparation:**
+### **Test Cases Preparation:**
    - For each requirement, QA's prepare corresponding test cases to ensure comprehensive coverage.
 
-4. **Test Cases Review :**
+### **Test Cases Review :**
    - Test cases undergo a review process facilitated by the Project Manager or Tech lead . During this review, any identified bug is captured and communicated to the QA's.
 
-5. **Rework and Approval(comments):**
+### **Rework and Approval(comments):**
    - QA's address the review bugs, make necessary revisions to the test cases, and seek approval and sign-off from the Project Manager or Tech lead. This iterative process ensures that the test cases align with the project's requirements.
 
 
@@ -395,7 +404,7 @@ By the project's conclusion, based on this estimation, the QA efforts for this p
   
 - **Test Cases:** Specify the comprehensive set of tests designed to ensure the proper functioning of the virtual processor as intended.
 
-- **Bug Reports:** Document any identified issues encountered during the testing phase.
+- **bug Reports:** Document any identified issues encountered during the testing phase.
 
 
 ### 5.5 Document Review and Commenting
@@ -414,7 +423,7 @@ By conducting thorough document reviews and leaving comments, we aim to prevent 
 
 ### Continuous Improvement
 
-Document reviews are not just about error correction; they also serve as opportunities for continuous improvement. Team members can suggest enhancements, share alternative approaches, and collectively strive for excellence in project documentation.
+Document reviews are not just about error correction, they also serve as opportunities for continuous improvement. Team members can suggest enhancements, share alternative approaches, and collectively strive for excellence in project documentation.
 
 ### Guidelines for Document Review
 
@@ -437,9 +446,9 @@ Document reviews are not just about error correction; they also serve as opportu
 
 5. **Final Approval:** Once the document meets the required standards, it receives final approval.
 
-### Conclusion
+# Conclusion
 
-The collaborative process of reviewing documents and leaving comments is integral to our commitment to excellence at ALGOSUP. It ensures accuracy, prevents errors, and cultivates a culture of continuous improvement among team members.
+We extend our heartfelt appreciation to Robin Debry, acknowledging his exceptional patience and support with the new students. Robin demonstrated unwavering commitment by taking the time to assist us when we faced challenges, and his approach was characterized by understanding and encouragement rather than frustration. His dedication and positive attitude have undoubtedly contributed significantly to our learning experience, and for that, we are truly grateful.
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
