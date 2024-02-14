@@ -53,10 +53,10 @@
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
 - [4. EXECUTION STRATEGY](#4-execution-strategy)
-  - [4.1 Criteria👁️](#41-criteria)
-    - [4.1.1 Entry Criteria and Exit Criteria👁️](#412-entry-criteria-and-exit-criteria)
-    - [4.1.2 Suspension Criteria👁️](#411-suspension-criteria)
-  - [4.2 Test Cycles👁️](#42-test-cycles)
+  - [4.1 Criteria✅](#41-criteria)
+    - [4.1.1 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
+    - [4.1.2 Suspension Criteria✅](#411-suspension-criteria)
+  - [4.2 Test Cycles✅](#42-test-cycles)
   - [4.3 GitHub Issues👁️](#43-github-issues)
   - [4.4 Test Cases👁️](#44-test-cases)
   - [4.5 Validation and Bug Report Management👁️](#45-validation-and-bug-report-management)
@@ -236,24 +236,24 @@ Agile testing involves an incremental approach, where features are tested as the
 
 
 ### 4.2 Test Cycles
- **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle prioritizes critical issues, and the second cycle aims to refine the system further and gather performance data.
+ **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle addresses critical issues, and the second cycle aims to refine the system performance and collect additional data.
  
  Two Functional Testing Cycles:
    - **First Cycle:**
      
-     - **Objective:** Identify blocking, critical bugs, and most high-priority bugs.
+     - **Objective:** Identify critical bugs, including any high-priority issues that may block basic functionality
      
-     - **Approach:** Use workarounds if necessary to complete all test cases.
+     - **Approach:** Use workarounds if necessary to execute all test cases.
      
-     - **Focus:** Prioritize finding showstopper issues that may hinder the basic functionality.
+     - **Focus:** Prioritize the discovery of showstopper issues that could impede fundamental functionality
    
    - **Second Cycle:**
      
-     - **Objective:** Address remaining high and medium bugs, eliminate workarounds from the first cycle, correct any gaps in the test cases, and gather performance results.
+     - **Objective:** Address remaining high and medium-priority bugs, eliminate workarounds from the first cycle, refine test cases, and gather performance data.
      
-     - **Approach:** Resolve issues identified in the first cycle, and specifically focus on medium-priority bugs.
+     - **Approach:** Resolve issues identified in the first cycle, with particular attention to medium-priority bugs.
      
-     - **Focus:** Achieve a more comprehensive testing phase, ensuring that bugs are addressed, and the system performs optimally.
+     - **Focus:** Conduct a comprehensive testing phase, ensuring the resolution of bugs and optimal system performance.
  
  <br>
 
