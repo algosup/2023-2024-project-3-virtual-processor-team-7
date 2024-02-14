@@ -48,7 +48,7 @@
 - [3. TEST STRATEGY](#3-test-strategy)
   - [3.1 Test Objectives✅](#31-test-objectives)
   - [3.2 Test Environment✅](#32-test-environment)
-  - [3.3 Test Principles👁️](#33-test-principles)
+  - [3.3 Test Principles✅](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
     - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
     - [3.4.2 Identify Testing Type](#342-identify-testing-type)
@@ -167,32 +167,32 @@
 
 ### 3.3 Test Principles 
 
-  - Tests will be focused on meeting the objectives and quality 
+  - Testing will be focused on meeting the objectives and ensuring quality
 <br>
 
-  - Testing processes will be well defined, yet flexible, with the ability to change as needed. 
+  - The testing processes will be well defined, yet flexible, with the ability to change as needed. 
 <br>  
 
   - There will be common, consistent procedures for all teams supporting testing activities
 <br>
 
-  - Testing activities will build upon previous stages to avoid redundancy or duplication of effort
+  - Testing activities will be built upon previous stages to prevent redundancy or duplication of effort
 <br>
 
   - Testing will be divided into distinct phases, each with clearly defined objectives and goals.
 <br>
 
-- We will also go through unit test for each feature released by the development team.
+- We will also perform unit tests for each feature released by the development team
 <br>
 
-- We will run the unit test algorithm coded by the dev team.
+- We will execute the unit test algorithms developed by the development team.
 
 
 ## 3.4 Scope and Levels of Testing
 ### 3.4.1 Define Scope of Testing
 #### In scope 
 
-   - Comprehensive testing of each part of the software, including each instruction.
+   - Comprehensive testing of each component of the software, including individual instructions.
    - Functional testing of all features and functionalities.
    - Identification and validation of expected system behavior.
    - Testing of various scenarios and inputs to ensure system robustness.
@@ -202,24 +202,24 @@
    - User acceptance testing (UAT) for assessing user satisfaction.
 ### 3.4.2 Identify Testing Type
 #### Agile testing
-Agile testing includes an incremental approach to testing. In this type of software testing, features are tested as they are developed.  
+Agile testing involves an incremental approach, where features are tested as they are developed during the software development process. 
 ## 4. EXECUTION STRATEGY
 
 
 ### 4.1 Criteria
 #### 4.1.1 Entry Criteria and Exit Criteria
-  - Entry criteria define the conditions that must be fulfilled before the testing process can commence. They serve as a set of prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
+  - Entry criteria define the conditions that must be fulfilled before the testing process can commence. These criteria act as prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
     - **The availability of the test environment** 
     - **Completion of necessary documentation**
     - **Readiness of unit test** 
     - **The successful completion of any prerequisite testing phases.** 
 
-    Meeting entry criteria helps ensure that testing can proceed efficiently and that the results obtained are reliable.
+    Adhering to entry criteria helps ensure efficient testing and that the results obtained are reliable.
   <p float="left">
   <img src="Images/entryExitCriteria.png" width="700" />
   </p>
 
-- Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They define the point at which testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
+- Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They determine when testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
     
   - **Achieving a certain level of test coverage** 
     
