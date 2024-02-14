@@ -64,7 +64,9 @@
 - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
   - [5.1 Test Managment Tool👁️](#51-test-managment-tool)
   - [5.2 Test Design Process👁️](#52-test-design-process)
-  - [5.3 Document Review and Commenting👁️](#53-document-review-and-commenting)
+  - [5.3 Schedule Estimation👁️](#53-schedule-estimation)
+  - [5.4 Test Deliverables👁️](#54-test-deliverables)
+  - [5.5 Document Review and Commenting👁️](#55-document-review-and-commenting)
 
 ## 1. GLOSSARY
 <br> 
@@ -286,6 +288,13 @@ Agile testing includes an incremental approach to testing. In this type of softw
   - This ensures that every team member can readily comprehend the testing requirements. 
   
   - Assignees for these test cases will include both QA's and software engineers. 
+
+  | Severity |Importance|
+  |----------|----------|
+  |1 (Critical) |Core business processes|
+  |2 (High) |Major functionalitie|
+  |3 (Medium) |Secondary features|
+  |4 (Low) |Minor features with minimal impact|
   
 ### 4.5 Validation and Bug Report Management
   - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA's. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
@@ -293,7 +302,7 @@ Agile testing includes an incremental approach to testing. In this type of softw
   
   - A template for those tickets has been created :
   <p float="left">
-  <img src="Images/bugReport.png" width="900" />
+  <img src="Images/bugReport.png" width="700" />
   </p>
   
   - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug.
@@ -366,8 +375,30 @@ This section outlines the process of test case preparation and collaboration bet
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
+### 5.3 Schedule estimation
 
-### 5.3 Document Review and Commenting
+To spread out over the duration of the project, we estimated the time it would take to complete each test task. The project will last 8 weeks, so it's important to plan the QA's tasks to ensure sufficient time for testing the virtual processor and ensuring its quality.
+
+
+| Task | Subtask | Time estimation |
+|------|---------|-------------|
+|Analyse requirement specification| - Review functional specifications <br> - Review technical specification| - 8 hours <br> - 8 hours
+| Create the test specification|  - Create the test plan <br> - Create test cases <br> - Review the test cases|- 48 hours <br> - 16 hours <br> - 4 hours
+|Execute the test cases| - Build up the test environment <br> - Execute the test cases <br> - Update test cases status|- 4 hours <br> - 40 hours <br> - 16 hours
+|Report the bug| - Create bug reports <br> | - 24 hours <br> 
+
+By the project's conclusion, based on this estimation, the QA efforts for this project will amount to a total of 168 hours. <br>
+
+### 5.4 Test deliverables
+
+- **Test Plan/Test Strategy:** Outline the approach and methodology for testing, detailing how the various tests will be conducted.
+  
+- **Test Cases:** Specify the comprehensive set of tests designed to ensure the proper functioning of the virtual processor as intended.
+
+- **Bug Reports:** Document any identified issues encountered during the testing phase.
+
+
+### 5.5 Document Review and Commenting
 
 ### Importance of Reviewing Documents
 
