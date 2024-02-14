@@ -42,11 +42,11 @@
   - [Approval List](#approval-list)
 - [1. GLOSSARY](#1-glossary)
 - [2. INTRODUCTION](#2-introduction)
-  - [2.1 Purpose👁️](#21-purpose)
-  - [2.2 Project Overview👁️](#22-project-overview)
-  - [2.3 Audience👁️](#23-audience)
+  - [2.1 Purpose✅](#21-purpose)
+  - [2.2 Project Overview✅](#22-project-overview)
+  - [2.3 Audience✅](#23-audience)
 - [3. TEST STRATEGY](#3-test-strategy)
-  - [3.1 Test Objectives👁️](#31-test-objectives)
+  - [3.1 Test Objectives✅](#31-test-objectives)
   - [3.2 Test Environment✅](#32-test-environment)
   - [3.3 Test Principles👁️](#33-test-principles)
   - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
@@ -98,20 +98,20 @@
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
     -  **Test Strategy:**
-      <br>Outline the goals of this test plan, specifying the testing environment and delineating the scope and levels of testing. Additionally, articulate the principles guiding the testing process and categorize the testing types involved.
+      <br>This section outline the goals of this test plan, specifying the testing environment and delineating the scope and levels of testing. Articulates the principles guiding the testing process, and categorizes the types of testing involved.
     -  **Execution Strategy:**
-      <br>Describes how the test will be performed and process to identify and report bugs, and to fix and implement fixes.
+      <br>Describes how the tests will be performed, the process for identifying and reporting bugs.
     -  **Test Management:**
-      <br>Process to handle the logistics of the test and all the events that come up during execution.
+      <br>This section outlines the process for handling the logistics of the test and addressing all events that arise during execution.
 
 
 ### 2.2 Project Overview
 
-  - ALGOSUP asked us to build a virtual processor and interpreter for running assembly code. It's an open project for students to learn low-level programming. We're keeping things clear with easy-to-follow guides. Our goal? Create a friendly space for anyone curious about assembly language and system programming.
+  - We have been asked to develop a virtual processor and interpreter for running assembly code. This project is open to students eager to delve into low-level programming. Our approach focuses on simplicity, providing straightforward guides to follow. Our ultimate aim? To cultivate a welcoming environment for anyone interested in exploring assembly language and system programming.
 
 ### 2.3 Audience
 
-  - The primary audience for this test plan includes project team members, each with distinct roles:
+  - The primary audience for this test plan includes members of project team, each with distinct roles:
 
       - **Technical Team (Technical Lead and Software Engineers):**
 
@@ -125,19 +125,19 @@
         - Tracks the performance of the testing activities.
 
       - **Program Manager**
-        - Reviewing and approving the test plan to ensure it aligns with the project's objectives.
+        - Reviews and approves the test plan to ensure alignment with the project's objectives.
         - Ensuring that the testing process adheres to established procedures and standards
 
-      - **QA's Members:**
+      - **QA Team Members:**
 
           - Ensures the test plan and deliverables are consistent with the project's design.
           - Provides the necessary testing environment.
-          - Adheres to procedures related to bug fixes programming.
+          - Adheres to procedures related to bug fixes and programming.
 
 
 ## 3. TEST STRATEGY
 ### 3.1 Test Objectives
-  - This test plan is focused on rigorously assessing the virtual processor and interpreter in our project, emphasizing functionality, reliability, and correctness. We aim to validate precise execution of assembly code, assess the reliability of the virtual processor under diverse scenarios, and ensure accurate results from the interpreter. Additionally, we prioritize educational value, providing a testing framework aligned with learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides ensure accessibility for a broad audience. This testing approach aims not only to validate technical robustness but also to highlight the project's educational merits in the realm of low-level programming.
+  - This test plan is dedicated to thoroughly evaluating the virtual processor and interpreter in our project, with a strong emphasis on functionality, reliability, and correctness. Our objectives include validating the precise execution of assembly code,, assessing the reliability of the virtual processor across various scenarios, and ensuring accurate results from the interpreter. n addition to technical validation, we prioritize educational value, by aligning our testing framework with the learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides are provided to ensure accessibility for a wide audience. Through this testing approach, we aim not only to validate technical robustness but also to underscore the project's educational significance in the realm of low-level programming.
 
 ### 3.2 Test Environment
 
