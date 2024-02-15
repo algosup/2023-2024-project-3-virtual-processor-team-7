@@ -18,7 +18,7 @@
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
 |1.0| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Create the template  |
-|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add main titles and starte to fill the different parts | 
+|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add main titles and start to fill the different parts | 
 |1.02| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add table of contents and add images | 
 |1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Replace images to match the background color with Github and fill more content. | 
 |1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON |  | 
@@ -28,8 +28,12 @@
 |2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+<<<<<<< Updated upstream
 |2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 2.06 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+=======
+|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version |
+>>>>>>> Stashed changes
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
