@@ -28,12 +28,8 @@
 |2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-<<<<<<< Updated upstream
-|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-2.06 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-=======
-|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version |
->>>>>>> Stashed changes
+|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version  |
+|2.06 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
