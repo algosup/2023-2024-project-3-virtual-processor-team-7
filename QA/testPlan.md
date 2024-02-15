@@ -29,6 +29,7 @@
 |2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 |2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
+2.06 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
 ## Approval List
 |Name|Role|Approver/Reviewer|Approval/ Review Date|
 |---|---|---|---|
@@ -57,16 +58,16 @@
     - [4.1.1 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
     - [4.1.2 Suspension Criteria✅](#411-suspension-criteria)
   - [4.2 Test Cycles✅](#42-test-cycles)
-  - [4.3 GitHub Issues👁️](#43-github-issues)
-  - [4.4 Test Cases👁️](#44-test-cases)
-  - [4.5 Validation and Bug Report Management👁️](#45-validation-and-bug-report-management)
+  - [4.3 GitHub Issues✅](#43-github-issues)
+  - [4.4 Test Cases✅](#44-test-cases)
+  - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
   - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
 - [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
-  - [5.1 Test Managment Tool👁️](#51-test-managment-tool)
-  - [5.2 Test Design Process👁️](#52-test-design-process)
-  - [5.3 Schedule Estimation👁️](#53-schedule-estimation)
-  - [5.4 Test Deliverables👁️](#54-test-deliverables)
-  - [5.5 Document Review and Commenting👁️](#55-document-review-and-commenting)
+  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
+  - [5.2 Test Design Process✅](#52-test-design-process)
+  - [5.3 Schedule Estimation✅](#53-schedule-estimation)
+  - [5.4 Test Deliverables✅](#54-test-deliverables)
+  - [5.5 Document Review and Commenting✅](#55-document-review-and-commenting)
 
 ## 1. GLOSSARY
 <br> 
@@ -267,15 +268,14 @@ Agile testing involves an incremental approach, where features are tested as the
    
    - **Bugs:** Unexpected problems or code errors.
    - **Errors:** Includes all errors that do not originate in the code.
-   - **Deadlines:** Specific deadlines for project stages to ensure timely
-     delivery.
+   - **Deadlines:** Specific project stage deadlines to ensure timely delivery.
    - **Documentation:** Request for documentation on a specific function or group of functions in the code.
    - **Task allocation:** Assignment and tracking of specific responsibilities.
   <br>
 
   
 ### 4.4 Test Cases
-   To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress. It also serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented.
+   To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress.Additionally, it serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented
   <br>
   
   A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
@@ -287,7 +287,7 @@ Agile testing involves an incremental approach, where features are tested as the
   
   - This ensures that every team member can readily comprehend the testing requirements. 
   
-  - Assignees for these test cases will include both QA's and software engineers. 
+  - Assignees for these test cases will include both QA team members and software engineers. 
 
   | Severity |Importance|
   |----------|----------|
@@ -297,7 +297,7 @@ Agile testing involves an incremental approach, where features are tested as the
   |4 (Low) |Minor features with minimal impact|
   
 ### 4.5 Validation and Bug Report Management
-  - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA's. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
+  - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA team. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
   
   - A template for those tickets has been created :
@@ -305,9 +305,9 @@ Agile testing involves an incremental approach, where features are tested as the
   <img src="Images/bugReport.png" width="700" />
   </p>
   
-  - It is QA's responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug.
+  - It is QA teams responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug.
     
-  - It is Project Manager and Tehnical Lead responsibility to review the severity of the bugs and facilitate with the software engineers team the fix and its implementation, communicate with QA's when the test can continue or should be halt, request the QA's to retest, and modify status as the bug progresses through the cycle.
+  - It is Project Manager and Tehnical Lead responsibility to review the severity of the bugs and facilitate with the software engineers team the fix and its implementation, communicate with the QA team when the test can continue or should be halt, request the QA team to retest, and modify status as the bug progresses through the cycle.
     
   - It is Software Engineers responsibility to review the bug report on a daily basis, ask for details if necessary, fix the bug, communicate to the Project Manager and Technical Lead the fix is done.
   
@@ -331,24 +331,24 @@ Agile testing involves an incremental approach, where features are tested as the
 ### 5.1 Test Managment Tool
 - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.   
 
-- Project specific folder structure will be created in Github to manage the status of this project.
+- A project specific folder structure will be created in Github to manage the project's status.
 
 - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
 
 
-- During the Test Design phase, all test cases are written directly with this templates: [testcase.yml](). Any change to the test case will be directly updated in Github issues. 
+- During the Test Design phase, all test cases are written directly with the template[testcase.yml](). Any change to the test case will be directly updated in Github issues. 
 <br>
 
 - Each software engineer will directly access their respective assigned test cases and update the status of each executed step in Github issues.
 <br>
 
-- Any bug encountered will be raised in Github issues to the particular test case.
+- Any encountered bugs will be reported in GitHub Issues and linked to the respective test case.
 <br>
 
-- During bug fix testing, bugs are re-assigned back to the QA's to verify the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
+- During bug fix testing, bugs are reassigned to the QA team for verification of the bug fix. The QA's verifies the bug fix and updates the status directly in Github issues.
 <br>
 
-- Various reports can be generated from Github issues to provide status of Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
+- Various reports can be generated from GitHub Issues to provide status updates on Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
   
 ### 5.2 Test Design Process
 
@@ -377,7 +377,7 @@ This process emphasizes collaboration, review, and iteration to enhance the qual
 
 ### 5.3 Schedule estimation
 
-To spread out over the duration of the project, we estimated the time it would take to complete each test task. The project will last 8 weeks, so it's important to plan the QA's tasks to ensure sufficient time for testing the virtual processor and ensuring its quality.
+To span the duration of the project, we have estimated the time required to complete each testing task. The project will last 8 weeks, it is crucial to plan the QA tasks carefully to ensure sufficient time for testing the virtual processor and ensuring its quality.
 
 
 | Task | Subtask | Time estimation |
@@ -391,11 +391,11 @@ By the project's conclusion, based on this estimation, the QA efforts for this p
 
 ### 5.4 Test deliverables
 
-- **Test Plan/Test Strategy:** Outline the approach and methodology for testing, detailing how the various tests will be conducted.
+- **Test Plan/Test Strategy:** This section outlines the approach and methodology for testing, detailing how various tests will be conducted.
   
-- **Test Cases:** Specify the comprehensive set of tests designed to ensure the proper functioning of the virtual processor as intended.
+- **Test Cases:** This section specifies a comprehensive set of tests designed to ensure the proper functioning of the virtual processor as intended.
 
-- **Bug Reports:** Document any identified issues encountered during the testing phase.
+- **Bug Reports:** This section documents any identified issues encountered during the testing phase.
 
 
 ### 5.5 Document Review and Commenting
