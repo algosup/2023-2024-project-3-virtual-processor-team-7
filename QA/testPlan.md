@@ -452,7 +452,7 @@ We extend our heartfelt appreciation to Robin Debry, acknowledging his exception
 | Tech Lead | Robin DEBRY |  | 02/16/2024|
 | Software Developer | Camille GAYAT |  |02/16/2024 |
 | Software Developer | David CUAHONTE |  | 02/16/2024|
-| Quality Assurance | Raphaël PROUDHON |  |02/16/2024 |
+| Quality Assurance | Raphaël PROUDHON |✅|02/16/2024 |
 | Quality Assurance | Abderrazaq MAKRAN |✅|02/16/2024|
 
 
