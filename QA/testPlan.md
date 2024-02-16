@@ -30,6 +30,7 @@
 |3.0 | 02/16/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version  |
 
 <br>
+<details>
 
 ## Table of Contents
 
@@ -82,6 +83,8 @@
     - [Document Review Process](#document-review-process)
   - [CONCLUSION](#conclusion)
   - [Test Plan approval](#test-plan-approval)
+
+</details>
 
 ## 1. GLOSSARY
 
