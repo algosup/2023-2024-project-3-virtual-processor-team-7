@@ -6,8 +6,8 @@
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
 |---|---|
 |Created|01/22/2024|
-|Last Updated| 02/14/2024 |
-|Status| Draft|
+|Last Updated| 02/16/2024 |
+|Status| Finish|
 
 
 <br>
@@ -18,24 +18,19 @@
 | Version | Date | Author | Description of Changes|
 |---|---|---|---|
 |1.0| 01/22/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Create the template  |
-|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add main titles and start to fill the different parts | 
+|1.01| 01/23/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add main titles: Introduction, Test strategy, Execution strategy and Test management and start to fill the different parts | 
 |1.02| 01/24/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add table of contents and add images | 
-|1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Replace images to match the background color with Github and fill more content. | 
-|1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON |  | 
-|1.05| 01/27/2024|Abderrazaq MAKRAN | Draft |
-|2.0| 02/01/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.01| 02/07/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| |
-|2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Draft |
-|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version  |
-|2.06 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version |
-## Approval List
-|Name|Role|Approver/Reviewer|Approval/ Review Date|
-|---|---|---|---|
-| Mattéo LEFIN | Project Manager | Reviewer | 02/01/2024 |
-| Raphael PROUDHON | Quality Assurance | Reviewer | 02/14/2024 |
-| Abderrazaq MAKRAN | Quality Assurance | Reviewer | 02/14/2024 |
+|1.03| 01/25/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Remake charts with Lucidchart to match the background color with Github and fill more content. | 
+|1.04| 01/26/2024|Abderrazaq MAKRAN and Raphael PROUDHON | Add document review and commenting in Test management part | 
+|1.05| 01/27/2024|Abderrazaq MAKRAN | Add scopes and levels of testing and modify test cycles |
+|2.0| 02/01/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Small review of all the test plan by the QA's and the project manager, modification of poorly written parts  |
+|2.01| 02/07/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Change the indentation, the test plan has some preview problem. In parallel, start writing test cases in a draft file |
+|2.02| 02/10/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Not much modification, focus on test cases  |
+|2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Not much modification, focus on test cases |
+|2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Add schedule estimation and test deliverables in Test management |
+|2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version, review syntax, grammar, spelling errors   |
+|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version, review syntax, grammar, spelling errors by  |
+|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version  |
 
 <br>
 
@@ -43,35 +38,35 @@
 - [Revision and Sign off](#revision-and-sign-off)
   - [Document History](#document-history)
   - [Approval List](#approval-list)
-- [1. GLOSSARY](#1-glossary)
-- [2. INTRODUCTION](#2-introduction)
-  - [2.1 Purpose✅](#21-purpose)
-  - [2.2 Project Overview✅](#22-project-overview)
-  - [2.3 Audience✅](#23-audience)
-- [3. TEST STRATEGY](#3-test-strategy)
-  - [3.1 Test Objectives✅](#31-test-objectives)
-  - [3.2 Test Environment✅](#32-test-environment)
-  - [3.3 Test Principles✅](#33-test-principles)
-  - [3.4 Scope and Levels of Testing✅](#34-scope-and-levels-of-testing)
-    - [3.4.1 Define Scope of Testing✅](#341-define-scope-of-testing)
-    - [3.4.2 Identify Testing Type✅](#342-identify-testing-type)
-- [4. EXECUTION STRATEGY](#4-execution-strategy)
-  - [4.1 Criteria✅](#41-criteria)
-    - [4.1.1 Entry Criteria and Exit Criteria✅](#412-entry-criteria-and-exit-criteria)
-    - [4.1.2 Suspension Criteria✅](#411-suspension-criteria)
-  - [4.2 Test Cycles✅](#42-test-cycles)
-  - [4.3 GitHub Issues✅](#43-github-issues)
-  - [4.4 Test Cases✅](#44-test-cases)
-  - [4.5 Validation and Bug Report Management✅](#45-validation-and-bug-report-management)
-  - [4.7 Bug tracking & Reporting✅](#47-bug-tracking--reporting)
-- [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
-  - [5.1 Test Managment Tool✅](#51-test-managment-tool)
-  - [5.2 Test Design Process✅](#52-test-design-process)
-  - [5.3 Schedule Estimation✅](#53-schedule-estimation)
-  - [5.4 Test Deliverables✅](#54-test-deliverables)
-  - [5.5 Document Review and Commenting✅](#55-document-review-and-commenting)
+- [<span style="color:red">1. GLOSSARY</span>](#1-glossary)
+- [<span style="color:red">2. INTRODUCTION</span>](#2-introduction)
+  - [<span style="color:green">2.1 Purpose</span>](#21-purpose)
+  - [<span style="color:green">2.2 Project Overview</span>](#22-project-overview)
+  - [<span style="color:green">2.3 Audience</span>](#23-audience)
+- [<span style="color:red">3. TEST STRATEGY</span>](#3-test-strategy)
+  - [<span style="color:green">3.1 Test Objectives</span>](#31-test-objectives)
+  - [<span style="color:green">3.2 Test Environment</span>](#32-test-environment)
+  - [<span style="color:green">3.3 Test Principles</span>](#33-test-principles)
+  - [<span style="color:green">3.4 Scope and Levels of Testing</span>](#34-scope-and-levels-of-testing)
+    - [<span style="color:orange">3.4.1 Define Scope of Testing</span>](#341-define-scope-of-testing)
+    - [<span style="color:orange">3.4.2 Identify Testing Type</span>](#342-identify-testing-type)
+- [<span style="color:red">4. EXECUTION STRATEGY</span>](#4-execution-strategy)
+  - [<span style="color:green">4.1 Criteria</span>](#41-criteria)
+    - [<span style="color:orange">4.1.1 Entry Criteria and Exit Criteria</span>](#412-entry-criteria-and-exit-criteria)
+    - [<span style="color:orange">4.1.2 Suspension Criteria</span>](#411-suspension-criteria)
+  - [<span style="color:green">4.2 Test Cycles</span>](#42-test-cycles)
+  - [<span style="color:green">4.3 GitHub Issues</span>](#43-github-issues)
+  - [<span style="color:green">4.4 Test Cases</span>](#44-test-cases)
+  - [<span style="color:green">4.5 Validation and Bug Report Management</span>](#45-validation-and-bug-report-management)
+  - [<span style="color:green">4.7 Bug tracking & Reporting</span>](#47-bug-tracking--reporting)
+- [<span style="color:red">5. TEST MANAGEMENT PROCESS</span>](#5-test-management-process)
+  - [<span style="color:green">5.1 Test Managment Tool</span>](#51-test-managment-tool)
+  - [<span style="color:green">5.2 Test Design Process</span>](#52-test-design-process)
+  - [<span style="color:green">5.3 Schedule Estimation</span>](#53-schedule-estimation)
+  - [<span style="color:green">5.4 Test Deliverables</span>](#54-test-deliverables)
+  - [<span style="color:green">5.5 Document Review and Commenting</span>](#55-document-review-and-commenting)
 
-## 1. GLOSSARY
+## <span style="color:red">1. GLOSSARY</span>
 <br> 
 
 
@@ -94,9 +89,9 @@
 
 <br>
 
-## 2. INTRODUCTION
+## <span style="color:red">2. INTRODUCTION</span></p>
 
-### 2.1 Purpose
+### <span style="color:green">2.1 Purpose</span></p>
 
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
@@ -108,11 +103,11 @@
       This section outlines the process for handling the logistics of the test and addressing all events that arise during execution.
 
 
-### 2.2 Project Overview
+### <span style="color:green">2.2 Project Overview</span></p>
 
   - We have been asked to develop a virtual processor and interpreter for running assembly code. This project is open to students eager to delve into low-level programming. Our approach focuses on simplicity, providing straightforward guides to follow. Our ultimate aim? To cultivate a welcoming environment for anyone interested in exploring assembly language and system programming.
 
-### 2.3 Audience
+### <span style="color:green">2.3 Audience</span></p>
 
   - The primary audience for this test plan includes members of project team, each with distinct roles:
 
@@ -138,11 +133,11 @@
           - Adheres to procedures related to bug fixes and programming.
 
 
-## 3. TEST STRATEGY
-### 3.1 Test Objectives
+## <span style="color:red">3. TEST STRATEGY</span></p>
+### <span style="color:green">3.1 Test Objectives</span></p>
   - This test plan is dedicated to thoroughly evaluating the virtual processor and interpreter in our project, with a strong emphasis on functionality, reliability, and correctness. Our objectives include validating the precise execution of assembly code, assessing the reliability of the virtual processor across various scenarios, and ensuring accurate results from the interpreter. In addition to technical validation, we prioritize educational value, by aligning our testing framework with the learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides are provided to ensure accessibility for a wide audience. Through this testing approach, we aim not only to validate technical robustness but also to underscore the project's educational significance in the realm of low-level programming.
 
-### 3.2 Test Environment
+### <span style="color:green">3.2 Test Environment</span></p>
 
   - **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
@@ -168,7 +163,7 @@
       - System type: 64-bit operating system, x64-based processor
 
 
-### 3.3 Test Principles 
+### <span style="color:green">3.3 Test Principles</span></p>
 
   - Testing will be focused on meeting the objectives and ensuring quality
 <br>
@@ -191,8 +186,8 @@
 - We will execute the unit test algorithms developed by the development team.
 
 
-## 3.4 Scope and Levels of Testing
-### 3.4.1 Define Scope of Testing
+## <span style="color:green">3.4 Scope and Levels of Testing</span></p>
+### <span style="color:orange">3.4.1 Define Scope of Testing</span></p>
 #### In scope 
 
    - Comprehensive testing of each component of the software, including individual instructions.
@@ -203,7 +198,7 @@
 
    - Security testing for potential vulnerabilities in the system.
    - User acceptance testing (UAT) for assessing user satisfaction.
-### 3.4.2 Identify Testing Type
+### <span style="color:orange">3.4.2 Identify Testing Type</span></p>
 
 #### Functional testing
 Functional testing is a type of software testing that evaluates the functionality of a system or application based on specified requirements. The goal is to ensure that the software performs as expected, focusing on user-facing features and behaviors. Functional testing includes various types such as unit testing, integration testing, system testing, and user acceptance testing. The primary emphasis is on verifying that the software's features align with defined requirements.
@@ -211,11 +206,10 @@ Functional testing is a type of software testing that evaluates the functionalit
 Unit testing is a type of software testing where individual components or units of a program, such as functions or methods, are tested in isolation to ensure they work as intended. It involves automated, fast, and repeatable tests to catch defects early in the development process. Unit testing is fundamental for ensuring the reliability and maintainability of software.
 #### Agile testing
 Agile testing aligns with Agile development principles, emphasizing continuous feedback, collaboration, iterative testing, test automation, and adaptability to deliver high-quality software in a dynamic and iterative development environment.
-## 4. EXECUTION STRATEGY
 
-
-### 4.1 Criteria
-#### 4.1.1 Entry Criteria and Exit Criteria
+## <span style="color:red">4. EXECUTION STRATEGY</span></p>
+### <span style="color:green">4.1 Criteria</span></p>
+#### <span style="color:orange">4.1.1 Entry Criteria and Exit Criteria</span></p>
   - Entry criteria define the conditions that must be fulfilled before the testing process can commence. These criteria act as prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
     - **The availability of the test environment** 
     - **Completion of necessary documentation**
@@ -236,14 +230,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   - **The commitment of the whole code on Github repository** 
   
   Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
-#### 4.1.2 Suspension Criteria
+#### <span style="color:orange">4.1.2 Suspension Criteria</span></p>
   - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as bugs or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
       <p float="left">
       <img src="Images/suspensionCriteria.png" width="700" />
       </p>
 
 
-### 4.2 Test Cycles
+### <span style="color:green">4.2 Test Cycles</span></p>
  **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle addresses critical issues, and the second cycle aims to refine the system performance and collect additional data.
  
 ### Two Functional Testing Cycles:
@@ -267,7 +261,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 
 
 
-### 4.3 GitHub Issues
+### <span style="color:green">4.3 GitHub Issues</span></p>
 
    GitHub Issues is a built-in issue-tracking tool that allows us to create and manage issues and assign them to team members.
    
@@ -281,7 +275,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   <br>
 
   
-### 4.4 Test Cases
+### <span style="color:green">4.4 Test Cases</span></p>
    To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress.Additionally, it serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented
   <br>
   
@@ -303,7 +297,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   |3 (Medium) |Secondary features|
   |4 (Low) |Minor features with minimal impact|
   
-### 4.5 Validation and Bug Report Management
+### <span style="color:green">4.5 Validation and Bug Report Management</span></p>
   - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA team. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
   
@@ -328,14 +322,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
 
-### 4.7 bug tracking & Reporting
+### <span style="color:green">4.7 bug tracking & Reporting</span></p>
      
   <p float="left">
   <img src="Images/defectTrackingReporting.png" width="900" />
   </p>
    
-## 5. TEST MANAGEMENT PROCESS
-### 5.1 Test Managment Tool
+## <span style="color:red">5. TEST MANAGEMENT PROCESS</span></p>
+### <span style="color:green">5.1 Test Managment Tool</span></p>
 - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.   
 
 - A project specific folder structure will be created in Github to manage the project's status.
@@ -343,7 +337,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 - Each resource in the team will be provided with Read/Write access to add/modify Test cases.
 
 
-- During the Test Design phase, all test cases are written directly with the template[testcase.yml](). Any change to the test case will be directly updated in Github issues. 
+- During the Test Design phase, all test cases are written directly with the template testcase.yml. Any change to the test case will be directly updated in Github issues. 
 <br>
 
 - Each software engineer will directly access their respective assigned test cases and update the status of each executed step in Github issues.
@@ -357,7 +351,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 
 - Various reports can be generated from GitHub Issues to provide status updates on Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
   
-### 5.2 Test Design Process
+### <span style="color:green">5.2 Test Design Process</span></p>
 
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
@@ -384,7 +378,7 @@ This section outlines the process of test case preparation and collaboration bet
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
-### 5.3 Schedule estimation
+### <span style="color:green">5.3 Schedule estimation</span></p>
 
 To span the duration of the project, we have estimated the time required to complete each testing task. The project will last 8 weeks, it is crucial to plan the QA tasks carefully to ensure sufficient time for testing the virtual processor and ensuring its quality.
 
@@ -398,7 +392,7 @@ To span the duration of the project, we have estimated the time required to comp
 
 By the project's conclusion, based on this estimation, the QA efforts for this project will amount to a total of 168 hours. <br>
 
-### 5.4 Test deliverables
+### <span style="color:green">5.4 Test deliverables</span></p>
 
 - **Test Plan/Test Strategy:** This section outlines the approach and methodology for testing, detailing how various tests will be conducted.
   
@@ -407,7 +401,7 @@ By the project's conclusion, based on this estimation, the QA efforts for this p
 - **Bug Reports:** This section documents any identified issues encountered during the testing phase.
 
 
-### 5.5 Document Review and Commenting
+### <span style="color:green">5.5 Document Review and Commenting</span></p>
 
 ### Importance of Reviewing Documents
 
@@ -446,7 +440,7 @@ Document reviews are not just about error correction, they also serve as opportu
 
 5. **Final Approval:** Once the document meets the required standards, it receives final approval.
 
-# Conclusion
+# <span style="color:red">Conclusion</span></p>
 
 We extend our heartfelt appreciation to Robin Debry, acknowledging his exceptional patience and support with the new students. Robin demonstrated unwavering commitment by taking the time to assist us when we faced challenges, and his approach was characterized by understanding and encouragement rather than frustration. His dedication and positive attitude have undoubtedly contributed significantly to our learning experience, and for that, we are truly grateful.
 ## Test Plan approval
