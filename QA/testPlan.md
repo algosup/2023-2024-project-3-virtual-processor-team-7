@@ -322,7 +322,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
 
-### <span style="color:green">4.7 bug tracking & Reporting</span></p>
+### <span style="color:green">4.7 Bug Tracking & Reporting</span></p>
      
   <p float="left">
   <img src="Images/defectTrackingReporting.png" width="900" />
@@ -378,7 +378,7 @@ This section outlines the process of test case preparation and collaboration bet
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
-### <span style="color:green">5.3 Schedule estimation</span></p>
+### <span style="color:green">5.3 Schedule Estimation</span></p>
 
 To span the duration of the project, we have estimated the time required to complete each testing task. The project will last 8 weeks, it is crucial to plan the QA tasks carefully to ensure sufficient time for testing the virtual processor and ensuring its quality.
 
@@ -392,7 +392,7 @@ To span the duration of the project, we have estimated the time required to comp
 
 By the project's conclusion, based on this estimation, the QA efforts for this project will amount to a total of 168 hours. <br>
 
-### <span style="color:green">5.4 Test deliverables</span></p>
+### <span style="color:green">5.4 Test Deliverables</span></p>
 
 - **Test Plan/Test Strategy:** This section outlines the approach and methodology for testing, detailing how various tests will be conducted.
   
@@ -440,7 +440,7 @@ Document reviews are not just about error correction, they also serve as opportu
 
 5. **Final Approval:** Once the document meets the required standards, it receives final approval.
 
-# <span style="color:red">Conclusion</span></p>
+## <span style="color:red">CONCLUSION</span></p>
 
 We extend our heartfelt appreciation to Robin Debry, acknowledging his exceptional patience and support with the new students. Robin demonstrated unwavering commitment by taking the time to assist us when we faced challenges, and his approach was characterized by understanding and encouragement rather than frustration. His dedication and positive attitude have undoubtedly contributed significantly to our learning experience, and for that, we are truly grateful.
 ## Test Plan approval
