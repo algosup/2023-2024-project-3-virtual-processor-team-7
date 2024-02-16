@@ -38,35 +38,35 @@
 - [Revision and Sign off](#revision-and-sign-off)
   - [Document History](#document-history)
   - [Approval List](#approval-list)
-- [<span style="color:red">1. GLOSSARY</span>](#1-glossary)
-- [<span style="color:red">2. INTRODUCTION</span>](#2-introduction)
-  - [<span style="color:green">2.1 Purpose</span>](#21-purpose)
-  - [<span style="color:green">2.2 Project Overview</span>](#22-project-overview)
-  - [<span style="color:green">2.3 Audience</span>](#23-audience)
-- [<span style="color:red">3. TEST STRATEGY</span>](#3-test-strategy)
-  - [<span style="color:green">3.1 Test Objectives</span>](#31-test-objectives)
-  - [<span style="color:green">3.2 Test Environment</span>](#32-test-environment)
-  - [<span style="color:green">3.3 Test Principles</span>](#33-test-principles)
-  - [<span style="color:green">3.4 Scope and Levels of Testing</span>](#34-scope-and-levels-of-testing)
-    - [<span style="color:orange">3.4.1 Define Scope of Testing</span>](#341-define-scope-of-testing)
-    - [<span style="color:orange">3.4.2 Identify Testing Type</span>](#342-identify-testing-type)
-- [<span style="color:red">4. EXECUTION STRATEGY</span>](#4-execution-strategy)
-  - [<span style="color:green">4.1 Criteria</span>](#41-criteria)
-    - [<span style="color:orange">4.1.1 Entry Criteria and Exit Criteria</span>](#412-entry-criteria-and-exit-criteria)
-    - [<span style="color:orange">4.1.2 Suspension Criteria</span>](#411-suspension-criteria)
-  - [<span style="color:green">4.2 Test Cycles</span>](#42-test-cycles)
-  - [<span style="color:green">4.3 GitHub Issues</span>](#43-github-issues)
-  - [<span style="color:green">4.4 Test Cases</span>](#44-test-cases)
-  - [<span style="color:green">4.5 Validation and Bug Report Management</span>](#45-validation-and-bug-report-management)
-  - [<span style="color:green">4.7 Bug tracking & Reporting</span>](#47-bug-tracking--reporting)
-- [<span style="color:red">5. TEST MANAGEMENT PROCESS</span>](#5-test-management-process)
-  - [<span style="color:green">5.1 Test Managment Tool</span>](#51-test-managment-tool)
-  - [<span style="color:green">5.2 Test Design Process</span>](#52-test-design-process)
-  - [<span style="color:green">5.3 Schedule Estimation</span>](#53-schedule-estimation)
-  - [<span style="color:green">5.4 Test Deliverables</span>](#54-test-deliverables)
-  - [<span style="color:green">5.5 Document Review and Commenting</span>](#55-document-review-and-commenting)
+- [1. GLOSSARY](#1-glossary)
+- [2. INTRODUCTION](#2-introduction)
+  - [2.1 Purpose](#21-purpose)
+  - [2.2 Project Overview](#22-project-overview)
+  - [2.3 Audience](#23-audience)
+- [3. TEST STRATEGY](#3-test-strategy)
+  - [3.1 Test Objectives](#31-test-objectives)
+  - [3.2 Test Environment](#32-test-environment)
+  - [3.3 Test Principles](#33-test-principles)
+  - [3.4 Scope and Levels of Testing](#34-scope-and-levels-of-testing)
+    - [3.4.1 Define Scope of Testing](#341-define-scope-of-testing)
+    - [3.4.2 Identify Testing Type](#342-identify-testing-type)
+- [4. EXECUTION STRATEGY](#4-execution-strategy)
+  - [4.1 Criteria](#41-criteria)
+    - [4.1.1 Entry Criteria and Exit Criteria](#412-entry-criteria-and-exit-criteria)
+    - [4.1.2 Suspension Criteria](#411-suspension-criteria)
+  - [4.2 Test Cycles](#42-test-cycles)
+  - [4.3 GitHub Issues](#43-github-issues)
+  - [4.4 Test Cases](#44-test-cases)
+  - [4.5 Validation and Bug Report Management](#45-validation-and-bug-report-management)
+  - [4.7 Bug tracking & Reporting](#47-bug-tracking--reporting)
+- [5. TEST MANAGEMENT PROCESS](#5-test-management-process)
+  - [5.1 Test Managment Tool](#51-test-managment-tool)
+  - [5.2 Test Design Process](#52-test-design-process)
+  - [5.3 Schedule Estimation](#53-schedule-estimation)
+  - [5.4 Test Deliverables](#54-test-deliverables)
+  - [5.5 Document Review and Commenting](#55-document-review-and-commenting)
 
-## <span style="color:red">1. GLOSSARY</span>
+## 1. GLOSSARY
 <br> 
 
 
@@ -89,9 +89,9 @@
 
 <br>
 
-## <span style="color:red">2. INTRODUCTION</span></p>
+## 2. INTRODUCTION
 
-### <span style="color:green">2.1 Purpose</span></p>
+### 2.1 Purpose
 
   - The purpose of this test plan is to ensure the functionality, reliability, and correctness of the virtual processor and interpreter. The document introduces:
   
@@ -103,11 +103,11 @@
       This section outlines the process for handling the logistics of the test and addressing all events that arise during execution.
 
 
-### <span style="color:green">2.2 Project Overview</span></p>
+### 2.2 Project Overview
 
   - We have been asked to develop a virtual processor and interpreter for running assembly code. This project is open to students eager to delve into low-level programming. Our approach focuses on simplicity, providing straightforward guides to follow. Our ultimate aim? To cultivate a welcoming environment for anyone interested in exploring assembly language and system programming.
 
-### <span style="color:green">2.3 Audience</span></p>
+### 2.3 Audience
 
   - The primary audience for this test plan includes members of project team, each with distinct roles:
 
@@ -133,11 +133,11 @@
           - Adheres to procedures related to bug fixes and programming.
 
 
-## <span style="color:red">3. TEST STRATEGY</span></p>
-### <span style="color:green">3.1 Test Objectives</span></p>
+## 3. TEST STRATEGY
+### 3.1 Test Objectives
   - This test plan is dedicated to thoroughly evaluating the virtual processor and interpreter in our project, with a strong emphasis on functionality, reliability, and correctness. Our objectives include validating the precise execution of assembly code, assessing the reliability of the virtual processor across various scenarios, and ensuring accurate results from the interpreter. In addition to technical validation, we prioritize educational value, by aligning our testing framework with the learning goals for students and developers exploring low-level programming concepts. Clear documentation and guides are provided to ensure accessibility for a wide audience. Through this testing approach, we aim not only to validate technical robustness but also to underscore the project's educational significance in the realm of low-level programming.
 
-### <span style="color:green">3.2 Test Environment</span></p>
+### 3.2 Test Environment
 
   - **Operating System:** Windows and MacOS
   - **Compiler:** GCC 13.2
@@ -163,7 +163,7 @@
       - System type: 64-bit operating system, x64-based processor
 
 
-### <span style="color:green">3.3 Test Principles</span></p>
+### 3.3 Test Principles
 
   - Testing will be focused on meeting the objectives and ensuring quality
 <br>
@@ -186,8 +186,8 @@
 - We will execute the unit test algorithms developed by the development team.
 
 
-## <span style="color:green">3.4 Scope and Levels of Testing</span></p>
-### <span style="color:orange">3.4.1 Define Scope of Testing</span></p>
+## 3.4 Scope and Levels of Testing
+### 3.4.1 Define Scope of Testing
 #### In scope 
 
    - Comprehensive testing of each component of the software, including individual instructions.
@@ -198,7 +198,7 @@
 
    - Security testing for potential vulnerabilities in the system.
    - User acceptance testing (UAT) for assessing user satisfaction.
-### <span style="color:orange">3.4.2 Identify Testing Type</span></p>
+### 3.4.2 Identify Testing Type
 
 #### Functional testing
 Functional testing is a type of software testing that evaluates the functionality of a system or application based on specified requirements. The goal is to ensure that the software performs as expected, focusing on user-facing features and behaviors. Functional testing includes various types such as unit testing, integration testing, system testing, and user acceptance testing. The primary emphasis is on verifying that the software's features align with defined requirements.
@@ -207,9 +207,9 @@ Unit testing is a type of software testing where individual components or units 
 #### Agile testing
 Agile testing aligns with Agile development principles, emphasizing continuous feedback, collaboration, iterative testing, test automation, and adaptability to deliver high-quality software in a dynamic and iterative development environment.
 
-## <span style="color:red">4. EXECUTION STRATEGY</span></p>
-### <span style="color:green">4.1 Criteria</span></p>
-#### <span style="color:orange">4.1.1 Entry Criteria and Exit Criteria</span></p>
+## 4. EXECUTION STRATEGY
+### 4.1 Criteria
+#### 4.1.1 Entry Criteria and Exit Criteria
   - Entry criteria define the conditions that must be fulfilled before the testing process can commence. These criteria act as prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
     - **The availability of the test environment** 
     - **Completion of necessary documentation**
@@ -219,7 +219,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
     Adhering to entry criteria helps ensure efficient testing and that the results obtained are reliable.
   <p float="left">
   <img src="Images/entryExitCriteria.png" width="700" />
-  </p>
+  
 
 - Exit criteria, on the other hand, establish the conditions that must be met for testing to be considered complete and successful. They determine when testing activities can be concluded and the software can move to the next phase or be released. Exit criteria may include factors such as:
     
@@ -230,14 +230,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   - **The commitment of the whole code on Github repository** 
   
   Meeting exit criteria is crucial for making informed decisions about the readiness of the software for the next phase.
-#### <span style="color:orange">4.1.2 Suspension Criteria</span></p>
+#### 4.1.2 Suspension Criteria
   - The purpose of implementing suspension criteria is to avoid unnecessary expenditure of effort and resources. When testing faces impediments such as bugs or other obstacles that hinder effective progress, it is prudent to temporarily halt testing activities until these issues are addressed. This strategic pause optimizes the utilization of testing resources and contributes to maintaining the precision and validity of test results.
       <p float="left">
       <img src="Images/suspensionCriteria.png" width="700" />
-      </p>
+      
 
 
-### <span style="color:green">4.2 Test Cycles</span></p>
+### 4.2 Test Cycles
  **Functional Testing Cycles:** These cycles focus on ensuring that the software functions as expected. The first cycle addresses critical issues, and the second cycle aims to refine the system performance and collect additional data.
  
 ### Two Functional Testing Cycles:
@@ -261,7 +261,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 
 
 
-### <span style="color:green">4.3 GitHub Issues</span></p>
+### 4.3 GitHub Issues
 
    GitHub Issues is a built-in issue-tracking tool that allows us to create and manage issues and assign them to team members.
    
@@ -275,14 +275,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   <br>
 
   
-### <span style="color:green">4.4 Test Cases</span></p>
+### 4.4 Test Cases
    To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress.Additionally, it serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented
   <br>
   
   A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
   <p float="left">
   <img src="Images/testCase.png" width="700" />
-  </p>
+  
     
   - To enhance clarity, each test case will be meticulously crafted and documented within GitHub Issues, designated with the label "Test Case." 
   
@@ -297,14 +297,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
   |3 (Medium) |Secondary features|
   |4 (Low) |Minor features with minimal impact|
   
-### <span style="color:green">4.5 Validation and Bug Report Management</span></p>
+### 4.5 Validation and Bug Report Management
   - The bugs will be tracked through tickets on Github issues only. Software engineers will gather information on a daily basis from Github, and request additional details from the project manager and the QA team. Software Engineers will work on fixes. The title must be clear and explicit so that everyone can understand what bug it is. Each bug report will be created on GitHub issues with the label "bug". The people in charge of resolving the bug will be set as assignees.
   <br>
   
   - A template for those tickets has been created :
   <p float="left">
   <img src="Images/bugReport.png" width="700" />
-  </p>
+  
   
   - It is QA teams responsibility to open a bug report, link it to the corresponding test case, assign an initial severity, retest and close the bug.
     
@@ -322,14 +322,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
  |4 (Low) | - There is an insufficient or unclear error message, which has minimum impact on product use.
   
 
-### <span style="color:green">4.7 Bug Tracking & Reporting</span></p>
+### 4.7 Bug Tracking & Reporting
      
   <p float="left">
   <img src="Images/defectTrackingReporting.png" width="900" />
-  </p>
+  
    
-## <span style="color:red">5. TEST MANAGEMENT PROCESS</span></p>
-### <span style="color:green">5.1 Test Managment Tool</span></p>
+## 5. TEST MANAGEMENT PROCESS
+### 5.1 Test Managment Tool
 - Github issues is the tool used for Test Management. All testing artifacts such as Test cases, test results are updated in the Github issues.   
 
 - A project specific folder structure will be created in Github to manage the project's status.
@@ -351,11 +351,11 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 
 - Various reports can be generated from GitHub Issues to provide status updates on Test execution. For example, Status report of Test cases executed, Passed, Failed, No. of open Bugs, Severity wise bugs etc.
   
-### <span style="color:green">5.2 Test Design Process</span></p>
+### 5.2 Test Design Process
 
 <p float="left">
   <img src="Images/TestDesignProcess.png" width="1000" />
-</p>
+
 This section outlines the process of test case preparation and collaboration between each team members. Here's a breakdown of the key points: 
 
 <br>
@@ -378,7 +378,7 @@ This section outlines the process of test case preparation and collaboration bet
 
 This process emphasizes collaboration, review, and iteration to enhance the quality and accuracy of the test cases, ultimately contributing to the effectiveness of the testing phase.
 
-### <span style="color:green">5.3 Schedule Estimation</span></p>
+### 5.3 Schedule Estimation
 
 To span the duration of the project, we have estimated the time required to complete each testing task. The project will last 8 weeks, it is crucial to plan the QA tasks carefully to ensure sufficient time for testing the virtual processor and ensuring its quality.
 
@@ -392,7 +392,7 @@ To span the duration of the project, we have estimated the time required to comp
 
 By the project's conclusion, based on this estimation, the QA efforts for this project will amount to a total of 168 hours. <br>
 
-### <span style="color:green">5.4 Test Deliverables</span></p>
+### 5.4 Test Deliverables
 
 - **Test Plan/Test Strategy:** This section outlines the approach and methodology for testing, detailing how various tests will be conducted.
   
@@ -401,7 +401,7 @@ By the project's conclusion, based on this estimation, the QA efforts for this p
 - **Bug Reports:** This section documents any identified issues encountered during the testing phase.
 
 
-### <span style="color:green">5.5 Document Review and Commenting</span></p>
+### 5.5 Document Review and Commenting
 
 ### Importance of Reviewing Documents
 
@@ -440,7 +440,7 @@ Document reviews are not just about error correction, they also serve as opportu
 
 5. **Final Approval:** Once the document meets the required standards, it receives final approval.
 
-## <span style="color:red">CONCLUSION</span></p>
+## CONCLUSION
 
 We extend our heartfelt appreciation to Robin Debry, acknowledging his exceptional patience and support with the new students. Robin demonstrated unwavering commitment by taking the time to assist us when we faced challenges, and his approach was characterized by understanding and encouragement rather than frustration. His dedication and positive attitude have undoubtedly contributed significantly to our learning experience, and for that, we are truly grateful.
 ## Test Plan approval
