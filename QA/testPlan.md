@@ -1,4 +1,5 @@
 # Test Plan
+
 <br>
 
 | Authors | Abderrazaq MAKRAN and Raphael PROUDHON |
@@ -8,8 +9,6 @@
 |Status| Finish|
 
 <br>
-
-# Revision and Sign off
 
 ## Document History
 
@@ -27,17 +26,16 @@
 |2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Not much modification, focus on test cases |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Add schedule estimation and test deliverables in Test management |
 |2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version, review syntax, grammar, spelling errors   |
-|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version, review syntax, grammar, spelling errors   |
-|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version  |
+|3.0 | 02/16/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version, review syntax, grammar, spelling errors   |
+|3.0 | 02/16/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version  |
 
 <br>
 
-# Table of Contents
+## Table of Contents
 
 - [Test Plan](#test-plan)
-- [Revision and Sign off](#revision-and-sign-off)
   - [Document History](#document-history)
-- [Table of Contents](#table-of-contents)
+  - [Table of Contents](#table-of-contents)
   - [1. GLOSSARY](#1-glossary)
   - [2. INTRODUCTION](#2-introduction)
     - [2.1 Purpose](#21-purpose)
@@ -243,13 +241,14 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
 
 #### 4.1.1 Entry Criteria and Exit Criteria
 
-  - Entry criteria define the conditions that must be fulfilled before the testing process can commence. These criteria act as prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
-    - **The availability of the test environment**
-    - **Completion of necessary documentation**
-    - **Readiness of unit test**
-    - **The successful completion of any prerequisite testing phases.**
+- Entry criteria define the conditions that must be fulfilled before the testing process can commence. These criteria act as prerequisites and ensure that the testing environment is ready for effective and meaningful testing. Entry criteria typically include aspects such as:
+  - **The availability of the test environment**
+  - **Completion of necessary documentation**
+  - **Readiness of unit test**
+  - **The successful completion of any prerequisite testing phases.**
 
-    Adhering to entry criteria helps ensure efficient testing and that the results obtained are reliable.
+Adhering to entry criteria helps ensure efficient testing and that the results obtained are reliable.
+
   <p float="left">
   <img src="Images/entryExitCriteria.png" width="700" />
 
@@ -305,7 +304,7 @@ Agile testing aligns with Agile development principles, emphasizing continuous f
    To ensure comprehensive testing of all features and thorough identification of potential bugs, test cases will be generated using GitHub Issues as a collaborative tool. This approach facilitates clear visibility for QA's team members, outlining what needs testing and tracking the testing progress.Additionally, it serves as a centralized platform for the entire team to stay informed about pending features or those yet to be implemented
   <br>
   
-  A standardized template for creating these tickets has been formulated and is accessible in the [testCase.yml]() file, providing consistency and structure to the testing process:
+  A standardized template for creating these tickets has been formulated and is accessible in the file. Inside `.github` folder, providing consistency and structure to the testing process:
   <p float="left">
   <img src="Images/testCase.png" width="700" />
 
