@@ -29,7 +29,7 @@
 |2.03| 02/12/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Not much modification, focus on test cases |
 |2.04| 02/13/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Add schedule estimation and test deliverables in Test management |
 |2.05| 02/14/2024|Abderrazaq MAKRAN and Raphael PROUDHON| Pre-release version, review syntax, grammar, spelling errors   |
-|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version, review syntax, grammar, spelling errors by  |
+|3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version, review syntax, grammar, spelling errors   |
 |3.0 | 02/15/2024 | Abderrazaq MAKRAN and Raphael PROUDHON| Final version  |
 
 <br>
