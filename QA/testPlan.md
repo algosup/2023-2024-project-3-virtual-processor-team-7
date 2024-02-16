@@ -460,8 +460,8 @@ Together, we look forward to the successful execution of the testing phase and t
 | Project Manager | Matteo LEFIN |  | 02/16/2024|
 | Program Manager | Gael MALVAR |  |02/16/2024 |
 | Tech Lead | Robin DEBRY |  | 02/16/2024|
-| Software Developer | Camille GAYAT |  |02/16/2024 |
-| Software Developer | David CUAHONTE |  | 02/16/2024|
+| Software Developer | Camille GAYAT |✅|02/16/2024 |
+| Software Developer | David CUAHONTE |✅| 02/16/2024|
 | Quality Assurance | Raphaël PROUDHON |✅|02/16/2024 |
 | Quality Assurance | Abderrazaq MAKRAN |✅|02/16/2024|
 
