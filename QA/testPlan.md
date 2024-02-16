@@ -441,8 +441,18 @@ Document reviews are not just about error correction, they also serve as opportu
 5. **Final Approval:** Once the document meets the required standards, it receives final approval.
 
 ## CONCLUSION
+In conclusion, this test plan outlines a robust strategy for ensuring the functionality, reliability, and correctness of our virtual processor and interpreter project. 
 
-We extend our heartfelt appreciation to Robin Debry, acknowledging his exceptional patience and support with the new students. Robin demonstrated unwavering commitment by taking the time to assist us when we faced challenges, and his approach was characterized by understanding and encouragement rather than frustration. His dedication and positive attitude have undoubtedly contributed significantly to our learning experience, and for that, we are truly grateful.
+The thorough Test Strategy, detailed Execution Strategy, and meticulous Test Management Process are tailored to ensure the project's success.
+
+The collaborative efforts of the team members, have contributed to the development of a thorough testing approach.
+
+The glossary provides a shared understanding of key terms, and the document history attests to the iterative nature of the testing process. 
+
+We appreciate the contributions of all team members, teacher Caroline CORDIER, and ALGOSUP for this valuable opportunity. 
+
+Together, we look forward to the successful execution of the testing phase and the overall success of the project.
+
 ## Test Plan approval
 
 | Role | Name | Signature | Date |
