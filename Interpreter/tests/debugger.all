@@ -1,0 +1,5 @@
+MOV 20, R15
+PRT "Before Debug"
+PRT R15
+
+HLT

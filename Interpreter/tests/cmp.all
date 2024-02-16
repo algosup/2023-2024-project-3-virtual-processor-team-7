@@ -1,0 +1,17 @@
+;Comparing register inequality
+MOV 4, R5
+MOV 5, R6
+PRT R5
+PRT R6
+CMP R5, R6
+
+;------------------
+
+;Comparing register equality
+MOV 5, R5
+MOV 5, R6
+PRT R5
+PRT R6
+CMP R5, R6
+
+HLT
