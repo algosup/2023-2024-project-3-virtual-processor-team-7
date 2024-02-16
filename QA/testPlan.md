@@ -447,13 +447,13 @@ We extend our heartfelt appreciation to Robin Debry, acknowledging his exception
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
-| Project Manager | Matteo LEFIN |  | |
-| Program Manager | Gael MALVAR |  | |
-| Tech Lead | Robin DEBRY |  | |
-| Software Developer | Camille GAYAT |  | |
-| Software Developer | David CUAHONTE |  | |
-| Quality Assurance | Raphaël PROUDHON |  | |
-| Quality Assurance | Abderrazaq MAKRAN |   | |
+| Project Manager | Matteo LEFIN |  | 02/16/2024|
+| Program Manager | Gael MALVAR |  |02/16/2024 |
+| Tech Lead | Robin DEBRY |  | 02/16/2024|
+| Software Developer | Camille GAYAT |  |02/16/2024 |
+| Software Developer | David CUAHONTE |  | 02/16/2024|
+| Quality Assurance | Raphaël PROUDHON |  |02/16/2024 |
+| Quality Assurance | Abderrazaq MAKRAN |✅|02/16/2024|
 
 
 
