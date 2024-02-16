@@ -477,7 +477,7 @@ Together, we look forward to the successful execution of the testing phase and t
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
-| Project Manager | Matteo LEFIN |  | 02/16/2024|
+| Project Manager | Matteo LEFIN | ✅ | 02/16/2024|
 | Program Manager | Gaël MALVAR |✅|02/16/2024 |
 | Tech Lead | Robin DEBRY |  | 02/16/2024|
 | Software Developer | Camille GAYAT |✅|02/16/2024 |
