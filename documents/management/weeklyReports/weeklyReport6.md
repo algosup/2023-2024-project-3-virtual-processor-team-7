@@ -30,7 +30,7 @@ The test plan is currently undergoing refinement to ensure it's readyness for th
 We are currently fixing issues where in the program, subroutines were executed without calling it or using the jump instruction.
 
 <h5>Test Case</h5>
-Our test Cases have been filled, answered and reviewed.
+some of our test Cases have been filled, answered and reviewed.
 
 ![Alt text](/documents/management/image/testCase3.png)
 *List of the finished Test Cases*
