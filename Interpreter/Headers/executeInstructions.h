@@ -1,4 +1,5 @@
 #include "cpu.h"
+#include <stdint.h>
 
 
 void executeInstructions(CPU *cpu, unsigned char machineCode[])
@@ -6,6 +7,10 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
     int pc = 0; // Program Counter
 
     while (1){
+        if (pc >= MEMORY_SIZE) {
+            printf("Memory overflow detected.\n");
+            return;
+        }
         switch (machineCode[pc])
         {
         // MOV immediate_value, destination_register
@@ -92,14 +97,20 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             
             break;
         }
+
         case 0x58:
         {
-            int srcReg1 = machineCode[pc + 1];
-            
+            if (machineCode[pc + 1] < 16) {
+                // It's a register number
                 printf("PRT R%d: %d\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
                 pc += 2;
-                break;
-            
+            } else {
+                // It's a string literal
+            printf("PRT: %s\n", &machineCode[pc + 1]);
+            // Increment pc by the length of the string plus one for the null byte
+            pc += strlen((char*)&machineCode[pc + 1]) + 2;
+            }
+            break;
         }
         
         // JMP label

@@ -4,6 +4,7 @@
 
 #define MEMORY_SIZE 65536
 
+
 // A structure to store labels and their addresses
     struct Label {
         char name[256];
@@ -18,11 +19,9 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
     int currentAddress = 0;
     int labelCount = 0;
     
-
-
-
     while (fgets(line, sizeof(line), file) != NULL)
     {
+        
         // Skip comments and empty lines
         if (line[0] == ';' || line[0] == '\n')
             continue;
@@ -97,14 +96,32 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             token = strtok(NULL, " \t\n");
             machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
         }
+
         else if (strcmp(token, "PRT") == 0)
         {
             machineCode[index++] = 0x58; // PRT opcode
+            
 
-            // Parse register to print
-            token = strtok(NULL, " \t\n");
-            machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
+            // Parse register to print or string literal
+            token = strtok(NULL, "\""); // Split the string at quotes
+        if (token != NULL) {
+            char *endQuote = strchr(token, '"');
+        if (endQuote != NULL) {
+            *endQuote = '\0'; // Replace the closing quote with a null byte
         }
+        // Copy the string into the machine code
+        while (*token != '\0') {
+            machineCode[index++] = *token++;
+        }
+        // Add a null byte to mark the end of the string
+        machineCode[index++] = '\0';
+        } else {
+        // It's a register number
+        token = strtok(NULL, " \t\n");
+        machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
+        }
+        }
+        
         else if (strcmp(token, "JMP") == 0)
         {
             machineCode[index++] = 0x70; // JMP opcode
@@ -295,6 +312,7 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             printf("Unknown instruction: %s\n", token);
             exit(1);
         }
+        
     }
 
     *machineCodeSize = index;
