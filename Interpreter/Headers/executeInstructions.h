@@ -7,10 +7,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
     int pc = 0; // Program Counter
 
     while (1){
-        if (pc >= MEMORY_SIZE) {
-            printf("Memory overflow detected.\n");
-            return;
-        }
         switch (machineCode[pc])
         {
         // MOV immediate_value, destination_register
