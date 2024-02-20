@@ -1,4 +1,4 @@
-<h2><u><strong>Weekly report project 3: "Virtual processor". Week 5 (12th of february to th of february).</strong></u>
+<h2><u><strong>Weekly report project 3: "Virtual processor". Week 6 (12th of february to 16th of february).</strong></u>
 
 ------------------------
 
