@@ -97,7 +97,7 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
         case 0x58:
         {
             if (machineCode[pc + 1] < 16) {
-                // It's a register number
+                
                 printf("PRT R%d: %d\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
                 pc += 2;
             } else {
@@ -105,6 +105,21 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             printf("PRT: %s\n", &machineCode[pc + 1]);
             // Increment pc by the length of the string plus one for the null byte
             pc += strlen((char*)&machineCode[pc + 1]) + 2;
+            }
+            break;
+        }
+
+        case 0x59:
+        {
+            if (machineCode[pc + 1] < 16) {
+                // It's a register number
+                printf("PRT R%d: %c\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
+                pc += 2;
+            } else {
+                // It's a string literal
+                printf("PRT: %s\n", &machineCode[pc + 1]);
+                // Increment pc by the length of the string plus one for the null byte
+                pc += strlen((char*)&machineCode[pc + 1]) + 2;
             }
             break;
         }
@@ -148,6 +163,7 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             cpu->stack[cpu->stack_pointer++] = cpu->program_counter + 2;
             cpu->program_counter = machineCode[cpu->program_counter + 1];
             printf("CALL %d\n", machineCode[cpu->program_counter + 1]);
+            pc += 2;
             break;
 
         case 0xB0: // RETURN

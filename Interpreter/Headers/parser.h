@@ -18,10 +18,10 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
     int index = 0;
     int currentAddress = 0;
     int labelCount = 0;
+    int skipUntilRet = 0;
     
     while (fgets(line, sizeof(line), file) != NULL)
     {
-        
         // Skip comments and empty lines
         if (line[0] == ';' || line[0] == '\n')
             continue;
@@ -29,13 +29,22 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         // Tokenize the line to extract instruction and operands
         char *token = strtok(line, " \t\n");
         if (token == NULL)
-            continue; 
+            continue;
 
+        // Check if the current line defines a label
         if (token[strlen(token) - 1] == ':') {
-            token[strlen(token) - 1] = '\0'; // Remove the colon
-            strcpy(labels[labelCount].name, token);
-            labels[labelCount].address = currentAddress;
-            labelCount++;
+            // If the label is followed by a RET instruction, don't skip
+            if (strcmp(token, "RET") != 0) {
+                skipUntilRet = 1;
+            }
+            continue; // Skip processing this line further
+        }
+
+        // If we are skipping until a RET instruction, continue until we find it
+        if (skipUntilRet) {
+            if (strcmp(token, "RET") == 0) {
+                skipUntilRet = 0;
+            }
             continue;
         }
         
@@ -100,26 +109,24 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         else if (strcmp(token, "PRT") == 0)
         {
             machineCode[index++] = 0x58; // PRT opcode
-            
 
-            // Parse register to print or string literal
-            token = strtok(NULL, "\""); // Split the string at quotes
-        if (token != NULL) {
-            char *endQuote = strchr(token, '"');
-        if (endQuote != NULL) {
-            *endQuote = '\0'; // Replace the closing quote with a null byte
+            // Parse register to print
+            token = strtok(NULL, " \t\n");
+            machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
+
+
         }
-        // Copy the string into the machine code
-        while (*token != '\0') {
-            machineCode[index++] = *token++;
-        }
-        // Add a null byte to mark the end of the string
-        machineCode[index++] = '\0';
-        } else {
-        // It's a register number
-        token = strtok(NULL, " \t\n");
-        machineCode[index++] = strtol(token + 1, NULL, 10); // Register number
-        }
+        else if (strcmp(token, "PRTS") == 0)
+        {
+            machineCode[index++] = 0x59; // PRTS opcode
+
+            // Parse string to print
+            token = strtok(NULL, " \t\n");
+            int i;
+            for (i = 0; i < strlen(token); i++) {
+                machineCode[index++] = token[i];
+            }
+            machineCode[index++] = 0;
         }
         
         else if (strcmp(token, "JMP") == 0)
@@ -175,9 +182,10 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             token = strtok(NULL, " \t\n");
             machineCode[index++] = strtol(token, NULL, 10); // Subroutine label value
         }
-        else if (strcmp(token, "RETURN") == 0)
+        else if (strcmp(token, "RET") == 0)
         {
             machineCode[index++] = 0xB0; // RETURN opcode
+            skipUntilRet = 0;
         }
         else if (strcmp(token, "ADD") == 0)
         {
