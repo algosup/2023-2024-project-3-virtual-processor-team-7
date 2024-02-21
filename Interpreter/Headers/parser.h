@@ -118,15 +118,21 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
         }
         else if (strcmp(token, "PRTS") == 0)
         {
-            machineCode[index++] = 0x59; // PRTS opcode
+                machineCode[index++] = 0x59; // PRTS opcode
 
-            // Parse string to print
-            token = strtok(NULL, " \t\n");
-            int i;
-            for (i = 0; i < strlen(token); i++) {
-                machineCode[index++] = token[i];
+                token = strtok(NULL, "\"");
+            if (token != NULL) {
+                char *endQuote = strchr(token, '"');
+            if (endQuote != NULL) {
+                *endQuote = '\0';
             }
-            machineCode[index++] = 0;
+            // Copy the string into the machine code
+            while (*token != '\0') {
+                machineCode[index++] = *token++;
+            }
+            // Add a null byte to mark the end of the string
+            machineCode[index++] = '\0';
+            }
         }
         
         else if (strcmp(token, "JMP") == 0)

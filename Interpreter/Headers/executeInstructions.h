@@ -1,6 +1,6 @@
 #include "cpu.h"
 #include <stdint.h>
-
+#include <stdio.h>
 
 void executeInstructions(CPU *cpu, unsigned char machineCode[])
 {
@@ -103,7 +103,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             } else {
                 // It's a string literal
             printf("PRT: %s\n", &machineCode[pc + 1]);
-            // Increment pc by the length of the string plus one for the null byte
             pc += strlen((char*)&machineCode[pc + 1]) + 2;
             }
             break;
@@ -111,16 +110,9 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
 
         case 0x59:
         {
-            if (machineCode[pc + 1] < 16) {
-                // It's a register number
-                printf("PRT R%d: %c\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
-                pc += 2;
-            } else {
-                // It's a string literal
-                printf("PRT: %s\n", &machineCode[pc + 1]);
-                // Increment pc by the length of the string plus one for the null byte
-                pc += strlen((char*)&machineCode[pc + 1]) + 2;
-            }
+            // It's a string literal
+            printf("PRTS: %s\n", &machineCode[pc + 1]);
+            pc += strlen((char*)&machineCode[pc + 1]) + 2;
             break;
         }
         
