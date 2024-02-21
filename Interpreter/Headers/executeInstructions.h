@@ -152,11 +152,12 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
 
         case 0xA0: // CALL subroutine_label
             // Save the return address (next instruction) on the stack
-            cpu->stack[cpu->stack_pointer++] = cpu->program_counter + 2;
-            cpu->program_counter = machineCode[cpu->program_counter + 1];
-            printf("CALL %d\n", machineCode[cpu->program_counter + 1]);
-            pc += 2;
-            break;
+             cpu->stack[cpu->stack_pointer++] = cpu->program_counter + 1;
+            // Set the program counter to the address of the subroutine
+             cpu->program_counter = machineCode[cpu->program_counter + 1];
+            // Increment program counter to skip the CALL instruction
+             printf("CALL\n");
+             pc += 2;
 
         case 0xB0: // RETURN
             // Retrieve the return address from the stack
