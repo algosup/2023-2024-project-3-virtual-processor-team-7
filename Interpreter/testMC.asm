@@ -1,16 +1,18 @@
 start:
 MOV 5, R1
 MOV 20, R2
-ADD R1, R2, R3
+ADD R1, R2, R17
 PRT R3
+MUL R1, R2, R3
+PRT R23
 RET
 
 MOV 8, R1
 MOV 10, R2
-ADD R1, R2, R3
-PRT R3
+ADD R1, R2, R16
+PRT R16
+JMP start
 PRTS "Hello, World !"
-CALL start
 HLT
 
 

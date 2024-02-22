@@ -2,7 +2,7 @@
 
 cd interpreter
 gcc -o main main.c
-./main tests/not.all ../binary/output.bin
+./main testMC.asm ../binary/output.bin
 cd ..
 cd binary
 gcc -o binaryConverter binaryConverter.c

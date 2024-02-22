@@ -37,6 +37,11 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             if (strcmp(token, "RET") != 0) {
                 skipUntilRet = 1;
             }
+            // Remove the colon before storing the label name
+            token[strlen(token) - 1] = '\0';
+            strcpy(labels[labelCount].name, token);
+            labels[labelCount].address = currentAddress;
+            labelCount++;
             continue; // Skip processing this line further
         }
 
@@ -47,7 +52,6 @@ void parser(FILE *file, unsigned char machineCode[], int *machineCodeSize)
             }
             continue;
         }
-        
 
         // Decode the instruction and convert to machine code
         if (strcmp(token, "MOV") == 0)

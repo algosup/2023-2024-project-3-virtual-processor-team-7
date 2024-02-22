@@ -6,82 +6,91 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
 {
     int pc = 0; // Program Counter
 
-    while (1){
-        switch (machineCode[pc])
-        {
-        // MOV immediate_value, destination_register
-        case 0x20:
-        {
-            if (machineCode[pc + 1] > 255) {
-                // Handle overflow
-                printf("Overflow in MOV detected\n");
-                return;
-            } else {
-                int destReg = machineCode[pc + 2];
-                cpu->registers[destReg] = machineCode[pc + 1];
-                printf("MOV %d, R%d\n", machineCode[pc + 1], destReg);
-                pc += 3;
+    while (1) {
+        switch (machineCode[pc]) {
+            // MOV immediate_value, destination_register
+            case 0x20: {
+                if (machineCode[pc + 1] > 255) {
+                    // Handle overflow
+                    printf("Overflow in MOV detected\n");
+                    return;
+                } else {
+                    int destReg = machineCode[pc + 2];
+                    if (destReg < 1 || destReg > 16) {
+                        printf("Invalid register number in the MOV instruction\n");
+                        return;
+                    }
+                    cpu->registers[destReg] = machineCode[pc + 1];
+                    printf("MOV %d, R%d\n", machineCode[pc + 1], destReg);
+                    pc += 3;
+                }
+                break;
             }
-            break;
-        }
-
-        // MOV source_register, destination_register
-        case 0x21:
-        {
-            if (cpu->registers[machineCode[pc + 1]] > 255) {
-                // Handle overflow
-                printf("Overflow in MOV detected\n");
-                return;
-            } else {
-                int destReg = machineCode[pc + 2];
+            // MOV source_register, destination_register
+            case 0x21: {
                 int srcReg = machineCode[pc + 1];
-                
+                int destReg = machineCode[pc + 2];
+                if (srcReg < 1 || srcReg > 16 || destReg < 1 || destReg > 16) {
+                    printf("Invalid register number in the MOV register to register\n");
+                    return;
+                }
+                if (cpu->registers[srcReg] > 255) {
+                    // Handle overflow
+                    printf("Overflow in MOV detected\n");
+                    return;
+                } else {
                     cpu->registers[destReg] = cpu->registers[srcReg];
                     printf("MOV R%d, R%d\n", srcReg, destReg);
                     pc += 3;
+                }
+                break;
             }
-            break;
-        }
-        // LOAD address_register, destination_register
-        case 0x30:
-        {
-            int address = cpu->registers[machineCode[pc + 1]];
-            if (address > MEMORY_SIZE) {
-                // Handle out of bounds memory access
-                printf("Out of bounds memory access in LOAD\n");
-                return;
-            } else {
-                int destReg = machineCode[pc + 2];
-                
+            // LOAD address_register, destination_register
+            case 0x30: {
+                int address = cpu->registers[machineCode[pc + 1]];
+                if (address > MEMORY_SIZE) {
+                    // Handle out of bounds memory access
+                    printf("Out of bounds memory access in LOAD\n");
+                    return;
+                } else {
+                    int destReg = machineCode[pc + 2];
+                    if (destReg < 1 || destReg > 16) {
+                        printf("Invalid register number in the LOAD instruction\n");
+                        return;
+                    }
                     cpu->registers[destReg] = cpu->memory[address];
                     printf("LOAD R%d, R%d\n", machineCode[pc + 1], destReg);
                     pc += 3;
+                }
+                break;
             }
-            break;
-        }
-        // STR source_register, address_register
-        case 0x41:
-        {
-            int address = cpu->registers[machineCode[pc + 2]];
-            if (address > MEMORY_SIZE) {
-                // Handle out of bounds memory access
-                printf("Out of bounds memory access in STR\n");
-                return;
-            } else {
+            // STR source_register, address_register
+            case 0x41: {
                 int srcReg = machineCode[pc + 1];
-               
+                int address = cpu->registers[machineCode[pc + 2]];
+                if (srcReg < 1 || srcReg > 16) {
+                    printf("Invalid register number in the STR instruction\n");
+                    return;
+                }
+                if (address > MEMORY_SIZE) {
+                    // Handle out of bounds memory access
+                    printf("Out of bounds memory access in STR\n");
+                    return;
+                } else {
                     cpu->memory[address] = cpu->registers[srcReg];
                     printf("STR R%d, R%d\n", srcReg, machineCode[pc + 2]);
                     pc += 3;
+                }
+                break;
             }
-            break;
-        }
-        // CMP source_register1, source_register2
-        case 0x52:
-        {
-            int srcReg1 = machineCode[pc + 1];
-            int srcReg2 = machineCode[pc + 2];
-            
+            // CMP source_register1, source_register2
+            case 0x52: {
+                int srcReg1 = machineCode[pc + 1];
+                int srcReg2 = machineCode[pc + 2];
+                if (srcReg1 < 1 || srcReg1 > 16 || srcReg2 < 1 || srcReg2 > 16) {
+                    printf("Invalid register number in the CMP instruction\n");
+                    return;
+                }
                 if (cpu->registers[srcReg1] == cpu->registers[srcReg2]) {
                     printf("CMP R%d, R%d\n", srcReg1, srcReg2);
                     printf("Comparison is TRUE\n");
@@ -90,23 +99,23 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                     printf("Comparison is FALSE\n");
                 }
                 pc += 3;
-            
-            break;
-        }
+                break;
+            }
 
         case 0x58:
         {
-            if (machineCode[pc + 1] < 16) {
-                
-                printf("PRT R%d: %d\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
-                pc += 2;
-            } else {
-                // It's a string literal
-            printf("PRT: %s\n", &machineCode[pc + 1]);
-            pc += strlen((char*)&machineCode[pc + 1]) + 2;
+            if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16)
+            {
+                printf("Invalid register number in PRT instruction\n");
+                return;
             }
+            else{
+            printf("PRT R%d: %d\n", machineCode[pc + 1], cpu->registers[machineCode[pc + 1]]);
+            pc += 2;
             break;
+            }
         }
+            
 
         case 0x59:
         {
@@ -152,12 +161,12 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
 
         case 0xA0: // CALL subroutine_label
             // Save the return address (next instruction) on the stack
-             cpu->stack[cpu->stack_pointer++] = cpu->program_counter + 1;
+             cpu->stack[cpu->stack_pointer++] = pc + 2;
             // Set the program counter to the address of the subroutine
-             cpu->program_counter = machineCode[cpu->program_counter + 1];
-            // Increment program counter to skip the CALL instruction
+             cpu->program_counter = machineCode[pc + 1];
              printf("CALL\n");
              pc += 2;
+            break;
 
         case 0xB0: // RETURN
             // Retrieve the return address from the stack
@@ -172,6 +181,12 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             int srcReg2 = machineCode[pc + 2];
             int destReg = machineCode[pc + 3];
             
+            if (srcReg1 < 1 || srcReg1 > 16 || srcReg2 < 1 || srcReg2 > 16 || destReg < 1 || destReg > 16)
+            {
+                printf("Invalid register number in the ADD instruction\n");
+                return;
+            }
+            else{
                 int result = cpu->registers[srcReg1] + cpu->registers[srcReg2];
                 if (result > 255) {
                     // Handle overflow
@@ -184,6 +199,7 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                 pc += 4;
                 }
             break;
+            }
         } 
         // SUB source_register1, source_register2, destination_register
         case 0xD1:
@@ -191,6 +207,15 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             int srcReg1 = machineCode[pc + 1];
             int srcReg2 = machineCode[pc + 2];
             int destReg = machineCode[pc + 3];
+
+            if (srcReg1 < 1 || srcReg1 > 16 || srcReg2 < 1 || srcReg2 > 16 || destReg < 1 || destReg > 16)
+            {
+                printf("Invalid register number in the SUB instruction\n");
+                return;
+            }
+            else
+            {
+
            
                 int result = cpu->registers[srcReg1] - cpu->registers[srcReg2];
                 if (result < 0)
@@ -206,8 +231,10 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                     pc += 4;
                 }
             }
-
             break;
+        }
+
+            
         
         // MUL source_register1, source_register2, destination_register
         case 0xE2:
@@ -216,6 +243,13 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             int srcReg2 = machineCode[pc + 2];
             int destReg = machineCode[pc + 3];
             
+            if (srcReg1 < 1 || srcReg1 > 16 || srcReg2 < 1 || srcReg2 > 16 || destReg < 1 || destReg > 16)
+            {
+                printf("Invalid register number in the MUL instruction\n");
+                return;
+            }
+            else
+            {
             int result = cpu->registers[machineCode[pc + 1]] * cpu->registers[machineCode[pc + 2]];
             if (result > 255)
             {
@@ -230,7 +264,9 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                 pc += 4;
             }
             
+            
             break;
+            }
         }
         // DIV source_register1, source_register2, destination_register
         case 0xF3:
@@ -238,6 +274,14 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             int srcReg1 = machineCode[pc + 1];
             int srcReg2 = machineCode[pc + 2];
             int destReg = machineCode[pc + 3];
+
+            if (srcReg1 < 1 || srcReg1 > 16 || srcReg2 < 1 || srcReg2 > 16 || destReg < 1 || destReg > 16)
+            {
+                printf("Invalid register number in the DIV instruction\n");
+                return;
+            }
+            else
+            {
     
             unsigned char divisor = cpu->registers[machineCode[pc + 2]];
             unsigned char dividend = cpu->registers[machineCode[pc + 1]];
@@ -254,31 +298,64 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                 pc += 4;
             }
             break;
+            }
         }
         // OR source_register1, source_register2, destination_register
         case 0x14:
+            if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16 || machineCode[pc + 2] < 1 || machineCode[pc + 2] > 16 || machineCode[pc + 3] < 1 || machineCode[pc + 3] > 16)
+            {
+                printf("Invalid register number in the OR instruction\n");
+                return;
+            }
+            else
+            {
             cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] | cpu->registers[machineCode[pc + 2]];
             printf("OR R%d, R%d, R%d\n", machineCode[pc + 1], machineCode[pc + 2], machineCode[pc + 3]);
             pc += 4;
             break;
+            }
         // AND source_register1, source_register2, destination_register
         case 0x25:
+            if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16 || machineCode[pc + 2] < 1 || machineCode[pc + 2] > 16 || machineCode[pc + 3] < 1 || machineCode[pc + 3] > 16)
+            {
+                printf("Invalid register number in the AND instruction\n");
+                return;
+            }
+            else
+            {
             cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] & cpu->registers[machineCode[pc + 2]];
             printf("AND R%d, R%d, R%d\n", machineCode[pc + 1], machineCode[pc + 2], machineCode[pc + 3]);
             pc += 4;
             break;
+            }
         // XOR source_register1, source_register2, destination_register
         case 0x36:
+            if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16 || machineCode[pc + 2] < 1 || machineCode[pc + 2] > 16 || machineCode[pc + 3] < 1 || machineCode[pc + 3] > 16)
+            {
+                printf("Invalid register number in the XOR instruction\n");
+                return;
+            }
+            else
+            {
             cpu->registers[machineCode[pc + 3]] = cpu->registers[machineCode[pc + 1]] ^ cpu->registers[machineCode[pc + 2]];
             printf("XOR R%d, R%d, R%d\n", machineCode[pc + 1], machineCode[pc + 2], machineCode[pc + 3]);
             pc += 4;
             break;
+            }
         // NOT source_register, destination_register
         case 0x47:
+            if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16 || machineCode[pc + 2] < 1 || machineCode[pc + 2] > 16)
+            {
+                printf("Invalid register number in the NOT instruction\n");
+                return;
+            }
+            else
+            {
             cpu->registers[machineCode[pc + 2]] = ~cpu->registers[machineCode[pc + 1]];
             printf("NOT R%d, R%d\n", machineCode[pc + 1], machineCode[pc + 2]);
             pc += 3;
             break;
+            }
         case 0xFF:
             printf("HLT\n");
             return;
