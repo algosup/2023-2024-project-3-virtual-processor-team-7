@@ -3,7 +3,7 @@
 ------------------------
 
 <h3>Overview</h3>
-During this week, we finalized every document and tried to finish programs to be ready for the deadline.
+Throughout this week, we concluded the finalization of every document and made efforts to complete the programs, ensuring readiness for the deadline.
 
 ---
 <h3>Achievements</h3>
@@ -12,7 +12,7 @@ During this week, we finalized every document and tried to finish programs to be
 
 <h3>Test cases</h3>
 
-test cases have been are still in progress.
+Test Cases are still in progress.
 
 ![Alt text](/documents/management/image/testCase4.png)
 
@@ -20,17 +20,17 @@ test cases have been are still in progress.
 
 <h3>Program</h3>
 
-We managed to print "Hello World!" on the console, we tried to repair the RETURN instruction and we tested out the memoryoverflow and underflow.
+We successfully printed "Hello World!" on the console, addressed the RETURN instruction issue, and conducted tests on memory overflow and underflow.
 
 ![Alt text](/documents/management/image/Dev8.png)
 
-*a part of the program that detect a RETURN instruction and skip if there isn't one*
+*A section of the program that detects a RETURN instruction and skips it if it is not present.*
 
 <h4>Wednesday, Thursday and Friday</h4>
 
 <h5>Test Cases</h5>
 
-The entirerty of the Test Cases have been done once.However we have 7 fail including.
+All the test cases have been executed once; however, there are 7 failures, related to subroutines.
 
 ![Alt text](/documents/management/image/testCase5.png)
 
@@ -38,7 +38,7 @@ The entirerty of the Test Cases have been done once.However we have 7 fail inclu
 
 <h5>Program</h5>
 
-We worked hard develloping the CALL, JUMP and RETURN instructions and we added a debbuging instruction.
+We worked hardly on developing the CALL, JUMP, and RETURN instructions, and we incorporated a debugging instruction.
 
 ![Alt text](/documents/management/image/Dev9.png)
 
@@ -46,7 +46,7 @@ We worked hard develloping the CALL, JUMP and RETURN instructions and we added a
 
 ![Alt text](/documents/management/image/Dev10.png)
 
-*Debuging printing into the console depending of what is checked*
+*Printing debugging information to the console based on the checked conditions.*
 
 ------------------------
 
