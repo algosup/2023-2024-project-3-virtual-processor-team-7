@@ -1,19 +1,5 @@
-start:
-MOV 5, R1
-MOV 20, R2
-ADD R1, R2, R17
-PRT R3
-MUL R1, R2, R3
-PRT R23
-RET
-
-
-
-MOV 10, R2
-MOV 8, R1
-ADD R1, R2, R5
-PRT R5
-OR R2, R1, R19
-CALL start
-PRTS "Hello, World !"
+MOV 22, R1
+MOV 223, R2
+ADD R1, R2, R3
+MOUV 10, R23
 HLT

@@ -348,7 +348,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             printf("HLT\n");
             return;
         default:
-            printf("Invalid instruction on line %d\n", line_number);
             return;
         }
         line_number++;
