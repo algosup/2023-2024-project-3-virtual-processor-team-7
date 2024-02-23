@@ -1,0 +1,3 @@
+MOVE 13, R1
+MOUV 15, R2
+HLT

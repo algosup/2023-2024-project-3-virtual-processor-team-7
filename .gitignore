@@ -50,4 +50,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-QA/Images/.DS_Store
+.DS_Store
+.bin
