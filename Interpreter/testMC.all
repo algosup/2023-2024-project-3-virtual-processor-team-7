@@ -14,5 +14,3 @@ PRT R16
 JMP start
 PRTS "Hello, World !"
 HLT
-
-

@@ -11,7 +11,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             // MOV immediate_value, destination_register
             case 0x20: {
                 if (machineCode[pc + 1] > 255) {
-                    // Handle overflow
                     printf("Overflow in MOV detected\n");
                     return;
                 } else {
@@ -35,7 +34,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                     return;
                 }
                 if (cpu->registers[srcReg] > 255) {
-                    // Handle overflow
                     printf("Overflow in MOV detected\n");
                     return;
                 } else {
@@ -49,7 +47,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             case 0x30: {
                 int address = cpu->registers[machineCode[pc + 1]];
                 if (address > MEMORY_SIZE) {
-                    // Handle out of bounds memory access
                     printf("Out of bounds memory access in LOAD\n");
                     return;
                 } else {
@@ -73,7 +70,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                     return;
                 }
                 if (address > MEMORY_SIZE) {
-                    // Handle out of bounds memory access
                     printf("Out of bounds memory access in STR\n");
                     return;
                 } else {
@@ -102,6 +98,7 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                 break;
             }
 
+        // PRT source_register
         case 0x58:
         {
             if (machineCode[pc + 1] < 1 || machineCode[pc + 1] > 16)
@@ -116,19 +113,17 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             }
         }
             
-
+        // PRTS string
         case 0x59:
         {
-            // It's a string literal
             printf("PRTS: %s\n", &machineCode[pc + 1]);
             pc += strlen((char*)&machineCode[pc + 1]) + 2;
             break;
         }
         
         // JMP label
-        case 0x70: // JMP label
+        case 0x70:
         {
-            // Assuming operand is a 16-bit address
             uint16_t address = (machineCode[cpu->program_counter + 1] << 8) | machineCode[cpu->program_counter + 2];
             cpu->program_counter = address;
             printf("JMP %04X\n", address); 
@@ -160,16 +155,13 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             break;
 
         case 0xA0: // CALL subroutine_label
-            // Save the return address (next instruction) on the stack
              cpu->stack[cpu->stack_pointer++] = pc + 2;
-            // Set the program counter to the address of the subroutine
              cpu->program_counter = machineCode[pc + 1];
              printf("CALL\n");
              pc += 2;
             break;
 
         case 0xB0: // RETURN
-            // Retrieve the return address from the stack
             cpu->program_counter = cpu->stack[--cpu->stack_pointer];
             printf("RETURN to %d\n", cpu->program_counter);
             break;
@@ -189,7 +181,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             else{
                 int result = cpu->registers[srcReg1] + cpu->registers[srcReg2];
                 if (result > 255) {
-                    // Handle overflow
                     printf("Overflow in addition detected\n");
                     return;
                 }
@@ -220,7 +211,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
                 int result = cpu->registers[srcReg1] - cpu->registers[srcReg2];
                 if (result < 0)
                 {
-                    // Handle underflow
                     printf("Underflow in subtraction detected\n");
                     return;
                 }
@@ -253,7 +243,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             int result = cpu->registers[machineCode[pc + 1]] * cpu->registers[machineCode[pc + 2]];
             if (result > 255)
             {
-                // Handle overflow
                 printf("Overflow in multiplication detected\n");
                 return;
             }
@@ -287,7 +276,6 @@ void executeInstructions(CPU *cpu, unsigned char machineCode[])
             unsigned char dividend = cpu->registers[machineCode[pc + 1]];
             if (divisor == 0 || dividend == 0)
             {
-                // Handle division by zero
                 printf("Division by zero detected\n");
                 return;
             }

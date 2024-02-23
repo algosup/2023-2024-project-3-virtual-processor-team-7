@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
     if (argc != 3)
     {
-        printf("Usage: %s <assembly_code_file> <output_binary_file>\n", argv[0]);
+        printf("Usage: %s <assembly-like_code_file> <output_binary_file>\n", argv[0]);
         return 1;
     }
 
@@ -31,13 +31,12 @@ int main(int argc, char const *argv[])
     // Convert assembly code to machine code
     parser(inputFile, machineCode, &machineCodeSize);
 
-      // Write the machine code to the binary file line by line
+    // Write the machine code to the binary file line by line
     for (int i = 0; i < machineCodeSize; ++i)
     {
         fwrite(&machineCode[i], sizeof(unsigned char), 1, outputFile);
     }
 
-    // Close the files
     fclose(inputFile);
     fclose(outputFile);
 

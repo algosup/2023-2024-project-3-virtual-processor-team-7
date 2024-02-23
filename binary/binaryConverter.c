@@ -18,7 +18,6 @@ int main(int argc, char const *argv[])
     CPU cpu;
     initializeCPU(&cpu);
 
-    // Read the machine code from the binary file
     fseek(binaryFile, 0, SEEK_END);
     long fileSize = ftell(binaryFile);
     rewind(binaryFile);
@@ -33,17 +32,13 @@ int main(int argc, char const *argv[])
     }
 
     fread(machineCode, sizeof(unsigned char), fileSize, binaryFile);
-
-    // Close the binary file
     fclose(binaryFile);
 
     binaryFile = fopen(argv[1], "wb");
     fclose(binaryFile);
 
-    // Execute the program
     executeInstructions(&cpu, machineCode);
 
-    // Free allocated memory
     free(machineCode);
 
     return 0;
