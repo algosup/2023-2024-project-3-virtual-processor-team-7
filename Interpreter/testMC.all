@@ -7,10 +7,13 @@ MUL R1, R2, R3
 PRT R23
 RET
 
-MOV 8, R1
+
+
 MOV 10, R2
-ADD R1, R2, R16
-PRT R16
-JMP start
+MOV 8, R1
+ADD R1, R2, R5
+PRT R5
+OR R2, R1, R19
+CALL start
 PRTS "Hello, World !"
 HLT
