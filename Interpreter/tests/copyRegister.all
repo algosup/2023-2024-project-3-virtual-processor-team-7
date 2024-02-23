@@ -3,5 +3,4 @@ MOV R2, R3
 CMP R2, R3
 PRT R2
 PRT R3
-
 HLT

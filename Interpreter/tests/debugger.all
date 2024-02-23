@@ -1,5 +1,4 @@
 MOV 20, R15
 PRTS "Before Debug"
 PRT R15
-
 HLT

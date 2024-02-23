@@ -6,5 +6,4 @@ CMP R6, R9
 PRT R7
 PRT R8
 PRT R9
-
 HLT

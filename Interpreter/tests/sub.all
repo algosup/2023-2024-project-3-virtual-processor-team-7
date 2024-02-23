@@ -4,5 +4,4 @@ SUB R4, R5, R6
 MOV 7, R7
 CMP R6, R7
 PRT R6
-
 HLT

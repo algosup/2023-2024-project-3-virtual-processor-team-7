@@ -4,5 +4,4 @@ SUB R1, R2, R3
 PRT R1
 PRT R2
 PRT R3
-
 HLT

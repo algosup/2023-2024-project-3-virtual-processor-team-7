@@ -6,5 +6,4 @@ XOR R1, R2, R5
 PRT R3
 PRT R4
 PRT R5
-
 HLT

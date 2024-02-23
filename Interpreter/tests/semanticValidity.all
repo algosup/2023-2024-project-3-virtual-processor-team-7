@@ -1,4 +1,3 @@
 CMP R13, R14
 JMPT INVALID_CONDITION, error_label
-
 HLT

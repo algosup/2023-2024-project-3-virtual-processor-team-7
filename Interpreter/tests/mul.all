@@ -4,5 +4,4 @@ MUL R7, R8, R9
 PRT R7
 PRT R8
 PRT R9
-
 HLT

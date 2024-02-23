@@ -1,13 +1,9 @@
 MOV 10, R1
 CALL my_subroutine
 PRT R1
-
 JMP end
-
 my_subroutine:
 MOV 100, R1
 RET
-
 end:
-
 HLT
