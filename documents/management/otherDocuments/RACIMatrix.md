@@ -4,7 +4,7 @@
 
 <h3>What's a RACI Matrix?</h3>
 
-A RACI Matrix is a table that simply clarifies what is the impact of each team members, the client or stakeholder's role and responsibilities in this project.
+A RACI Matrix serves as a table that provides clear delineation of the impact and roles and responsibilities of each team member, client, or stakeholder in the project.
 
 <h3>The Matrix</h3>
 
