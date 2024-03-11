@@ -1,27 +1,27 @@
 # Project Post-Mortem
 
-______
+---
 
 ## Overview
 
 The purpose of this document is to list all of our different successes and
 challenges during the project. It has been written after the project has been completed.
 
-______
+---
 
 ## Team members
 
-| Members |Rôles | Images|
-|---|---|---|
-|Mattéo Lefin| Project manager||
-|Gaël Malvar| Program manager||
-|Robin Debry| Technical Lead||
-|Raphaël Proudon| Quality Insurance||
-|Abderrazaq Makran| Quality Insurance||
-|Camille Gayat| Software engineer||
-|David Cuahonte| Software engineer||
+| Members           | Rôles             | Images |
+| ----------------- | ----------------- | ------ |
+| Mattéo Lefin      | Project manager   |        |
+| Gaël Malvar       | Program manager   |        |
+| Robin Debry       | Technical Lead    |        |
+| Raphaël Proudon   | Quality Insurance |        |
+| Abderrazaq Makran | Quality Insurance |        |
+| Camille Gayat     | Software engineer |        |
+| David Cuahonte    | Software engineer |        |
 
-______
+---
 
 ## Succeses
 
@@ -33,7 +33,7 @@ We created our own assembly which had some of the original instructions such as:
 
 To emulate the processor's way of working we implemented a binary conversion to our assembly.
 
-______
+---
 
 ## Challenges
 
@@ -45,24 +45,29 @@ Our team had a lot of struggles during the project period such as :
 
 - Somme program issues that weren't
 
-______
+---
 
 ## What we learned?
 
 ROBIN :
- I learned the importance of understanding the project better at the beginning to avoid problem of misunderstanding during the presentation.
+I learned the importance of understanding the project better at the beginning to avoid problem of misunderstanding during the presentation.
 I learned also a bit more about how assembly language works but I need to improve my knowledge about that.
 
-|Criteria|Score|
-|---|---|
-|Performance against project goals/objectives| 3/10|
-|Performance against planned schedule| 2/10|
-|Performance against quality goals| 4/10|
-|Adherence to scope| 3/10|
-|Project planning| 2/10|
-|Resource management| 3/10|
-|Project management| 3/10|
-|Development| 3/10|
-|Communication| 2/10|
-|Team cooperation| 3/10|
-|Project deliverable| 3/10|
+DAVID :
+As a software engineer i have now a better grasp and understanding on the intricacies of Assembly as well as the C language.
+
+In general we have learnt to create a better scope for the project to ensure a satisfying result.
+
+| Criteria                                     | Score |
+| -------------------------------------------- | ----- |
+| Performance against project goals/objectives | 3/10  |
+| Performance against planned schedule         | 2/10  |
+| Performance against quality goals            | 4/10  |
+| Adherence to scope                           | 3/10  |
+| Project planning                             | 2/10  |
+| Resource management                          | 3/10  |
+| Project management                           | 3/10  |
+| Development                                  | 3/10  |
+| Communication                                | 2/10  |
+| Team cooperation                             | 3/10  |
+| Project deliverable                          | 3/10  |
